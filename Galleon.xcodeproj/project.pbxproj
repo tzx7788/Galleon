@@ -7,13 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6CEE190E1AADBC78006CB3DD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CEE190D1AADBC78006CB3DD /* main.m */; };
-		6CEE19111AADBC78006CB3DD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CEE19101AADBC78006CB3DD /* AppDelegate.m */; };
-		6CEE19141AADBC78006CB3DD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CEE19131AADBC78006CB3DD /* ViewController.m */; };
-		6CEE19171AADBC78006CB3DD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6CEE19151AADBC78006CB3DD /* Main.storyboard */; };
-		6CEE19191AADBC78006CB3DD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6CEE19181AADBC78006CB3DD /* Images.xcassets */; };
-		6CEE191C1AADBC78006CB3DD /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6CEE191A1AADBC78006CB3DD /* LaunchScreen.xib */; };
+		6CA07D2D1AADC63000BEEEE7 /* UIImage+Snapshot.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CA07D2C1AADC63000BEEEE7 /* UIImage+Snapshot.m */; };
 		6CEE19281AADBC78006CB3DD /* GalleonTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CEE19271AADBC78006CB3DD /* GalleonTests.m */; };
+		6CEE19401AADC291006CB3DD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CEE19361AADC291006CB3DD /* AppDelegate.m */; };
+		6CEE19411AADC291006CB3DD /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6CEE19371AADC291006CB3DD /* LaunchScreen.xib */; };
+		6CEE19421AADC291006CB3DD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6CEE19391AADC291006CB3DD /* Main.storyboard */; };
+		6CEE19431AADC291006CB3DD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6CEE193B1AADC291006CB3DD /* Images.xcassets */; };
+		6CEE19441AADC291006CB3DD /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6CEE193C1AADC291006CB3DD /* Info.plist */; };
+		6CEE19451AADC291006CB3DD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CEE193D1AADC291006CB3DD /* main.m */; };
+		6CEE19461AADC291006CB3DD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CEE193F1AADC291006CB3DD /* ViewController.m */; };
+		6CEE194B1AADC4A2006CB3DD /* UISnapShotNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CEE194A1AADC4A2006CB3DD /* UISnapShotNavigationController.m */; };
+		83A98D002283403AA00C88F6 /* libPods-Galleon.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A469F2A228C7CAC00E115829 /* libPods-Galleon.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,19 +31,26 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		44966A53F4CB1EEA112879F2 /* Pods-Galleon.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Galleon.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Galleon/Pods-Galleon.debug.xcconfig"; sourceTree = "<group>"; };
+		6CA07D2B1AADC63000BEEEE7 /* UIImage+Snapshot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Snapshot.h"; sourceTree = "<group>"; };
+		6CA07D2C1AADC63000BEEEE7 /* UIImage+Snapshot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Snapshot.m"; sourceTree = "<group>"; };
 		6CEE19081AADBC78006CB3DD /* Galleon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Galleon.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		6CEE190C1AADBC78006CB3DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6CEE190D1AADBC78006CB3DD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		6CEE190F1AADBC78006CB3DD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		6CEE19101AADBC78006CB3DD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		6CEE19121AADBC78006CB3DD /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		6CEE19131AADBC78006CB3DD /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		6CEE19161AADBC78006CB3DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		6CEE19181AADBC78006CB3DD /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		6CEE191B1AADBC78006CB3DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		6CEE19211AADBC78006CB3DD /* GalleonTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GalleonTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6CEE19261AADBC78006CB3DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6CEE19271AADBC78006CB3DD /* GalleonTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GalleonTests.m; sourceTree = "<group>"; };
+		6CEE19351AADC291006CB3DD /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		6CEE19361AADC291006CB3DD /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		6CEE19381AADC291006CB3DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		6CEE193A1AADC291006CB3DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6CEE193B1AADC291006CB3DD /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		6CEE193C1AADC291006CB3DD /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6CEE193D1AADC291006CB3DD /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6CEE193E1AADC291006CB3DD /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		6CEE193F1AADC291006CB3DD /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		6CEE19491AADC4A2006CB3DD /* UISnapShotNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UISnapShotNavigationController.h; sourceTree = "<group>"; };
+		6CEE194A1AADC4A2006CB3DD /* UISnapShotNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UISnapShotNavigationController.m; sourceTree = "<group>"; };
+		93E3A8A183354E1A097DC007 /* Pods-Galleon.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Galleon.release.xcconfig"; path = "Pods/Target Support Files/Pods-Galleon/Pods-Galleon.release.xcconfig"; sourceTree = "<group>"; };
+		A469F2A228C7CAC00E115829 /* libPods-Galleon.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Galleon.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83A98D002283403AA00C88F6 /* libPods-Galleon.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,12 +72,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1BE2B96BC2479D3FA4132EC3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A469F2A228C7CAC00E115829 /* libPods-Galleon.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6CA07D2A1AADC5E800BEEEE7 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				6CA07D2B1AADC63000BEEEE7 /* UIImage+Snapshot.h */,
+				6CA07D2C1AADC63000BEEEE7 /* UIImage+Snapshot.m */,
+			);
+			name = Category;
+			sourceTree = "<group>";
+		};
 		6CEE18FF1AADBC78006CB3DD = {
 			isa = PBXGroup;
 			children = (
-				6CEE190A1AADBC78006CB3DD /* Galleon */,
+				6CEE19341AADC291006CB3DD /* Galleon */,
 				6CEE19241AADBC78006CB3DD /* GalleonTests */,
 				6CEE19091AADBC78006CB3DD /* Products */,
+				8882182ACABA5488F8E29B54 /* Pods */,
+				1BE2B96BC2479D3FA4132EC3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -76,30 +107,6 @@
 				6CEE19211AADBC78006CB3DD /* GalleonTests.xctest */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		6CEE190A1AADBC78006CB3DD /* Galleon */ = {
-			isa = PBXGroup;
-			children = (
-				6CEE190F1AADBC78006CB3DD /* AppDelegate.h */,
-				6CEE19101AADBC78006CB3DD /* AppDelegate.m */,
-				6CEE19121AADBC78006CB3DD /* ViewController.h */,
-				6CEE19131AADBC78006CB3DD /* ViewController.m */,
-				6CEE19151AADBC78006CB3DD /* Main.storyboard */,
-				6CEE19181AADBC78006CB3DD /* Images.xcassets */,
-				6CEE191A1AADBC78006CB3DD /* LaunchScreen.xib */,
-				6CEE190B1AADBC78006CB3DD /* Supporting Files */,
-			);
-			path = Galleon;
-			sourceTree = "<group>";
-		};
-		6CEE190B1AADBC78006CB3DD /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				6CEE190C1AADBC78006CB3DD /* Info.plist */,
-				6CEE190D1AADBC78006CB3DD /* main.m */,
-			);
-			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		6CEE19241AADBC78006CB3DD /* GalleonTests */ = {
@@ -119,6 +126,50 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		6CEE19341AADC291006CB3DD /* Galleon */ = {
+			isa = PBXGroup;
+			children = (
+				6CA07D2A1AADC5E800BEEEE7 /* Category */,
+				6CEE19481AADC43A006CB3DD /* Root */,
+				6CEE19471AADC2A0006CB3DD /* Supporting Files */,
+				6CEE19371AADC291006CB3DD /* LaunchScreen.xib */,
+				6CEE19391AADC291006CB3DD /* Main.storyboard */,
+				6CEE193B1AADC291006CB3DD /* Images.xcassets */,
+				6CEE193C1AADC291006CB3DD /* Info.plist */,
+				6CEE193D1AADC291006CB3DD /* main.m */,
+				6CEE193E1AADC291006CB3DD /* ViewController.h */,
+				6CEE193F1AADC291006CB3DD /* ViewController.m */,
+			);
+			path = Galleon;
+			sourceTree = "<group>";
+		};
+		6CEE19471AADC2A0006CB3DD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6CEE19351AADC291006CB3DD /* AppDelegate.h */,
+				6CEE19361AADC291006CB3DD /* AppDelegate.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6CEE19481AADC43A006CB3DD /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				6CEE19491AADC4A2006CB3DD /* UISnapShotNavigationController.h */,
+				6CEE194A1AADC4A2006CB3DD /* UISnapShotNavigationController.m */,
+			);
+			name = Root;
+			sourceTree = "<group>";
+		};
+		8882182ACABA5488F8E29B54 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				44966A53F4CB1EEA112879F2 /* Pods-Galleon.debug.xcconfig */,
+				93E3A8A183354E1A097DC007 /* Pods-Galleon.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -126,9 +177,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6CEE192B1AADBC78006CB3DD /* Build configuration list for PBXNativeTarget "Galleon" */;
 			buildPhases = (
+				740355F5DA3E60A2DDD8771A /* Check Pods Manifest.lock */,
 				6CEE19041AADBC78006CB3DD /* Sources */,
 				6CEE19051AADBC78006CB3DD /* Frameworks */,
 				6CEE19061AADBC78006CB3DD /* Resources */,
+				18808C30057C7885A4145FC4 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -199,9 +252,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6CEE19171AADBC78006CB3DD /* Main.storyboard in Resources */,
-				6CEE191C1AADBC78006CB3DD /* LaunchScreen.xib in Resources */,
-				6CEE19191AADBC78006CB3DD /* Images.xcassets in Resources */,
+				6CEE19441AADC291006CB3DD /* Info.plist in Resources */,
+				6CEE19431AADC291006CB3DD /* Images.xcassets in Resources */,
+				6CEE19411AADC291006CB3DD /* LaunchScreen.xib in Resources */,
+				6CEE19421AADC291006CB3DD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -214,14 +268,49 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		18808C30057C7885A4145FC4 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Galleon/Pods-Galleon-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		740355F5DA3E60A2DDD8771A /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		6CEE19041AADBC78006CB3DD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6CEE19141AADBC78006CB3DD /* ViewController.m in Sources */,
-				6CEE19111AADBC78006CB3DD /* AppDelegate.m in Sources */,
-				6CEE190E1AADBC78006CB3DD /* main.m in Sources */,
+				6CEE19461AADC291006CB3DD /* ViewController.m in Sources */,
+				6CEE19451AADC291006CB3DD /* main.m in Sources */,
+				6CEE194B1AADC4A2006CB3DD /* UISnapShotNavigationController.m in Sources */,
+				6CA07D2D1AADC63000BEEEE7 /* UIImage+Snapshot.m in Sources */,
+				6CEE19401AADC291006CB3DD /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -244,20 +333,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		6CEE19151AADBC78006CB3DD /* Main.storyboard */ = {
+		6CEE19371AADC291006CB3DD /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				6CEE19161AADBC78006CB3DD /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		6CEE191A1AADBC78006CB3DD /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				6CEE191B1AADBC78006CB3DD /* Base */,
+				6CEE19381AADC291006CB3DD /* Base */,
 			);
 			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+		6CEE19391AADC291006CB3DD /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6CEE193A1AADC291006CB3DD /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -341,9 +430,11 @@
 		};
 		6CEE192C1AADBC78006CB3DD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 44966A53F4CB1EEA112879F2 /* Pods-Galleon.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Galleon/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -351,9 +442,11 @@
 		};
 		6CEE192D1AADBC78006CB3DD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 93E3A8A183354E1A097DC007 /* Pods-Galleon.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Galleon/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -412,6 +505,7 @@
 				6CEE192D1AADBC78006CB3DD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6CEE192E1AADBC78006CB3DD /* Build configuration list for PBXNativeTarget "GalleonTests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +514,7 @@
 				6CEE19301AADBC78006CB3DD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
