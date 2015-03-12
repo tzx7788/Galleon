@@ -25,6 +25,10 @@
 		6CEE19451AADC291006CB3DD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CEE193D1AADC291006CB3DD /* main.m */; };
 		6CEE19461AADC291006CB3DD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CEE193F1AADC291006CB3DD /* ViewController.m */; };
 		6CEE194B1AADC4A2006CB3DD /* UISnapShotNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CEE194A1AADC4A2006CB3DD /* UISnapShotNavigationController.m */; };
+		6CF078871AB1978800DF0C0C /* SuperViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CF078861AB1978800DF0C0C /* SuperViewController.m */; };
+		6CF0788B1AB197FB00DF0C0C /* RootContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CF0788A1AB197FB00DF0C0C /* RootContentViewController.m */; };
+		6CF0788E1AB1BF3100DF0C0C /* SubContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CF0788D1AB1BF3100DF0C0C /* SubContentViewController.m */; };
+		6CF078911AB1DA8900DF0C0C /* UIView+Resize.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CF078901AB1DA8900DF0C0C /* UIView+Resize.m */; };
 		83A98D002283403AA00C88F6 /* libPods-Galleon.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A469F2A228C7CAC00E115829 /* libPods-Galleon.a */; };
 /* End PBXBuildFile section */
 
@@ -71,6 +75,15 @@
 		6CEE19491AADC4A2006CB3DD /* UISnapShotNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UISnapShotNavigationController.h; sourceTree = "<group>"; };
 		6CEE194A1AADC4A2006CB3DD /* UISnapShotNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UISnapShotNavigationController.m; sourceTree = "<group>"; };
 		6CF078811AB176CF00DF0C0C /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		6CF078841AB1914A00DF0C0C /* NotificationConstant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationConstant.h; sourceTree = "<group>"; };
+		6CF078851AB1978800DF0C0C /* SuperViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SuperViewController.h; sourceTree = "<group>"; };
+		6CF078861AB1978800DF0C0C /* SuperViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SuperViewController.m; sourceTree = "<group>"; };
+		6CF078891AB197FB00DF0C0C /* RootContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootContentViewController.h; sourceTree = "<group>"; };
+		6CF0788A1AB197FB00DF0C0C /* RootContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootContentViewController.m; sourceTree = "<group>"; };
+		6CF0788C1AB1BF3100DF0C0C /* SubContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubContentViewController.h; sourceTree = "<group>"; };
+		6CF0788D1AB1BF3100DF0C0C /* SubContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubContentViewController.m; sourceTree = "<group>"; };
+		6CF0788F1AB1DA8900DF0C0C /* UIView+Resize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Resize.h"; sourceTree = "<group>"; };
+		6CF078901AB1DA8900DF0C0C /* UIView+Resize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Resize.m"; sourceTree = "<group>"; };
 		93E3A8A183354E1A097DC007 /* Pods-Galleon.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Galleon.release.xcconfig"; path = "Pods/Target Support Files/Pods-Galleon/Pods-Galleon.release.xcconfig"; sourceTree = "<group>"; };
 		A469F2A228C7CAC00E115829 /* libPods-Galleon.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Galleon.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -160,6 +173,7 @@
 			children = (
 				6C5BDC701AB11E07005FE343 /* StringConstant.h */,
 				6CBDA9661AB12881003CCB20 /* ImageConstant.h */,
+				6CF078841AB1914A00DF0C0C /* NotificationConstant.h */,
 			);
 			name = Constant;
 			sourceTree = "<group>";
@@ -167,6 +181,8 @@
 		6CA07D2A1AADC5E800BEEEE7 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				6CF0788F1AB1DA8900DF0C0C /* UIView+Resize.h */,
+				6CF078901AB1DA8900DF0C0C /* UIView+Resize.m */,
 				6CA07D2B1AADC63000BEEEE7 /* UIImage+Snapshot.h */,
 				6CA07D2C1AADC63000BEEEE7 /* UIImage+Snapshot.m */,
 			);
@@ -209,6 +225,8 @@
 		6CBDA9741AB13153003CCB20 /* SuperClass */ = {
 			isa = PBXGroup;
 			children = (
+				6CF078851AB1978800DF0C0C /* SuperViewController.h */,
+				6CF078861AB1978800DF0C0C /* SuperViewController.m */,
 			);
 			name = SuperClass;
 			sourceTree = "<group>";
@@ -280,6 +298,10 @@
 			children = (
 				6CEE19491AADC4A2006CB3DD /* UISnapShotNavigationController.h */,
 				6CEE194A1AADC4A2006CB3DD /* UISnapShotNavigationController.m */,
+				6CF078891AB197FB00DF0C0C /* RootContentViewController.h */,
+				6CF0788A1AB197FB00DF0C0C /* RootContentViewController.m */,
+				6CF0788C1AB1BF3100DF0C0C /* SubContentViewController.h */,
+				6CF0788D1AB1BF3100DF0C0C /* SubContentViewController.m */,
 			);
 			name = Root;
 			sourceTree = "<group>";
@@ -434,12 +456,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6CF078911AB1DA8900DF0C0C /* UIView+Resize.m in Sources */,
 				6CEE19461AADC291006CB3DD /* ViewController.m in Sources */,
 				6CEE19451AADC291006CB3DD /* main.m in Sources */,
+				6CF0788B1AB197FB00DF0C0C /* RootContentViewController.m in Sources */,
 				6CEE194B1AADC4A2006CB3DD /* UISnapShotNavigationController.m in Sources */,
 				6CA07D2D1AADC63000BEEEE7 /* UIImage+Snapshot.m in Sources */,
 				6C5BDC401AB0721B005FE343 /* LeftMenuViewController.m in Sources */,
+				6CF078871AB1978800DF0C0C /* SuperViewController.m in Sources */,
 				6C5BDC5B1AB08008005FE343 /* LeftMenuTableViewCell.m in Sources */,
+				6CF0788E1AB1BF3100DF0C0C /* SubContentViewController.m in Sources */,
 				6CEE19401AADC291006CB3DD /* AppDelegate.m in Sources */,
 				6C5BDC541AB07ADD005FE343 /* LeftMenuTableViewController.m in Sources */,
 			);
