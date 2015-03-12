@@ -7,6 +7,8 @@
 //
 
 #import "LeftMenuTableViewCell.h"
+#import "StringConstant.h"
+#import "ImageConstant.h"
 
 @implementation LeftMenuTableViewCell
 
@@ -15,24 +17,24 @@
     _type = type;
     switch (type) {
         case LeftMenuTableViewCellHomePage:
-            self.iconImageView.image = [UIImage imageNamed:@""];
-            self.contentLabel.text = NSLocalizedString(@"HomePage", @"");
+            self.iconImageView.image = HomePageIcon;
+            self.contentLabel.text = HomePage;
             break;
-        case LeftMenuTableViewCellInformation:
-            self.iconImageView.image = [UIImage imageNamed:@""];
-            self.contentLabel.text = @"";
+        case LeftMenuTableViewCellNews:
+            self.iconImageView.image = NewsIcon;
+            self.contentLabel.text = News;
             break;
         case LeftMenuTableViewCellExhibition:
-            self.iconImageView.image = [UIImage imageNamed:@""];
-            self.contentLabel.text = @"";
+            self.iconImageView.image = ExhibitionIcon;
+            self.contentLabel.text = Exhibition;
             break;
         case LeftMenuTableViewCellDiscuss:
-            self.iconImageView.image = [UIImage imageNamed:@""];
-            self.contentLabel.text = @"";
+            self.iconImageView.image = DiscussIcon;
+            self.contentLabel.text = Discuss;
             break;
         case LeftMenuTableViewCellAbout:
-            self.iconImageView.image = [UIImage imageNamed:@""];
-            self.contentLabel.text = @"";
+            self.iconImageView.image = AboutUsIcon;
+            self.contentLabel.text = AboutUs;
             break;
         default:
             break;

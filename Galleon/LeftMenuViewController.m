@@ -7,18 +7,19 @@
 //
 
 #import "LeftMenuViewController.h"
+#import "LeftMenuTableViewController.h"
 
 @interface LeftMenuViewController ()
-@property (weak, nonatomic) IBOutlet UILabel *testLabel;
-
+@property (strong,nonatomic) LeftMenuTableViewController * leftMenuTableViewController;
 @end
 
 @implementation LeftMenuViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.testLabel.text = NSLocalizedString(@"HomePage", @"");
-    // Do any additional setup after loading the view.
+    self.leftMenuTableViewController = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"LeftMenuTableViewController"];
+    [self addChildViewController:self.leftMenuTableViewController];
+    [self.view addSubview:self.leftMenuTableViewController.view];
 }
 
 - (void)didReceiveMemoryWarning {

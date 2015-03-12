@@ -7,6 +7,7 @@
 //
 
 #import "LeftMenuTableViewController.h"
+#import "LeftMenuTableViewCell.h"
 
 @interface LeftMenuTableViewController ()
 
@@ -32,26 +33,38 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Potentially incomplete method implementation.
-    // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete method implementation.
-    // Return the number of rows in the section.
-    return 0;
+    return 5;
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
-    
-    // Configure the cell...
-    
+    LeftMenuTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"LeftMenuTableViewCell" forIndexPath:indexPath];
+    switch (indexPath.row) {
+        case 0:
+            cell.type = LeftMenuTableViewCellHomePage;
+            break;
+        case 1:
+            cell.type = LeftMenuTableViewCellNews;
+            break;
+        case 2:
+            cell.type = LeftMenuTableViewCellExhibition;
+            break;
+        case 3:
+            cell.type = LeftMenuTableViewCellDiscuss;
+            break;
+        case 4:
+            cell.type = LeftMenuTableViewCellAbout;
+            break;
+        default:
+            break;
+    }
     return cell;
 }
-*/
+
 
 /*
 // Override to support conditional editing of the table view.

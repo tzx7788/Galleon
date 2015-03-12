@@ -11,7 +11,7 @@
 typedef enum
 {
     LeftMenuTableViewCellHomePage = 0,
-    LeftMenuTableViewCellInformation,
+    LeftMenuTableViewCellNews,
     LeftMenuTableViewCellExhibition,
     LeftMenuTableViewCellDiscuss,
     LeftMenuTableViewCellAbout,
