@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6C5BDC401AB0721B005FE343 /* LeftMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C5BDC3F1AB0721B005FE343 /* LeftMenuViewController.m */; };
+		6C5BDC4D1AB0754C005FE343 /* ic_sidebar_about_us.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C5BDC481AB0754C005FE343 /* ic_sidebar_about_us.png */; };
+		6C5BDC4E1AB0754C005FE343 /* ic_sidebar_exhibition.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C5BDC491AB0754C005FE343 /* ic_sidebar_exhibition.png */; };
+		6C5BDC4F1AB0754C005FE343 /* ic_sidebar_homepage.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C5BDC4A1AB0754C005FE343 /* ic_sidebar_homepage.png */; };
+		6C5BDC501AB0754C005FE343 /* ic_sidebar_message.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C5BDC4B1AB0754C005FE343 /* ic_sidebar_message.png */; };
+		6C5BDC511AB0754C005FE343 /* ic_sidebar_news.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C5BDC4C1AB0754C005FE343 /* ic_sidebar_news.png */; };
+		6C5BDC541AB07ADD005FE343 /* LeftMenuTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C5BDC531AB07ADD005FE343 /* LeftMenuTableViewController.m */; };
+		6C5BDC5B1AB08008005FE343 /* LeftMenuTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C5BDC5A1AB08008005FE343 /* LeftMenuTableViewCell.m */; };
+		6C5BDC6B1AB0933D005FE343 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6C5BDC6A1AB0933D005FE343 /* Localizable.strings */; };
 		6CA07D2D1AADC63000BEEEE7 /* UIImage+Snapshot.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CA07D2C1AADC63000BEEEE7 /* UIImage+Snapshot.m */; };
 		6CEE19281AADBC78006CB3DD /* GalleonTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CEE19271AADBC78006CB3DD /* GalleonTests.m */; };
 		6CEE19401AADC291006CB3DD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CEE19361AADC291006CB3DD /* AppDelegate.m */; };
@@ -32,6 +41,18 @@
 
 /* Begin PBXFileReference section */
 		44966A53F4CB1EEA112879F2 /* Pods-Galleon.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Galleon.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Galleon/Pods-Galleon.debug.xcconfig"; sourceTree = "<group>"; };
+		6C5BDC3E1AB0721B005FE343 /* LeftMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftMenuViewController.h; sourceTree = "<group>"; };
+		6C5BDC3F1AB0721B005FE343 /* LeftMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftMenuViewController.m; sourceTree = "<group>"; };
+		6C5BDC481AB0754C005FE343 /* ic_sidebar_about_us.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_sidebar_about_us.png; sourceTree = "<group>"; };
+		6C5BDC491AB0754C005FE343 /* ic_sidebar_exhibition.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_sidebar_exhibition.png; sourceTree = "<group>"; };
+		6C5BDC4A1AB0754C005FE343 /* ic_sidebar_homepage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_sidebar_homepage.png; sourceTree = "<group>"; };
+		6C5BDC4B1AB0754C005FE343 /* ic_sidebar_message.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_sidebar_message.png; sourceTree = "<group>"; };
+		6C5BDC4C1AB0754C005FE343 /* ic_sidebar_news.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_sidebar_news.png; sourceTree = "<group>"; };
+		6C5BDC521AB07ADD005FE343 /* LeftMenuTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftMenuTableViewController.h; sourceTree = "<group>"; };
+		6C5BDC531AB07ADD005FE343 /* LeftMenuTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftMenuTableViewController.m; sourceTree = "<group>"; };
+		6C5BDC591AB08008005FE343 /* LeftMenuTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftMenuTableViewCell.h; sourceTree = "<group>"; };
+		6C5BDC5A1AB08008005FE343 /* LeftMenuTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftMenuTableViewCell.m; sourceTree = "<group>"; };
+		6C5BDC6A1AB0933D005FE343 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		6CA07D2B1AADC63000BEEEE7 /* UIImage+Snapshot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Snapshot.h"; sourceTree = "<group>"; };
 		6CA07D2C1AADC63000BEEEE7 /* UIImage+Snapshot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Snapshot.m"; sourceTree = "<group>"; };
 		6CEE19081AADBC78006CB3DD /* Galleon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Galleon.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -80,6 +101,59 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		6C5BDC461AB074DF005FE343 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				6C5BDC471AB07535005FE343 /* LeftMenu */,
+				6C5BDC6A1AB0933D005FE343 /* Localizable.strings */,
+			);
+			name = Resource;
+			sourceTree = "<group>";
+		};
+		6C5BDC471AB07535005FE343 /* LeftMenu */ = {
+			isa = PBXGroup;
+			children = (
+				6C5BDC4A1AB0754C005FE343 /* ic_sidebar_homepage.png */,
+				6C5BDC4C1AB0754C005FE343 /* ic_sidebar_news.png */,
+				6C5BDC491AB0754C005FE343 /* ic_sidebar_exhibition.png */,
+				6C5BDC4B1AB0754C005FE343 /* ic_sidebar_message.png */,
+				6C5BDC481AB0754C005FE343 /* ic_sidebar_about_us.png */,
+			);
+			name = LeftMenu;
+			sourceTree = "<group>";
+		};
+		6C5BDC551AB07F43005FE343 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6C5BDC571AB07F5F005FE343 /* Left */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		6C5BDC561AB07F4B005FE343 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6C5BDC581AB07F66005FE343 /* Left */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		6C5BDC571AB07F5F005FE343 /* Left */ = {
+			isa = PBXGroup;
+			children = (
+				6C5BDC591AB08008005FE343 /* LeftMenuTableViewCell.h */,
+				6C5BDC5A1AB08008005FE343 /* LeftMenuTableViewCell.m */,
+			);
+			name = Left;
+			sourceTree = "<group>";
+		};
+		6C5BDC581AB07F66005FE343 /* Left */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Left;
+			sourceTree = "<group>";
+		};
 		6CA07D2A1AADC5E800BEEEE7 /* Category */ = {
 			isa = PBXGroup;
 			children = (
@@ -87,6 +161,37 @@
 				6CA07D2C1AADC63000BEEEE7 /* UIImage+Snapshot.m */,
 			);
 			name = Category;
+			sourceTree = "<group>";
+		};
+		6CA07D371AAE65D400BEEEE7 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				6CA07D2A1AADC5E800BEEEE7 /* Category */,
+				6C5BDC561AB07F4B005FE343 /* Model */,
+				6C5BDC551AB07F43005FE343 /* View */,
+				6CA07D391AAE65EC00BEEEE7 /* ViewController */,
+			);
+			name = Base;
+			sourceTree = "<group>";
+		};
+		6CA07D391AAE65EC00BEEEE7 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				6CA07D3A1AAE65F600BEEEE7 /* Left */,
+				6CEE19481AADC43A006CB3DD /* Root */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		6CA07D3A1AAE65F600BEEEE7 /* Left */ = {
+			isa = PBXGroup;
+			children = (
+				6C5BDC3E1AB0721B005FE343 /* LeftMenuViewController.h */,
+				6C5BDC3F1AB0721B005FE343 /* LeftMenuViewController.m */,
+				6C5BDC521AB07ADD005FE343 /* LeftMenuTableViewController.h */,
+				6C5BDC531AB07ADD005FE343 /* LeftMenuTableViewController.m */,
+			);
+			name = Left;
 			sourceTree = "<group>";
 		};
 		6CEE18FF1AADBC78006CB3DD = {
@@ -129,16 +234,10 @@
 		6CEE19341AADC291006CB3DD /* Galleon */ = {
 			isa = PBXGroup;
 			children = (
-				6CA07D2A1AADC5E800BEEEE7 /* Category */,
-				6CEE19481AADC43A006CB3DD /* Root */,
-				6CEE19471AADC2A0006CB3DD /* Supporting Files */,
-				6CEE19371AADC291006CB3DD /* LaunchScreen.xib */,
 				6CEE19391AADC291006CB3DD /* Main.storyboard */,
-				6CEE193B1AADC291006CB3DD /* Images.xcassets */,
-				6CEE193C1AADC291006CB3DD /* Info.plist */,
-				6CEE193D1AADC291006CB3DD /* main.m */,
-				6CEE193E1AADC291006CB3DD /* ViewController.h */,
-				6CEE193F1AADC291006CB3DD /* ViewController.m */,
+				6CA07D371AAE65D400BEEEE7 /* Base */,
+				6C5BDC461AB074DF005FE343 /* Resource */,
+				6CEE19471AADC2A0006CB3DD /* Supporting Files */,
 			);
 			path = Galleon;
 			sourceTree = "<group>";
@@ -146,6 +245,12 @@
 		6CEE19471AADC2A0006CB3DD /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				6CEE19371AADC291006CB3DD /* LaunchScreen.xib */,
+				6CEE193B1AADC291006CB3DD /* Images.xcassets */,
+				6CEE193C1AADC291006CB3DD /* Info.plist */,
+				6CEE193D1AADC291006CB3DD /* main.m */,
+				6CEE193E1AADC291006CB3DD /* ViewController.h */,
+				6CEE193F1AADC291006CB3DD /* ViewController.m */,
 				6CEE19351AADC291006CB3DD /* AppDelegate.h */,
 				6CEE19361AADC291006CB3DD /* AppDelegate.m */,
 			);
@@ -233,8 +338,8 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				en,
 				Base,
+				"zh-Hans",
 			);
 			mainGroup = 6CEE18FF1AADBC78006CB3DD;
 			productRefGroup = 6CEE19091AADBC78006CB3DD /* Products */;
@@ -254,8 +359,14 @@
 			files = (
 				6CEE19441AADC291006CB3DD /* Info.plist in Resources */,
 				6CEE19431AADC291006CB3DD /* Images.xcassets in Resources */,
+				6C5BDC501AB0754C005FE343 /* ic_sidebar_message.png in Resources */,
+				6C5BDC4F1AB0754C005FE343 /* ic_sidebar_homepage.png in Resources */,
+				6C5BDC4D1AB0754C005FE343 /* ic_sidebar_about_us.png in Resources */,
+				6C5BDC6B1AB0933D005FE343 /* Localizable.strings in Resources */,
+				6C5BDC4E1AB0754C005FE343 /* ic_sidebar_exhibition.png in Resources */,
 				6CEE19411AADC291006CB3DD /* LaunchScreen.xib in Resources */,
 				6CEE19421AADC291006CB3DD /* Main.storyboard in Resources */,
+				6C5BDC511AB0754C005FE343 /* ic_sidebar_news.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,7 +421,10 @@
 				6CEE19451AADC291006CB3DD /* main.m in Sources */,
 				6CEE194B1AADC4A2006CB3DD /* UISnapShotNavigationController.m in Sources */,
 				6CA07D2D1AADC63000BEEEE7 /* UIImage+Snapshot.m in Sources */,
+				6C5BDC401AB0721B005FE343 /* LeftMenuViewController.m in Sources */,
+				6C5BDC5B1AB08008005FE343 /* LeftMenuTableViewCell.m in Sources */,
 				6CEE19401AADC291006CB3DD /* AppDelegate.m in Sources */,
+				6C5BDC541AB07ADD005FE343 /* LeftMenuTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -386,7 +500,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -421,7 +535,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;

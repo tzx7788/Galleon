@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <include layout="@layout/main_title_bar"/>
+    
+	<include layout="@layout/progressbar"/>
+	
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#fafafa" >
+
+        <ListView
+            android:id="@+id/msgList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none"
+            >
+            
+        </ListView>
+
+        <ImageButton
+            android:id="@+id/ibtnLeaveMsg"
+            android:layout_width="67dp"
+            android:layout_height="67dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="60dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/ic_leave_new_message" />
+    </RelativeLayout>
+
+</LinearLayout>

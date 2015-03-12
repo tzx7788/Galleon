@@ -7,8 +7,11 @@
 //
 
 #import "ViewController.h"
+#import "LeftMenuViewController.h"
 
 @interface ViewController ()
+
+@property (nonatomic, strong) LeftMenuViewController * leftMenuViewController;
 
 @end
 
@@ -16,7 +19,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    self.leftMenuViewController = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"LeftMenuViewController"];
+    [self addChildViewController:self.leftMenuViewController];
+    [self.view addSubview:self.leftMenuViewController.view];
 }
 
 - (void)didReceiveMemoryWarning {
