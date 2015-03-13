@@ -11,6 +11,7 @@
 #import "RootContentViewController.h"
 #import "UISnapShotNavigationController.h"
 #import "UIView+Resize.h"
+#import "NotificationConstant.h"
 
 typedef enum {
     WERootContainerViewControllerSlideDirectionStill = 0, // Default
@@ -48,6 +49,8 @@ typedef enum {
     [self addChildViewController:self.contentNavigationController];
     [self.view addSubview:self.contentNavigationController.view];
     [self configureGesture];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(showLeftMenu) name:NotificationShowLeftMenu object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(showContent) name:NotificationShowContent object:nil];
 }
 
 - (void)configureGesture
@@ -161,6 +164,13 @@ typedef enum {
     }
     
     return NO;
+}
+
+- (void) finalize
+{
+    [super finalize];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:NotificationShowLeftMenu object:nil];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:NotificationShowContent object:nil];
 }
 
 - (void)didReceiveMemoryWarning {

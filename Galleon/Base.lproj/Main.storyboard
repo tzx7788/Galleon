@@ -121,6 +121,7 @@
                                 </state>
                                 <connections>
                                     <action selector="btnClicked:" destination="WqI-eX-til" eventType="touchUpInside" id="zqW-HE-yfj"/>
+                                    <segue destination="iXl-SV-bBy" kind="push" id="DZ3-CS-o6c"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -144,8 +145,20 @@
                     <view key="view" contentMode="scaleToFill" id="qWw-5H-KQ9">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BWr-2O-wfV">
+                                <rect key="frame" x="100" y="108" width="46" height="30"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="iXl-SV-bBy" kind="push" id="Xyv-Z1-jHb"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="LPR-Wj-OSh"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xo9-88-jh5" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -156,4 +169,7 @@
     <resources>
         <image name="ic_sidebar_homepage.png" width="72" height="72"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="DZ3-CS-o6c"/>
+    </inferredMetricsTieBreakers>
 </document>

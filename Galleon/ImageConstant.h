@@ -15,4 +15,16 @@
 #define DiscussIcon         [UIImage imageNamed:@"ic_sidebar_message"]
 #define AboutUsIcon         [UIImage imageNamed:@"ic_sidebar_about_us"]
 
+#define TabBarBackGround    [UIImage imageNamed:@"bg_tab_bar"]
+
+#define BackButtonBackGround    [UIImage imageNamed:@"btn_back"]
+#define HomeButtonBackGround    [UIImage imageNamed:@"test_menu"]
+
+#define ExhibitionIntroduceBackGround [UIImage imageNamed:@"pic_1huiyijieshao"]
+#define ExhibitionServiceBackGround   [UIImage imageNamed:@"pic_2jiaotongzhusu"]
+#define ExhibitionHostBackGround      [UIImage imageNamed:@"pic_3zuweihui"]
+#define ExhibitionScheduleBackGround  [UIImage imageNamed:@"pic_4huiyiricheng"]
+#define ExhibitionlayoutBackGround    [UIImage imageNamed:@"pic_5huichangbuju"]
+#define ExhibitionDownloadsBackGround [UIImage imageNamed:@"pic_6lijiehuiyibaogao"]
+
 #endif

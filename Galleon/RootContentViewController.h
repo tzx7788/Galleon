@@ -10,6 +10,6 @@
 
 @interface RootContentViewController : SuperViewController
 
-
+@property (nonatomic,strong) UIViewController * contentController;
 
 @end

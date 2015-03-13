@@ -82,6 +82,7 @@
         default:
             break;
     }
+    [[NSNotificationCenter defaultCenter] postNotificationName:NotificationShowContent object:nil];
 }
 
 @end

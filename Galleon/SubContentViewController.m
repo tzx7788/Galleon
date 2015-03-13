@@ -7,6 +7,7 @@
 //
 
 #import "SubContentViewController.h"
+#import "ImageConstant.h"
 
 @interface SubContentViewController ()
 
@@ -16,7 +17,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    UIBarButtonItem * backBarButtonItem = [[UIBarButtonItem alloc] initWithImage:BackButtonBackGround style:UIBarButtonItemStyleBordered target:self action:@selector(popBack)];
+    [backBarButtonItem setTintColor:[UIColor whiteColor]];
+    self.navigationItem.leftBarButtonItem = backBarButtonItem;
+}
+
+- (void)popBack
+{
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (void)didReceiveMemoryWarning {

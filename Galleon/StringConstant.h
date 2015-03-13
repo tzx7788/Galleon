@@ -15,4 +15,11 @@
 #define Discuss     NSLocalizedString(@"Discuss",nil)
 #define AboutUs     NSLocalizedString(@"About Us",nil)
 
+#define ExhibitionIntroduce NSLocalizedString(@"Introduction",nil)
+#define ExhibitionService   NSLocalizedString(@"Service",nil)
+#define ExhibitionHost      NSLocalizedString(@"Host Community",nil)
+#define ExhibitionSchedule  NSLocalizedString(@"Schedule",nil)
+#define Exhibitionlayout    NSLocalizedString(@"Layout",nil)
+#define ExhibitionDownloads NSLocalizedString(@"Downloads",nil)
+
 #endif

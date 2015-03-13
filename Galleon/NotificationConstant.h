@@ -17,7 +17,14 @@
 
 #define NotificationReloadLeftMenu      @"NotificationReloadLeftMenu"
 
-#define DisableRootScrollView @"DisableRootScrollView"
-#define EnableRootScrollView @"EnableRootScrollView"
+#define NotificationShowLeftMenu        @"NotificationShowLeftMenu"
+#define NotificationShowContent         @"NotificationShowContent"
+
+#define NotificationExhibitionIntroduce @"NotificationExhibitionIntroduce"
+#define NotificationExhibitionService   @"NotificationExhibitionService"
+#define NotificationExhibitionHost      @"NotificationExhibitionHost"
+#define NotificationExhibitionSchedule  @"NotificationExhibitionSchedule"
+#define NotificationExhibitionlayout    @"NotificationExhibitionlayout"
+#define NotificationExhibitionDownloads @"NotificationExhibitionDownloads"
 
 #endif

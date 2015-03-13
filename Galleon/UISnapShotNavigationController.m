@@ -8,6 +8,7 @@
 
 #import "UISnapShotNavigationController.h"
 #import "UIImage+Snapshot.h"
+#import "ImageConstant.h"
 #import <QuartzCore/QuartzCore.h>
 
 static CGFloat kMinThreshold = 277/3;
@@ -49,6 +50,8 @@ static NSString *const snapShotViewKey = @"snapShotViewKey";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    [self.navigationBar setBackgroundImage:TabBarBackGround forBarMetrics:UIBarMetricsDefault];
   
     self.leftSnapshotView.hidden = YES;
     

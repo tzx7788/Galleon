@@ -8,6 +8,9 @@
 
 #import "RootContentViewController.h"
 #import "NotificationConstant.h"
+#import "ImageConstant.h"
+#import "NotificationConstant.h"
+#import "ExhibitionViewController.h"
 
 @interface RootContentViewController ()
 
@@ -17,17 +20,41 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSLog(@"%@",self.navigationController);
+    UIBarButtonItem * homeButtonItem = [[UIBarButtonItem alloc] initWithImage:HomeButtonBackGround style:UIBarButtonItemStyleBordered target:self action:@selector(showLeftMenu)];
+    [homeButtonItem setTintColor:[UIColor whiteColor]];
+    self.navigationItem.leftBarButtonItem = homeButtonItem;
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loadExhibitionViewController) name:NotificationExhibitionClicked object:nil];
 }
 
-- (void) viewDidAppear:(BOOL)animated
+- (void) finalize
 {
-    //[[NSNotificationCenter defaultCenter] postNotificationName:EnableRootScrollView object:nil];
+    [super finalize];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:NotificationExhibitionClicked object:nil];
 }
 
-- (void) viewWillDisappear:(BOOL)animated
+- (void)loadExhibitionViewController
 {
-    //[[NSNotificationCenter defaultCenter] postNotificationName:DisableRootScrollView object:nil];
+    [self loadViewController:[ExhibitionViewController createViewController]];
+}
+
+- (void)loadViewController:(UIViewController *) vc
+{
+    if (self.contentController){
+        [self.contentController.view removeFromSuperview];
+        [self.contentController removeFromParentViewController];
+    }
+    self.contentController = vc;
+    [self addChildViewController:self.contentController];
+    CGRect frame = self.view.bounds;
+    frame.size.height -= self.navigationController.navigationBar.bounds.size.height+20;
+    frame.origin.y += self.navigationController.navigationBar.bounds.size.height+20;
+    [self.contentController.view setFrame:frame];
+    [self.view addSubview:self.contentController.view];
+}
+
+- (void)showLeftMenu
+{
+    [[NSNotificationCenter defaultCenter] postNotificationName:NotificationShowLeftMenu object:nil];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -35,7 +62,7 @@
     // Dispose of any resources that can be recreated.
 }
 - (IBAction)btnClicked:(id)sender {
-    [self.navigationController pushViewController:[[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"SubContentViewController"]animated:YES];
+    //[self.navigationController pushViewController:[[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"SubContentViewController"]animated:YES];
 }
 
 /*
