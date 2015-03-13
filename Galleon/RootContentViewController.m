@@ -11,9 +11,10 @@
 #import "ImageConstant.h"
 #import "NotificationConstant.h"
 #import "ExhibitionViewController.h"
+#import "TitleLabel.h"
 
 @interface RootContentViewController ()
-
+@property (nonatomic,strong) TitleLabel * titleLabel;
 @end
 
 @implementation RootContentViewController
@@ -24,6 +25,8 @@
     [homeButtonItem setTintColor:[UIColor whiteColor]];
     self.navigationItem.leftBarButtonItem = homeButtonItem;
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loadExhibitionViewController) name:NotificationExhibitionClicked object:nil];
+    self.titleLabel = [TitleLabel createLabel];
+    self.navigationItem.titleView = self.titleLabel;
 }
 
 - (void) finalize
@@ -34,6 +37,7 @@
 
 - (void)loadExhibitionViewController
 {
+    self.titleLabel.text = @"Exhibition";
     [self loadViewController:[ExhibitionViewController createViewController]];
 }
 

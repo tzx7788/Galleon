@@ -8,6 +8,7 @@
 
 #import "ExhibitionViewController.h"
 #import "ExhibitionTableViewCell.h"
+#import "TitleLabel.h"
 
 @interface ExhibitionViewController ()<UITableViewDataSource,UITableViewDelegate>
 
@@ -25,6 +26,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.tableView registerClass:[ExhibitionTableViewCell class] forCellReuseIdentifier:@"ExhibitionTableViewCell"];
+
 }
 
 - (void)didReceiveMemoryWarning {
