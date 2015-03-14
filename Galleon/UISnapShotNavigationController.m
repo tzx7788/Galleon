@@ -11,11 +11,7 @@
 #import "ImageConstant.h"
 #import <QuartzCore/QuartzCore.h>
 
-#import "NotificationConstant.h"
 
-#import "SubContentViewController.h"
-#import "ExhibitionViewController.h"
-#import "ExhibitionModel.h"
 #import "TitleLabel.h"
 
 static CGFloat kMinThreshold = 277/3;
@@ -67,34 +63,7 @@ static NSString *const snapShotViewKey = @"snapShotViewKey";
     [self.view addGestureRecognizer:gestureRecognizer];
     
     [self renderShadow];
-    
-    
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(exhibitionclicked:) name:NotificationExhibitionClicked object:nil];
 }
-
-- (void)finalize
-{
-    [super finalize];
-    [[NSNotificationCenter defaultCenter] removeObserver:self name:NotificationExhibitionClicked object:nil];
-}
-
-- (void)exhibitionclicked:(NSNotification *) notification
-{
-    if ( [[notification object] isKindOfClass:[ExhibitionModel class]] ) {
-        ExhibitionModel * model = [notification object];
-        SubContentViewController * svc = [SubContentViewController createViewController];
-        TitleLabel * label = [TitleLabel createLabel];
-        label.text = model.exhibitionName;
-        self.navigationItem.titleView = label;
-        svc.titleLabel = label;
-        ExhibitionViewController * vc = [ExhibitionViewController createViewController];
-        svc.contentViewController = vc;
-        vc.model = model;
-        [self pushViewController:svc animated:YES];
-    }
-}
-
-
 
 - (void)handlePan:(UIPanGestureRecognizer *)gestureRecognizer {
     if ([gestureRecognizer state] == UIGestureRecognizerStateBegan) {

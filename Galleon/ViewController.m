@@ -9,7 +9,7 @@
 #import "ViewController.h"
 #import "LeftMenuViewController.h"
 #import "RootContentViewController.h"
-#import "UISnapShotNavigationController.h"
+#import "GalleonNavigationController.h"
 #import "UIView+Resize.h"
 #import "NotificationConstant.h"
 
@@ -45,7 +45,7 @@ typedef enum {
     [self addChildViewController:self.leftMenuViewController];
     [self.view addSubview:self.leftMenuViewController.view];
     self.rootContentViewController = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"RootContentViewController"];
-    self.contentNavigationController = [[UISnapShotNavigationController alloc] initWithRootViewController:self.rootContentViewController];
+    self.contentNavigationController = [[GalleonNavigationController alloc] initWithRootViewController:self.rootContentViewController];
     [self addChildViewController:self.contentNavigationController];
     [self.view addSubview:self.contentNavigationController.view];
     [self configureGesture];

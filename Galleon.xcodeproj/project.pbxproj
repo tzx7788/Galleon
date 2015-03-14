@@ -31,6 +31,7 @@
 		6CA07D2D1AADC63000BEEEE7 /* UIImage+Snapshot.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CA07D2C1AADC63000BEEEE7 /* UIImage+Snapshot.m */; };
 		6CA763971AB16BAD00A9185F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6CA763951AB16BAD00A9185F /* Main.storyboard */; };
 		6CAA1D311AB3C2AB00B848BD /* ExhibitionListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CAA1D301AB3C2AB00B848BD /* ExhibitionListModel.m */; };
+		6CAA1D371AB3E29900B848BD /* GalleonNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CAA1D361AB3E29900B848BD /* GalleonNavigationController.m */; };
 		6CC6EBBE1AB31E2300A9392E /* TitleLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CC6EBBD1AB31E2300A9392E /* TitleLabel.m */; };
 		6CC6EBC01AB31E3800A9392E /* TitleLabel.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6CC6EBBF1AB31E3800A9392E /* TitleLabel.xib */; };
 		6CC6EBC61AB328AD00A9392E /* ExhibitionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CC6EBC51AB328AD00A9392E /* ExhibitionModel.m */; };
@@ -99,6 +100,8 @@
 		6CA763961AB16BAD00A9185F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6CAA1D2F1AB3C2AB00B848BD /* ExhibitionListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExhibitionListModel.h; sourceTree = "<group>"; };
 		6CAA1D301AB3C2AB00B848BD /* ExhibitionListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExhibitionListModel.m; sourceTree = "<group>"; };
+		6CAA1D351AB3E29900B848BD /* GalleonNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GalleonNavigationController.h; sourceTree = "<group>"; };
+		6CAA1D361AB3E29900B848BD /* GalleonNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GalleonNavigationController.m; sourceTree = "<group>"; };
 		6CBDA9661AB12881003CCB20 /* ImageConstant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageConstant.h; sourceTree = "<group>"; };
 		6CC6EBBC1AB31E2300A9392E /* TitleLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TitleLabel.h; sourceTree = "<group>"; };
 		6CC6EBBD1AB31E2300A9392E /* TitleLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TitleLabel.m; sourceTree = "<group>"; };
@@ -604,6 +607,8 @@
 			children = (
 				6CEE19491AADC4A2006CB3DD /* UISnapShotNavigationController.h */,
 				6CEE194A1AADC4A2006CB3DD /* UISnapShotNavigationController.m */,
+				6CAA1D351AB3E29900B848BD /* GalleonNavigationController.h */,
+				6CAA1D361AB3E29900B848BD /* GalleonNavigationController.m */,
 				6CF078891AB197FB00DF0C0C /* RootContentViewController.h */,
 				6CF0788A1AB197FB00DF0C0C /* RootContentViewController.m */,
 				6CF0788C1AB1BF3100DF0C0C /* SubContentViewController.h */,
@@ -786,6 +791,7 @@
 				6CF0788B1AB197FB00DF0C0C /* RootContentViewController.m in Sources */,
 				6CEE194B1AADC4A2006CB3DD /* UISnapShotNavigationController.m in Sources */,
 				6CA07D2D1AADC63000BEEEE7 /* UIImage+Snapshot.m in Sources */,
+				6CAA1D371AB3E29900B848BD /* GalleonNavigationController.m in Sources */,
 				6CC6EBC61AB328AD00A9392E /* ExhibitionModel.m in Sources */,
 				6C5BDC401AB0721B005FE343 /* LeftMenuViewController.m in Sources */,
 				6CC6EBCF1AB3371900A9392E /* ExhibitionListTableViewCell.m in Sources */,
