@@ -10,6 +10,7 @@
 #import "LeftMenuTableViewCell.h"
 #import "NotificationConstant.h"
 #import "ExhibitionListModel.h"
+#import "LeftMenuUserHeaderView.h"
 
 @interface LeftMenuTableViewController ()
 
@@ -19,6 +20,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self.tableView setScrollEnabled:NO];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -26,6 +28,16 @@
 }
 
 #pragma mark - Table view data source
+
+- (CGFloat) tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+{
+    return LeftMenuUserHeaderViewHeight;
+}
+
+- (UIView *) tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+{
+    return [LeftMenuUserHeaderView createView];
+}
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;

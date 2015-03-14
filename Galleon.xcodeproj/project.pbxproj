@@ -32,6 +32,8 @@
 		6CA763971AB16BAD00A9185F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6CA763951AB16BAD00A9185F /* Main.storyboard */; };
 		6CAA1D311AB3C2AB00B848BD /* ExhibitionListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CAA1D301AB3C2AB00B848BD /* ExhibitionListModel.m */; };
 		6CAA1D371AB3E29900B848BD /* GalleonNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CAA1D361AB3E29900B848BD /* GalleonNavigationController.m */; };
+		6CAA1D3E1AB3ED2F00B848BD /* LeftMenuUserHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CAA1D3D1AB3ED2F00B848BD /* LeftMenuUserHeaderView.m */; };
+		6CAA1D421AB3ED6000B848BD /* LeftMenuUserHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6CAA1D411AB3ED6000B848BD /* LeftMenuUserHeaderView.xib */; };
 		6CC6EBBE1AB31E2300A9392E /* TitleLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CC6EBBD1AB31E2300A9392E /* TitleLabel.m */; };
 		6CC6EBC01AB31E3800A9392E /* TitleLabel.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6CC6EBBF1AB31E3800A9392E /* TitleLabel.xib */; };
 		6CC6EBC61AB328AD00A9392E /* ExhibitionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CC6EBC51AB328AD00A9392E /* ExhibitionModel.m */; };
@@ -102,6 +104,9 @@
 		6CAA1D301AB3C2AB00B848BD /* ExhibitionListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExhibitionListModel.m; sourceTree = "<group>"; };
 		6CAA1D351AB3E29900B848BD /* GalleonNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GalleonNavigationController.h; sourceTree = "<group>"; };
 		6CAA1D361AB3E29900B848BD /* GalleonNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GalleonNavigationController.m; sourceTree = "<group>"; };
+		6CAA1D3C1AB3ED2F00B848BD /* LeftMenuUserHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftMenuUserHeaderView.h; sourceTree = "<group>"; };
+		6CAA1D3D1AB3ED2F00B848BD /* LeftMenuUserHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftMenuUserHeaderView.m; sourceTree = "<group>"; };
+		6CAA1D411AB3ED6000B848BD /* LeftMenuUserHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LeftMenuUserHeaderView.xib; sourceTree = "<group>"; };
 		6CBDA9661AB12881003CCB20 /* ImageConstant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageConstant.h; sourceTree = "<group>"; };
 		6CC6EBBC1AB31E2300A9392E /* TitleLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TitleLabel.h; sourceTree = "<group>"; };
 		6CC6EBBD1AB31E2300A9392E /* TitleLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TitleLabel.m; sourceTree = "<group>"; };
@@ -214,6 +219,9 @@
 			children = (
 				6C5BDC591AB08008005FE343 /* LeftMenuTableViewCell.h */,
 				6C5BDC5A1AB08008005FE343 /* LeftMenuTableViewCell.m */,
+				6CAA1D3C1AB3ED2F00B848BD /* LeftMenuUserHeaderView.h */,
+				6CAA1D3D1AB3ED2F00B848BD /* LeftMenuUserHeaderView.m */,
+				6CAA1D411AB3ED6000B848BD /* LeftMenuUserHeaderView.xib */,
 			);
 			name = Left;
 			sourceTree = "<group>";
@@ -714,6 +722,7 @@
 				6C6E63521AB287E60014F47F /* pic_2jiaotongzhusu.png in Resources */,
 				6CEE19431AADC291006CB3DD /* Images.xcassets in Resources */,
 				6C5BDC501AB0754C005FE343 /* ic_sidebar_message.png in Resources */,
+				6CAA1D421AB3ED6000B848BD /* LeftMenuUserHeaderView.xib in Resources */,
 				6CC6EBCB1AB3357E00A9392E /* ExhibitionListViewController.xib in Resources */,
 				6C6E63561AB287E60014F47F /* pic_6lijiehuiyibaogao.png in Resources */,
 				6C6E63531AB287E60014F47F /* pic_3zuweihui.png in Resources */,
@@ -785,6 +794,7 @@
 				6CF078911AB1DA8900DF0C0C /* UIView+Resize.m in Sources */,
 				6CEE19461AADC291006CB3DD /* ViewController.m in Sources */,
 				6CEE19451AADC291006CB3DD /* main.m in Sources */,
+				6CAA1D3E1AB3ED2F00B848BD /* LeftMenuUserHeaderView.m in Sources */,
 				6CAA1D311AB3C2AB00B848BD /* ExhibitionListModel.m in Sources */,
 				6C6E635F1AB290530014F47F /* ExhibitionTableViewCell.m in Sources */,
 				6CC6EBCA1AB3357E00A9392E /* ExhibitionListViewController.m in Sources */,
