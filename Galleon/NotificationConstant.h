@@ -15,6 +15,8 @@
 #define NotificationDiscussClicked      @"NotificationDiscussClicked"
 #define NotificationAboutClicked        @"NotificationAboutClicked"
 
+#define NotificationExhibitionListClicked @"NotificationExhibitionListClicked"
+
 #define NotificationReloadLeftMenu      @"NotificationReloadLeftMenu"
 
 #define NotificationShowLeftMenu        @"NotificationShowLeftMenu"

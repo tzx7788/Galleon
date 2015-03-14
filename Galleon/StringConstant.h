@@ -22,4 +22,6 @@
 #define Exhibitionlayout    NSLocalizedString(@"Layout",nil)
 #define ExhibitionDownloads NSLocalizedString(@"Downloads",nil)
 
+#define ExhibitionList      NSLocalizedString(@"Exhibition List",nil)
+
 #endif

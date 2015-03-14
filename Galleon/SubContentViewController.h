@@ -7,7 +7,13 @@
 //
 
 #import "SuperViewController.h"
+#import "TitleLabel.h"
 
 @interface SubContentViewController : SuperViewController
+
+@property (nonatomic, strong) UIViewController * contentViewController;
+@property (nonatomic, strong) TitleLabel * titleLabel;
+
++ (SubContentViewController *) createViewController;
 
 @end

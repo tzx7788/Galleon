@@ -9,6 +9,7 @@
 #import "LeftMenuTableViewController.h"
 #import "LeftMenuTableViewCell.h"
 #import "NotificationConstant.h"
+#import "ExhibitionListModel.h"
 
 @interface LeftMenuTableViewController ()
 
@@ -71,10 +72,15 @@
             [[NSNotificationCenter defaultCenter] postNotificationName:NotificationNewsClicked object:nil];
             break;
         case LeftMenuTableViewCellExhibition:
-            [[NSNotificationCenter defaultCenter] postNotificationName:NotificationExhibitionClicked object:nil];
+        {
+            ExhibitionListModel * model = [[ExhibitionListModel alloc] init];
+            [[NSNotificationCenter defaultCenter] postNotificationName:NotificationExhibitionListClicked object:model];
+        }
             break;
         case LeftMenuTableViewCellDiscuss:
+        {
             [[NSNotificationCenter defaultCenter] postNotificationName:NotificationDiscussClicked object:nil];
+        }
             break;
         case LeftMenuTableViewCellAbout:
             [[NSNotificationCenter defaultCenter] postNotificationName:NotificationAboutClicked object:nil];

@@ -11,6 +11,4 @@
 
 @interface UISnapShotNavigationController : UINavigationController
 
-
-
 @end

@@ -9,6 +9,7 @@
 #import "ExhibitionViewController.h"
 #import "ExhibitionTableViewCell.h"
 #import "TitleLabel.h"
+#import "TitleLabel.h"
 
 @interface ExhibitionViewController ()<UITableViewDataSource,UITableViewDelegate>
 
@@ -25,7 +26,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self.tableView registerClass:[ExhibitionTableViewCell class] forCellReuseIdentifier:@"ExhibitionTableViewCell"];
+    TitleLabel * titleLabel = [TitleLabel createLabel];
+    titleLabel = [TitleLabel createLabel];
+    titleLabel.text = self.model.exhibitionName;
+    self.navigationItem.titleView = titleLabel;
+    [self.tableView registerNib:[UINib nibWithNibName:@"ExhibitionTableViewCell" bundle:nil] forCellReuseIdentifier:@"ExhibitionTableViewCell"];
 
 }
 
@@ -52,9 +57,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     ExhibitionTableViewCell * cell;
-    cell = [tableView dequeueReusableCellWithIdentifier:@"ExhibitionTableViewCell"];
-    if ( cell != NULL)
-        cell = [ExhibitionTableViewCell createCell];
+    cell = [tableView dequeueReusableCellWithIdentifier:@"ExhibitionTableViewCell" forIndexPath:indexPath];
     ExhibitionType * type = [[ExhibitionType alloc] init];
     switch (indexPath.row) {
         case 0:

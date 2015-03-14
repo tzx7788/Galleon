@@ -15,11 +15,35 @@
 
 @implementation SubContentViewController
 
++(SubContentViewController *)createViewController
+{
+    return [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"SubContentViewController"];
+}
+
+- (void)setContentViewController:(UIViewController *)contentViewController
+{
+    if ( _contentViewController && [self isViewLoaded] ) {
+        [_contentViewController removeFromParentViewController];
+        [_contentViewController.view removeFromSuperview];
+    }
+    if ( [self isViewLoaded] ) {
+        [self addChildViewController:contentViewController];
+        CGRect frame = self.view.bounds;
+        frame.size.height -= self.navigationController.navigationBar.bounds.size.height+20;
+        frame.origin.y += self.navigationController.navigationBar.bounds.size.height+20;
+        [_contentViewController.view setFrame:frame];
+        [self.view addSubview:_contentViewController.view];
+    }
+    _contentViewController = contentViewController;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.navigationItem.titleView = self.titleLabel;
     UIBarButtonItem * backBarButtonItem = [[UIBarButtonItem alloc] initWithImage:BackButtonBackGround style:UIBarButtonItemStyleBordered target:self action:@selector(popBack)];
     [backBarButtonItem setTintColor:[UIColor whiteColor]];
     self.navigationItem.leftBarButtonItem = backBarButtonItem;
+    self.contentViewController = self.contentViewController;
 }
 
 - (void)popBack

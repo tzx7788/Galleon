@@ -12,4 +12,6 @@
 
 @property (nonatomic, strong) NSString * exhibitionName;
 
+@property (nonatomic, strong) NSString * titleImageURLString;
+
 @end

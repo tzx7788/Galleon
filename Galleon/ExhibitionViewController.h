@@ -7,8 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ExhibitionModel.h"
 
 @interface ExhibitionViewController : UIViewController
+
+@property (nonatomic, strong) ExhibitionModel * model;
+
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 + (ExhibitionViewController *)createViewController;

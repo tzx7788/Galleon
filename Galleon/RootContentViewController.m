@@ -12,9 +12,12 @@
 #import "NotificationConstant.h"
 #import "ExhibitionViewController.h"
 #import "TitleLabel.h"
+#import "ExhibitionModel.h"
+#import "ExhibitionListModel.h"
+#import "StringConstant.h"
+#import "ExhibitionListViewController.h"
 
 @interface RootContentViewController ()
-@property (nonatomic,strong) TitleLabel * titleLabel;
 @end
 
 @implementation RootContentViewController
@@ -24,25 +27,30 @@
     UIBarButtonItem * homeButtonItem = [[UIBarButtonItem alloc] initWithImage:HomeButtonBackGround style:UIBarButtonItemStyleBordered target:self action:@selector(showLeftMenu)];
     [homeButtonItem setTintColor:[UIColor whiteColor]];
     self.navigationItem.leftBarButtonItem = homeButtonItem;
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loadExhibitionViewController) name:NotificationExhibitionClicked object:nil];
-    self.titleLabel = [TitleLabel createLabel];
-    self.navigationItem.titleView = self.titleLabel;
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loadExhibitionListViewController:) name:NotificationExhibitionListClicked object:nil];
 }
 
 - (void) finalize
 {
     [super finalize];
-    [[NSNotificationCenter defaultCenter] removeObserver:self name:NotificationExhibitionClicked object:nil];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:NotificationExhibitionListClicked object:nil];
 }
 
-- (void)loadExhibitionViewController
+- (void)loadExhibitionListViewController:(NSNotification *)notification
 {
-    self.titleLabel.text = @"Exhibition";
-    [self loadViewController:[ExhibitionViewController createViewController]];
+    if ( [[notification object] isKindOfClass:[ExhibitionListModel class]] ) {
+        //ExhibitionListModel * model = [notification object];
+        TitleLabel * label = [TitleLabel createLabel];
+        label.text = ExhibitionList;
+        self.navigationItem.titleView = label;
+        
+    }
+    [self loadViewController:[ExhibitionListViewController createViewController]];
 }
 
 - (void)loadViewController:(UIViewController *) vc
 {
+    [self.navigationController popToRootViewControllerAnimated:YES];
     if (self.contentController){
         [self.contentController.view removeFromSuperview];
         [self.contentController removeFromParentViewController];
