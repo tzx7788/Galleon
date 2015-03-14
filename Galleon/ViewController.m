@@ -53,6 +53,12 @@ typedef enum {
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(showContent) name:NotificationShowContent object:nil];
 }
 
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    [self performSegueWithIdentifier:@"LoginSegue" sender:nil];
+}
+
 - (void)configureGesture
 {
     UIPanGestureRecognizer *panGesture = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(didTriggerPanGesture:)];
