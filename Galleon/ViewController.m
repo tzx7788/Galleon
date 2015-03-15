@@ -13,6 +13,7 @@
 #import "UIView+Resize.h"
 #import "NotificationConstant.h"
 #import "MBProgressHUD.h"
+#import "Client.h"
 
 typedef enum {
     WERootContainerViewControllerSlideDirectionStill = 0, // Default
@@ -36,12 +37,12 @@ typedef enum {
 @property (assign, nonatomic) CGFloat slideStartPointX;
 @property (assign, nonatomic) CGFloat slideVelocityX;
 @property (assign, nonatomic) BOOL isAnimating;
-@property (strong ,nonatomic) MBProgressHUD *hud;
 @end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
+    [[Client sharedClient] test];
     [super viewDidLoad];
     self.leftMenuViewController = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"LeftMenuViewController"];
     [self addChildViewController:self.leftMenuViewController];
@@ -61,9 +62,14 @@ typedef enum {
     NSString * message = @"";
     if ( [[notification object] isKindOfClass:[NSString class]] )
         message = [notification object];
-    self.hud.labelText = message;
-    self.hud.mode = MBProgressHUDModeText;
-    [self.hud showAnimated:YES whileExecutingBlock:^{
+    MBProgressHUD * hud = [[MBProgressHUD alloc] initWithView:self.view];
+    [self.view addSubview:hud];
+    hud.delegate = self;
+    hud.dimBackground = YES;
+    hud.square = YES;
+    hud.labelText = message;
+    hud.mode = MBProgressHUDModeText;
+    [hud showAnimated:YES whileExecutingBlock:^{
         sleep(2);
     } completionBlock:^{
     }];
@@ -72,6 +78,7 @@ typedef enum {
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
+    //[[NSNotificationCenter defaultCenter] postNotificationName:NotificationWarningMessage object:@"hehehe"];
     //[self performSegueWithIdentifier:@"LoginSegue" sender:nil];
 }
 
@@ -200,24 +207,12 @@ typedef enum {
     // Dispose of any resources that can be recreated.
 }
 
-#pragma mark - Override
-- (MBProgressHUD *)hud
-{
-    if (!_hud) {
-        _hud = [[MBProgressHUD alloc] initWithView:self.view];
-        [self.view addSubview:_hud];
-        _hud.delegate = self;
-        _hud.dimBackground = YES;
-        _hud.square = YES;
-    }
-    return _hud;
-}
 
 #pragma mark - MBProgressHUDDeleagte
 - (void)hudWasHidden:(MBProgressHUD *)hud
 {
-    [self.hud removeFromSuperview];
-    self.hud = nil;
+    [hud removeFromSuperview];
+    hud = nil;
 }
 
 @end
