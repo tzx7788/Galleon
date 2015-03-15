@@ -8,6 +8,7 @@
 
 #import "RegisterViewController.h"
 #import "UIAlertView+ErrorMessage.h"
+#import "NotificationConstant.h"
 
 @interface RegisterViewController ()<UIScrollViewDelegate,UIActionSheetDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate>
 
@@ -34,6 +35,9 @@
     [actionSheet showInView:self.view];
 }
 - (IBAction)ComfirmClicked:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:^{
+        [[NSNotificationCenter defaultCenter] postNotificationName:NotificationWarningMessage object:@"hahahah"];
+    }];
 }
 - (IBAction)CancelClicked:(id)sender {
     [self.navigationController popViewControllerAnimated:YES];

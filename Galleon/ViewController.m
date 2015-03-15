@@ -12,6 +12,7 @@
 #import "GalleonNavigationController.h"
 #import "UIView+Resize.h"
 #import "NotificationConstant.h"
+#import "MBProgressHUD.h"
 
 typedef enum {
     WERootContainerViewControllerSlideDirectionStill = 0, // Default
@@ -25,7 +26,7 @@ typedef enum {
     WERootContainerViewControllerStatusLeftMenu = 1
 } WERootContainerViewControllerStatus;
 
-@interface ViewController ()<UIGestureRecognizerDelegate>
+@interface ViewController ()<UIGestureRecognizerDelegate,MBProgressHUDDelegate>
 
 @property (nonatomic, strong) LeftMenuViewController * leftMenuViewController;
 @property (nonatomic, strong) UISnapShotNavigationController * contentNavigationController;
@@ -35,6 +36,7 @@ typedef enum {
 @property (assign, nonatomic) CGFloat slideStartPointX;
 @property (assign, nonatomic) CGFloat slideVelocityX;
 @property (assign, nonatomic) BOOL isAnimating;
+@property (strong ,nonatomic) MBProgressHUD *hud;
 @end
 
 @implementation ViewController
@@ -51,12 +53,26 @@ typedef enum {
     [self configureGesture];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(showLeftMenu) name:NotificationShowLeftMenu object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(showContent) name:NotificationShowContent object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(showWarningMessage:) name:NotificationWarningMessage object:nil];
+}
+
+- (void)showWarningMessage:(NSNotification *) notification
+{
+    NSString * message = @"";
+    if ( [[notification object] isKindOfClass:[NSString class]] )
+        message = [notification object];
+    self.hud.labelText = message;
+    self.hud.mode = MBProgressHUDModeText;
+    [self.hud showAnimated:YES whileExecutingBlock:^{
+        sleep(2);
+    } completionBlock:^{
+    }];
 }
 
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-    [self performSegueWithIdentifier:@"LoginSegue" sender:nil];
+    //[self performSegueWithIdentifier:@"LoginSegue" sender:nil];
 }
 
 - (void)configureGesture
@@ -182,6 +198,26 @@ typedef enum {
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - Override
+- (MBProgressHUD *)hud
+{
+    if (!_hud) {
+        _hud = [[MBProgressHUD alloc] initWithView:self.view];
+        [self.view addSubview:_hud];
+        _hud.delegate = self;
+        _hud.dimBackground = YES;
+        _hud.square = YES;
+    }
+    return _hud;
+}
+
+#pragma mark - MBProgressHUDDeleagte
+- (void)hudWasHidden:(MBProgressHUD *)hud
+{
+    [self.hud removeFromSuperview];
+    self.hud = nil;
 }
 
 @end

@@ -29,4 +29,6 @@
 #define NotificationExhibitionlayout    @"NotificationExhibitionlayout"
 #define NotificationExhibitionDownloads @"NotificationExhibitionDownloads"
 
+#define NotificationWarningMessage  @"NotificationWarningMessage"
+
 #endif
