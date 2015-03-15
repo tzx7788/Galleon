@@ -157,7 +157,6 @@
         <!--Register View Controller-->
         <scene sceneID="BXB-6W-YHq">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="85W-3Z-xv9" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="ETk-GG-08E" customClass="RegisterViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="cUi-Sv-bMU"/>
@@ -255,6 +254,7 @@
                         <outlet property="scrollView" destination="yhI-OI-0nq" id="EUp-Sa-cYt"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="85W-3Z-xv9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1685" y="173"/>
         </scene>

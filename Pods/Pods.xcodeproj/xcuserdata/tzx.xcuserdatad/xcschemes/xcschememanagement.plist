@@ -9,6 +9,26 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-Galleon-DMFoundation.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-Galleon-DMImage.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-Galleon-DMPdfView.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-Galleon-DMRequest.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-Galleon-MBProgressHUD.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -27,22 +47,42 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>3EC7E2BD2648B2D9532AC9F2</key>
+		<key>13EC321A39117B5EF3FA79C7</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>DCBD5A0D251DBFBA295AE9E6</key>
+		<key>3C8AD7264BBEB268560508F9</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E7A86A4354CCF5110C7742DA</key>
+		<key>5279742C23F3472437FD7A86</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>EB63B10FEB83F885885EE32C</key>
+		<key>80C9B674EBC5A2657A9A92EA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A459B6735AD796FB784A56B6</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>BC3CC4F23F1DC21C54C5CA95</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>EF0F5CDC3AC06535681D9DEF</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F1899780BD6BA7E8F0768C12</key>
 		<dict>
 			<key>primary</key>
 			<true/>

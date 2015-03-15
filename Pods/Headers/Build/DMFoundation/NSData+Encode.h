@@ -1,0 +1,1 @@
+../../../DMFoundation/Classes/NSData+Encode.h
