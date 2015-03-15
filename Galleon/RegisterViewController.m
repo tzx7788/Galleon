@@ -7,8 +7,9 @@
 //
 
 #import "RegisterViewController.h"
+#import "UIAlertView+ErrorMessage.h"
 
-@interface RegisterViewController ()<UIScrollViewDelegate>
+@interface RegisterViewController ()<UIScrollViewDelegate,UIActionSheetDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate>
 
 @end
 
@@ -22,6 +23,58 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+- (IBAction)updateAvatarButtonClicked:(id)sender {
+    UIActionSheet *actionSheet = [[UIActionSheet alloc]
+                                  initWithTitle:nil
+                                  delegate:self
+                                  cancelButtonTitle:@"取消"
+                                  destructiveButtonTitle:nil
+                                  otherButtonTitles:@"拍照", @"从相册选取", nil];
+    [actionSheet showInView:self.view];
+}
+- (IBAction)ComfirmClicked:(id)sender {
+}
+- (IBAction)CancelClicked:(id)sender {
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+#pragma mark - UIActionSheetDelegate
+- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
+    if(buttonIndex == actionSheet.cancelButtonIndex)
+        return;
+    
+    UIImagePickerController *ipc = [[UIImagePickerController alloc] init];
+    ipc.delegate = self;
+    ipc.allowsEditing = YES;
+    
+    if(buttonIndex == 1) {
+        ipc.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    } else if(buttonIndex == 0) {
+        ipc.sourceType = UIImagePickerControllerSourceTypeCamera;
+    }
+    
+    [self presentViewController:ipc animated:YES completion:nil];
+}
+
+#pragma mark - UIImagePickerController delegate
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
+{
+    UIImage *edittedImage = [info objectForKey:UIImagePickerControllerEditedImage];
+    
+    if (edittedImage.size.height > edittedImage.size.width + 3.5f || edittedImage.size.height < edittedImage.size.width - 3.5f) {
+        [UIAlertView alertErrorMessage:@"为了达到更好的头像显示效果，请上传正方形头像"];
+    }
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
+    
+//    WERequest *request = [WERequest requestWithSuccessBlock:^(id responseObject) {
+//        self.avatarImageView.image = edittedImage;
+//    } failureBlock:^(NSError *error, NSString *responseString) {
+//        [UIAlertView alertErrorMessage:@"上传头像失败"];
+//    }];
+//    [request updateCurrentUserAvatarWithImage:edittedImage];
+//    [[WEClient sharedClient] enqueueTokenRequest:request];
 }
 
 /*

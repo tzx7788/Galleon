@@ -224,6 +224,19 @@
                                             <constraint firstAttribute="height" constant="145" id="wlx-bC-Ghg"/>
                                         </constraints>
                                     </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="brc-mc-KYX">
+                                        <rect key="frame" x="108" y="114" width="145" height="145"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="145" id="IhC-5P-iB6"/>
+                                            <constraint firstAttribute="height" constant="145" id="emt-E7-KPV"/>
+                                        </constraints>
+                                        <state key="normal">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="updateAvatarButtonClicked:" destination="ETk-GG-08E" eventType="touchUpInside" id="JVE-AX-hcG"/>
+                                        </connections>
+                                    </button>
                                     <view alpha="0.69999999999999996" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ke3-2t-lxg">
                                         <rect key="frame" x="0.0" y="302" width="360" height="1"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -800,14 +813,6 @@
                                             <constraint firstAttribute="centerX" secondItem="U4W-He-7oD" secondAttribute="centerX" constant="-49" id="tOD-SD-fxk"/>
                                         </constraints>
                                     </view>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gjy-Z9-VLS">
-                                        <rect key="frame" x="189" y="827" width="81" height="33"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <state key="normal" title="确定">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F9m-rl-iVI">
                                         <rect key="frame" x="89" y="827" width="81" height="33"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -815,6 +820,20 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="CancelClicked:" destination="ETk-GG-08E" eventType="touchUpInside" id="2tJ-KX-m9L"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gjy-Z9-VLS">
+                                        <rect key="frame" x="189" y="827" width="81" height="33"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <state key="normal" title="确定">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="ComfirmClicked:" destination="ETk-GG-08E" eventType="touchUpInside" id="RUt-Pf-3Q2"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -845,6 +864,8 @@
                                     <constraint firstItem="Emz-Zy-J8R" firstAttribute="leading" secondItem="yhI-OI-0nq" secondAttribute="leading" constant="20" id="NTI-X4-c7m"/>
                                     <constraint firstAttribute="width" secondItem="W9U-qL-P4X" secondAttribute="width" id="NXg-Es-klm"/>
                                     <constraint firstItem="WHg-F5-fAv" firstAttribute="top" secondItem="yhI-OI-0nq" secondAttribute="top" constant="386" id="O4k-Cv-Zfm"/>
+                                    <constraint firstItem="at7-nC-hsJ" firstAttribute="centerX" secondItem="brc-mc-KYX" secondAttribute="centerX" id="Qde-j3-Gom"/>
+                                    <constraint firstItem="at7-nC-hsJ" firstAttribute="centerY" secondItem="brc-mc-KYX" secondAttribute="centerY" id="S2r-05-TdN"/>
                                     <constraint firstItem="HiG-kH-hra" firstAttribute="width" secondItem="yhI-OI-0nq" secondAttribute="width" id="SgZ-95-GP6"/>
                                     <constraint firstAttribute="width" secondItem="ke3-2t-lxg" secondAttribute="width" id="SnR-Ef-3pI"/>
                                     <constraint firstAttribute="centerX" secondItem="HiG-kH-hra" secondAttribute="centerX" id="Wop-1a-igB"/>
