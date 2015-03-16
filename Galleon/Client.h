@@ -9,12 +9,25 @@
 #import <Foundation/Foundation.h>
 #import "GRequest.h"
 
+typedef void (^SuccessCompletionBlock)(id responseObject);
+typedef void (^FailureCompletionBlock)(NSError *error, NSString *responseString);
+
+
 @interface Client : NSObject
 
 + (Client *)sharedClient;
 
-- (void)enqueueTokenRequest:(GRequest *)rawRequest;
+@property (nonatomic, copy) SuccessCompletionBlock successCompletionBlock;
+@property (nonatomic, copy) FailureCompletionBlock failureCompletionBlock;
 
-- (void) test;
+- (void) testPost;
+
+- (void)loginWithAccount:(NSString *) account
+                Password:(NSString *) password
+            successBlock:(SuccessCompletionBlock) successCompletionBlock
+            failureBlock:(FailureCompletionBlock) failureCompletionBlock;
+
+- (void)getNewsWithsuccessBlock:(SuccessCompletionBlock) successCompletionBlock
+                   failureBlock:(FailureCompletionBlock) failureCompletionBlock;
 
 @end

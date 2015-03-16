@@ -42,7 +42,7 @@ typedef enum {
 @implementation ViewController
 
 - (void)viewDidLoad {
-    [[Client sharedClient] test];
+    [[Client sharedClient] testPost];
     [super viewDidLoad];
     self.leftMenuViewController = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"LeftMenuViewController"];
     [self addChildViewController:self.leftMenuViewController];
@@ -200,6 +200,7 @@ typedef enum {
     [super finalize];
     [[NSNotificationCenter defaultCenter] removeObserver:self name:NotificationShowLeftMenu object:nil];
     [[NSNotificationCenter defaultCenter] removeObserver:self name:NotificationShowContent object:nil];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:NotificationWarningMessage object:nil];
 }
 
 - (void)didReceiveMemoryWarning {

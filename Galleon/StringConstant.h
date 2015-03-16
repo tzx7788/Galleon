@@ -24,4 +24,7 @@
 
 #define ExhibitionList      NSLocalizedString(@"Exhibition List",nil)
 
+
+#define NewsList      NSLocalizedString(@"News List",nil)
+
 #endif

@@ -11,6 +11,7 @@
 #import "NotificationConstant.h"
 #import "ExhibitionListModel.h"
 #import "LeftMenuUserHeaderView.h"
+#import "NewsListModel.h"
 
 @interface LeftMenuTableViewController ()
 
@@ -81,7 +82,10 @@
             [[NSNotificationCenter defaultCenter] postNotificationName:NotificationHomePageClicked object:nil];
             break;
         case LeftMenuTableViewCellNews:
-            [[NSNotificationCenter defaultCenter] postNotificationName:NotificationNewsClicked object:nil];
+        {
+            NewsListModel * model = [[NewsListModel alloc] init];
+            [[NSNotificationCenter defaultCenter] postNotificationName:NotificationNewsClicked object:model];
+        }
             break;
         case LeftMenuTableViewCellExhibition:
         {

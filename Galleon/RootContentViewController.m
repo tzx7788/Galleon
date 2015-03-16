@@ -16,6 +16,8 @@
 #import "ExhibitionListModel.h"
 #import "StringConstant.h"
 #import "ExhibitionListViewController.h"
+#import "NewsListModel.h"
+#import "NewsListViewController.h"
 
 @interface RootContentViewController ()
 @end
@@ -28,12 +30,24 @@
     [homeButtonItem setTintColor:[UIColor whiteColor]];
     self.navigationItem.leftBarButtonItem = homeButtonItem;
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loadExhibitionListViewController:) name:NotificationExhibitionListClicked object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loadNewsListViewController:) name:NotificationNewsClicked object:nil];
 }
 
 - (void) finalize
 {
     [super finalize];
     [[NSNotificationCenter defaultCenter] removeObserver:self name:NotificationExhibitionListClicked object:nil];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:NotificationNewsClicked object:nil];
+}
+
+- (void)loadNewsListViewController:(NSNotification *) notification
+{
+    if ( [[notification object] isKindOfClass:[NewsListModel class]] ) {
+        TitleLabel * label = [TitleLabel createLabel];
+        label.text = ExhibitionList;
+        self.navigationItem.titleView = label;
+    }
+    [self loadViewController:[NewsListViewController createViewController]];
 }
 
 - (void)loadExhibitionListViewController:(NSNotification *)notification
@@ -41,7 +55,7 @@
     if ( [[notification object] isKindOfClass:[ExhibitionListModel class]] ) {
         //ExhibitionListModel * model = [notification object];
         TitleLabel * label = [TitleLabel createLabel];
-        label.text = ExhibitionList;
+        label.text = NewsList;
         self.navigationItem.titleView = label;
         
     }
