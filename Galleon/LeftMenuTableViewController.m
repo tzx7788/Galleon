@@ -12,6 +12,10 @@
 #import "ExhibitionListModel.h"
 #import "LeftMenuUserHeaderView.h"
 #import "NewsListModel.h"
+#import "AboutModel.h"
+#import "PersonModel.h"
+#import "HomePageModel.h"
+#import "DiscussModel.h"
 
 @interface LeftMenuTableViewController ()
 
@@ -79,7 +83,10 @@
     [cell setSelected:NO];
     switch (cell.type) {
         case LeftMenuTableViewCellHomePage:
-            [[NSNotificationCenter defaultCenter] postNotificationName:NotificationHomePageClicked object:nil];
+        {
+            HomePageModel * model = [[HomePageModel alloc] init];
+            [[NSNotificationCenter defaultCenter] postNotificationName:NotificationHomePageClicked object:model];
+        }
             break;
         case LeftMenuTableViewCellNews:
         {
@@ -95,11 +102,15 @@
             break;
         case LeftMenuTableViewCellDiscuss:
         {
-            [[NSNotificationCenter defaultCenter] postNotificationName:NotificationDiscussClicked object:nil];
+            DiscussModel * model = [[DiscussModel alloc] init];
+            [[NSNotificationCenter defaultCenter] postNotificationName:NotificationDiscussClicked object:model];
         }
             break;
         case LeftMenuTableViewCellAbout:
-            [[NSNotificationCenter defaultCenter] postNotificationName:NotificationAboutClicked object:nil];
+        {
+            AboutModel * model = [[AboutModel alloc] init];
+            [[NSNotificationCenter defaultCenter] postNotificationName:NotificationAboutClicked object:model];
+        }
             break;
         default:
             break;

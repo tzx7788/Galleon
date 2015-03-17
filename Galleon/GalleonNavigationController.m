@@ -17,6 +17,9 @@
 #import "NewsModel.h"
 #import "PDFViewController.h"
 #import "PDFModel.h"
+#import "PostMessageModel.h"
+#import "PostMessageViewController.h"
+#import "StringConstant.h"
 
 @interface GalleonNavigationController ()
 
@@ -29,6 +32,8 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(exhibitionclicked:) name:NotificationExhibitionClicked object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(newsDetailClicked:) name:NotificationNewsDetailClicked object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(viewPDF:) name:NotificationViewPDF object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(postMessageClicked:) name:NotificationPostMessageViewController object:nil];
+    
 }
 
 - (void) finalize
@@ -37,6 +42,23 @@
     [[NSNotificationCenter defaultCenter] removeObserver:self name:NotificationExhibitionClicked object:nil];
     [[NSNotificationCenter defaultCenter] removeObserver:self name:NotificationNewsDetailClicked object:nil];
     [[NSNotificationCenter defaultCenter] removeObserver:self name:NotificationViewPDF object:nil];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:NotificationPostMessageViewController object:nil];
+}
+
+- (void)postMessageClicked:(NSNotification *) notification
+{
+    if ( [[notification object] isKindOfClass:[PostMessageModel class]] ) {
+        PostMessageModel *model = [notification object];
+        SubContentViewController * svc = [SubContentViewController createViewController];
+        TitleLabel * label = [TitleLabel createLabel];
+        label.text = PostMessage;
+        self.navigationItem.titleView = label;
+        svc.titleLabel = label;
+        PostMessageViewController * vc = [PostMessageViewController createViewController];
+        svc.contentViewController = vc;
+        vc.model = model;
+        [self pushViewController:svc animated:YES];
+    }
 }
 
 - (void)viewPDF:(NSNotification *) notification

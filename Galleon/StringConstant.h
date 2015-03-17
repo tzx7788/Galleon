@@ -23,8 +23,8 @@
 #define ExhibitionDownloads NSLocalizedString(@"Downloads",nil)
 
 #define ExhibitionList      NSLocalizedString(@"Exhibition List",nil)
+#define PostMessage         NSLocalizedString(@"Post Message",nil)
 
 
-#define NewsList      NSLocalizedString(@"News List",nil)
 
 #endif

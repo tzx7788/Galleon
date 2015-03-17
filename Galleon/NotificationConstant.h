@@ -29,10 +29,14 @@
 #define NotificationExhibitionlayout    @"NotificationExhibitionlayout"
 #define NotificationExhibitionDownloads @"NotificationExhibitionDownloads"
 
-#define NotificationWarningMessage  @"NotificationWarningMessage"
+#define NotificationWarningMessage      @"NotificationWarningMessage"
 
-#define NotificationNewsDetailClicked @"NotificationNewsDetailClicked"
+#define NotificationNewsDetailClicked   @"NotificationNewsDetailClicked"
 
-#define NotificationViewPDF @"NotificationViewPDF"
+#define NotificationViewPDF             @"NotificationViewPDF"
+
+#define NotificationPostMessageViewController @"NotificationPostMessageViewController"
+
+#define NotificationPersonPageClicked   @"NotificationPersonPageClicked"
 
 #endif

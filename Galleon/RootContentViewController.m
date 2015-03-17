@@ -18,6 +18,12 @@
 #import "ExhibitionListViewController.h"
 #import "NewsListModel.h"
 #import "NewsListViewController.h"
+#import "AboutModel.h"
+#import "AboutViewController.h"
+#import "HomePageModel.h"
+#import "HomePageViewController.h"
+#import "DiscussModel.h"
+#import "DiscussViewController.h"
 
 @interface RootContentViewController ()
 @end
@@ -32,6 +38,9 @@
     self.navigationItem.leftBarButtonItem = homeButtonItem;
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loadExhibitionListViewController:) name:NotificationExhibitionListClicked object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loadNewsListViewController:) name:NotificationNewsClicked object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loadAboutViewController:) name:NotificationAboutClicked object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loadHomePageViewController:) name:NotificationHomePageClicked object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loadDiscussViewController:) name:NotificationDiscussClicked object:nil];
 }
 
 - (void) finalize
@@ -39,13 +48,49 @@
     [super finalize];
     [[NSNotificationCenter defaultCenter] removeObserver:self name:NotificationExhibitionListClicked object:nil];
     [[NSNotificationCenter defaultCenter] removeObserver:self name:NotificationNewsClicked object:nil];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:NotificationAboutClicked object:nil];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:NotificationHomePageClicked object:nil];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:NotificationDiscussClicked object:nil];
 }
+
+- (void)loadHomePageViewController:(NSNotification *) notification
+{
+    if ( [[notification object] isKindOfClass:[HomePageModel class]] ) {
+        TitleLabel * label = [TitleLabel createLabel];
+        label.text = HomePage;
+        self.navigationItem.titleView = label;
+    }
+    [self loadViewController:[HomePageViewController createViewController]];
+}
+
+- (void)loadDiscussViewController:(NSNotification *) notification
+{
+    if ( [[notification object] isKindOfClass:[DiscussModel class]] ) {
+        TitleLabel * label = [TitleLabel createLabel];
+        label.text = Discuss;
+        self.navigationItem.titleView = label;
+    }
+    [self loadViewController:[DiscussViewController createViewController]];
+}
+
+
+
+- (void)loadAboutViewController:(NSNotification *) notification
+{
+    if ( [[notification object] isKindOfClass:[AboutModel class]] ) {
+        TitleLabel * label = [TitleLabel createLabel];
+        label.text = AboutUs;
+        self.navigationItem.titleView = label;
+    }
+    [self loadViewController:[AboutViewController createViewController]];
+}
+
 
 - (void)loadNewsListViewController:(NSNotification *) notification
 {
     if ( [[notification object] isKindOfClass:[NewsListModel class]] ) {
         TitleLabel * label = [TitleLabel createLabel];
-        label.text = ExhibitionList;
+        label.text = News;
         self.navigationItem.titleView = label;
     }
     [self loadViewController:[NewsListViewController createViewController]];
@@ -56,7 +101,7 @@
     if ( [[notification object] isKindOfClass:[ExhibitionListModel class]] ) {
         //ExhibitionListModel * model = [notification object];
         TitleLabel * label = [TitleLabel createLabel];
-        label.text = NewsList;
+        label.text = Exhibition;
         self.navigationItem.titleView = label;
         
     }
