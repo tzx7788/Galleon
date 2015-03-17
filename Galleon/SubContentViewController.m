@@ -39,6 +39,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.automaticallyAdjustsScrollViewInsets = NO;
     self.navigationItem.titleView = self.titleLabel;
     UIBarButtonItem * backBarButtonItem = [[UIBarButtonItem alloc] initWithImage:BackButtonBackGround style:UIBarButtonItemStyleBordered target:self action:@selector(popBack)];
     [backBarButtonItem setTintColor:[UIColor whiteColor]];

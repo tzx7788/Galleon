@@ -33,4 +33,6 @@
 
 #define NotificationNewsDetailClicked @"NotificationNewsDetailClicked"
 
+#define NotificationViewPDF @"NotificationViewPDF"
+
 #endif

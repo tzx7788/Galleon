@@ -8,6 +8,7 @@
 
 #import "NewsViewController.h"
 #import "Client.h"
+#import <MediaPlayer/MediaPlayer.h>
 
 @interface NewsViewController ()
 
@@ -30,6 +31,16 @@
 {
     [[Client sharedClient] getNewsDetialWithId:self.model.newsId successBlock:^(id responseData){
         [self.webView loadHTMLString:responseData[@"content"] baseURL:nil];
+        if ( self.model.hasVideo ) {
+            MPMoviePlayerController * vc = [[MPMoviePlayerController alloc] initWithContentURL:[NSURL URLWithString:responseData[@"video_link"] ]];
+            vc.controlStyle = MPMovieControlStyleNone;
+            vc.shouldAutoplay = YES;
+            vc.repeatMode = MPMovieRepeatModeOne;
+            [vc setFullscreen:YES animated:YES];
+            vc.scalingMode = MPMovieScalingModeAspectFit;
+            [vc play];
+            [self.view addSubview:vc.view];
+        }
     } failureBlock:nil];
 }
 

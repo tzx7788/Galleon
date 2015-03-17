@@ -12,6 +12,7 @@
 
 @property (nonatomic, strong) NSString * newsId;
 @property (nonatomic, strong) NSString * avatarURLString;
+@property (nonatomic, strong) NSString * videoURLString;
 @property (nonatomic, strong) NSString * titleString;
 @property (nonatomic, strong) NSDate * date;
 @property (assign) BOOL isCN;

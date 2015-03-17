@@ -20,29 +20,16 @@ PODS:
   - AFNetworking/UIKit (2.3.1):
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
-  - DMFoundation (0.1.2)
-  - DMImage (0.0.3):
-    - DMFoundation (~> 0.1.0)
-    - DMRequest (~> 0.2.0)
-  - DMPdfView (0.1.1):
-    - DMImage (~> 0.0.1)
-  - DMRequest (0.2.1):
-    - DMFoundation (~> 0.1.0)
   - MBProgressHUD (0.9)
   - UIImage-Helpers (0.0.2)
 
 DEPENDENCIES:
   - AFNetworking (~> 2.3.1)
-  - DMPdfView
   - MBProgressHUD
   - UIImage-Helpers
 
 SPEC CHECKSUMS:
   AFNetworking: 6d7b76aa5d04c8c37daad3eef4b7e3f2a7620da3
-  DMFoundation: 4619e1052815e9ce15433be76630ea625d7426da
-  DMImage: 2ab7986d3068adad7b8782ec6475ba747f24d818
-  DMPdfView: 6a60abcfe45c011d43d8aff35550ea0e4554a8c6
-  DMRequest: 05d8eb9c4a82feda999c73eb4db8b663c025ebb3
   MBProgressHUD: 2038dbcf3dce73215abed6001657043d53aa79a8
   UIImage-Helpers: f42c86ad5ed925f22b56a81c89f2f15ebeadfd3d
 

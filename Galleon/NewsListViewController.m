@@ -51,6 +51,8 @@
             model.titleString = object[@"title"];
             model.avatarURLString = object[@"icon"];
             model.date = object[@"create_time"];
+            model.hasVideo = [object[@"has_video"] boolValue];
+            model.videoURLString = object[@"video_link"];
             [self.modelList addObject:model];
         }
         [self.tableView reloadData];
@@ -88,8 +90,7 @@
 
 - (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NewsTableViewCell * cell = (NewsTableViewCell *)[tableView cellForRowAtIndexPath:indexPath];
-    [[NSNotificationCenter defaultCenter] postNotificationName:NotificationNewsDetailClicked object:cell.model];
+    [[NSNotificationCenter defaultCenter] postNotificationName:NotificationNewsDetailClicked object:self.modelList[indexPath.row]];
 }
 
 /*

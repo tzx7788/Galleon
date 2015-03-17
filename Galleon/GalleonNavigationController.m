@@ -15,6 +15,8 @@
 #import "ExhibitionModel.h"
 #import "NewsViewController.h"
 #import "NewsModel.h"
+#import "PDFViewController.h"
+#import "PDFModel.h"
 
 @interface GalleonNavigationController ()
 
@@ -26,6 +28,7 @@
     [super viewDidLoad];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(exhibitionclicked:) name:NotificationExhibitionClicked object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(newsDetailClicked:) name:NotificationNewsDetailClicked object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(viewPDF:) name:NotificationViewPDF object:nil];
 }
 
 - (void) finalize
@@ -33,6 +36,23 @@
     [super finalize];
     [[NSNotificationCenter defaultCenter] removeObserver:self name:NotificationExhibitionClicked object:nil];
     [[NSNotificationCenter defaultCenter] removeObserver:self name:NotificationNewsDetailClicked object:nil];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:NotificationViewPDF object:nil];
+}
+
+- (void)viewPDF:(NSNotification *) notification
+{
+    if ( [[notification object] isKindOfClass:[PDFModel class]] ) {
+        PDFModel *model = [notification object];
+        SubContentViewController * svc = [SubContentViewController createViewController];
+        TitleLabel * label = [TitleLabel createLabel];
+        label.text = model.pdfName;
+        self.navigationItem.titleView = label;
+        svc.titleLabel = label;
+        PDFViewController * vc = [PDFViewController createViewController];
+        svc.contentViewController = vc;
+        vc.model = model;
+        [self pushViewController:svc animated:YES];
+    }
 }
 
 - (void)newsDetailClicked:(NSNotification *) notification

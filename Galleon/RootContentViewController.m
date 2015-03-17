@@ -26,6 +26,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.automaticallyAdjustsScrollViewInsets = NO;
     UIBarButtonItem * homeButtonItem = [[UIBarButtonItem alloc] initWithImage:HomeButtonBackGround style:UIBarButtonItemStyleBordered target:self action:@selector(showLeftMenu)];
     [homeButtonItem setTintColor:[UIColor whiteColor]];
     self.navigationItem.leftBarButtonItem = homeButtonItem;

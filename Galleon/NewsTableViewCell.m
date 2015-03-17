@@ -17,6 +17,7 @@
     [self.avatarImageView setImageWithURL:[NSURL URLWithString:model.avatarURLString]];
     self.titleLabel.text = model.titleString;
     self.dataLabel.text = [model.date description];
+    [self.videoImageView setHidden:!model.hasVideo];
 }
 
 + (NewsTableViewCell *)createCell

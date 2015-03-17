@@ -28,7 +28,7 @@
                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FKO-Mb-gIn">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pic_1huiyijieshao.png" translatesAutoresizingMaskIntoConstraints="NO" id="FKO-Mb-gIn">
                         <rect key="frame" x="287" y="29" width="25" height="25"/>
                     </imageView>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Yiw-gj-DZr">
@@ -41,11 +41,16 @@
             </tableViewCellContentView>
             <connections>
                 <outlet property="avatarImageView" destination="jWv-hz-154" id="Lug-av-Y6s"/>
+                <outlet property="cnImageView" destination="Yiw-gj-DZr" id="nJr-vh-Zwd"/>
                 <outlet property="dataLabel" destination="uOj-FB-GTQ" id="KXg-Ot-vyw"/>
                 <outlet property="enImageView" destination="n2U-u0-FYE" id="jZb-tF-kYO"/>
                 <outlet property="titleLabel" destination="zwn-Pa-55H" id="8e8-bV-Bka"/>
+                <outlet property="videoImageView" destination="FKO-Mb-gIn" id="UQS-Jx-M7v"/>
             </connections>
             <point key="canvasLocation" x="307" y="77"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="pic_1huiyijieshao.png" width="1080" height="243"/>
+    </resources>
 </document>

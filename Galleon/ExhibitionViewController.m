@@ -10,6 +10,8 @@
 #import "ExhibitionTableViewCell.h"
 #import "TitleLabel.h"
 #import "TitleLabel.h"
+#import "NotificationConstant.h"
+#import "PDFModel.h"
 
 @interface ExhibitionViewController ()<UITableViewDataSource,UITableViewDelegate>
 
@@ -88,6 +90,14 @@
             break;
     }
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    PDFModel * model = [[PDFModel alloc] init];
+    model.pdfName = @"haha";
+    model.pdfURLString = @"http://aero.wisdomriver.com.cn/_uploads/files/24179241.pdf";
+    [[NSNotificationCenter defaultCenter] postNotificationName:NotificationViewPDF object:model];
 }
 
 /*
