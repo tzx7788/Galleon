@@ -13,6 +13,8 @@
 #import "SubContentViewController.h"
 #import "ExhibitionViewController.h"
 #import "ExhibitionModel.h"
+#import "NewsViewController.h"
+#import "NewsModel.h"
 
 @interface GalleonNavigationController ()
 
@@ -23,12 +25,30 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(exhibitionclicked:) name:NotificationExhibitionClicked object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(newsDetailClicked:) name:NotificationNewsDetailClicked object:nil];
 }
 
 - (void) finalize
 {
     [super finalize];
     [[NSNotificationCenter defaultCenter] removeObserver:self name:NotificationExhibitionClicked object:nil];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:NotificationNewsDetailClicked object:nil];
+}
+
+- (void)newsDetailClicked:(NSNotification *) notification
+{
+    if ( [[notification object] isKindOfClass:[NewsModel class]] ) {
+        NewsModel *model = [notification object];
+        SubContentViewController * svc = [SubContentViewController createViewController];
+        TitleLabel * label = [TitleLabel createLabel];
+        label.text = model.titleString;
+        self.navigationItem.titleView = label;
+        svc.titleLabel = label;
+        NewsViewController * vc = [NewsViewController createViewController];
+        svc.contentViewController = vc;
+        vc.model = model;
+        [self pushViewController:svc animated:YES];
+    }
 }
 
 - (void)exhibitionclicked:(NSNotification *) notification

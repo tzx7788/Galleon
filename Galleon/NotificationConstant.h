@@ -31,4 +31,6 @@
 
 #define NotificationWarningMessage  @"NotificationWarningMessage"
 
+#define NotificationNewsDetailClicked @"NotificationNewsDetailClicked"
+
 #endif
