@@ -22,6 +22,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.webView.scalesPageToFit = YES;
 }
 
 - (void)viewDidAppear:(BOOL)animated
