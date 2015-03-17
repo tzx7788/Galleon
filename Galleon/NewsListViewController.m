@@ -10,6 +10,7 @@
 #import "NewsTableViewCell.h"
 #import "NewsModel.h"
 #import "Client.h"
+#import "NotificationConstant.h"
 
 @interface NewsListViewController ()<UITableViewDataSource, UITableViewDelegate>
 
@@ -82,6 +83,12 @@
     }
     [cell setModel:self.modelList[indexPath.row]];
     return cell;
+}
+
+- (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NewsTableViewCell * cell = (NewsTableViewCell *)[tableView cellForRowAtIndexPath:indexPath];
+    [[NSNotificationCenter defaultCenter] postNotificationName:NotificationNewsDetailClicked object:cell.model];
 }
 
 /*
