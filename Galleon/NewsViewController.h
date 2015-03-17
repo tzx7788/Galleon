@@ -12,6 +12,7 @@
 @interface NewsViewController : UIViewController
 
 @property (nonatomic, strong) NewsModel * model;
+@property (weak, nonatomic) IBOutlet UIWebView *webView;
 
 + (NewsViewController *)createViewController;
 

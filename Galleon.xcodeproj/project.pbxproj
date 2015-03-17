@@ -43,7 +43,6 @@
 		6CAA1D511AB48F9200B848BD /* ic_avater_new_normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 6CAA1D501AB48F9200B848BD /* ic_avater_new_normal.png */; };
 		6CAA1D531AB4907A00B848BD /* ic_avatar.png in Resources */ = {isa = PBXBuildFile; fileRef = 6CAA1D521AB4907A00B848BD /* ic_avatar.png */; };
 		6CAD843A1AB5CF3100F5F2F5 /* Client.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CAD84391AB5CF3100F5F2F5 /* Client.m */; };
-		6CAD843E1AB5D27C00F5F2F5 /* GRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CAD843D1AB5D27C00F5F2F5 /* GRequest.m */; };
 		6CAD84421AB7177F00F5F2F5 /* NewsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CAD84401AB7177F00F5F2F5 /* NewsListViewController.m */; };
 		6CAD84431AB7177F00F5F2F5 /* NewsListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6CAD84411AB7177F00F5F2F5 /* NewsListViewController.xib */; };
 		6CAD84471AB7178E00F5F2F5 /* NewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CAD84451AB7178E00F5F2F5 /* NewsViewController.m */; };
@@ -137,8 +136,6 @@
 		6CAA1D521AB4907A00B848BD /* ic_avatar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_avatar.png; sourceTree = "<group>"; };
 		6CAD84381AB5CF3100F5F2F5 /* Client.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Client.h; sourceTree = "<group>"; };
 		6CAD84391AB5CF3100F5F2F5 /* Client.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Client.m; sourceTree = "<group>"; };
-		6CAD843C1AB5D27C00F5F2F5 /* GRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRequest.h; sourceTree = "<group>"; };
-		6CAD843D1AB5D27C00F5F2F5 /* GRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GRequest.m; sourceTree = "<group>"; };
 		6CAD843F1AB7177F00F5F2F5 /* NewsListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsListViewController.h; sourceTree = "<group>"; };
 		6CAD84401AB7177F00F5F2F5 /* NewsListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsListViewController.m; sourceTree = "<group>"; };
 		6CAD84411AB7177F00F5F2F5 /* NewsListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewsListViewController.xib; sourceTree = "<group>"; };
@@ -479,8 +476,6 @@
 			children = (
 				6CAD84381AB5CF3100F5F2F5 /* Client.h */,
 				6CAD84391AB5CF3100F5F2F5 /* Client.m */,
-				6CAD843C1AB5D27C00F5F2F5 /* GRequest.h */,
-				6CAD843D1AB5D27C00F5F2F5 /* GRequest.m */,
 			);
 			name = Client;
 			sourceTree = "<group>";
@@ -936,7 +931,6 @@
 				6CA07D2D1AADC63000BEEEE7 /* UIImage+Snapshot.m in Sources */,
 				6CAA1D371AB3E29900B848BD /* GalleonNavigationController.m in Sources */,
 				6CC6EBC61AB328AD00A9392E /* ExhibitionModel.m in Sources */,
-				6CAD843E1AB5D27C00F5F2F5 /* GRequest.m in Sources */,
 				6CAD84471AB7178E00F5F2F5 /* NewsViewController.m in Sources */,
 				6CAD843A1AB5CF3100F5F2F5 /* Client.m in Sources */,
 				6C5BDC401AB0721B005FE343 /* LeftMenuViewController.m in Sources */,

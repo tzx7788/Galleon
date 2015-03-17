@@ -67,6 +67,13 @@
     [self GET:@"/news/simple_news"successBlock:successCompletionBlock failureBlock:failureCompletionBlock];
 }
 
+- (void)getNewsDetialWithId:(NSString *)newsId
+               successBlock:(SuccessCompletionBlock) successCompletionBlock
+               failureBlock:(FailureCompletionBlock) failureCompletionBlock
+{
+    [self GET:[NSString stringWithFormat:@"/news/news/%@",newsId] successBlock:successCompletionBlock failureBlock:failureCompletionBlock];
+}
+
 #pragma PrivateMethod
 - (void)POST:(NSString *) urlString
    parameter:(id) param

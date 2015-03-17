@@ -7,7 +7,6 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "GRequest.h"
 
 typedef void (^SuccessCompletionBlock)(id responseObject);
 typedef void (^FailureCompletionBlock)(NSError *error, NSString *responseString);
@@ -29,5 +28,9 @@ typedef void (^FailureCompletionBlock)(NSError *error, NSString *responseString)
 
 - (void)getNewsWithsuccessBlock:(SuccessCompletionBlock) successCompletionBlock
                    failureBlock:(FailureCompletionBlock) failureCompletionBlock;
+
+- (void)getNewsDetialWithId:(NSString *)newsId
+               successBlock:(SuccessCompletionBlock) successCompletionBlock
+               failureBlock:(FailureCompletionBlock) failureCompletionBlock;
 
 @end

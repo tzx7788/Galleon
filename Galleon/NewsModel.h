@@ -10,6 +10,7 @@
 
 @interface NewsModel : NSObject
 
+@property (nonatomic, strong) NSString * newsId;
 @property (nonatomic, strong) NSString * avatarURLString;
 @property (nonatomic, strong) NSString * titleString;
 @property (nonatomic, strong) NSDate * date;

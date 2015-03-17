@@ -47,6 +47,7 @@
         NSArray * array = responseObject;
         for (id object in array){
             NewsModel * model = [[NewsModel alloc] init];
+            model.newsId = object[@"id"];
             model.titleString = object[@"title"];
             model.avatarURLString = object[@"icon"];
             model.date = object[@"create_time"];

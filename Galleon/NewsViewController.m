@@ -7,6 +7,7 @@
 //
 
 #import "NewsViewController.h"
+#import "Client.h"
 
 @interface NewsViewController ()
 
@@ -22,7 +23,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    [self loadData];
+}
+
+- (void)loadData
+{
+    [[Client sharedClient] getNewsDetialWithId:self.model.newsId successBlock:^(id responseData){
+        [self.webView loadHTMLString:responseData[@"content"] baseURL:nil];
+    } failureBlock:nil];
 }
 
 - (void)didReceiveMemoryWarning {

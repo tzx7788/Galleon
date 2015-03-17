@@ -8,13 +8,26 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NewsViewController">
             <connections>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="webView" destination="6aA-a7-Fjb" id="qvb-9m-giq"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6aA-a7-Fjb">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </webView>
+            </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="6aA-a7-Fjb" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="3c4-xO-her"/>
+                <constraint firstAttribute="bottom" secondItem="6aA-a7-Fjb" secondAttribute="bottom" id="obx-01-u98"/>
+                <constraint firstAttribute="trailing" secondItem="6aA-a7-Fjb" secondAttribute="trailing" id="q89-on-YDa"/>
+                <constraint firstItem="6aA-a7-Fjb" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="yoH-ul-d7h"/>
+            </constraints>
         </view>
     </objects>
 </document>
