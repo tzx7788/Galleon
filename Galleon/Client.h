@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 typedef void (^SuccessCompletionBlock)(id responseObject);
 typedef void (^FailureCompletionBlock)(NSError *error, NSString *responseString);
@@ -15,9 +16,6 @@ typedef void (^FailureCompletionBlock)(NSError *error, NSString *responseString)
 @interface Client : NSObject
 
 + (Client *)sharedClient;
-
-@property (nonatomic, copy) SuccessCompletionBlock successCompletionBlock;
-@property (nonatomic, copy) FailureCompletionBlock failureCompletionBlock;
 
 - (void) testPost;
 
@@ -39,5 +37,9 @@ typedef void (^FailureCompletionBlock)(NSError *error, NSString *responseString)
                    token:(NSString *)token
             successBlock:(SuccessCompletionBlock) successCompletionBlock
             failureBlock:(FailureCompletionBlock) failureCompletionBlock;
+
+- (void)uploadImage:(UIImage *) image
+       successBlock:(SuccessCompletionBlock) successCompletionBlock
+       failureBlock:(FailureCompletionBlock) failureCompletionBlock;
 
 @end

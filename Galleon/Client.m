@@ -52,11 +52,23 @@
 //    } failureBlock:^(NSError *error, NSString * responseString) {
 //        NSLog(@"%@",error);
 //    }];
-    [self updateUserWithId:@"1" withNickName:@"abc" name:@"bcd" token:@"b6b22322c3be6bd06b8bd2911567bc1b:1419465662" successBlock:^(id resposeObject){
-        NSLog(@"%@",resposeObject);
-    } failureBlock:^(NSError *error, NSString * responseString) {
-        NSLog(@"%@",error);
-    }];
+//    [self updateUserWithId:@"1" withNickName:@"abc" name:@"bcd" token:@"b6b22322c3be6bd06b8bd2911567bc1b:1419465662" successBlock:^(id resposeObject){
+//        NSLog(@"%@",resposeObject);
+//    } failureBlock:^(NSError *error, NSString * responseString) {
+//        NSLog(@"%@",error);
+//    }];
+    
+//    [self uploadImage:[UIImage imageNamed:@"pic_1huiyijieshao"] successBlock:^(id resposeObject){
+//                NSLog(@"%@",resposeObject);
+//            } failureBlock:^(NSError *error, NSString * responseString) {
+//                NSLog(@"%@",error);
+//            }];
+    
+    [self updateUserWithId:@"1" withNickName:@"abc" name:@"bcd" token:@"b6b22322c3be6bd06b8bd2911567bc1b:1419465662" iconURLString:@"ios.jpg" successBlock:^(id resposeObject){
+            NSLog(@"%@",resposeObject);
+        } failureBlock:^(NSError *error, NSString * responseString) {
+            NSLog(@"%@",error);
+        }];
 }
 
 - (void)loginWithAccount:(NSString *) account
@@ -98,6 +110,32 @@
     [self POST:urlString parameter:param successBlock:successCompletionBlock failureBlock:failureCompletionBlock];
 }
 
+- (void)uploadImage:(UIImage *) image
+       successBlock:(SuccessCompletionBlock) successCompletionBlock
+       failureBlock:(FailureCompletionBlock) failureCompletionBlock
+{
+    [self uploadImage:image name:@"file" filename:@"ios.jpg" URL:@"news/user/upload_icon" parameter:nil successBlock:successCompletionBlock failureBlock:failureCompletionBlock];
+}
+
+- (void)updateUserWithId:(NSString *)userId
+            withNickName:(NSString *)nikeName
+                    name:(NSString *)name
+                   token:(NSString *)token
+           iconURLString:(NSString *)iconURLString
+            successBlock:(SuccessCompletionBlock) successCompletionBlock
+            failureBlock:(FailureCompletionBlock) failureCompletionBlock
+{
+    NSMutableDictionary * param = [[NSMutableDictionary alloc] init];
+    if (name)       param[@"name"]= name;
+    if (nikeName)   param[@"nickname"] = nikeName;
+    if (token)      param[@"token"]=token;
+    if (iconURLString) param[@"header"] = iconURLString;
+    NSString * urlString = [NSString stringWithFormat:@"/news/user/%@/update_profile",userId];
+    [self POST:urlString parameter:param successBlock:successCompletionBlock failureBlock:failureCompletionBlock];
+}
+
+
+
 #pragma PrivateMethod
 - (void)POST:(NSString *) urlString
    parameter:(id) param
@@ -116,6 +154,31 @@ failureBlock:(FailureCompletionBlock) failureCompletionBlock
     }];
 }
 
+- (void)uploadImage:(UIImage *) image
+               name:(NSString *)name
+           filename:(NSString *) filename
+                URL:(NSString *) urlString
+          parameter:(id) param
+       successBlock:(SuccessCompletionBlock) successCompletionBlock
+       failureBlock:(FailureCompletionBlock) failureCompletionBlock
+{
+    [self.manager POST:urlString parameters:param constructingBodyWithBlock:^(id<AFMultipartFormData> formData) {
+        [formData appendPartWithFileData:UIImageJPEGRepresentation(image, 1.0)
+                                    name:name
+                                fileName:filename
+                                mimeType:@"image/jpeg"];
+    } success:^(AFHTTPRequestOperation *operation, id resposeObject){
+        if (successCompletionBlock)
+            successCompletionBlock(resposeObject);
+    } failure:^(AFHTTPRequestOperation * operation, NSError * error){
+        NSLog(@"%@",operation.request);
+        NSLog(@"%@",[operation.request allHTTPHeaderFields]);
+        NSLog(@"%@",param);
+        NSLog(@"%@", error);
+        if (failureCompletionBlock)
+            failureCompletionBlock(error,nil);
+    }];
+}
 
 - (void)GET:(NSString *) urlString
 successBlock:(SuccessCompletionBlock) successCompletionBlock
@@ -125,6 +188,9 @@ failureBlock:(FailureCompletionBlock) failureCompletionBlock
         if (successCompletionBlock)
             successCompletionBlock(resposeObject);
     } failure:^(AFHTTPRequestOperation * operation, NSError * error){
+        NSLog(@"%@",operation.request);
+        NSLog(@"%@",[operation.request allHTTPHeaderFields]);
+        NSLog(@"%@", error);
         if (failureCompletionBlock)
             failureCompletionBlock(error,nil);
     }];
