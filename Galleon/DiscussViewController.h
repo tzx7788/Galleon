@@ -11,6 +11,7 @@
 
 @interface DiscussViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic, strong) DiscussModel * model;
 
 + (DiscussViewController *)createViewController;

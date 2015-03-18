@@ -64,13 +64,18 @@
 //                NSLog(@"%@",error);
 //            }];
     
-    [self updateUserWithId:@"1" withNickName:@"abc" name:@"bcd" token:@"b6b22322c3be6bd06b8bd2911567bc1b:1419465662" iconURLString:@"ios.jpg" successBlock:^(id resposeObject){
-            NSLog(@"%@",resposeObject);
-        } failureBlock:^(NSError *error, NSString * responseString) {
-            NSLog(@"%@",error);
-        }];
+//    [self updateUserWithId:@"1" withNickName:@"abc" name:@"bcd" token:@"b6b22322c3be6bd06b8bd2911567bc1b:1419465662" iconURLString:@"ios.jpg" successBlock:^(id resposeObject){
+//            NSLog(@"%@",resposeObject);
+//        } failureBlock:^(NSError *error, NSString * responseString) {
+//            NSLog(@"%@",error);
+//        }];
+    
+    [self getMockImageURLWithsuccessBlock:^(id resposeObject){
+                    NSLog(@"%@",resposeObject);
+                } failureBlock:^(NSError *error, NSString * responseString) {
+                    NSLog(@"%@",error);
+                }];
 }
-
 - (void)loginWithAccount:(NSString *) account
                 Password:(NSString *) password
             successBlock:(SuccessCompletionBlock) successCompletionBlock
@@ -138,6 +143,23 @@
                            failureBlock:(FailureCompletionBlock) failureCompletionBlock
 {
     [self GET:@"/news/mockimage" successBlock:successCompletionBlock failureBlock:failureCompletionBlock];
+}
+
+- (void)getAllMessagesWithsuccessBlock:(SuccessCompletionBlock) successCompletionBlock
+                          failureBlock:(FailureCompletionBlock) failureCompletionBlock
+{
+    [self GET:@"/news/messages" successBlock:successCompletionBlock failureBlock:failureCompletionBlock];
+}
+
+- (void)PostMessgeWithContent:(NSString *)contentString
+                        token:(NSString *)token
+                 successBlock:(SuccessCompletionBlock) successCompletionBlock
+                 failureBlock:(FailureCompletionBlock) failureCompletionBlock
+{
+    NSMutableDictionary * param = [[NSMutableDictionary alloc] init];
+    if (contentString)       param[@"content"]= contentString;
+    if (token)               param[@"token"]=token;
+    [self POST:@"/news/message/send" parameter:param successBlock:successCompletionBlock failureBlock:failureCompletionBlock];
 }
 
 #pragma PrivateMethod

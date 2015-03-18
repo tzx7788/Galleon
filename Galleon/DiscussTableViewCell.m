@@ -7,8 +7,19 @@
 //
 
 #import "DiscussTableViewCell.h"
+#import <AFNetworking/UIImageView+AFNetworking.h>
 
 @implementation DiscussTableViewCell
+
+- (void) setModel:(MessageModel *)model
+{
+    _model = model;
+    [self.avatarImage setImageWithURL:[NSURL URLWithString:model.avatarURLString]];
+    self.nameLabel.text = model.name;
+    self.dateLabel.text = model.date.description;
+    self.contentLabel.text = model.content;
+}
+
 
 - (void)awakeFromNib {
     // Initialization code

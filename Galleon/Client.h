@@ -42,4 +42,23 @@ typedef void (^FailureCompletionBlock)(NSError *error, NSString *responseString)
        successBlock:(SuccessCompletionBlock) successCompletionBlock
        failureBlock:(FailureCompletionBlock) failureCompletionBlock;
 
+- (void)updateUserWithId:(NSString *)userId
+            withNickName:(NSString *)nikeName
+                    name:(NSString *)name
+                   token:(NSString *)token
+           iconURLString:(NSString *)iconURLString
+            successBlock:(SuccessCompletionBlock) successCompletionBlock
+            failureBlock:(FailureCompletionBlock) failureCompletionBlock;
+
+- (void)getMockImageURLWithsuccessBlock:(SuccessCompletionBlock) successCompletionBlock
+                           failureBlock:(FailureCompletionBlock) failureCompletionBlock;
+
+- (void)getAllMessagesWithsuccessBlock:(SuccessCompletionBlock) successCompletionBlock
+                          failureBlock:(FailureCompletionBlock) failureCompletionBlock;
+
+- (void)PostMessgeWithContent:(NSString *)contentString
+                        token:(NSString *)token
+                 successBlock:(SuccessCompletionBlock) successCompletionBlock
+                 failureBlock:(FailureCompletionBlock) failureCompletionBlock;
+
 @end

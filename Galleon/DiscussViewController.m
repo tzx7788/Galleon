@@ -7,8 +7,13 @@
 //
 
 #import "DiscussViewController.h"
+#import "DiscussTableViewCell.h"
+#import "Client.h"
+#import "MessageModel.h"
 
-@interface DiscussViewController ()
+@interface DiscussViewController ()<UITableViewDataSource, UITableViewDelegate>
+
+@property (nonatomic, strong) NSArray * messageList;
 
 @end
 
@@ -22,13 +27,68 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    [self.tableView registerNib:[UINib nibWithNibName:@"DiscussTableViewCell" bundle:nil] forCellReuseIdentifier:@"DiscussTableViewCell"];
+    [self loadData];
+}
+
+- (void)loadData
+{
+    [[Client sharedClient] getAllMessagesWithsuccessBlock:^(id responseData){
+        NSMutableArray * modelArray = [[NSMutableArray alloc] init];
+        NSArray * array = responseData;
+        for ( id dict in array ) {
+            MessageModel * model = [[MessageModel alloc] init];
+            model.avatarURLString = dict[@"user"][@"header_small"];
+            model.content = dict[@"content"];
+            model.date = dict[@"created_time"];
+            model.name = dict[@"user"][@"name"];
+            [modelArray addObject:model];
+        }
+        self.messageList = [modelArray sortedArrayUsingComparator:^(id obj1, id obj2){
+            MessageModel * a = (MessageModel *) obj1;
+            MessageModel * b = (MessageModel *) obj2;
+            return [b.date compare:a.date];
+        }];
+        [self.tableView reloadData];
+    } failureBlock:nil];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return self.messageList.count;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static DiscussTableViewCell * cell = nil;
+    if ( !cell ) {
+        cell = [tableView dequeueReusableCellWithIdentifier:@"DiscussTableViewCell"];
+    }
+    MessageModel * model = self.messageList[indexPath.row];
+    cell.contentLabel.text = model.content;
+    [cell setNeedsUpdateConstraints];
+    [cell updateConstraintsIfNeeded];
+    CGFloat height = [cell.contentView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize].height;
+    return height;
+}
+
+- (UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    DiscussTableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:@"DiscussTableViewCell" forIndexPath:indexPath];
+    [cell setModel:self.messageList[indexPath.row]];
+    return cell;
+}
+
 
 /*
 #pragma mark - Navigation

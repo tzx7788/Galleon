@@ -14,7 +14,7 @@
 
 @interface NewsListViewController ()<UITableViewDataSource, UITableViewDelegate>
 
-@property (nonatomic, strong) NSMutableArray * modelList;
+@property (nonatomic, strong) NSArray * modelList;
 
 @end
 
@@ -26,10 +26,10 @@
     return vc;
 }
 
-- (NSMutableArray *)modelList
+- (NSArray *)modelList
 {
     if ( !_modelList ) {
-        _modelList = [[NSMutableArray alloc] init];
+        _modelList = [[NSArray alloc] init];
     }
     return _modelList;
 }
@@ -43,8 +43,8 @@
 - (void)loadData
 {
     [[Client sharedClient] getNewsWithsuccessBlock:^(id responseObject){
-        self.modelList = nil;
         NSArray * array = responseObject;
+        NSMutableArray * modelArray = [[NSMutableArray alloc] init];
         for (id object in array){
             NewsModel * model = [[NewsModel alloc] init];
             model.newsId = object[@"id"];
@@ -53,8 +53,13 @@
             model.date = object[@"create_time"];
             model.hasVideo = [object[@"has_video"] boolValue];
             model.videoURLString = object[@"video_link"];
-            [self.modelList addObject:model];
+            [modelArray addObject:model];
         }
+        self.modelList = [modelArray sortedArrayUsingComparator:^(id obj1, id obj2){
+            NewsModel * a = (NewsModel *)obj1;
+            NewsModel * b = (NewsModel *)obj2;
+            return [b.date compare:a.date];
+        }];
         [self.tableView reloadData];
     } failureBlock:nil];
 }

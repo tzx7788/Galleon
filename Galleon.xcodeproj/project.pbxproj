@@ -78,6 +78,7 @@
 		6CC6EBCB1AB3357E00A9392E /* ExhibitionListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6CC6EBC91AB3357E00A9392E /* ExhibitionListViewController.xib */; };
 		6CC6EBCF1AB3371900A9392E /* ExhibitionListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CC6EBCD1AB3371900A9392E /* ExhibitionListTableViewCell.m */; };
 		6CC6EBD01AB3371900A9392E /* ExhibitionListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6CC6EBCE1AB3371900A9392E /* ExhibitionListTableViewCell.xib */; };
+		6CCB9C3A1AB9ABA8001BF16E /* MessageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CCB9C391AB9ABA8001BF16E /* MessageModel.m */; };
 		6CCC89A71AB7F34900D04033 /* Launch Screen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6CCC89A61AB7F34900D04033 /* Launch Screen.xib */; };
 		6CEE19281AADBC78006CB3DD /* GalleonTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CEE19271AADBC78006CB3DD /* GalleonTests.m */; };
 		6CEE19401AADC291006CB3DD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CEE19361AADC291006CB3DD /* AppDelegate.m */; };
@@ -215,6 +216,8 @@
 		6CC6EBCC1AB3371900A9392E /* ExhibitionListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExhibitionListTableViewCell.h; sourceTree = "<group>"; };
 		6CC6EBCD1AB3371900A9392E /* ExhibitionListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExhibitionListTableViewCell.m; sourceTree = "<group>"; };
 		6CC6EBCE1AB3371900A9392E /* ExhibitionListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExhibitionListTableViewCell.xib; sourceTree = "<group>"; };
+		6CCB9C381AB9ABA8001BF16E /* MessageModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageModel.h; sourceTree = "<group>"; };
+		6CCB9C391AB9ABA8001BF16E /* MessageModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageModel.m; sourceTree = "<group>"; };
 		6CCC89A61AB7F34900D04033 /* Launch Screen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "Launch Screen.xib"; sourceTree = "<group>"; };
 		6CEE19081AADBC78006CB3DD /* Galleon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Galleon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6CEE19211AADBC78006CB3DD /* GalleonTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GalleonTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -638,6 +641,8 @@
 				6C01413C1AB877C80069EDE7 /* DiscussModel.m */,
 				6C01414B1AB879350069EDE7 /* PostMessageModel.h */,
 				6C01414C1AB879350069EDE7 /* PostMessageModel.m */,
+				6CCB9C381AB9ABA8001BF16E /* MessageModel.h */,
+				6CCB9C391AB9ABA8001BF16E /* MessageModel.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -1012,6 +1017,7 @@
 			files = (
 				6C6E63491AB282BD0014F47F /* ExhibitionType.m in Sources */,
 				6CAA1D4C1AB4025E00B848BD /* LoginViewController.m in Sources */,
+				6CCB9C3A1AB9ABA8001BF16E /* MessageModel.m in Sources */,
 				6C0141441AB877FC0069EDE7 /* DiscussTableViewCell.m in Sources */,
 				6CF078911AB1DA8900DF0C0C /* UIView+Resize.m in Sources */,
 				6CEE19461AADC291006CB3DD /* ViewController.m in Sources */,
