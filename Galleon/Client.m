@@ -41,13 +41,22 @@
 //        NSLog(@"yes");
 //        NSLog(@"%@",resposeObject);
 //    }failure:nil];
-    [self loginWithAccount:@"system" Password:@"1234"
-    successBlock:^(id resposeObject){
-        NSLog(@"%@",resposeObject);
-    } failureBlock:nil];
+//    [self loginWithAccount:@"system" Password:@"1234"
+//    successBlock:^(id resposeObject){
+//        NSLog(@"%@",resposeObject);
+//    } failureBlock:^(NSError *error, NSString * responseString) {
+//        NSLog(@"%@",error);
+//    }];
 //    [self getNewsWithsuccessBlock:^(id resposeObject){
 //        NSLog(@"%@",resposeObject);
-//    } failureBlock:nil];
+//    } failureBlock:^(NSError *error, NSString * responseString) {
+//        NSLog(@"%@",error);
+//    }];
+    [self updateUserWithId:@"1" withNickName:@"abc" name:@"bcd" token:@"b6b22322c3be6bd06b8bd2911567bc1b:1419465662" successBlock:^(id resposeObject){
+        NSLog(@"%@",resposeObject);
+    } failureBlock:^(NSError *error, NSString * responseString) {
+        NSLog(@"%@",error);
+    }];
 }
 
 - (void)loginWithAccount:(NSString *) account
@@ -74,6 +83,21 @@
     [self GET:[NSString stringWithFormat:@"/news/news/%@",newsId] successBlock:successCompletionBlock failureBlock:failureCompletionBlock];
 }
 
+- (void)updateUserWithId:(NSString *)userId
+            withNickName:(NSString *)nikeName
+                    name:(NSString *)name
+                   token:(NSString *)token
+            successBlock:(SuccessCompletionBlock) successCompletionBlock
+            failureBlock:(FailureCompletionBlock) failureCompletionBlock
+{
+    NSMutableDictionary * param = [[NSMutableDictionary alloc] init];
+    if (name)       param[@"name"]= name;
+    if (nikeName)   param[@"nickname"] = nikeName;
+    if (token)      param[@"token"]=token;
+    NSString * urlString = [NSString stringWithFormat:@"/news/user/%@/update_name",userId];
+    [self POST:urlString parameter:param successBlock:successCompletionBlock failureBlock:failureCompletionBlock];
+}
+
 #pragma PrivateMethod
 - (void)POST:(NSString *) urlString
    parameter:(id) param
@@ -84,6 +108,9 @@ failureBlock:(FailureCompletionBlock) failureCompletionBlock
         if (successCompletionBlock)
             successCompletionBlock(resposeObject);
     } failure:^(AFHTTPRequestOperation * operation, NSError * error){
+        NSLog(@"%@",operation.request);
+        NSLog(@"%@",[operation.request allHTTPHeaderFields]);
+        NSLog(@"%@",param);
         if (failureCompletionBlock)
             failureCompletionBlock(error,nil);
     }];
