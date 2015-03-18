@@ -134,7 +134,11 @@
     [self POST:urlString parameter:param successBlock:successCompletionBlock failureBlock:failureCompletionBlock];
 }
 
-
+- (void)getMockImageURLWithsuccessBlock:(SuccessCompletionBlock) successCompletionBlock
+                           failureBlock:(FailureCompletionBlock) failureCompletionBlock
+{
+    [self GET:@"/news/mockimage" successBlock:successCompletionBlock failureBlock:failureCompletionBlock];
+}
 
 #pragma PrivateMethod
 - (void)POST:(NSString *) urlString
