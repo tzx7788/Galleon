@@ -18,7 +18,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    [[self.confirmButton layer] setBorderWidth:1.0f];
+    [[self.confirmButton layer] setBorderColor:CGColorCreateCopyWithAlpha([UIColor whiteColor].CGColor, 0.3f)];
+    [[self.confirmButton layer] setCornerRadius:20.0f];
+    [[self.cancelButton layer] setBorderWidth:1.0f];
+    [[self.cancelButton layer] setBorderColor:CGColorCreateCopyWithAlpha([UIColor whiteColor].CGColor, 0.3f)];
+    [[self.cancelButton layer] setCornerRadius:20.0f];
 }
 
 - (void)didReceiveMemoryWarning {

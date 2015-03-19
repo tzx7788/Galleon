@@ -10,5 +10,7 @@
 
 @interface RegisterViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
+@property (weak, nonatomic) IBOutlet UIButton *cancelButton;
+@property (weak, nonatomic) IBOutlet UIButton *confirmButton;
 
 @end
