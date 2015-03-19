@@ -237,7 +237,7 @@
                                     <constraint firstItem="yck-Aw-efL" firstAttribute="leading" secondItem="1ac-4W-0qz" secondAttribute="leading" constant="72" id="zcJ-0v-vXm"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Galleon" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="bQC-xq-F06">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Galleon" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="bQC-xq-F06">
                                 <rect key="frame" x="94" y="56" width="133" height="48"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="bOo-Sf-tyo"/>

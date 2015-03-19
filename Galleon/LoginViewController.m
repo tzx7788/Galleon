@@ -33,7 +33,7 @@
     _user = user;
     self.accountTextField.text = user.account;
     self.passwordTextField.text = user.password;
-    [self refreshAutoLoginButton:user.autoLogin];
+    [self refreshAutoLoginButton:[user.autoLogin boolValue]];
     self.isPasswordVisible = NO;
 }
 
