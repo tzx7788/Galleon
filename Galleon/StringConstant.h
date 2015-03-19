@@ -24,7 +24,8 @@
 
 #define ExhibitionList      NSLocalizedString(@"Exhibition List",nil)
 #define PostMessage         NSLocalizedString(@"Post Message",nil)
-
-
+#define LogInSuccessful     NSLocalizedString(@"Log in successful!",nil)
+#define LogInFailure        NSLocalizedString(@"Failure!",nil)
+#define Logging             NSLocalizedString(@"Logging...",nil)
 
 #endif

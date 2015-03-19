@@ -22,7 +22,7 @@
     static dispatch_once_t ClientPredicate;
     dispatch_once(&ClientPredicate, ^{
         client = [[Client alloc] init];
-        client.manager = [[AFHTTPRequestOperationManager alloc] initWithBaseURL:[NSURL URLWithString:@"http://aero2.wisdomriver.com.cn/"]];
+        client.manager = [[AFHTTPRequestOperationManager alloc] initWithBaseURL:[NSURL URLWithString:@"http://aero.wisdomriver.com.cn/"]];
         client.manager.requestSerializer = [AFJSONRequestSerializer serializer];
         client.manager.responseSerializer = [AFJSONResponseSerializer serializer];
         client.manager.responseSerializer.acceptableContentTypes = [client.manager.responseSerializer.acceptableContentTypes setByAddingObject:@"text/html"];

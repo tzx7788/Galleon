@@ -9,8 +9,10 @@
 #import "LoginViewController.h"
 #import "User.h"
 #import "Client.h"
+#import "StringConstant.h"
+#import <MBProgressHUD/MBProgressHUD.h>
 
-@interface LoginViewController ()
+@interface LoginViewController ()<MBProgressHUDDelegate>
 @property (nonatomic, strong) User * user;
 @property (nonatomic, assign) BOOL isPasswordVisible;
 @end
@@ -63,6 +65,8 @@
     [[self.registerButton layer] setBorderWidth:1.0f];
     [[self.registerButton layer] setBorderColor:CGColorCreateCopyWithAlpha([UIColor whiteColor].CGColor, 0.3f)];
     [[self.registerButton layer] setCornerRadius:20.0f];
+    if ( self.user.account && self.user.password )
+        [self loginWithAccount:self.user.account password:self.user.password];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -77,7 +81,22 @@
 }
 
 - (IBAction)LoginClicked:(id)sender {
-    [[Client sharedClient] loginWithAccount:self.accountTextField.text Password:self.passwordTextField.text successBlock:^(id responseData){
+    [self loginWithAccount:self.accountTextField.text password:self.passwordTextField.text];
+}
+
+- (void)loginWithAccount:(NSString *) account
+                password:(NSString *) password
+{
+    NSString * message =Logging;
+    MBProgressHUD * hud = [[MBProgressHUD alloc] initWithView:self.view];
+    [self.view addSubview:hud];
+    hud.delegate = self;
+    hud.dimBackground = YES;
+    hud.square = YES;
+    hud.labelText = message;
+    hud.mode = MBProgressHUDModeIndeterminate;
+    [hud show:YES];
+    [[Client sharedClient] loginWithAccount:account Password:account successBlock:^(id responseData){
         if ( responseData[@"account"] != [NSNull null] )
             self.user.account = responseData[@"account"];
         if ( responseData[@"company"] != [NSNull null] )
@@ -113,14 +132,25 @@
         if ( responseData[@"token"] != [NSNull null] )
             self.user.token = responseData[@"token"];
         [User saveToCache:self.user];
+        hud.mode = MBProgressHUDModeText;
+        hud.labelText = LogInSuccessful;
+        [hud hide:YES afterDelay:1];
         [self dismissViewControllerAnimated:YES completion:nil];
     } failureBlock:^(NSError *error, NSString * responseString) {
-        
+        hud.mode = MBProgressHUDModeText;
+        hud.labelText = LogInFailure;
+        [hud hide:YES afterDelay:1];
     }];
 }
-
 - (IBAction)peekClicked:(id)sender {
     self.isPasswordVisible = !self.isPasswordVisible;
+}
+
+#pragma mark - MBProgressHUDDeleagte
+- (void)hudWasHidden:(MBProgressHUD *)hud
+{
+    [hud removeFromSuperview];
+    hud = nil;
 }
 
 /*
