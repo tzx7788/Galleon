@@ -41,6 +41,7 @@ typedef enum {
 
 @implementation ViewController
 
+#define kMenuWidth 277
 - (void)viewDidLoad {
     [[Client sharedClient] testPost];
     [super viewDidLoad];
@@ -56,6 +57,9 @@ typedef enum {
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(showContent) name:NotificationShowContent object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(showWarningMessage:) name:NotificationWarningMessage object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loadLoginViewController:) name:NotificationLoginIn object:nil];
+    [self.contentNavigationController.view resetOriginX:kMenuWidth];
+    [self disableSubView];
+    self.status = WERootContainerViewControllerStatusLeftMenu;
 }
 
 - (void)showWarningMessage:(NSNotification *) notification
@@ -86,7 +90,7 @@ typedef enum {
     [super viewDidAppear:animated];
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        [[NSNotificationCenter defaultCenter] postNotificationName:NotificationLoginIn object:nil];
+        //[[NSNotificationCenter defaultCenter] postNotificationName:NotificationLoginIn object:nil];
     });
 }
 
@@ -141,7 +145,7 @@ typedef enum {
     }
 }
 
-#define kMenuWidth 277
+
 - (void)showLeftMenu
 {
     [UIView animateWithDuration:0.3f animations:^{

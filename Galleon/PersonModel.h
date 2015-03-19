@@ -11,4 +11,6 @@
 
 @interface PersonModel : NSObject
 
+@property (nonatomic, strong) User * user;
+
 @end

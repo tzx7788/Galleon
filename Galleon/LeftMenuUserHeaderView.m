@@ -7,12 +7,21 @@
 //
 
 #import "LeftMenuUserHeaderView.h"
+#import "PersonModel.h"
+#import "NotificationConstant.h"
 
 @implementation LeftMenuUserHeaderView
 
 + (LeftMenuUserHeaderView *)createView
 {
     return [[[NSBundle mainBundle] loadNibNamed:@"LeftMenuUserHeaderView" owner:self options:nil] lastObject];
+}
+
+- (IBAction)clicked:(id)sender {
+    PersonModel * model = [[PersonModel alloc] init];
+    model.user = [User awakeFromCache];
+    [[NSNotificationCenter defaultCenter] postNotificationName:NotificationPersonPageClicked object:model];
+    [[NSNotificationCenter defaultCenter] postNotificationName:NotificationShowContent object:nil];
 }
 
 /*
