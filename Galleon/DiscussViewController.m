@@ -10,6 +10,8 @@
 #import "DiscussTableViewCell.h"
 #import "Client.h"
 #import "MessageModel.h"
+#import "NotificationConstant.h"
+#import "PostMessageModel.h"
 
 @interface DiscussViewController ()<UITableViewDataSource, UITableViewDelegate>
 
@@ -89,6 +91,10 @@
     return cell;
 }
 
+- (IBAction)addMessageClicked:(id)sender {
+    PostMessageModel * model = [[PostMessageModel alloc] init];
+    [[NSNotificationCenter defaultCenter] postNotificationName:NotificationPostMessageViewController object:model];
+}
 
 /*
 #pragma mark - Navigation

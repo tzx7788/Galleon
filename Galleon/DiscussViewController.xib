@@ -24,9 +24,24 @@
                         <outlet property="delegate" destination="-1" id="U7O-bi-Lrs"/>
                     </connections>
                 </tableView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i6B-I7-236">
+                    <rect key="frame" x="510" y="475" width="46" height="46"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="46" id="peb-Ec-KAi"/>
+                        <constraint firstAttribute="height" constant="46" id="yoI-km-MCf"/>
+                    </constraints>
+                    <state key="normal" backgroundImage="ic_leave_new_message.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="addMessageClicked:" destination="-1" eventType="touchUpInside" id="TUR-fz-RTL"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstAttribute="bottom" secondItem="i6B-I7-236" secondAttribute="bottom" constant="79" id="1Va-O7-nUg"/>
+                <constraint firstAttribute="trailing" secondItem="i6B-I7-236" secondAttribute="trailing" constant="44" id="6g9-ij-YTo"/>
                 <constraint firstAttribute="bottom" secondItem="e9C-nj-Ev0" secondAttribute="bottom" id="HKV-TX-3tQ"/>
                 <constraint firstAttribute="trailing" secondItem="e9C-nj-Ev0" secondAttribute="trailing" id="UuT-aZ-ypi"/>
                 <constraint firstItem="e9C-nj-Ev0" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Wmz-xP-MUU"/>
@@ -35,4 +50,7 @@
             <point key="canvasLocation" x="176" y="371"/>
         </view>
     </objects>
+    <resources>
+        <image name="ic_leave_new_message.png" width="201" height="201"/>
+    </resources>
 </document>

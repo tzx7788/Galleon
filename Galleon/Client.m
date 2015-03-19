@@ -41,12 +41,12 @@
 //        NSLog(@"yes");
 //        NSLog(@"%@",resposeObject);
 //    }failure:nil];
-//    [self loginWithAccount:@"system" Password:@"1234"
-//    successBlock:^(id resposeObject){
-//        NSLog(@"%@",resposeObject);
-//    } failureBlock:^(NSError *error, NSString * responseString) {
-//        NSLog(@"%@",error);
-//    }];
+    [self loginWithAccount:@"system" Password:@"1234"
+    successBlock:^(id resposeObject){
+        NSLog(@"%@",resposeObject);
+    } failureBlock:^(NSError *error, NSString * responseString) {
+        NSLog(@"%@",error);
+    }];
 //    [self getNewsWithsuccessBlock:^(id resposeObject){
 //        NSLog(@"%@",resposeObject);
 //    } failureBlock:^(NSError *error, NSString * responseString) {
@@ -70,11 +70,11 @@
 //            NSLog(@"%@",error);
 //        }];
     
-    [self getMockImageURLWithsuccessBlock:^(id resposeObject){
-                    NSLog(@"%@",resposeObject);
-                } failureBlock:^(NSError *error, NSString * responseString) {
-                    NSLog(@"%@",error);
-                }];
+//    [self getMockImageURLWithsuccessBlock:^(id resposeObject){
+//                    NSLog(@"%@",resposeObject);
+//                } failureBlock:^(NSError *error, NSString * responseString) {
+//                    NSLog(@"%@",error);
+//                }];
 }
 - (void)loginWithAccount:(NSString *) account
                 Password:(NSString *) password

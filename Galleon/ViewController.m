@@ -78,8 +78,7 @@ typedef enum {
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-    //[[NSNotificationCenter defaultCenter] postNotificationName:NotificationWarningMessage object:@"hehehe"];
-    //[self performSegueWithIdentifier:@"LoginSegue" sender:nil];
+    [self performSegueWithIdentifier:@"LoginSegue" sender:nil];
 }
 
 - (void)configureGesture

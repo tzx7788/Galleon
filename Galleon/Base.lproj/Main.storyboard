@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -122,10 +122,13 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2fD-KW-yXh">
-                                <rect key="frame" x="49" y="397" width="46" height="30"/>
-                                <state key="normal" title="Button">
+                                <rect key="frame" x="49" y="397" width="38" height="30"/>
+                                <state key="normal" title="Login">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="LoginClicked:" destination="s6A-5n-Ifb" eventType="touchUpInside" id="kxJ-ww-DTh"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eph-OW-mtL">
                                 <rect key="frame" x="226" y="397" width="46" height="30"/>
@@ -134,6 +137,25 @@
                                 </state>
                                 <connections>
                                     <segue destination="ETk-GG-08E" kind="push" id="vzj-Y3-Vpr"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yck-Aw-efL">
+                                <rect key="frame" x="112" y="123" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kMv-cA-Nq1">
+                                <rect key="frame" x="112" y="182" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m2A-Dn-VTf">
+                                <rect key="frame" x="112" y="257" width="30" height="30"/>
+                                <state key="normal" backgroundImage="ic_unchecked_normal.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="autoLoginClicked:" destination="s6A-5n-Ifb" eventType="touchUpInside" id="slk-U0-3mu"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -148,12 +170,15 @@
                     <navigationItem key="navigationItem" id="AZn-pH-1RX"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
+                        <outlet property="accountTextField" destination="yck-Aw-efL" id="tID-wH-Uie"/>
+                        <outlet property="autoLoginButton" destination="m2A-Dn-VTf" id="wqb-nl-S8E"/>
+                        <outlet property="passwordTextField" destination="kMv-cA-Nq1" id="6sX-IW-9nR"/>
                         <segue destination="ETk-GG-08E" kind="push" identifier="RegisterSegue" id="h5X-ED-sXG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rld-gm-vu3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1189" y="173"/>
+            <point key="canvasLocation" x="1087" y="173"/>
         </scene>
         <!--Register View Controller-->
         <scene sceneID="BXB-6W-YHq">
@@ -987,6 +1012,7 @@
         <image name="ic_avatar.png" width="500" height="499"/>
         <image name="ic_avater_new_normal.png" width="219" height="180"/>
         <image name="ic_sidebar_homepage.png" width="72" height="72"/>
+        <image name="ic_unchecked_normal.png" width="81" height="81"/>
         <image name="reddot.jpg" width="507" height="259"/>
     </resources>
     <inferredMetricsTieBreakers>
