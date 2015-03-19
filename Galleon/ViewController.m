@@ -55,6 +55,7 @@ typedef enum {
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(showLeftMenu) name:NotificationShowLeftMenu object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(showContent) name:NotificationShowContent object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(showWarningMessage:) name:NotificationWarningMessage object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loadLoginViewController:) name:NotificationLoginIn object:nil];
 }
 
 - (void)showWarningMessage:(NSNotification *) notification
@@ -75,10 +76,18 @@ typedef enum {
     }];
 }
 
+- (void)loadLoginViewController:(NSNotification *)notification
+{
+    [self performSegueWithIdentifier:@"LoginSegue" sender:nil];
+}
+
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-    [self performSegueWithIdentifier:@"LoginSegue" sender:nil];
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        [[NSNotificationCenter defaultCenter] postNotificationName:NotificationLoginIn object:nil];
+    });
 }
 
 - (void)configureGesture
@@ -200,6 +209,7 @@ typedef enum {
     [[NSNotificationCenter defaultCenter] removeObserver:self name:NotificationShowLeftMenu object:nil];
     [[NSNotificationCenter defaultCenter] removeObserver:self name:NotificationShowContent object:nil];
     [[NSNotificationCenter defaultCenter] removeObserver:self name:NotificationWarningMessage object:nil];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:NotificationLoginIn object:nil];
 }
 
 - (void)didReceiveMemoryWarning {

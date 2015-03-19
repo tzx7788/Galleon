@@ -21,6 +21,7 @@
 @property (nonatomic, strong) NSDate * lastLogInTime;
 @property (nonatomic, strong) NSString * myattr;
 @property (nonatomic, strong) NSString * name;
+@property (nonatomic, strong) NSString * nickName;
 @property (nonatomic, strong) NSString * password;
 @property (nonatomic, strong) NSString * phone;
 @property (nonatomic, strong) NSString * registeredTime;

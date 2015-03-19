@@ -24,6 +24,7 @@
     [ud setObject:user.lastLogInTime forKey:@"lastLogInTime"];
     [ud setObject:user.myattr forKey:@"myattr"];
     [ud setObject:user.name forKey:@"name"];
+    [ud setObject:user.nickName forKey:@"nickName"];
     [ud setObject:user.password forKey:@"password"];
     [ud setObject:user.phone forKey:@"phone"];
     [ud setObject:user.registeredTime forKey:@"registeredTime"];
@@ -47,6 +48,7 @@
     user.lastLogInTime = [ud objectForKey:@"lastLogInTime"];
     user.myattr = [ud objectForKey:@"myattr"];
     user.name = [ud objectForKey:@"name"];
+    user.nickName = [ud objectForKey:@"nickName"];
     user.password = [ud objectForKey:@"password"];
     user.phone = [ud objectForKey:@"phone"];
     user.registeredTime = [ud objectForKey:@"registeredTime"];
@@ -70,6 +72,7 @@
     [ud setObject:nil forKey:@"lastLogInTime"];
     [ud setObject:nil forKey:@"myattr"];
     [ud setObject:nil forKey:@"name"];
+    [ud setObject:nil forKey:@"nickName"];
     [ud setObject:nil forKey:@"password"];
     [ud setObject:nil forKey:@"phone"];
     [ud setObject:nil forKey:@"registeredTime"];

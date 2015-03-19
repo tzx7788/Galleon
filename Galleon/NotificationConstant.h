@@ -39,4 +39,6 @@
 
 #define NotificationPersonPageClicked   @"NotificationPersonPageClicked"
 
+#define NotificationLoginIn @"NotificationLoginIn"
+
 #endif
