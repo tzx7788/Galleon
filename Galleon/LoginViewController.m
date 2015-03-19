@@ -57,6 +57,12 @@
     [[self.passwordView layer] setBorderWidth:1.0f];
     [[self.passwordView layer] setBorderColor:CGColorCreateCopyWithAlpha([UIColor whiteColor].CGColor, 0.3f)];
     [[self.passwordView layer] setCornerRadius:20.0f];
+    [[self.loginButton layer] setBorderWidth:1.0f];
+    [[self.loginButton layer] setBorderColor:CGColorCreateCopyWithAlpha([UIColor whiteColor].CGColor, 0.3f)];
+    [[self.loginButton layer] setCornerRadius:20.0f];
+    [[self.registerButton layer] setBorderWidth:1.0f];
+    [[self.registerButton layer] setBorderColor:CGColorCreateCopyWithAlpha([UIColor whiteColor].CGColor, 0.3f)];
+    [[self.registerButton layer] setCornerRadius:20.0f];
 }
 
 - (void)didReceiveMemoryWarning {

@@ -16,5 +16,7 @@
 @property (weak, nonatomic) IBOutlet UIView *accountView;
 @property (weak, nonatomic) IBOutlet UIView *passwordView;
 @property (weak, nonatomic) IBOutlet UIButton *peekButton;
+@property (weak, nonatomic) IBOutlet UIButton *loginButton;
+@property (weak, nonatomic) IBOutlet UIButton *registerButton;
 
 @end
