@@ -31,6 +31,8 @@
 		6C0FB4CC1ABA760400E72C20 /* ic_checked_pressed.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C0FB4C81ABA760400E72C20 /* ic_checked_pressed.png */; };
 		6C0FB4CD1ABA760400E72C20 /* ic_unchecked_normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C0FB4C91ABA760400E72C20 /* ic_unchecked_normal.png */; };
 		6C0FB4CE1ABA760400E72C20 /* ic_unchecked_press.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C0FB4CA1ABA760400E72C20 /* ic_unchecked_press.png */; };
+		6C0FB4D11ABAAF0300E72C20 /* ic_input_box_invisible.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C0FB4CF1ABAAF0300E72C20 /* ic_input_box_invisible.png */; };
+		6C0FB4D21ABAAF0300E72C20 /* ic_input_box_visible.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C0FB4D01ABAAF0300E72C20 /* ic_input_box_visible.png */; };
 		6C3CA2761AB16E8A00A87288 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6C3CA2781AB16E8A00A87288 /* Localizable.strings */; };
 		6C5B7A871AB56D9900FE47F0 /* button_dark_normal.9.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C5B7A861AB56D9900FE47F0 /* button_dark_normal.9.png */; };
 		6C5B7A8A1AB5731500FE47F0 /* UIAlertView+ErrorMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C5B7A891AB5731500FE47F0 /* UIAlertView+ErrorMessage.m */; };
@@ -150,6 +152,8 @@
 		6C0FB4C81ABA760400E72C20 /* ic_checked_pressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_checked_pressed.png; sourceTree = "<group>"; };
 		6C0FB4C91ABA760400E72C20 /* ic_unchecked_normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_unchecked_normal.png; sourceTree = "<group>"; };
 		6C0FB4CA1ABA760400E72C20 /* ic_unchecked_press.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_unchecked_press.png; sourceTree = "<group>"; };
+		6C0FB4CF1ABAAF0300E72C20 /* ic_input_box_invisible.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_input_box_invisible.png; sourceTree = "<group>"; };
+		6C0FB4D01ABAAF0300E72C20 /* ic_input_box_visible.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_input_box_visible.png; sourceTree = "<group>"; };
 		6C3CA2771AB16E8A00A87288 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		6C5B7A861AB56D9900FE47F0 /* button_dark_normal.9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_dark_normal.9.png; sourceTree = "<group>"; };
 		6C5B7A881AB5731500FE47F0 /* UIAlertView+ErrorMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+ErrorMessage.h"; sourceTree = "<group>"; };
@@ -503,6 +507,8 @@
 		6CAA1D451AB3FDC400B848BD /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				6C0FB4CF1ABAAF0300E72C20 /* ic_input_box_invisible.png */,
+				6C0FB4D01ABAAF0300E72C20 /* ic_input_box_visible.png */,
 				6C0FB4C71ABA760400E72C20 /* ic_checked_normal.png */,
 				6C0FB4C81ABA760400E72C20 /* ic_checked_pressed.png */,
 				6C0FB4C91ABA760400E72C20 /* ic_unchecked_normal.png */,
@@ -987,6 +993,7 @@
 				6CAA1D441AB3FDC100B848BD /* bg_login.jpg in Resources */,
 				6C5B7A871AB56D9900FE47F0 /* button_dark_normal.9.png in Resources */,
 				6CA763971AB16BAD00A9185F /* Main.storyboard in Resources */,
+				6C0FB4D11ABAAF0300E72C20 /* ic_input_box_invisible.png in Resources */,
 				6C3CA2761AB16E8A00A87288 /* Localizable.strings in Resources */,
 				6CC6EBC01AB31E3800A9392E /* TitleLabel.xib in Resources */,
 				6CAD84481AB7178E00F5F2F5 /* NewsViewController.xib in Resources */,
@@ -996,6 +1003,7 @@
 				6CA3D8051AB5284D0059E7CF /* reddot.jpg in Resources */,
 				6C5BDC4F1AB0754C005FE343 /* ic_sidebar_homepage.png in Resources */,
 				6CF078951AB2712400DF0C0C /* test_menu@2x.png in Resources */,
+				6C0FB4D21ABAAF0300E72C20 /* ic_input_box_visible.png in Resources */,
 				6C6E63551AB287E60014F47F /* pic_5huichangbuju.png in Resources */,
 				6C6E63511AB287E60014F47F /* pic_1huiyijieshao.png in Resources */,
 				6CCB9C3D1AB9C045001BF16E /* ic_leave_new_message.png in Resources */,
