@@ -79,9 +79,11 @@
 		6CC6EBCB1AB3357E00A9392E /* ExhibitionListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6CC6EBC91AB3357E00A9392E /* ExhibitionListViewController.xib */; };
 		6CC6EBCF1AB3371900A9392E /* ExhibitionListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CC6EBCD1AB3371900A9392E /* ExhibitionListTableViewCell.m */; };
 		6CC6EBD01AB3371900A9392E /* ExhibitionListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6CC6EBCE1AB3371900A9392E /* ExhibitionListTableViewCell.xib */; };
+		6CC9EC331ABC08300062B64A /* Launch Screen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6CC9EC321ABC08300062B64A /* Launch Screen.xib */; };
+		6CC9EC361ABC14420062B64A /* galleon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6CC9EC341ABC14420062B64A /* galleon@2x.png */; };
+		6CC9EC371ABC14420062B64A /* galleon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6CC9EC351ABC14420062B64A /* galleon@3x.png */; };
 		6CCB9C3A1AB9ABA8001BF16E /* MessageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CCB9C391AB9ABA8001BF16E /* MessageModel.m */; };
 		6CCB9C3D1AB9C045001BF16E /* ic_leave_new_message.png in Resources */ = {isa = PBXBuildFile; fileRef = 6CCB9C3C1AB9C045001BF16E /* ic_leave_new_message.png */; };
-		6CCC89A71AB7F34900D04033 /* Launch Screen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6CCC89A61AB7F34900D04033 /* Launch Screen.xib */; };
 		6CE169A31ABA47E9003BF89F /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CE169A21ABA47E9003BF89F /* User.m */; };
 		6CEE19281AADBC78006CB3DD /* GalleonTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CEE19271AADBC78006CB3DD /* GalleonTests.m */; };
 		6CEE19401AADC291006CB3DD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CEE19361AADC291006CB3DD /* AppDelegate.m */; };
@@ -229,10 +231,12 @@
 		6CC6EBCC1AB3371900A9392E /* ExhibitionListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExhibitionListTableViewCell.h; sourceTree = "<group>"; };
 		6CC6EBCD1AB3371900A9392E /* ExhibitionListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExhibitionListTableViewCell.m; sourceTree = "<group>"; };
 		6CC6EBCE1AB3371900A9392E /* ExhibitionListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExhibitionListTableViewCell.xib; sourceTree = "<group>"; };
+		6CC9EC321ABC08300062B64A /* Launch Screen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "Launch Screen.xib"; sourceTree = "<group>"; };
+		6CC9EC341ABC14420062B64A /* galleon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "galleon@2x.png"; sourceTree = "<group>"; };
+		6CC9EC351ABC14420062B64A /* galleon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "galleon@3x.png"; sourceTree = "<group>"; };
 		6CCB9C381AB9ABA8001BF16E /* MessageModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageModel.h; sourceTree = "<group>"; };
 		6CCB9C391AB9ABA8001BF16E /* MessageModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageModel.m; sourceTree = "<group>"; };
 		6CCB9C3C1AB9C045001BF16E /* ic_leave_new_message.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_leave_new_message.png; sourceTree = "<group>"; };
-		6CCC89A61AB7F34900D04033 /* Launch Screen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "Launch Screen.xib"; sourceTree = "<group>"; };
 		6CE169A11ABA47E9003BF89F /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
 		6CE169A21ABA47E9003BF89F /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		6CEE19081AADBC78006CB3DD /* Galleon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Galleon.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -305,6 +309,8 @@
 		6C5BDC461AB074DF005FE343 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				6CC9EC341ABC14420062B64A /* galleon@2x.png */,
+				6CC9EC351ABC14420062B64A /* galleon@3x.png */,
 				6CC058C41ABB117100C16465 /* About */,
 				6CCB9C3B1AB9C038001BF16E /* Discuss */,
 				6CAA1D451AB3FDC400B848BD /* Login */,
@@ -869,7 +875,6 @@
 				6C6E63421AB281AA0014F47F /* UI */,
 				6C5BDC461AB074DF005FE343 /* Resource */,
 				6CEE19471AADC2A0006CB3DD /* Supporting Files */,
-				6CCC89A61AB7F34900D04033 /* Launch Screen.xib */,
 			);
 			path = Galleon;
 			sourceTree = "<group>";
@@ -882,6 +887,7 @@
 				6CEE193D1AADC291006CB3DD /* main.m */,
 				6CEE19351AADC291006CB3DD /* AppDelegate.h */,
 				6CEE19361AADC291006CB3DD /* AppDelegate.m */,
+				6CC9EC321ABC08300062B64A /* Launch Screen.xib */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -1006,6 +1012,7 @@
 				6CAA1D421AB3ED6000B848BD /* LeftMenuUserHeaderView.xib in Resources */,
 				6CC6EBCB1AB3357E00A9392E /* ExhibitionListViewController.xib in Resources */,
 				6CAD84531AB719E900F5F2F5 /* NewsTableViewCell.xib in Resources */,
+				6CC9EC361ABC14420062B64A /* galleon@2x.png in Resources */,
 				6C0141451AB877FC0069EDE7 /* DiscussTableViewCell.xib in Resources */,
 				6C0FB4CB1ABA760400E72C20 /* ic_checked_normal.png in Resources */,
 				6C0141521AB87AE60069EDE7 /* HomePageViewController.xib in Resources */,
@@ -1023,6 +1030,7 @@
 				6CF24AC81ABBA734002423D2 /* pic_5huichangbuju.png in Resources */,
 				6CA763971AB16BAD00A9185F /* Main.storyboard in Resources */,
 				6C0FB4D11ABAAF0300E72C20 /* ic_input_box_invisible.png in Resources */,
+				6CC9EC331ABC08300062B64A /* Launch Screen.xib in Resources */,
 				6C3CA2761AB16E8A00A87288 /* Localizable.strings in Resources */,
 				6CC6EBC01AB31E3800A9392E /* TitleLabel.xib in Resources */,
 				6CF24AC91ABBA734002423D2 /* pic_6lijiehuiyibaogao.png in Resources */,
@@ -1030,6 +1038,7 @@
 				6CAD84431AB7177F00F5F2F5 /* NewsListViewController.xib in Resources */,
 				6CC6EBD01AB3371900A9392E /* ExhibitionListTableViewCell.xib in Resources */,
 				6C0FB4CC1ABA760400E72C20 /* ic_checked_pressed.png in Resources */,
+				6CC9EC371ABC14420062B64A /* galleon@3x.png in Resources */,
 				6CF24AC51ABBA734002423D2 /* pic_2jiaotongzhusu.png in Resources */,
 				6CA3D8051AB5284D0059E7CF /* reddot.jpg in Resources */,
 				6C5BDC4F1AB0754C005FE343 /* ic_sidebar_homepage.png in Resources */,
@@ -1040,7 +1049,6 @@
 				6C01415D1AB87BBB0069EDE7 /* PersonViewController.xib in Resources */,
 				6C5BDC4E1AB0754C005FE343 /* ic_sidebar_exhibition.png in Resources */,
 				6CF078931AB25CDF00DF0C0C /* bg_tab_bar.png in Resources */,
-				6CCC89A71AB7F34900D04033 /* Launch Screen.xib in Resources */,
 				6C5BDC511AB0754C005FE343 /* ic_sidebar_news.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1263,6 +1271,7 @@
 			baseConfigurationReference = 44966A53F4CB1EEA112879F2 /* Pods-Galleon.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Galleon/Info.plist;
@@ -1278,6 +1287,7 @@
 			baseConfigurationReference = 93E3A8A183354E1A097DC007 /* Pods-Galleon.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Galleon/Info.plist;

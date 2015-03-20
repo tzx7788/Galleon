@@ -7,17 +7,45 @@
 //
 
 #import "AppDelegate.h"
+#import <AFNetworking/UIImageView+AFNetworking.h>
+#import "Client.h"
 
 @interface AppDelegate ()
-
+@property (strong, nonatomic) UIImageView *splashView;
 @end
 
 @implementation AppDelegate
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    [self.window makeKeyAndVisible];
+    
+    self.splashView = [[UIImageView alloc]initWithFrame:self.window.bounds];
+    [self displaySplashView];
     return YES;
+}
+
+- (void)displaySplashView
+{
+    [self.window makeKeyAndVisible];
+    [self.window addSubview:self.splashView];
+    [self.window bringSubviewToFront:self.splashView];
+    self.splashView.backgroundColor = [UIColor orangeColor];
+    NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
+    [self.splashView setImageWithURL:[NSURL URLWithString:[ud objectForKey:@"SplashViewURL"]]];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [UIView animateWithDuration:0.5f animations:^{
+            [self.splashView setAlpha:0.0f];
+        } completion:^(BOOL isFinished){
+            [self.splashView removeFromSuperview];
+            [self.splashView setAlpha:1.0f];
+        }];
+    });
+    [[Client sharedClient] getMockImageURLWithsuccessBlock:^(id responseData){
+        if (responseData[@""]) {
+            [ud setObject:responseData[@""] forKey:@"SplashViewURL"];
+        }
+    } failureBlock:nil];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

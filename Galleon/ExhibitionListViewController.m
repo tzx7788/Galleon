@@ -9,6 +9,7 @@
 #import "ExhibitionListViewController.h"
 #import "ExhibitionListTableViewCell.h"
 #import "NotificationConstant.h"
+#import "Client.h"
 
 @interface ExhibitionListViewController ()<UITableViewDataSource, UITableViewDelegate>
 
@@ -35,14 +36,29 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.tableView registerNib:[UINib nibWithNibName:@"ExhibitionListTableViewCell" bundle:nil] forCellReuseIdentifier:@"ExhibitionListTableViewCell"];
-    ExhibitionModel *model = [[ExhibitionModel  alloc] init];
-    model.exhibitionName = @"一个论坛";
-    model.titleImageURLString = @"/Users/tzx/Documents/Galleon/Galleon/pic_1huiyijieshao.png";
-    [self.modelList addObject:model];
-    model = [[ExhibitionModel  alloc] init];
-    model.exhibitionName = @"两个论坛";
-    model.titleImageURLString = @"pic_6lijiehuiyibaogao";
-    [self.modelList addObject:model];
+    [self loadData];
+}
+
+- (void)loadData
+{
+    [[Client sharedClient] getAllExhibitionsWithsuccessBlock:^(id responseData){
+        NSArray * array = responseData;
+        NSMutableArray * modelList = [[NSMutableArray alloc] init];
+        for ( id dict in array ){
+            ExhibitionModel * model = [[ExhibitionModel alloc] init];
+            if (dict[@"view_count"]) model.viewCount = dict[@"view_count"];
+            if (dict[@"started_time"]) model.startedTime = dict[@"started_time"];
+            if (dict[@"updated_time"]) model.updatedTime = dict[@"updated_time"];
+            if (dict[@"created_time"]) model.createdTime = dict[@"created_time"];
+            if (dict[@"id"]) model.exhibitionId = dict[@"id"];
+            if (dict[@"title"]) model.exhibitionName = dict[@"title"];
+            [modelList addObject:model];
+        }
+        self.modelList = [modelList copy];
+        [self.tableView reloadData];
+    }failureBlock:^(NSError *error, NSString * responseString) {
+        
+    }];
 }
 
 - (void)didReceiveMemoryWarning {

@@ -14,4 +14,14 @@
 
 @property (nonatomic, strong) NSString * titleImageURLString;
 
+@property (nonatomic, strong) NSString * startedTime;
+
+@property (nonatomic, strong) NSNumber * viewCount;
+
+@property (nonatomic, strong) NSDate * updatedTime;
+
+@property (nonatomic, strong) NSDate * createdTime;
+
+@property (nonatomic, strong) NSString * exhibitionId;
+
 @end

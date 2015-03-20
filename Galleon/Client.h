@@ -61,4 +61,7 @@ typedef void (^FailureCompletionBlock)(NSError *error, NSString *responseString)
                  successBlock:(SuccessCompletionBlock) successCompletionBlock
                  failureBlock:(FailureCompletionBlock) failureCompletionBlock;
 
+- (void)getAllExhibitionsWithsuccessBlock:(SuccessCompletionBlock) successCompletionBlock
+                             failureBlock:(FailureCompletionBlock) failureCompletionBlock;
+
 @end

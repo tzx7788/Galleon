@@ -162,6 +162,12 @@
     [self POST:@"/news/message/send" parameter:param successBlock:successCompletionBlock failureBlock:failureCompletionBlock];
 }
 
+- (void)getAllExhibitionsWithsuccessBlock:(SuccessCompletionBlock) successCompletionBlock
+                             failureBlock:(FailureCompletionBlock) failureCompletionBlock
+{
+    [self GET:@"/news/conferences/list/ios" successBlock:successCompletionBlock failureBlock:failureCompletionBlock];
+}
+
 #pragma PrivateMethod
 - (void)POST:(NSString *) urlString
    parameter:(id) param
