@@ -90,7 +90,7 @@ typedef enum {
     [super viewDidAppear:animated];
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        //[[NSNotificationCenter defaultCenter] postNotificationName:NotificationLoginIn object:nil];
+        [[NSNotificationCenter defaultCenter] postNotificationName:NotificationLoginIn object:nil];
     });
 }
 
