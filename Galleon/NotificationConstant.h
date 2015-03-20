@@ -42,4 +42,6 @@
 
 #define NotificationLoginIn @"NotificationLoginIn"
 
+#define NotificationNewsPush @"NotificationNewsPush"
+
 #endif

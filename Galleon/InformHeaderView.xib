@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="InformHeaderView">
+            <rect key="frame" x="0.0" y="0.0" width="409" height="31"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="bg_banner_noshadow.png" translatesAutoresizingMaskIntoConstraints="NO" id="7WG-gA-ZRb">
+                    <rect key="frame" x="0.0" y="0.0" width="409" height="31"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="通告" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dAm-ty-Deb">
+                    <rect key="frame" x="19" y="5" width="34" height="20.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="dAm-ty-Deb" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="19" id="6PJ-P8-yQR"/>
+                <constraint firstItem="7WG-gA-ZRb" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="CqT-P7-lWH"/>
+                <constraint firstAttribute="trailing" secondItem="7WG-gA-ZRb" secondAttribute="trailing" id="Q0p-cF-WrI"/>
+                <constraint firstAttribute="centerY" secondItem="dAm-ty-Deb" secondAttribute="centerY" id="T79-S2-Z74"/>
+                <constraint firstAttribute="bottom" secondItem="7WG-gA-ZRb" secondAttribute="bottom" id="mlN-sZ-HQP"/>
+                <constraint firstItem="7WG-gA-ZRb" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="tmn-44-ufg"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="29.5" y="-276.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="bg_banner_noshadow.png" width="1080" height="240"/>
+    </resources>
+</document>

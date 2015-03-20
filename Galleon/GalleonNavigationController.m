@@ -20,6 +20,8 @@
 #import "PostMessageModel.h"
 #import "PostMessageViewController.h"
 #import "StringConstant.h"
+#import "NewsListModel.h"
+#import "NewsListViewController.h"
 
 @interface GalleonNavigationController ()
 
@@ -33,6 +35,7 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(newsDetailClicked:) name:NotificationNewsDetailClicked object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(viewPDF:) name:NotificationViewPDF object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(postMessageClicked:) name:NotificationPostMessageViewController object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(pushNewsListViewController:) name:NotificationNewsPush  object:nil];
     
 }
 
@@ -43,7 +46,25 @@
     [[NSNotificationCenter defaultCenter] removeObserver:self name:NotificationNewsDetailClicked object:nil];
     [[NSNotificationCenter defaultCenter] removeObserver:self name:NotificationViewPDF object:nil];
     [[NSNotificationCenter defaultCenter] removeObserver:self name:NotificationPostMessageViewController object:nil];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:NotificationNewsPush object:nil];
 }
+
+- (void)pushNewsListViewController:(NSNotification *) notification
+{
+    if ( [[notification object] isKindOfClass:[NewsListModel class]] ) {
+        NewsListModel *model = [notification object];
+        SubContentViewController * svc = [SubContentViewController createViewController];
+        TitleLabel * label = [TitleLabel createLabel];
+        label.text = News;
+        self.navigationItem.titleView = label;
+        svc.titleLabel = label;
+        NewsListViewController * vc = [NewsListViewController createViewController];
+        svc.contentViewController = vc;
+        vc.model = model;
+        [self pushViewController:svc animated:YES];
+    }
+}
+
 
 - (void)postMessageClicked:(NSNotification *) notification
 {
