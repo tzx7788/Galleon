@@ -9,6 +9,8 @@
 #import "RegisterViewController.h"
 #import "UIAlertView+ErrorMessage.h"
 #import "NotificationConstant.h"
+#import "SelectionViewController.h"
+#import "StringConstant.h"
 
 @interface RegisterViewController ()<UIScrollViewDelegate,UIActionSheetDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate>
 
@@ -46,6 +48,20 @@
 }
 - (IBAction)CancelClicked:(id)sender {
     [self.navigationController popViewControllerAnimated:YES];
+}
+
+- (IBAction)disctrictClicked:(id)sender {
+    [self performSegueWithIdentifier:@"SelectionSegue" sender:self.districtTextField];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"SelectionSegue"] && (sender == self.districtTextField) ) {
+        SelectionViewController * vc = (SelectionViewController *)segue.destinationViewController;
+        vc.textField = self.districtTextField;
+        NSArray * array = @[Asia, Africa, NorhthAmerica, SouthAmerica, Europe, Oceania];
+        vc.dataArray = array;
+    }
 }
 
 #pragma mark - UIActionSheetDelegate

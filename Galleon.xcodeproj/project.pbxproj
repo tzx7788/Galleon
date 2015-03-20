@@ -102,6 +102,8 @@
 		6CF24AC81ABBA734002423D2 /* pic_5huichangbuju.png in Resources */ = {isa = PBXBuildFile; fileRef = 6CF24AC11ABBA734002423D2 /* pic_5huichangbuju.png */; };
 		6CF24AC91ABBA734002423D2 /* pic_6lijiehuiyibaogao.png in Resources */ = {isa = PBXBuildFile; fileRef = 6CF24AC21ABBA734002423D2 /* pic_6lijiehuiyibaogao.png */; };
 		6CF24ACA1ABBA734002423D2 /* pic_7guanyuwomen.png in Resources */ = {isa = PBXBuildFile; fileRef = 6CF24AC31ABBA734002423D2 /* pic_7guanyuwomen.png */; };
+		6CF24AD01ABBB9B0002423D2 /* SelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CF24ACF1ABBB9B0002423D2 /* SelectionViewController.m */; };
+		6CF24AD31ABBBEDC002423D2 /* SelectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CF24AD21ABBBEDC002423D2 /* SelectionCell.m */; };
 		83A98D002283403AA00C88F6 /* libPods-Galleon.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A469F2A228C7CAC00E115829 /* libPods-Galleon.a */; };
 /* End PBXBuildFile section */
 
@@ -265,6 +267,10 @@
 		6CF24AC11ABBA734002423D2 /* pic_5huichangbuju.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pic_5huichangbuju.png; sourceTree = "<group>"; };
 		6CF24AC21ABBA734002423D2 /* pic_6lijiehuiyibaogao.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pic_6lijiehuiyibaogao.png; sourceTree = "<group>"; };
 		6CF24AC31ABBA734002423D2 /* pic_7guanyuwomen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pic_7guanyuwomen.png; sourceTree = "<group>"; };
+		6CF24ACE1ABBB9B0002423D2 /* SelectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectionViewController.h; sourceTree = "<group>"; };
+		6CF24ACF1ABBB9B0002423D2 /* SelectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectionViewController.m; sourceTree = "<group>"; };
+		6CF24AD11ABBBEDC002423D2 /* SelectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectionCell.h; sourceTree = "<group>"; };
+		6CF24AD21ABBBEDC002423D2 /* SelectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectionCell.m; sourceTree = "<group>"; };
 		93E3A8A183354E1A097DC007 /* Pods-Galleon.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Galleon.release.xcconfig"; path = "Pods/Target Support Files/Pods-Galleon/Pods-Galleon.release.xcconfig"; sourceTree = "<group>"; };
 		A469F2A228C7CAC00E115829 /* libPods-Galleon.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Galleon.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -545,6 +551,8 @@
 				6CAA1D4B1AB4025E00B848BD /* LoginViewController.m */,
 				6CAA1D4D1AB4026A00B848BD /* RegisterViewController.h */,
 				6CAA1D4E1AB4026A00B848BD /* RegisterViewController.m */,
+				6CF24ACE1ABBB9B0002423D2 /* SelectionViewController.h */,
+				6CF24ACF1ABBB9B0002423D2 /* SelectionViewController.m */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -552,6 +560,8 @@
 		6CAA1D481AB400EB00B848BD /* View */ = {
 			isa = PBXGroup;
 			children = (
+				6CF24AD11ABBBEDC002423D2 /* SelectionCell.h */,
+				6CF24AD21ABBBEDC002423D2 /* SelectionCell.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -1082,6 +1092,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6CF24AD31ABBBEDC002423D2 /* SelectionCell.m in Sources */,
 				6C6E63491AB282BD0014F47F /* ExhibitionType.m in Sources */,
 				6CAA1D4C1AB4025E00B848BD /* LoginViewController.m in Sources */,
 				6CCB9C3A1AB9ABA8001BF16E /* MessageModel.m in Sources */,
@@ -1097,6 +1108,7 @@
 				6CE169A31ABA47E9003BF89F /* User.m in Sources */,
 				6C01415C1AB87BBB0069EDE7 /* PersonViewController.m in Sources */,
 				6C6E635F1AB290530014F47F /* ExhibitionTableViewCell.m in Sources */,
+				6CF24AD01ABBB9B0002423D2 /* SelectionViewController.m in Sources */,
 				6CC6EBCA1AB3357E00A9392E /* ExhibitionListViewController.m in Sources */,
 				6CAD844B1AB7181B00F5F2F5 /* NewsModel.m in Sources */,
 				6C01413D1AB877C80069EDE7 /* DiscussModel.m in Sources */,

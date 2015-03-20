@@ -12,7 +12,7 @@
 #import "StringConstant.h"
 #import <MBProgressHUD/MBProgressHUD.h>
 
-@interface LoginViewController ()<MBProgressHUDDelegate>
+@interface LoginViewController ()<MBProgressHUDDelegate,UITextFieldDelegate>
 @property (nonatomic, strong) User * user;
 @property (nonatomic, assign) BOOL isPasswordVisible;
 @end
@@ -67,6 +67,13 @@
     [[self.registerButton layer] setCornerRadius:20.0f];
     if ( self.user.account && self.user.password )
         [self loginWithAccount:self.user.account password:self.user.password];
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [self.accountTextField resignFirstResponder];
+    [self.passwordTextField resignFirstResponder];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -151,6 +158,14 @@
 {
     [hud removeFromSuperview];
     hud = nil;
+}
+
+#pragma - UITextFieldDelegate
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [textField resignFirstResponder];
+    return YES;
 }
 
 /*

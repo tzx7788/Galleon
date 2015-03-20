@@ -29,4 +29,11 @@
 #define LogInFailure        NSLocalizedString(@"Failure!",nil)
 #define Logging             NSLocalizedString(@"Logging...",nil)
 
+#define Asia               NSLocalizedString(@"Asia",nil)
+#define Europe             NSLocalizedString(@"Europe",nil)
+#define Africa             NSLocalizedString(@"Africa",nil)
+#define NorhthAmerica      NSLocalizedString(@"NorhthAmerica",nil)
+#define SouthAmerica       NSLocalizedString(@"SouthAmerica",nil)
+#define Oceania            NSLocalizedString(@"Oceania",nil)
+
 #endif

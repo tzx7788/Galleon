@@ -27,7 +27,7 @@
                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="上海广尧商务咨询有限公司 ，作为中国航空学会国际航空产业会议的独家合作伙伴以及中国商飞《大飞机》杂志社的独家战略伙伴，是目前国内唯一一家全方位提供航空产业咨询服务的公司" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yh9-HE-fh1">
+                <label opaque="NO" userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="上海广尧商务咨询有限公司 ，作为中国航空学会国际航空产业会议的独家合作伙伴以及中国商飞《大飞机》杂志社的独家战略伙伴，是目前国内唯一一家全方位提供航空产业咨询服务的公司" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="304" translatesAutoresizingMaskIntoConstraints="NO" id="Yh9-HE-fh1">
                     <rect key="frame" x="8" y="86" width="304" height="165"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="165" id="E9O-nQ-6xZ"/>
