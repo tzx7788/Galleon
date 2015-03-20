@@ -11,6 +11,8 @@
 #import "Client.h"
 #import "StringConstant.h"
 #import <MBProgressHUD/MBProgressHUD.h>
+#import "NotificationConstant.h"
+#import "PersonModel.h"
 
 @interface LoginViewController ()<MBProgressHUDDelegate,UITextFieldDelegate>
 @property (nonatomic, strong) User * user;
@@ -103,7 +105,7 @@
     hud.labelText = message;
     hud.mode = MBProgressHUDModeIndeterminate;
     [hud show:YES];
-    [[Client sharedClient] loginWithAccount:account Password:account successBlock:^(id responseData){
+    [[Client sharedClient] loginWithAccount:account Password:password successBlock:^(id responseData){
         if ( responseData[@"account"] != [NSNull null] )
             self.user.account = responseData[@"account"];
         if ( responseData[@"company"] != [NSNull null] )
@@ -140,9 +142,11 @@
             self.user.token = responseData[@"token"];
         [User saveToCache:self.user];
         hud.mode = MBProgressHUDModeText;
-        hud.labelText = LogInSuccessful;
-        [hud hide:YES afterDelay:1];
         [self dismissViewControllerAnimated:YES completion:nil];
+        PersonModel * model = [[PersonModel alloc] init];
+        model.user = self.user;
+        [[NSNotificationCenter defaultCenter] postNotificationName:NotificationWarningMessage object:@"Login Successful!"];
+        [[NSNotificationCenter defaultCenter] postNotificationName:NotificationPersonPageClicked object:model];
     } failureBlock:^(NSError *error, NSString * responseString) {
         hud.mode = MBProgressHUDModeText;
         hud.labelText = LogInFailure;
