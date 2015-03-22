@@ -7,8 +7,9 @@
 //
 
 #import "PostMessageViewController.h"
+#import "Client.h"
 
-@interface PostMessageViewController ()
+@interface PostMessageViewController ()<UITextViewDelegate>
 
 @end
 
@@ -22,7 +23,20 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    [[self.contentTextView layer] setCornerRadius:5.0];
+    [[self.contentTextView layer] setBorderColor:CGColorCreateCopyWithAlpha([UIColor lightGrayColor].CGColor, 1.0f)];
+    [[self.contentTextView layer] setBorderWidth:1.0f];
+    [[self.submitButton layer] setCornerRadius:20.0];
+    [[self.submitButton layer] setBorderColor:CGColorCreateCopyWithAlpha([UIColor lightGrayColor].CGColor, 1.0f)];
+    [[self.submitButton layer] setBorderWidth:1.0f];
+}
+
+- (IBAction)submitClicked:(id)sender {
+    [[Client sharedClient] PostMessgeWithContent:self.contentTextView.text token:self.model.user.token successBlock:^(id responseData){
+        [self.navigationController popViewControllerAnimated:YES];
+    } failureBlock:^(NSError * error, NSString * errorString){
+        
+    }];
 }
 
 - (void)didReceiveMemoryWarning {

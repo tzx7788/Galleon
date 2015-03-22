@@ -43,6 +43,11 @@
     // Do any additional setup after loading the view from its nib.
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [self.tableView reloadData];
+}
+
 - (void)loadData
 {
     [[Client sharedClient] getAllInformsWithsuccessBlock:^(id responseData){
@@ -106,6 +111,12 @@
         return cell;
     }
     return [tableView dequeueReusableCellWithIdentifier:@""];
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell * cell = [tableView cellForRowAtIndexPath:indexPath];
+    [cell setSelected:NO];
 }
 
 /*

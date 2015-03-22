@@ -7,7 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "User.h"
 
 @interface PostMessageModel : NSObject
+
+@property (nonatomic, strong) User * user;
 
 @end

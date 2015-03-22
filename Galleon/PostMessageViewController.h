@@ -13,6 +13,8 @@
 
 @property (nonatomic, strong) PostMessageModel * model;
 
+@property (weak, nonatomic) IBOutlet UITextView *contentTextView;
+@property (weak, nonatomic) IBOutlet UIButton *submitButton;
 + (PostMessageViewController *)createViewController;
 
 @end

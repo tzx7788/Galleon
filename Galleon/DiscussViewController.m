@@ -30,6 +30,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.tableView registerNib:[UINib nibWithNibName:@"DiscussTableViewCell" bundle:nil] forCellReuseIdentifier:@"DiscussTableViewCell"];
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
     [self loadData];
 }
 
@@ -51,7 +56,7 @@
             MessageModel * b = (MessageModel *) obj2;
             return [b.date compare:a.date];
         }];
-        [self.tableView reloadData];
+        [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:UITableViewRowAnimationAutomatic];
     } failureBlock:nil];
 }
 
@@ -93,6 +98,7 @@
 
 - (IBAction)addMessageClicked:(id)sender {
     PostMessageModel * model = [[PostMessageModel alloc] init];
+    model.user = [User awakeFromCache];
     [[NSNotificationCenter defaultCenter] postNotificationName:NotificationPostMessageViewController object:model];
 }
 
