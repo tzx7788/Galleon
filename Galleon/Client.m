@@ -22,7 +22,7 @@
     static dispatch_once_t ClientPredicate;
     dispatch_once(&ClientPredicate, ^{
         client = [[Client alloc] init];
-        client.manager = [[AFHTTPRequestOperationManager alloc] initWithBaseURL:[NSURL URLWithString:@"http://aero.wisdomriver.com.cn/"]];
+        client.manager = [[AFHTTPRequestOperationManager alloc] initWithBaseURL:[NSURL URLWithString:@"http://news1.yiliang.me/"]];
         client.manager.requestSerializer = [AFJSONRequestSerializer serializer];
         client.manager.responseSerializer = [AFJSONResponseSerializer serializer];
         client.manager.responseSerializer.acceptableContentTypes = [client.manager.responseSerializer.acceptableContentTypes setByAddingObject:@"text/html"];
@@ -166,6 +166,12 @@
                              failureBlock:(FailureCompletionBlock) failureCompletionBlock
 {
     [self GET:@"/news/conferences/list/ios" successBlock:successCompletionBlock failureBlock:failureCompletionBlock];
+}
+
+- (void)getAllInformsWithsuccessBlock:(SuccessCompletionBlock) successCompletionBlock
+                         failureBlock:(FailureCompletionBlock) failureCompletionBlock
+{
+    [self GET:@"/news/informs" successBlock:successCompletionBlock failureBlock:failureCompletionBlock];
 }
 
 #pragma PrivateMethod

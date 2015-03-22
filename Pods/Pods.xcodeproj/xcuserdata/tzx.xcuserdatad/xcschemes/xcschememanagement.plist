@@ -9,7 +9,17 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-Galleon-KDCycleBannerView.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-Galleon-MBProgressHUD.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-Galleon-SDWebImage.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -27,22 +37,32 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>0B6F2A5CFC15904AACF43292</key>
+		<key>2A036B5CBDE7CED48149219C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>6EC135DA951B2D09F2BDC6FB</key>
+		<key>4E042B11AA3C2C06CFD4668C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>75E0E1C6BAF598F8614C9BD1</key>
+		<key>7673894BB5422A480F423654</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B400DE9D42040E5B66F30EF7</key>
+		<key>8794FD10E6EFA0C65FAED2CB</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>CBDFDBEF365B815482D6BDE1</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>EEF0D6965058126F802ADD42</key>
 		<dict>
 			<key>primary</key>
 			<true/>

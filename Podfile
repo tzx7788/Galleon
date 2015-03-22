@@ -5,9 +5,9 @@ target 'Galleon' do
 pod 'AFNetworking', '~> 2.3.1'
 pod 'MBProgressHUD'
 pod 'UIImage-Helpers'
+pod 'KDCycleBannerView'
 end
 
 target 'GalleonTests' do
 
 end
-
