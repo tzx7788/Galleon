@@ -52,12 +52,7 @@
         NSMutableArray * modelArray = [[NSMutableArray alloc] init];
         for (id object in array){
             NewsModel * model = [[NewsModel alloc] init];
-            model.newsId = object[@"id"];
-            model.titleString = object[@"title"];
-            model.avatarURLString = object[@"icon"];
-            model.date = object[@"create_time"];
-            model.hasVideo = [object[@"has_video"] boolValue];
-            model.videoURLString = object[@"video_link"];
+            [model loadDataWithDictionary:object];
             [modelArray addObject:model];
         }
         self.modelList = [modelArray sortedArrayUsingComparator:^(id obj1, id obj2){

@@ -99,12 +99,7 @@
             count ++;
             if ( count > 3 ) break;
             NewsModel * model = [[NewsModel alloc] init];
-            model.newsId = object[@"id"];
-            model.titleString = object[@"title"];
-            model.avatarURLString = object[@"icon"];
-            model.date = object[@"create_time"];
-            model.hasVideo = [object[@"has_video"] boolValue];
-            model.videoURLString = object[@"video_link"];
+            [model loadDataWithDictionary:object];
             [modelList addObject:model];
         }
         NSMutableIndexSet * indexSet = [NSMutableIndexSet indexSet];

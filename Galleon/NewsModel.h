@@ -15,8 +15,13 @@
 @property (nonatomic, strong) NSString * videoURLString;
 @property (nonatomic, strong) NSString * titleString;
 @property (nonatomic, strong) NSDate * date;
+@property (nonatomic, strong) NSNumber * thumbCount;
+@property (nonatomic, strong) NSNumber * viewCount;
+@property (nonatomic, strong) NSString * content;
 @property (assign) BOOL isCN;
 @property (assign) BOOL isEN;
 @property (assign) BOOL hasVideo;
+
+- (void)loadDataWithDictionary:(NSDictionary *) dict;
 
 @end

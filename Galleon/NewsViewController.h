@@ -15,5 +15,7 @@
 @property (weak, nonatomic) IBOutlet UIWebView *webView;
 
 + (NewsViewController *)createViewController;
+@property (weak, nonatomic) IBOutlet UILabel *thumbCountLabel;
+@property (weak, nonatomic) IBOutlet UILabel *viewCountLabel;
 
 @end

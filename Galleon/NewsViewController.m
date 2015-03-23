@@ -27,10 +27,20 @@
     [self loadData];
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    self.viewCountLabel.text = [self.model.viewCount description];
+    self.thumbCountLabel.text = [self.model.thumbCount description];
+    [self.webView loadHTMLString:self.model.content baseURL:nil];
+}
+
 - (void)loadData
 {
     [[Client sharedClient] getNewsDetialWithId:self.model.newsId successBlock:^(id responseData){
-        [self.webView loadHTMLString:responseData[@"content"] baseURL:nil];
+        [self.model loadDataWithDictionary:responseData];
+        self.viewCountLabel.text = [self.model.viewCount description];
+        self.thumbCountLabel.text = [self.model.thumbCount description];
+        [self.webView loadHTMLString:self.model.content baseURL:nil];
         if ( self.model.hasVideo ) {
             MPMoviePlayerController * vc = [[MPMoviePlayerController alloc] initWithContentURL:[NSURL URLWithString:responseData[@"video_link"] ]];
             vc.controlStyle = MPMovieControlStyleNone;
@@ -47,6 +57,22 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)thumberClicked:(id)sender {
+    
+    static BOOL isAvailable = YES;
+    
+    if ( isAvailable ) {
+        int count = [self.model.thumbCount intValue];
+        count++;
+        self.model.thumbCount = [NSNumber numberWithInt:count];
+        self.thumbCountLabel.text = [self.model.thumbCount description];
+        isAvailable = NO;
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(20.0f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            isAvailable = YES;
+        });
+    }
 }
 
 /*
