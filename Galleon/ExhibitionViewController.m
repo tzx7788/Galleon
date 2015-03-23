@@ -12,6 +12,9 @@
 #import "TitleLabel.h"
 #import "NotificationConstant.h"
 #import "PDFModel.h"
+#import "ExhibitionDetailModel.h"
+#import "ExhibitionFileListModel.h"
+#import "Client.h"
 
 @interface ExhibitionViewController ()<UITableViewDataSource,UITableViewDelegate>
 
@@ -33,7 +36,16 @@
     titleLabel.text = self.model.exhibitionName;
     self.navigationItem.titleView = titleLabel;
     [self.tableView registerNib:[UINib nibWithNibName:@"ExhibitionTableViewCell" bundle:nil] forCellReuseIdentifier:@"ExhibitionTableViewCell"];
+    [self.tableView setHidden:YES];
+    [self loadData];
+}
 
+- (void)loadData
+{
+    [[Client sharedClient] getExhibitionWithId:self.model.exhibitionId successBlock:^(id responseData) {
+        [self.model loadWithDictionary:responseData];
+        [self.tableView setHidden:NO];
+    }failureBlock:nil];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -94,10 +106,60 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    PDFModel * model = [[PDFModel alloc] init];
-    model.pdfName = @"haha";
-    model.pdfURLString = @"http://aero.wisdomriver.com.cn/_uploads/files/24179241.pdf";
-    [[NSNotificationCenter defaultCenter] postNotificationName:NotificationViewPDF object:model];
+    ExhibitionTableViewCell * cell  = (ExhibitionTableViewCell *)[tableView cellForRowAtIndexPath:indexPath];
+    ExhibtionCategoryType type = cell.type.type;
+    switch (type) {
+        case ExhibitionTypeIntro:
+        {
+            ExhibitionDetailModel * model = [[ExhibitionDetailModel alloc] init];
+            model.title = cell.type.name;
+            model.content = self.model.introContent;
+            [[NSNotificationCenter defaultCenter] postNotificationName:NotificationExhibitionDeitail object:model];
+        }
+            break;
+        case ExhibitionTypeService:
+        {
+            ExhibitionDetailModel * model = [[ExhibitionDetailModel alloc] init];
+            model.title = cell.type.name;
+            model.content = self.model.serviceContent;
+            [[NSNotificationCenter defaultCenter] postNotificationName:NotificationExhibitionDeitail object:model];
+        }
+            break;
+        case ExhibitionTypeHost:
+        {
+            ExhibitionDetailModel * model = [[ExhibitionDetailModel alloc] init];
+            model.title = cell.type.name;
+            model.content = self.model.hostContent;
+            [[NSNotificationCenter defaultCenter] postNotificationName:NotificationExhibitionDeitail object:model];
+        }
+            break;
+        case ExhibitionTypeSche:
+        {
+            ExhibitionDetailModel * model = [[ExhibitionDetailModel alloc] init];
+            model.title = cell.type.name;
+            model.content = self.model.scheduleContent;
+            [[NSNotificationCenter defaultCenter] postNotificationName:NotificationExhibitionDeitail object:model];
+        }
+            break;
+        case ExhibitionTypeLayout:
+        {
+            ExhibitionDetailModel * model = [[ExhibitionDetailModel alloc] init];
+            model.title = cell.type.name;
+            model.content = self.model.layoutContent;
+            [[NSNotificationCenter defaultCenter] postNotificationName:NotificationExhibitionDeitail object:model];
+        }
+            break;
+        case ExhibitionTypeDownload:
+        {
+            ExhibitionFileListModel * model = [[ExhibitionFileListModel alloc] init];
+            model.title = cell.type.name;
+            model.exhibitionId = self.model.exhibitionId;
+            [[NSNotificationCenter defaultCenter] postNotificationName:NotificationExhibitionFileList object:model];
+        }
+            break;
+        default:
+            break;
+    }
 }
 
 /*

@@ -10,5 +10,19 @@
 
 @implementation ExhibitionModel
 
+- (void)loadWithDictionary:(NSDictionary *)dict
+{
+    if (dict[@"view_count"]) self.viewCount = dict[@"view_count"];
+    if (dict[@"started_time"]) self.startedTime = dict[@"started_time"];
+    if (dict[@"updated_time"]) self.updatedTime = dict[@"updated_time"];
+    if (dict[@"created_time"]) self.createdTime = dict[@"created_time"];
+    if (dict[@"id"]) self.exhibitionId = dict[@"id"];
+    if (dict[@"title"]) self.exhibitionName = dict[@"title"];
+    if (dict[@"logistics_content"]) self.serviceContent = dict[@"logistics_content"];
+    if (dict[@"group_content"]) self.hostContent = dict[@"group_content"];
+    if (dict[@"agenda_content"]) self.scheduleContent = dict[@"agenda_content"];
+    if (dict[@"layout_content"]) self.layoutContent = dict[@"layout_content"];
+    if (dict[@"intro_content"]) self.introContent = dict[@"intro_content"];
+}
 
 @end

@@ -46,12 +46,7 @@
         NSMutableArray * modelList = [[NSMutableArray alloc] init];
         for ( id dict in array ){
             ExhibitionModel * model = [[ExhibitionModel alloc] init];
-            if (dict[@"view_count"]) model.viewCount = dict[@"view_count"];
-            if (dict[@"started_time"]) model.startedTime = dict[@"started_time"];
-            if (dict[@"updated_time"]) model.updatedTime = dict[@"updated_time"];
-            if (dict[@"created_time"]) model.createdTime = dict[@"created_time"];
-            if (dict[@"id"]) model.exhibitionId = dict[@"id"];
-            if (dict[@"title"]) model.exhibitionName = dict[@"title"];
+            [model loadWithDictionary:dict];
             [modelList addObject:model];
         }
         self.modelList = [modelList copy];

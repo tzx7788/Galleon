@@ -168,6 +168,20 @@
     [self GET:@"/news/conferences/list/ios" successBlock:successCompletionBlock failureBlock:failureCompletionBlock];
 }
 
+- (void)getExhibitionWithId:(NSString *)exhibitionId
+               successBlock:(SuccessCompletionBlock) successCompletionBlock
+               failureBlock:(FailureCompletionBlock) failureCompletionBlock
+{
+    [self GET:[NSString stringWithFormat:@"/news/conferences/%@",exhibitionId] successBlock:successCompletionBlock failureBlock:failureCompletionBlock];
+}
+
+- (void)getExhibitionPDFlistWithId:(NSString *)exhibitionId
+               successBlock:(SuccessCompletionBlock) successCompletionBlock
+               failureBlock:(FailureCompletionBlock) failureCompletionBlock
+{
+    [self GET:[NSString stringWithFormat:@"news/conferences/%@/get_file/REPORT",exhibitionId] successBlock:successCompletionBlock failureBlock:failureCompletionBlock];
+}
+
 - (void)getAllInformsWithsuccessBlock:(SuccessCompletionBlock) successCompletionBlock
                          failureBlock:(FailureCompletionBlock) failureCompletionBlock
 {

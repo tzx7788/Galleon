@@ -33,6 +33,14 @@
 		6C0FB4CE1ABA760400E72C20 /* ic_unchecked_press.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C0FB4CA1ABA760400E72C20 /* ic_unchecked_press.png */; };
 		6C0FB4D11ABAAF0300E72C20 /* ic_input_box_invisible.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C0FB4CF1ABAAF0300E72C20 /* ic_input_box_invisible.png */; };
 		6C0FB4D21ABAAF0300E72C20 /* ic_input_box_visible.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C0FB4D01ABAAF0300E72C20 /* ic_input_box_visible.png */; };
+		6C28D06C1AC020E2004BD04D /* ExhibitionDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C28D06B1AC020E2004BD04D /* ExhibitionDetailModel.m */; };
+		6C28D0701AC02118004BD04D /* ExhibitionDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C28D06E1AC02118004BD04D /* ExhibitionDetailViewController.m */; };
+		6C28D0711AC02118004BD04D /* ExhibitionDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C28D06F1AC02118004BD04D /* ExhibitionDetailViewController.xib */; };
+		6C28D0751AC0217E004BD04D /* ExhibitionFileListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C28D0731AC0217E004BD04D /* ExhibitionFileListViewController.m */; };
+		6C28D0761AC0217E004BD04D /* ExhibitionFileListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C28D0741AC0217E004BD04D /* ExhibitionFileListViewController.xib */; };
+		6C28D0791AC021C5004BD04D /* ExhibitionFileListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C28D0781AC021C5004BD04D /* ExhibitionFileListModel.m */; };
+		6C28D07D1AC03DD6004BD04D /* PDFTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C28D07B1AC03DD6004BD04D /* PDFTableViewCell.m */; };
+		6C28D07E1AC03DD6004BD04D /* PDFTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C28D07C1AC03DD6004BD04D /* PDFTableViewCell.xib */; };
 		6C3CA2761AB16E8A00A87288 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6C3CA2781AB16E8A00A87288 /* Localizable.strings */; };
 		6C5B7A871AB56D9900FE47F0 /* button_dark_normal.9.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C5B7A861AB56D9900FE47F0 /* button_dark_normal.9.png */; };
 		6C5B7A8A1AB5731500FE47F0 /* UIAlertView+ErrorMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C5B7A891AB5731500FE47F0 /* UIAlertView+ErrorMessage.m */; };
@@ -172,6 +180,19 @@
 		6C0FB4CA1ABA760400E72C20 /* ic_unchecked_press.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_unchecked_press.png; sourceTree = "<group>"; };
 		6C0FB4CF1ABAAF0300E72C20 /* ic_input_box_invisible.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_input_box_invisible.png; sourceTree = "<group>"; };
 		6C0FB4D01ABAAF0300E72C20 /* ic_input_box_visible.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_input_box_visible.png; sourceTree = "<group>"; };
+		6C28D06A1AC020E2004BD04D /* ExhibitionDetailModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExhibitionDetailModel.h; sourceTree = "<group>"; };
+		6C28D06B1AC020E2004BD04D /* ExhibitionDetailModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExhibitionDetailModel.m; sourceTree = "<group>"; };
+		6C28D06D1AC02118004BD04D /* ExhibitionDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExhibitionDetailViewController.h; sourceTree = "<group>"; };
+		6C28D06E1AC02118004BD04D /* ExhibitionDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExhibitionDetailViewController.m; sourceTree = "<group>"; };
+		6C28D06F1AC02118004BD04D /* ExhibitionDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExhibitionDetailViewController.xib; sourceTree = "<group>"; };
+		6C28D0721AC0217E004BD04D /* ExhibitionFileListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExhibitionFileListViewController.h; sourceTree = "<group>"; };
+		6C28D0731AC0217E004BD04D /* ExhibitionFileListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExhibitionFileListViewController.m; sourceTree = "<group>"; };
+		6C28D0741AC0217E004BD04D /* ExhibitionFileListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExhibitionFileListViewController.xib; sourceTree = "<group>"; };
+		6C28D0771AC021C5004BD04D /* ExhibitionFileListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExhibitionFileListModel.h; sourceTree = "<group>"; };
+		6C28D0781AC021C5004BD04D /* ExhibitionFileListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExhibitionFileListModel.m; sourceTree = "<group>"; };
+		6C28D07A1AC03DD6004BD04D /* PDFTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDFTableViewCell.h; sourceTree = "<group>"; };
+		6C28D07B1AC03DD6004BD04D /* PDFTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDFTableViewCell.m; sourceTree = "<group>"; };
+		6C28D07C1AC03DD6004BD04D /* PDFTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PDFTableViewCell.xib; sourceTree = "<group>"; };
 		6C3CA2771AB16E8A00A87288 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		6C5B7A861AB56D9900FE47F0 /* button_dark_normal.9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_dark_normal.9.png; sourceTree = "<group>"; };
 		6C5B7A881AB5731500FE47F0 /* UIAlertView+ErrorMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+ErrorMessage.h"; sourceTree = "<group>"; };
@@ -455,6 +476,12 @@
 				6CC6EBC71AB3357E00A9392E /* ExhibitionListViewController.h */,
 				6CC6EBC81AB3357E00A9392E /* ExhibitionListViewController.m */,
 				6CC6EBC91AB3357E00A9392E /* ExhibitionListViewController.xib */,
+				6C28D06D1AC02118004BD04D /* ExhibitionDetailViewController.h */,
+				6C28D06E1AC02118004BD04D /* ExhibitionDetailViewController.m */,
+				6C28D06F1AC02118004BD04D /* ExhibitionDetailViewController.xib */,
+				6C28D0721AC0217E004BD04D /* ExhibitionFileListViewController.h */,
+				6C28D0731AC0217E004BD04D /* ExhibitionFileListViewController.m */,
+				6C28D0741AC0217E004BD04D /* ExhibitionFileListViewController.xib */,
 				6C0141281AB80D5A0069EDE7 /* PDFViewController.h */,
 				6C0141291AB80D5A0069EDE7 /* PDFViewController.m */,
 				6C01412A1AB80D5A0069EDE7 /* PDFViewController.xib */,
@@ -471,6 +498,9 @@
 				6CC6EBCC1AB3371900A9392E /* ExhibitionListTableViewCell.h */,
 				6CC6EBCD1AB3371900A9392E /* ExhibitionListTableViewCell.m */,
 				6CC6EBCE1AB3371900A9392E /* ExhibitionListTableViewCell.xib */,
+				6C28D07A1AC03DD6004BD04D /* PDFTableViewCell.h */,
+				6C28D07B1AC03DD6004BD04D /* PDFTableViewCell.m */,
+				6C28D07C1AC03DD6004BD04D /* PDFTableViewCell.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -484,6 +514,10 @@
 				6CC6EBC51AB328AD00A9392E /* ExhibitionModel.m */,
 				6CAA1D2F1AB3C2AB00B848BD /* ExhibitionListModel.h */,
 				6CAA1D301AB3C2AB00B848BD /* ExhibitionListModel.m */,
+				6C28D06A1AC020E2004BD04D /* ExhibitionDetailModel.h */,
+				6C28D06B1AC020E2004BD04D /* ExhibitionDetailModel.m */,
+				6C28D0771AC021C5004BD04D /* ExhibitionFileListModel.h */,
+				6C28D0781AC021C5004BD04D /* ExhibitionFileListModel.m */,
 				6C0141221AB80CCF0069EDE7 /* PDFModel.h */,
 				6C0141231AB80CCF0069EDE7 /* PDFModel.m */,
 			);
@@ -1091,8 +1125,10 @@
 				6CC9EC331ABC08300062B64A /* Launch Screen.xib in Resources */,
 				6C3CA2761AB16E8A00A87288 /* Localizable.strings in Resources */,
 				6CC6EBC01AB31E3800A9392E /* TitleLabel.xib in Resources */,
+				6C28D0711AC02118004BD04D /* ExhibitionDetailViewController.xib in Resources */,
 				6CF24AC91ABBA734002423D2 /* pic_6lijiehuiyibaogao.png in Resources */,
 				6CAD84481AB7178E00F5F2F5 /* NewsViewController.xib in Resources */,
+				6C28D07E1AC03DD6004BD04D /* PDFTableViewCell.xib in Resources */,
 				6CAD84431AB7177F00F5F2F5 /* NewsListViewController.xib in Resources */,
 				6CC3E6E61ABD125C00800F20 /* HomePageHeaderView.xib in Resources */,
 				6CDD89E11ABC592700FE41C2 /* ic_list_more_normal.png in Resources */,
@@ -1104,6 +1140,7 @@
 				6C5BDC4F1AB0754C005FE343 /* ic_sidebar_homepage.png in Resources */,
 				6CF078951AB2712400DF0C0C /* test_menu@2x.png in Resources */,
 				6C0FB4D21ABAAF0300E72C20 /* ic_input_box_visible.png in Resources */,
+				6C28D0761AC0217E004BD04D /* ExhibitionFileListViewController.xib in Resources */,
 				6CCB9C3D1AB9C045001BF16E /* ic_leave_new_message.png in Resources */,
 				6C5BDC4D1AB0754C005FE343 /* ic_sidebar_about_us.png in Resources */,
 				6CDD89DF1ABC589E00FE41C2 /* HeadLineHeaderView.xib in Resources */,
@@ -1170,6 +1207,7 @@
 				6CF078911AB1DA8900DF0C0C /* UIView+Resize.m in Sources */,
 				6CEE19461AADC291006CB3DD /* ViewController.m in Sources */,
 				6CDD89DD1ABC588400FE41C2 /* HeadLineHeaderView.m in Sources */,
+				6C28D0701AC02118004BD04D /* ExhibitionDetailViewController.m in Sources */,
 				6CEE19451AADC291006CB3DD /* main.m in Sources */,
 				6CC3E6E91ABD126D00800F20 /* HomePageHeaderView.m in Sources */,
 				6CAA1D3E1AB3ED2F00B848BD /* LeftMenuUserHeaderView.m in Sources */,
@@ -1177,6 +1215,7 @@
 				6C0141581AB87BA20069EDE7 /* PersonModel.m in Sources */,
 				6CAA1D311AB3C2AB00B848BD /* ExhibitionListModel.m in Sources */,
 				6CAA1D4F1AB4026A00B848BD /* RegisterViewController.m in Sources */,
+				6C28D0791AC021C5004BD04D /* ExhibitionFileListModel.m in Sources */,
 				6CE169A31ABA47E9003BF89F /* User.m in Sources */,
 				6C01415C1AB87BBB0069EDE7 /* PersonViewController.m in Sources */,
 				6C6E635F1AB290530014F47F /* ExhibitionTableViewCell.m in Sources */,
@@ -1185,10 +1224,13 @@
 				6CC6EBCA1AB3357E00A9392E /* ExhibitionListViewController.m in Sources */,
 				6CAD844B1AB7181B00F5F2F5 /* NewsModel.m in Sources */,
 				6C01413D1AB877C80069EDE7 /* DiscussModel.m in Sources */,
+				6C28D0751AC0217E004BD04D /* ExhibitionFileListViewController.m in Sources */,
 				6C0141391AB877880069EDE7 /* DiscussViewController.m in Sources */,
+				6C28D06C1AC020E2004BD04D /* ExhibitionDetailModel.m in Sources */,
 				6CB80BD31ABF97E500C49F44 /* NewsImageModel.m in Sources */,
 				6CF0788B1AB197FB00DF0C0C /* RootContentViewController.m in Sources */,
 				6C0141491AB878490069EDE7 /* PostMessageViewController.m in Sources */,
+				6C28D07D1AC03DD6004BD04D /* PDFTableViewCell.m in Sources */,
 				6CEE194B1AADC4A2006CB3DD /* UISnapShotNavigationController.m in Sources */,
 				6C5B7A8A1AB5731500FE47F0 /* UIAlertView+ErrorMessage.m in Sources */,
 				6CAD84511AB719D500F5F2F5 /* NewsTableViewCell.m in Sources */,

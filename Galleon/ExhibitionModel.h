@@ -24,4 +24,16 @@
 
 @property (nonatomic, strong) NSString * exhibitionId;
 
+@property (nonatomic, strong) NSString * introContent;
+
+@property (nonatomic, strong) NSString * serviceContent;
+
+@property (nonatomic, strong) NSString * hostContent;
+
+@property (nonatomic, strong) NSString * scheduleContent;
+
+@property (nonatomic, strong) NSString * layoutContent;
+
+- (void)loadWithDictionary:(NSDictionary *)dict;
+
 @end

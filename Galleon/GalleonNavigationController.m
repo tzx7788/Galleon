@@ -22,6 +22,8 @@
 #import "StringConstant.h"
 #import "NewsListModel.h"
 #import "NewsListViewController.h"
+#import "ExhibitionFileListViewController.h"
+#import "ExhibitionDetailViewController.h"
 
 @interface GalleonNavigationController ()
 
@@ -36,7 +38,8 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(viewPDF:) name:NotificationViewPDF object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(postMessageClicked:) name:NotificationPostMessageViewController object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(pushNewsListViewController:) name:NotificationNewsPush  object:nil];
-    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(pushExhibitionFileList:) name:NotificationExhibitionFileList  object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(pushExhibitionDetail:) name:NotificationExhibitionDeitail  object:nil];
 }
 
 - (void) finalize
@@ -47,7 +50,42 @@
     [[NSNotificationCenter defaultCenter] removeObserver:self name:NotificationViewPDF object:nil];
     [[NSNotificationCenter defaultCenter] removeObserver:self name:NotificationPostMessageViewController object:nil];
     [[NSNotificationCenter defaultCenter] removeObserver:self name:NotificationNewsPush object:nil];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:NotificationExhibitionFileList object:nil];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:NotificationExhibitionDeitail object:nil];
 }
+
+- (void)pushExhibitionFileList:(NSNotification *) notification
+{
+    if ( [[notification object] isKindOfClass:[ExhibitionFileListModel class]] ) {
+        ExhibitionFileListModel *model = [notification object];
+        SubContentViewController * svc = [SubContentViewController createViewController];
+        TitleLabel * label = [TitleLabel createLabel];
+        label.text = model.title;
+        self.navigationItem.titleView = label;
+        svc.titleLabel = label;
+        ExhibitionFileListViewController * vc = [ExhibitionFileListViewController createViewController];
+        svc.contentViewController = vc;
+        vc.model = model;
+        [self pushViewController:svc animated:YES];
+    }
+}
+
+- (void)pushExhibitionDetail:(NSNotification *) notification
+{
+    if ( [[notification object] isKindOfClass:[ExhibitionDetailModel class]] ) {
+        ExhibitionDetailModel *model = [notification object];
+        SubContentViewController * svc = [SubContentViewController createViewController];
+        TitleLabel * label = [TitleLabel createLabel];
+        label.text = model.title;
+        self.navigationItem.titleView = label;
+        svc.titleLabel = label;
+        ExhibitionDetailViewController * vc = [ExhibitionDetailViewController createViewController];
+        svc.contentViewController = vc;
+        vc.model = model;
+        [self pushViewController:svc animated:YES];
+    }
+}
+
 
 - (void)pushNewsListViewController:(NSNotification *) notification
 {
