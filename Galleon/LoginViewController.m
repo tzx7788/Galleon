@@ -130,8 +130,9 @@
             self.user.name = responseData[@"name"];
         if ( responseData[@"nickname"] != [NSNull null] )
             self.user.nickName = responseData[@"nickname"];
-        if ( responseData[@"password"] != [NSNull null] )
-            self.user.password = responseData[@"password"];
+//        if ( responseData[@"password"] != [NSNull null] )
+//            self.user.password = responseData[@"password"];
+        self.user.password = self.passwordTextField.text;
         if ( responseData[@"phone_number"] != [NSNull null] )
             self.user.phone = responseData[@"phone_number"];
         if ( responseData[@"registered_time"] != [NSNull null] )

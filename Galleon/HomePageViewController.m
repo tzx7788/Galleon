@@ -10,11 +10,13 @@
 #import "InformHeaderView.h"
 #import "HeadLineHeaderView.h"
 #import "InformTableViewCell.h"
+#import "HomePageHeaderView.h"
 #import "Client.h"
 
 @interface HomePageViewController ()<UITableViewDataSource, UITableViewDelegate>
 
 @property (nonatomic, strong) NSArray * dataArray;
+@property (nonatomic, strong) HomePageHeaderView * tableHeaderView;
 
 @end
 
@@ -39,8 +41,27 @@
     [self.tableView registerNib:[UINib nibWithNibName:@"InformHeaderView"  bundle:nil] forHeaderFooterViewReuseIdentifier:@"InformHeaderView"];
     [self.tableView registerNib:[UINib nibWithNibName:@"HeadLineHeaderView"  bundle:nil] forHeaderFooterViewReuseIdentifier:@"HeadLineHeaderView"];
     [self.tableView registerNib:[UINib nibWithNibName:@"InformTableViewCell" bundle:nil] forCellReuseIdentifier:@"InformTableViewCell"];
+    self.tableHeaderView = [HomePageHeaderView createView];
     [self loadData];
     // Do any additional setup after loading the view from its nib.
+}
+
+- (void)viewDidLayoutSubviews
+{
+    [self.tableView setTableHeaderView:self.tableHeaderView];
+    
+    [self.tableHeaderView setNeedsLayout];
+    [self.tableHeaderView layoutIfNeeded];
+    
+    CGFloat height = [self.tableHeaderView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize].height + self.tableHeaderView.frame.size.width * 0.5;
+    
+    NSLog(@"%f",height);
+    
+    CGRect headerFrame = self.tableHeaderView.frame;
+    headerFrame.size.height = height;
+    self.tableHeaderView.frame = headerFrame;
+    
+    [self.tableView setTableHeaderView:self.tableHeaderView];
 }
 
 - (void)viewWillAppear:(BOOL)animated

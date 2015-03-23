@@ -12,4 +12,7 @@
 @interface HomePageHeaderView : UIView
 @property (weak, nonatomic) IBOutlet KDCycleBannerView *bannerView;
 
+@property (weak, nonatomic) IBOutlet UILabel *countDownLabel;
++ (HomePageHeaderView *) createView;
+
 @end

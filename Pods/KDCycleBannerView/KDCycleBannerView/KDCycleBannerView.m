@@ -130,6 +130,7 @@ static void *kContentImageViewObservationContext = &kContentImageViewObservation
     for (NSInteger i = 0; i < _datasourceImages.count; i++) {
         CGRect imgRect = CGRectMake(contentWidth * i, 0, contentWidth, contentHeight);
         UIImageView *imageView = [[UIImageView alloc] initWithFrame:imgRect];
+        [imageView setClipsToBounds:YES];
         imageView.backgroundColor = [UIColor clearColor];
         imageView.contentMode = [_datasource contentModeForImageIndex:i];
         
