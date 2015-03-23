@@ -40,6 +40,11 @@
     [self loadData];
 }
 
+- (void) viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+}
+
 - (void)loadData
 {
     [[Client sharedClient] getNewsWithsuccessBlock:^(id responseObject){
@@ -70,7 +75,12 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return NewsTableViewCellHeight;
+    static NewsTableViewCell *cell;
+    if (cell == nil) {
+        cell = [tableView dequeueReusableCellWithIdentifier: @"NewsTableViewCell"];
+    }
+    [cell setModel:self.modelList[indexPath.row]]; // making text assignment and so on
+    return [cell.contentView systemLayoutSizeFittingSize: UILayoutFittingCompressedSize].height + 1.0f;
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -96,6 +106,8 @@
 - (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [[NSNotificationCenter defaultCenter] postNotificationName:NotificationNewsDetailClicked object:self.modelList[indexPath.row]];
+    UITableViewCell * cell = [tableView cellForRowAtIndexPath:indexPath];
+    [cell setSelected:NO];
 }
 
 /*

@@ -9,8 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "NewsModel.h"
 
-#define NewsTableViewCellHeight 60.0f
-
 @interface NewsTableViewCell : UITableViewCell
 
 @property (strong, nonatomic) NewsModel * model;

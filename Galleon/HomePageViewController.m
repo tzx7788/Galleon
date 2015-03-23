@@ -11,7 +11,9 @@
 #import "HeadLineHeaderView.h"
 #import "InformTableViewCell.h"
 #import "HomePageHeaderView.h"
+#import "NewsTableViewCell.h"
 #import "Client.h"
+#import "NotificationConstant.h"
 
 @interface HomePageViewController ()<UITableViewDataSource, UITableViewDelegate>
 
@@ -41,6 +43,7 @@
     [self.tableView registerNib:[UINib nibWithNibName:@"InformHeaderView"  bundle:nil] forHeaderFooterViewReuseIdentifier:@"InformHeaderView"];
     [self.tableView registerNib:[UINib nibWithNibName:@"HeadLineHeaderView"  bundle:nil] forHeaderFooterViewReuseIdentifier:@"HeadLineHeaderView"];
     [self.tableView registerNib:[UINib nibWithNibName:@"InformTableViewCell" bundle:nil] forCellReuseIdentifier:@"InformTableViewCell"];
+    [self.tableView registerNib:[UINib nibWithNibName:@"NewsTableViewCell" bundle:nil] forCellReuseIdentifier:@"NewsTableViewCell"];
     self.tableHeaderView = [HomePageHeaderView createView];
     [self loadData];
     // Do any additional setup after loading the view from its nib.
@@ -55,7 +58,6 @@
     
     CGFloat height = [self.tableHeaderView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize].height + self.tableHeaderView.frame.size.width * 0.5;
     
-    NSLog(@"%f",height);
     
     CGRect headerFrame = self.tableHeaderView.frame;
     headerFrame.size.height = height;
@@ -83,13 +85,58 @@
             if ( dict[@"id"] ) model.informId = dict[@"id"];
             [modelList addObject:model];
         }
-        [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:UITableViewRowAnimationAutomatic];
+        NSMutableIndexSet * indexSet = [NSMutableIndexSet indexSet];
+        [indexSet addIndex:0];
+        //[indexSet addIndex:1];
+        [self.tableView reloadSections:indexSet withRowAnimation:UITableViewRowAnimationAutomatic];
+    } failureBlock:nil];
+    [[Client sharedClient] getNewsWithsuccessBlock:^(id responseObject){
+        NSArray * array = responseObject;
+        NSMutableArray * modelList = self.dataArray[1];
+        [modelList removeAllObjects];
+        int count = 0;
+        for (id object in array){
+            count ++;
+            if ( count > 3 ) break;
+            NewsModel * model = [[NewsModel alloc] init];
+            model.newsId = object[@"id"];
+            model.titleString = object[@"title"];
+            model.avatarURLString = object[@"icon"];
+            model.date = object[@"create_time"];
+            model.hasVideo = [object[@"has_video"] boolValue];
+            model.videoURLString = object[@"video_link"];
+            [modelList addObject:model];
+        }
+        NSMutableIndexSet * indexSet = [NSMutableIndexSet indexSet];
+        //[indexSet addIndex:0];
+        [indexSet addIndex:1];
+        [self.tableView reloadSections:indexSet withRowAnimation:UITableViewRowAnimationAutomatic];
     } failureBlock:nil];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NewsTableViewCell * newscell;
+    if (newscell == nil) {
+        newscell = [tableView dequeueReusableCellWithIdentifier: @"NewsTableViewCell"];
+    }
+    static InformTableViewCell * headercell;
+    if (headercell == nil) {
+        headercell = [tableView dequeueReusableCellWithIdentifier: @"InformTableViewCell"];
+    }
+    if ( indexPath.section == 0 ) {
+        [headercell setModel:self.dataArray[indexPath.section][indexPath.row]];
+        return [headercell.contentView systemLayoutSizeFittingSize: UILayoutFittingCompressedSize].height + 1.0f;
+    } else if ( indexPath.section == 1 ) {
+        [newscell setModel:self.dataArray[indexPath.section][indexPath.row]];
+        return [newscell.contentView systemLayoutSizeFittingSize: UILayoutFittingCompressedSize].height + 1.0f;
+    }
+    return 0;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
@@ -130,6 +177,11 @@
         InformModel * model = self.dataArray[indexPath.section][indexPath.row];
         [cell setModel:model];
         return cell;
+    } else if ( indexPath.section == 1 ){
+        NewsTableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:@"NewsTableViewCell" forIndexPath:indexPath];
+        NewsModel * model = self.dataArray[indexPath.section][indexPath.row];
+        [cell setModel:model];
+        return cell;
     }
     return [tableView dequeueReusableCellWithIdentifier:@""];
 }
@@ -137,6 +189,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell * cell = [tableView cellForRowAtIndexPath:indexPath];
+    [[NSNotificationCenter defaultCenter] postNotificationName:NotificationNewsDetailClicked object:self.dataArray[indexPath.section][indexPath.row]];
     [cell setSelected:NO];
 }
 
