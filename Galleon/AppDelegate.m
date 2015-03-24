@@ -30,9 +30,8 @@
     [self.window makeKeyAndVisible];
     [self.window addSubview:self.splashView];
     [self.window bringSubviewToFront:self.splashView];
-    self.splashView.backgroundColor = [UIColor orangeColor];
     NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
-    [self.splashView setImageWithURL:[NSURL URLWithString:[ud objectForKey:@"SplashViewURL"]]];
+    [self.splashView setImageWithURL:[NSURL URLWithString:[ud objectForKey:@"SplashViewURL"]] placeholderImage:[UIImage imageNamed:@"bg_about_us"]];
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [UIView animateWithDuration:0.5f animations:^{
             [self.splashView setAlpha:0.0f];
@@ -42,8 +41,9 @@
         }];
     });
     [[Client sharedClient] getMockImageURLWithsuccessBlock:^(id responseData){
-        if (responseData[@""]) {
-            [ud setObject:responseData[@""] forKey:@"SplashViewURL"];
+        if (responseData[@"url"]) {
+            [ud setObject:responseData[@"url"] forKey:@"SplashViewURL"];
+            [self.splashView setImageWithURL:[NSURL URLWithString:[ud objectForKey:@"SplashViewURL"]] placeholderImage:[UIImage imageNamed:@"bg_about_us"]];
         }
     } failureBlock:nil];
 }
