@@ -7,6 +7,7 @@
 //
 
 #import "PersonViewController.h"
+#import "NotificationConstant.h"
 
 @interface PersonViewController ()
 
@@ -22,12 +23,33 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+}
+
+- (void)viewDidLayoutSubviews
+{
+    [super viewDidLayoutSubviews];
+    [[self.editButton layer] setBorderWidth:1.0f];
+    [[self.editButton layer] setBorderColor:CGColorCreateCopyWithAlpha([UIColor whiteColor].CGColor, 0.7)];
+    [[self.editButton layer] setCornerRadius:self.editButton.frame.size.height/2];
+    [[self.logoutButton layer] setBorderWidth:1.0f];
+    [[self.logoutButton layer] setBorderColor:CGColorCreateCopyWithAlpha([UIColor whiteColor].CGColor, 0.7)];
+    [[self.logoutButton layer] setCornerRadius:self.logoutButton.frame.size.height/2];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)editClicked:(id)sender {
+    [[NSNotificationCenter defaultCenter] postNotificationName:NotificationUpdateProfile object:self.model];
+}
+
+- (IBAction)logoutClicked:(id)sender {
+    self.model.user.password = @"";
+    self.model.user.autoLogin = [NSNumber numberWithBool:NO];
+    [User saveToCache:self.model.user];
+    [[NSNotificationCenter defaultCenter] postNotificationName:NotificationLoginIn object:nil];
 }
 
 /*

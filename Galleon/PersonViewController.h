@@ -13,6 +13,8 @@
 
 @property (nonatomic, strong) PersonModel * model;
 
+@property (weak, nonatomic) IBOutlet UIButton *editButton;
+@property (weak, nonatomic) IBOutlet UIButton *logoutButton;
 + (PersonViewController *)createViewController;
 
 @end

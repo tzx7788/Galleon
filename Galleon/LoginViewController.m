@@ -67,7 +67,7 @@
     [[self.registerButton layer] setBorderWidth:1.0f];
     [[self.registerButton layer] setBorderColor:CGColorCreateCopyWithAlpha([UIColor whiteColor].CGColor, 0.3f)];
     [[self.registerButton layer] setCornerRadius:20.0f];
-    if ( self.user.account && self.user.password )
+    if ( self.user.account && self.user.password && [self.user.autoLogin boolValue] )
         [self loginWithAccount:self.user.account password:self.user.password];
 }
 

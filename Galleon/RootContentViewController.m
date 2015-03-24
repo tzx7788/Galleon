@@ -64,8 +64,10 @@
         TitleLabel * label = [TitleLabel createLabel];
         label.text = Person;
         self.navigationItem.titleView = label;
+        PersonViewController * vc = [PersonViewController createViewController];
+        vc.model = [notification object];
+        [self loadViewController:vc];
     }
-    [self loadViewController:[PersonViewController createViewController]];
 }
 
 
