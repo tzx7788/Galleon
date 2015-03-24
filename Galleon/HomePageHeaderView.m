@@ -27,6 +27,7 @@
 
 - (void)awakeFromNib
 {
+    [self.bannerView setAutoPlayTimeInterval:5.0f];
     [[Client sharedClient] getAllNewImageWithsuccessBlock:^(id responseData){
         NSArray * array = responseData;
         NSMutableArray * list = [[NSMutableArray alloc] init];

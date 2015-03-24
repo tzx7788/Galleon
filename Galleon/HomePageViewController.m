@@ -103,7 +103,6 @@
             [modelList addObject:model];
         }
         NSMutableIndexSet * indexSet = [NSMutableIndexSet indexSet];
-        //[indexSet addIndex:0];
         [indexSet addIndex:1];
         [self.tableView reloadSections:indexSet withRowAnimation:UITableViewRowAnimationAutomatic];
     } failureBlock:nil];
@@ -136,7 +135,8 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
-    return 45;
+    if ( [self.dataArray[section] count] ) return 45;
+    return 0;
 }
 
 - (UIView *) tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
