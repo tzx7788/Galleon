@@ -36,4 +36,6 @@
 #define SouthAmerica       NSLocalizedString(@"SouthAmerica",nil)
 #define Oceania            NSLocalizedString(@"Oceania",nil)
 
+#define UpdateProfile       NSLocalizedString(@"Update Profile",nil)
+
 #endif

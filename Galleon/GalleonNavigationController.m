@@ -24,6 +24,7 @@
 #import "NewsListViewController.h"
 #import "ExhibitionFileListViewController.h"
 #import "ExhibitionDetailViewController.h"
+#import "UpdateProfileViewController.h"
 
 @interface GalleonNavigationController ()
 
@@ -40,6 +41,7 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(pushNewsListViewController:) name:NotificationNewsPush  object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(pushExhibitionFileList:) name:NotificationExhibitionFileList  object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(pushExhibitionDetail:) name:NotificationExhibitionDeitail  object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(pushUpdateProfile:) name:NotificationUpdateProfile  object:nil];
 }
 
 - (void) finalize
@@ -52,7 +54,25 @@
     [[NSNotificationCenter defaultCenter] removeObserver:self name:NotificationNewsPush object:nil];
     [[NSNotificationCenter defaultCenter] removeObserver:self name:NotificationExhibitionFileList object:nil];
     [[NSNotificationCenter defaultCenter] removeObserver:self name:NotificationExhibitionDeitail object:nil];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:NotificationUpdateProfile object:nil];
 }
+
+- (void)pushUpdateProfile:(NSNotification *) notification
+{
+    if ( [[notification object] isKindOfClass:[PersonModel class]] ) {
+        PersonModel *model = [notification object];
+        SubContentViewController * svc = [SubContentViewController createViewController];
+        TitleLabel * label = [TitleLabel createLabel];
+        label.text = UpdateProfile;
+        self.navigationItem.titleView = label;
+        svc.titleLabel = label;
+        UpdateProfileViewController * vc = [UpdateProfileViewController createViewController];
+        svc.contentViewController = vc;
+        vc.model = model;
+        [self pushViewController:svc animated:YES];
+    }
+}
+
 
 - (void)pushExhibitionFileList:(NSNotification *) notification
 {
