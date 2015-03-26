@@ -83,6 +83,11 @@
 
 - (void)loadDiscussViewController:(NSNotification *) notification
 {
+    User * user = [User awakeFromCache];
+    if ( [user.isVIP boolValue] == NO ){
+        [[NSNotificationCenter defaultCenter] postNotificationName:NotificationWarningMessage object:PermissionDenied];
+        return;
+    }
     if ( [[notification object] isKindOfClass:[DiscussModel class]] ) {
         TitleLabel * label = [TitleLabel createLabel];
         label.text = Discuss;

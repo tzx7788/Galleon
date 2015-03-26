@@ -38,4 +38,6 @@
 
 #define UpdateProfile       NSLocalizedString(@"Update Profile",nil)
 
+#define PermissionDenied    NSLocalizedString(@"Permission Denied!",nil)
+
 #endif

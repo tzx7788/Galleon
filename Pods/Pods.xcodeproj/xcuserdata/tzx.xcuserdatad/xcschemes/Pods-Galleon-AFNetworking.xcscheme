@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "4E042B11AA3C2C06CFD4668C"
+               BlueprintIdentifier = "0033AC8FBD7BA894B6168A5B"
                BuildableName = "libPods-Galleon-AFNetworking.a"
                BlueprintName = "Pods-Galleon-AFNetworking"
                ReferencedContainer = "container:Pods.xcodeproj">

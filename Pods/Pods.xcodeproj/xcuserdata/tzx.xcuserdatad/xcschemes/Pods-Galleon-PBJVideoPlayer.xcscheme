@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "571000410BDCC23F5EF8D344"
-               BuildableName = "libPods-Galleon-SDWebImage.a"
-               BlueprintName = "Pods-Galleon-SDWebImage"
+               BlueprintIdentifier = "C9A9FD05CFD2BD5DFA2B080D"
+               BuildableName = "libPods-Galleon-PBJVideoPlayer.a"
+               BlueprintName = "Pods-Galleon-PBJVideoPlayer"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>

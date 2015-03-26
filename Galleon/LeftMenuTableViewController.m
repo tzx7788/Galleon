@@ -16,6 +16,7 @@
 #import "PersonModel.h"
 #import "HomePageModel.h"
 #import "DiscussModel.h"
+#import "StringConstant.h"
 
 @interface LeftMenuTableViewController ()
 
@@ -102,6 +103,11 @@
             break;
         case LeftMenuTableViewCellDiscuss:
         {
+            User * user = [User awakeFromCache];
+            if ( [user.isVIP boolValue] == NO ){
+                [[NSNotificationCenter defaultCenter] postNotificationName:NotificationWarningMessage object:PermissionDenied];
+                return;
+            }
             DiscussModel * model = [[DiscussModel alloc] init];
             [[NSNotificationCenter defaultCenter] postNotificationName:NotificationDiscussClicked object:model];
         }

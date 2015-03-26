@@ -9,8 +9,10 @@
 #import "NewsViewController.h"
 #import "Client.h"
 #import <MediaPlayer/MediaPlayer.h>
+#import <PBJVideoPlayerController.h>
+#import <AVFoundation/AVFoundation.h>
 
-@interface NewsViewController ()
+@interface NewsViewController ()<PBJVideoPlayerControllerDelegate>
 
 @property (nonatomic, strong) UIButton * playButton;
 
@@ -47,15 +49,57 @@
 - (void)playClicked
 {
     if ( self.model.hasVideo ) {
-        MPMoviePlayerController * vc = [[MPMoviePlayerController alloc] initWithContentURL:[NSURL URLWithString:self.model.videoURLString]];
-        vc.controlStyle = MPMovieControlStyleNone;
-        vc.shouldAutoplay = YES;
-        vc.repeatMode = MPMovieRepeatModeOne;
-        [vc setFullscreen:YES animated:YES];
-        vc.scalingMode = MPMovieScalingModeAspectFit;
-        [vc play];
-        [self.view addSubview:vc.view];
+        NSLog(@"%@",self.model.videoURLString);
+//        AVPlayer * player = [AVPlayer playerWithURL:[NSURL URLWithString:@"http://aero.wisdomriver.com.cn/_uploads/files/24934980.mp4"]];
+//        AVPlayerLayer *layer=[AVPlayerLayer playerLayerWithPlayer:player];
+//        layer.backgroundColor=[[UIColor redColor]CGColor];
+//        
+//        [self.view.layer addSublayer:layer];
+//        [player play];
+        // allocate controller
+        MPMoviePlayerViewController *movie = [[MPMoviePlayerViewController alloc]initWithContentURL:[NSURL URLWithString:@"http://live.nwk4.yupptv.tv/nwk4/smil:mtunes.smil/playlist.m3u8"]];
+        
+        [movie.moviePlayer prepareToPlay];
+        [self presentMoviePlayerViewControllerAnimated:movie];
+        [movie.moviePlayer setControlStyle:MPMovieControlStyleFullscreen];
+        
+        [movie.view setBackgroundColor:[UIColor clearColor]];
+        
+        [movie.view setFrame:self.view.bounds];
+        [[NSNotificationCenter defaultCenter]addObserver:self
+         
+                                               selector:@selector(movieFinishedCallback:)
+         
+                                                   name:MPMoviePlayerPlaybackDidFinishNotification
+         
+                                                 object:movie.moviePlayer];
     }
+}
+
+- (void)videoPlayerReady:(PBJVideoPlayerController *)videoPlayer
+{
+}
+- (void)videoPlayerPlaybackStateDidChange:(PBJVideoPlayerController *)videoPlayer
+{
+}
+
+- (void)videoPlayerPlaybackWillStartFromBeginning:(PBJVideoPlayerController *)videoPlayer
+{
+}
+- (void)videoPlayerPlaybackDidEnd:(PBJVideoPlayerController *)videoPlayer
+{
+}
+
+-(void)movieFinishedCallback:(NSNotification*)notify{
+    MPMoviePlayerController* theMovie = [notify object];
+    
+    [[NSNotificationCenter defaultCenter]removeObserver:self
+     
+                                                  name:MPMoviePlayerPlaybackDidFinishNotification
+     
+                                                object:theMovie];
+    
+    [self dismissMoviePlayerViewControllerAnimated];
 }
 
 - (void)viewWillAppear:(BOOL)animated

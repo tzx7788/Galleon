@@ -194,6 +194,13 @@
     [self GET:@"/news/mainpage_images" successBlock:successCompletionBlock failureBlock:failureCompletionBlock];
 }
 
+- (void)getCountDownExhibitionWithsuccessBlock:(SuccessCompletionBlock) successCompletionBlock
+                                  failureBlock:(FailureCompletionBlock) failureCompletionBlock
+{
+    [self GET:@"/news/conferences/in_time_conference" successBlock:successCompletionBlock failureBlock:failureCompletionBlock];
+}
+
+
 #pragma PrivateMethod
 - (void)POST:(NSString *) urlString
    parameter:(id) param

@@ -15,6 +15,8 @@
 #import "ExhibitionDetailModel.h"
 #import "ExhibitionFileListModel.h"
 #import "Client.h"
+#import "User.h"
+#import "StringConstant.h"
 
 @interface ExhibitionViewController ()<UITableViewDataSource,UITableViewDelegate>
 
@@ -151,6 +153,11 @@
             break;
         case ExhibitionTypeDownload:
         {
+            User * user = [User awakeFromCache];
+            if ( [user.isVIP boolValue] == NO ){
+                [[NSNotificationCenter defaultCenter] postNotificationName:NotificationWarningMessage object:PermissionDenied];
+                return;
+            }
             ExhibitionFileListModel * model = [[ExhibitionFileListModel alloc] init];
             model.title = cell.type.name;
             model.exhibitionId = self.model.exhibitionId;

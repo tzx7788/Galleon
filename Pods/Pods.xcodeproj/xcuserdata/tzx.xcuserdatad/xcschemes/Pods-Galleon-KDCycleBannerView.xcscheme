@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "7673894BB5422A480F423654"
+               BlueprintIdentifier = "3552682B2F8048CF0E5F53DA"
                BuildableName = "libPods-Galleon-KDCycleBannerView.a"
                BlueprintName = "Pods-Galleon-KDCycleBannerView"
                ReferencedContainer = "container:Pods.xcodeproj">

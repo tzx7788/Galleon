@@ -78,4 +78,7 @@ typedef void (^FailureCompletionBlock)(NSError *error, NSString *responseString)
 - (void)getAllNewImageWithsuccessBlock:(SuccessCompletionBlock) successCompletionBlock
                           failureBlock:(FailureCompletionBlock) failureCompletionBlock;
 
+- (void)getCountDownExhibitionWithsuccessBlock:(SuccessCompletionBlock) successCompletionBlock
+                                  failureBlock:(FailureCompletionBlock) failureCompletionBlock;
+
 @end

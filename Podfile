@@ -6,6 +6,7 @@ pod 'AFNetworking', '~> 2.3.1'
 pod 'MBProgressHUD'
 pod 'UIImage-Helpers'
 pod 'KDCycleBannerView'
+pod 'PBJVideoPlayer'
 end
 
 target 'GalleonTests' do

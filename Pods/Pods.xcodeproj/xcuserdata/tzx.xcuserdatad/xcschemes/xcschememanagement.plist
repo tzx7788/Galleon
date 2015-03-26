@@ -19,6 +19,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-Galleon-PBJVideoPlayer.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-Galleon-SDWebImage.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -37,32 +42,37 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>2A036B5CBDE7CED48149219C</key>
+		<key>0033AC8FBD7BA894B6168A5B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>4E042B11AA3C2C06CFD4668C</key>
+		<key>2685825A1C85BF4C1964919F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>7673894BB5422A480F423654</key>
+		<key>3552682B2F8048CF0E5F53DA</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>8794FD10E6EFA0C65FAED2CB</key>
+		<key>571000410BDCC23F5EF8D344</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>CBDFDBEF365B815482D6BDE1</key>
+		<key>81FF0041871E780780E7E02E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>EEF0D6965058126F802ADD42</key>
+		<key>C99A729DF4531C02CD4F00C4</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C9A9FD05CFD2BD5DFA2B080D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
