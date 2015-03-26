@@ -36,4 +36,6 @@
 
 - (void)loadWithDictionary:(NSDictionary *)dict;
 
+- (void)saveToCalendar;
+
 @end

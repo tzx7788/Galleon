@@ -7,6 +7,9 @@
 //
 
 #import "ExhibitionModel.h"
+#import "NotificationConstant.h"
+#import "StringConstant.h"
+#import <EventKit/EventKit.h>
 
 @implementation ExhibitionModel
 
@@ -28,6 +31,49 @@
     if (dict[@"agenda_content"]) self.scheduleContent = dict[@"agenda_content"];
     if (dict[@"layout_content"]) self.layoutContent = dict[@"layout_content"];
     if (dict[@"intro_content"]) self.introContent = dict[@"intro_content"];
+}
+
+- (void)saveToCalendar
+{
+    EKEventStore *store = [[EKEventStore alloc] init];
+    [store requestAccessToEntityType:EKEntityTypeEvent completion:^(BOOL granted, NSError *error) {
+        if ( granted )
+        {
+            EKSource *localSource = nil;
+            for (EKSource *source in store.sources)
+                if (source.sourceType == EKSourceTypeLocal)
+                {
+                    localSource = source;
+                    break;
+                }
+            EKCalendar * calendar = [EKCalendar calendarForEntityType:EKEntityTypeEvent eventStore:store];
+            calendar.title = @"Exhibition";
+            calendar.source = localSource;
+            NSError * err = nil;
+            [store saveCalendar:calendar commit:YES error:&err];
+            if (err){
+                [[NSNotificationCenter defaultCenter] postNotificationName:NotificationWarningMessage object:OperationFailed];
+                NSLog(@"%@",err);
+            } else {
+                [[NSNotificationCenter defaultCenter] postNotificationName:NotificationWarningMessage object:OperationSuccessful];
+            }
+            EKEvent * event = [EKEvent eventWithEventStore:store];
+            event.title = self.exhibitionName;
+            event.startDate = self.startedTime;
+            event.endDate = [self.startedTime dateByAddingTimeInterval:60 * 60 * 24];
+            event.calendar = calendar;
+            [event setAllDay:YES];
+            [store saveEvent:event span:EKSpanThisEvent commit:YES error:&err];
+            if (err){
+                [[NSNotificationCenter defaultCenter] postNotificationName:NotificationWarningMessage object:OperationFailed];
+                NSLog(@"%@",err);
+            } else {
+                [[NSNotificationCenter defaultCenter] postNotificationName:NotificationWarningMessage object:OperationSuccessful];
+            }
+        } else {
+            [[NSNotificationCenter defaultCenter] postNotificationName:NotificationWarningMessage object:PermissionDenied];
+        }
+    }];
 }
 
 @end

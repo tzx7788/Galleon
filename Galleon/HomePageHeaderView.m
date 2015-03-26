@@ -57,6 +57,7 @@
             NSTimeInterval interval =[self.countDownExhibition.startedTime timeIntervalSinceDate:systemDate];
             int dayInterval = interval / (60 * 60 * 24);
             self.countDownLabel.text = [NSString stringWithFormat:@"%@\n%@ %d %@", self.countDownExhibition.exhibitionName,In,dayInterval,Days];
+            [self.countDownExhibition saveToCalendar];
         } failureBlock:^(NSError *error, NSString * responseString) {
             
         }];

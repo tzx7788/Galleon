@@ -43,4 +43,7 @@
 #define In  NSLocalizedString(@"In",nil)
 #define Days NSLocalizedString(@"Day(s)",nil)
 
+#define OperationSuccessful NSLocalizedString(@"Operation Successful!",nil)
+#define OperationFailed     NSLocalizedString(@"Operation Failed!",nil)
+
 #endif
