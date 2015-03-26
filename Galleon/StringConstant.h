@@ -40,4 +40,7 @@
 
 #define PermissionDenied    NSLocalizedString(@"Permission Denied!",nil)
 
+#define In  NSLocalizedString(@"In",nil)
+#define Days NSLocalizedString(@"Day(s)",nil)
+
 #endif

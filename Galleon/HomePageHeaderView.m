@@ -10,9 +10,12 @@
 #import "NewsImageModel.h"
 #import "NotificationConstant.h"
 #import "NewsViewController.h"
+#import "StringConstant.h"
 #import "Client.h"
+#import "ExhibitionModel.h"
 
 @interface HomePageHeaderView()<KDCycleBannerViewDataource, KDCycleBannerViewDelegate>
+@property (nonatomic, strong) ExhibitionModel * countDownExhibition;
 @property (nonatomic, strong) NSArray * modelList;
 
 @end
@@ -38,12 +41,28 @@
             if (dict[@"visiable"]) model.visible = dict[@"visiable"];
             if (dict[@"id"]) model.imageId = dict[@"id"];
             [list addObject:model];
-            self.countDownLabel.text = @"sadfasdflkfjsldkfjalsdfj;asldkfjal;skdfjlsjf;aklsdjf;aslkdfj;asdkfjals;dfjlsfjlasdfjlasdfjl";
         }
         self.modelList = [list copy];
         [self.bannerView reloadDataWithCompleteBlock:nil];
     } failureBlock:nil];
+    [[Client sharedClient] getSystemTimeWithsuccessBlock:^(id timeDict){
+        NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+        [formatter setDateStyle:NSDateFormatterMediumStyle];
+        [formatter setTimeStyle:NSDateFormatterShortStyle];
+        [formatter setDateFormat:@"yyyy-MM-dd'T'HH:mm:ss.S"];
+        NSDate * systemDate = [formatter dateFromString:timeDict[@"system_time"]];
+        [[Client sharedClient] getCountDownExhibitionWithsuccessBlock:^(id responseData){
+            self.countDownExhibition = [[ExhibitionModel alloc] init];
+            [self.countDownExhibition loadWithDictionary:responseData];
+            NSTimeInterval interval =[self.countDownExhibition.startedTime timeIntervalSinceDate:systemDate];
+            int dayInterval = interval / (60 * 60 * 24);
+            self.countDownLabel.text = [NSString stringWithFormat:@"%@\n%@ %d %@", self.countDownExhibition.exhibitionName,In,dayInterval,Days];
+        } failureBlock:^(NSError *error, NSString * responseString) {
+            
+        }];
+    } failureBlock:nil];
 }
+
 
 - (NSArray *)numberOfKDCycleBannerView:(KDCycleBannerView *)bannerView
 {

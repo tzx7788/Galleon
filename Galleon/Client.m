@@ -200,6 +200,11 @@
     [self GET:@"/news/conferences/in_time_conference" successBlock:successCompletionBlock failureBlock:failureCompletionBlock];
 }
 
+- (void)getSystemTimeWithsuccessBlock:(SuccessCompletionBlock) successCompletionBlock
+                         failureBlock:(FailureCompletionBlock) failureCompletionBlock
+{
+    [self GET:@"/news/system_time" successBlock:successCompletionBlock failureBlock:failureCompletionBlock];
+}
 
 #pragma PrivateMethod
 - (void)POST:(NSString *) urlString

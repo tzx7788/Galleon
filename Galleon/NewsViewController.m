@@ -57,7 +57,7 @@
 //        [self.view.layer addSublayer:layer];
 //        [player play];
         // allocate controller
-        MPMoviePlayerViewController *movie = [[MPMoviePlayerViewController alloc]initWithContentURL:[NSURL URLWithString:@"http://live.nwk4.yupptv.tv/nwk4/smil:mtunes.smil/playlist.m3u8"]];
+        MPMoviePlayerViewController *movie = [[MPMoviePlayerViewController alloc]initWithContentURL:[NSURL URLWithString:@"http://122.10.73.219:5001/"]];
         
         [movie.moviePlayer prepareToPlay];
         [self presentMoviePlayerViewControllerAnimated:movie];

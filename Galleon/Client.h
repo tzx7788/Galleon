@@ -81,4 +81,7 @@ typedef void (^FailureCompletionBlock)(NSError *error, NSString *responseString)
 - (void)getCountDownExhibitionWithsuccessBlock:(SuccessCompletionBlock) successCompletionBlock
                                   failureBlock:(FailureCompletionBlock) failureCompletionBlock;
 
+- (void)getSystemTimeWithsuccessBlock:(SuccessCompletionBlock) successCompletionBlock
+                         failureBlock:(FailureCompletionBlock) failureCompletionBlock;
+
 @end

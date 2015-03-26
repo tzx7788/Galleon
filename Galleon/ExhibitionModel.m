@@ -12,8 +12,13 @@
 
 - (void)loadWithDictionary:(NSDictionary *)dict
 {
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateStyle:NSDateFormatterMediumStyle];
+    [formatter setTimeStyle:NSDateFormatterShortStyle];
+    [formatter setDateFormat:@"yyyy-MM-dd'T'HH:mm:ss"];
+    
     if (dict[@"view_count"]) self.viewCount = dict[@"view_count"];
-    if (dict[@"started_time"]) self.startedTime = dict[@"started_time"];
+    if (dict[@"started_time"]) self.startedTime = [formatter dateFromString:dict[@"started_time"]];
     if (dict[@"updated_time"]) self.updatedTime = dict[@"updated_time"];
     if (dict[@"created_time"]) self.createdTime = dict[@"created_time"];
     if (dict[@"id"]) self.exhibitionId = dict[@"id"];
