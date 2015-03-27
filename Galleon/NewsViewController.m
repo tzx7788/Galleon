@@ -8,13 +8,8 @@
 
 #import "NewsViewController.h"
 #import "Client.h"
-#import <MediaPlayer/MediaPlayer.h>
-#import <PBJVideoPlayerController.h>
-#import <AVFoundation/AVFoundation.h>
 
-@interface NewsViewController ()<PBJVideoPlayerControllerDelegate>
-
-@property (nonatomic, strong) UIButton * playButton;
+@interface NewsViewController ()
 
 @end
 
@@ -32,76 +27,6 @@
     [self loadData];
 }
 
-- (void)viewDidLayoutSubviews
-{
-    if ( !self.playButton ){
-        UIButton * btn = [UIButton buttonWithType:UIButtonTypeCustom];
-        [self.webView.scrollView addSubview:btn];
-        self.playButton = btn;
-        CGFloat width = self.webView.scrollView.frame.size.width;
-        [self.playButton setFrame:CGRectMake(0, -width * 0.5f, width, width * 0.5f)];
-        [self.playButton setBackgroundImage:[UIImage imageNamed:@"btn_play_video"] forState:UIControlStateNormal];
-        [self.playButton addTarget:self action:@selector(playClicked) forControlEvents:UIControlEventTouchUpInside];
-        [self setHasVideo:self.model.hasVideo];
-    }
-}
-
-- (void)playClicked
-{
-    if ( self.model.hasVideo ) {
-        NSLog(@"%@",self.model.videoURLString);
-//        AVPlayer * player = [AVPlayer playerWithURL:[NSURL URLWithString:@"http://aero.wisdomriver.com.cn/_uploads/files/24934980.mp4"]];
-//        AVPlayerLayer *layer=[AVPlayerLayer playerLayerWithPlayer:player];
-//        layer.backgroundColor=[[UIColor redColor]CGColor];
-//        
-//        [self.view.layer addSublayer:layer];
-//        [player play];
-        // allocate controller
-        MPMoviePlayerViewController *movie = [[MPMoviePlayerViewController alloc]initWithContentURL:[NSURL URLWithString:@"http://122.10.73.219:5001/"]];
-        
-        [movie.moviePlayer prepareToPlay];
-        [self presentMoviePlayerViewControllerAnimated:movie];
-        [movie.moviePlayer setControlStyle:MPMovieControlStyleFullscreen];
-        
-        [movie.view setBackgroundColor:[UIColor clearColor]];
-        
-        [movie.view setFrame:self.view.bounds];
-        [[NSNotificationCenter defaultCenter]addObserver:self
-         
-                                               selector:@selector(movieFinishedCallback:)
-         
-                                                   name:MPMoviePlayerPlaybackDidFinishNotification
-         
-                                                 object:movie.moviePlayer];
-    }
-}
-
-- (void)videoPlayerReady:(PBJVideoPlayerController *)videoPlayer
-{
-}
-- (void)videoPlayerPlaybackStateDidChange:(PBJVideoPlayerController *)videoPlayer
-{
-}
-
-- (void)videoPlayerPlaybackWillStartFromBeginning:(PBJVideoPlayerController *)videoPlayer
-{
-}
-- (void)videoPlayerPlaybackDidEnd:(PBJVideoPlayerController *)videoPlayer
-{
-}
-
--(void)movieFinishedCallback:(NSNotification*)notify{
-    MPMoviePlayerController* theMovie = [notify object];
-    
-    [[NSNotificationCenter defaultCenter]removeObserver:self
-     
-                                                  name:MPMoviePlayerPlaybackDidFinishNotification
-     
-                                                object:theMovie];
-    
-    [self dismissMoviePlayerViewControllerAnimated];
-}
-
 - (void)viewWillAppear:(BOOL)animated
 {
     self.viewCountLabel.text = [self.model.viewCount description];
@@ -109,16 +34,17 @@
     [self.webView loadHTMLString:self.model.content baseURL:nil];
 }
 
-- (void) setHasVideo:(BOOL)hasVideo
+- (void)embedWithVideoLink:(NSString *) videoLink
 {
-    if ( hasVideo ){
-        CGFloat width = self.webView.scrollView.frame.size.width;
-        [self.playButton setHidden:NO];
-        [self.webView.scrollView setContentInset:UIEdgeInsetsMake(width * 0.5f, 0, 0, 0)];
-    } else {
-        [self.playButton setHidden:YES];
-        [self.webView.scrollView setContentInset:UIEdgeInsetsMake(0, 0, 0, 0)];
-    }
+    NSString *urlStr = videoLink;
+    NSURL *url=[NSURL URLWithString:urlStr];
+    NSURLRequest *request=[NSURLRequest requestWithURL:url];
+    NSOperationQueue *queue=[NSOperationQueue mainQueue];
+    [NSURLConnection sendAsynchronousRequest:request queue:queue completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
+        NSString * videoLinkString = [[NSString alloc] initWithData:data  encoding:NSUTF8StringEncoding];
+        self.model.content = [NSString stringWithFormat:@"%@%@",videoLinkString,self.model.content];
+        [self.webView loadHTMLString:self.model.content baseURL:nil];
+    }];
 }
 
 - (void)loadData
@@ -128,7 +54,11 @@
         self.viewCountLabel.text = [self.model.viewCount description];
         self.thumbCountLabel.text = [self.model.thumbCount description];
         [self.webView loadHTMLString:self.model.content baseURL:nil];
-        [self setHasVideo:self.model.hasVideo];
+        if ( self.model.hasVideo ) {
+            NSURL * url = [NSURL URLWithString:self.model.videoURLString];
+            self.model.videoURLString = [NSString stringWithFormat:@"http://aero.wisdomriver.com.cn/news/send_video/%@",[url lastPathComponent]];
+            [self embedWithVideoLink:self.model.videoURLString];
+        }
     } failureBlock:nil];
 }
 
