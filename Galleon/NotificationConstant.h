@@ -49,4 +49,6 @@
 
 #define NotificationUpdateProfile @"NotificationUpdateProfile"
 
+#define NotificationExhibitionAddToCalendar @"NotificationExhibitionAddToCalendar"
+
 #endif

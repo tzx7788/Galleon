@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @interface ExhibitionModel : NSObject
 
@@ -36,6 +37,6 @@
 
 - (void)loadWithDictionary:(NSDictionary *)dict;
 
-- (void)saveToCalendar;
+- (void)saveToCalendarWithViewController:(UIViewController *)vc;
 
 @end

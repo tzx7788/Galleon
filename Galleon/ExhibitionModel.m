@@ -10,6 +10,11 @@
 #import "NotificationConstant.h"
 #import "StringConstant.h"
 #import <EventKit/EventKit.h>
+#import <EventKitUI/EventKitUI.h>
+
+@interface ExhibitionModel()<EKEventEditViewDelegate>
+
+@end
 
 @implementation ExhibitionModel
 
@@ -33,47 +38,37 @@
     if (dict[@"intro_content"]) self.introContent = dict[@"intro_content"];
 }
 
-- (void)saveToCalendar
+- (void)saveToCalendarWithViewController:(UIViewController *)vc
 {
     EKEventStore *store = [[EKEventStore alloc] init];
     [store requestAccessToEntityType:EKEntityTypeEvent completion:^(BOOL granted, NSError *error) {
-        if ( granted )
-        {
-            EKSource *localSource = nil;
-            for (EKSource *source in store.sources)
-                if (source.sourceType == EKSourceTypeLocal)
-                {
-                    localSource = source;
-                    break;
-                }
-            EKCalendar * calendar = [EKCalendar calendarForEntityType:EKEntityTypeEvent eventStore:store];
-            calendar.title = @"Exhibition";
-            calendar.source = localSource;
-            NSError * err = nil;
-            [store saveCalendar:calendar commit:YES error:&err];
-            if (err){
-                [[NSNotificationCenter defaultCenter] postNotificationName:NotificationWarningMessage object:OperationFailed];
-                NSLog(@"%@",err);
-            } else {
-                [[NSNotificationCenter defaultCenter] postNotificationName:NotificationWarningMessage object:OperationSuccessful];
-            }
-            EKEvent * event = [EKEvent eventWithEventStore:store];
-            event.title = self.exhibitionName;
-            event.startDate = self.startedTime;
-            event.endDate = [self.startedTime dateByAddingTimeInterval:60 * 60 * 24];
-            event.calendar = calendar;
-            [event setAllDay:YES];
-            [store saveEvent:event span:EKSpanThisEvent commit:YES error:&err];
-            if (err){
-                [[NSNotificationCenter defaultCenter] postNotificationName:NotificationWarningMessage object:OperationFailed];
-                NSLog(@"%@",err);
-            } else {
-                [[NSNotificationCenter defaultCenter] postNotificationName:NotificationWarningMessage object:OperationSuccessful];
-            }
-        } else {
-            [[NSNotificationCenter defaultCenter] postNotificationName:NotificationWarningMessage object:PermissionDenied];
-        }
+        EKEventEditViewController* controller = [[EKEventEditViewController alloc] init];
+        controller.eventStore = store;
+        controller.editViewDelegate = self;
+        EKEvent * event = [EKEvent eventWithEventStore:store];
+        event.title = self.exhibitionName;
+        event.startDate = self.startedTime;
+        event.endDate = self.startedTime;
+        event.allDay = YES;
+        event.calendar = [store defaultCalendarForNewEvents];
+        controller.event = event;
+        [vc presentViewController:controller animated:YES completion:nil];
     }];
+}
+
+- (void)eventEditViewController:(EKEventEditViewController *)controller didCompleteWithAction:(EKEventEditViewAction)action
+{
+    NSError * error = nil;
+    if ( action == EKEventEditViewActionSaved )
+    {
+        [controller.eventStore saveEvent:controller.event span:EKSpanThisEvent commit:YES error:&error];
+        if ( error ) {
+            [[NSNotificationCenter defaultCenter] postNotificationName:NotificationWarningMessage object:OperationFailed];
+        } else {
+            [controller dismissViewControllerAnimated:YES completion:nil];
+            [[NSNotificationCenter defaultCenter] postNotificationName:NotificationWarningMessage object:OperationSuccessful];
+        }
+    }
 }
 
 @end

@@ -14,6 +14,7 @@
 #import "NotificationConstant.h"
 #import "MBProgressHUD.h"
 #import "Client.h"
+#import "ExhibitionModel.h"
 
 typedef enum {
     WERootContainerViewControllerSlideDirectionStill = 0, // Default
@@ -57,10 +58,20 @@ typedef enum {
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(showContent) name:NotificationShowContent object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(showWarningMessage:) name:NotificationWarningMessage object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loadLoginViewController:) name:NotificationLoginIn object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(exhibitionAddToCalendar:) name:NotificationExhibitionAddToCalendar object:nil];
     [self.contentNavigationController.view resetOriginX:kMenuWidth];
     [self disableSubView];
     self.status = WERootContainerViewControllerStatusLeftMenu;
 }
+
+- (void)exhibitionAddToCalendar:(NSNotification *) notification
+{
+    if ( [[notification object] isKindOfClass:[ExhibitionModel class]] ) {
+        ExhibitionModel *model = [notification object];
+        [model saveToCalendarWithViewController:self];
+    }
+}
+
 
 - (void)showWarningMessage:(NSNotification *) notification
 {
@@ -214,6 +225,7 @@ typedef enum {
     [[NSNotificationCenter defaultCenter] removeObserver:self name:NotificationShowContent object:nil];
     [[NSNotificationCenter defaultCenter] removeObserver:self name:NotificationWarningMessage object:nil];
     [[NSNotificationCenter defaultCenter] removeObserver:self name:NotificationLoginIn object:nil];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:NotificationExhibitionAddToCalendar object:nil];
 }
 
 - (void)didReceiveMemoryWarning {
