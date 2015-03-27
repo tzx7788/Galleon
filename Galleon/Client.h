@@ -84,4 +84,15 @@ typedef void (^FailureCompletionBlock)(NSError *error, NSString *responseString)
 - (void)getSystemTimeWithsuccessBlock:(SuccessCompletionBlock) successCompletionBlock
                          failureBlock:(FailureCompletionBlock) failureCompletionBlock;
 
+- (void)registerWithName:(NSString *)name
+                 account:(NSString *)account
+                password:(NSString *)password
+             headerImage:(NSString *)headerImage
+                 company:(NSString *)company
+                     job:(NSString *)job
+                   phone:(NSString *)phone
+                   email:(NSString *)email
+            successBlock:(SuccessCompletionBlock) successCompletionBlock
+            failureBlock:(FailureCompletionBlock) failureCompletionBlock;
+
 @end

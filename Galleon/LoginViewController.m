@@ -106,47 +106,15 @@
     hud.mode = MBProgressHUDModeIndeterminate;
     [hud show:YES];
     [[Client sharedClient] loginWithAccount:account Password:password successBlock:^(id responseData){
-        if ( responseData[@"account"] != [NSNull null] )
-            self.user.account = responseData[@"account"];
-        if ( responseData[@"company"] != [NSNull null] )
-            self.user.company = responseData[@"company"];
-        if ( responseData[@"description"] != [NSNull null] )
-            self.user.descript = responseData[@"description"];
-        if ( responseData[@"email"] != [NSNull null] )
-            self.user.email = responseData[@"email"];
-        if ( responseData[@"header_small"] != [NSNull null] )
-            self.user.iconImageURLString = responseData[@"header_small"];
-        if ( responseData[@"id"] != [NSNull null] )
-            self.user.userId = responseData[@"id"];
-        if ( responseData[@"is_active"] != [NSNull null] )
-            self.user.isActive = responseData[@"is_active"];
-        if ( responseData[@"is_vip"] != [NSNull null] )
-            self.user.isVIP = responseData[@"is_vip"];
-        if ( responseData[@"lastlogin_time"] != [NSNull null] )
-            self.user.lastLogInTime = responseData[@"lastlogin_time"];
-        if ( responseData[@"myattr"] != [NSNull null] )
-            self.user.myattr = responseData[@"myattr"];
-        if ( responseData[@"name"] != [NSNull null] )
-            self.user.name = responseData[@"name"];
-        if ( responseData[@"nickname"] != [NSNull null] )
-            self.user.nickName = responseData[@"nickname"];
-//        if ( responseData[@"password"] != [NSNull null] )
-//            self.user.password = responseData[@"password"];
+        [self.user loadWithDictionary:responseData];
         self.user.password = self.passwordTextField.text;
-        if ( responseData[@"phone_number"] != [NSNull null] )
-            self.user.phone = responseData[@"phone_number"];
-        if ( responseData[@"registered_time"] != [NSNull null] )
-            self.user.registeredTime = responseData[@"registered_time"];
-        if ( responseData[@"role"] != [NSNull null] )
-            self.user.role = responseData[@"role"];
-        if ( responseData[@"token"] != [NSNull null] )
-            self.user.token = responseData[@"token"];
         [User saveToCache:self.user];
         hud.mode = MBProgressHUDModeText;
+        [hud hide:YES afterDelay:0];
         [self dismissViewControllerAnimated:YES completion:nil];
         PersonModel * model = [[PersonModel alloc] init];
         model.user = self.user;
-        [[NSNotificationCenter defaultCenter] postNotificationName:NotificationWarningMessage object:@"Login Successful!"];
+        [[NSNotificationCenter defaultCenter] postNotificationName:NotificationWarningMessage object:LogInSuccessful];
         [[NSNotificationCenter defaultCenter] postNotificationName:NotificationPersonPageClicked object:model];
     } failureBlock:^(NSError *error, NSString * responseString) {
         hud.mode = MBProgressHUDModeText;

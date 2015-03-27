@@ -28,6 +28,11 @@
 #define LogInSuccessful     NSLocalizedString(@"Log in successful!",nil)
 #define LogInFailure        NSLocalizedString(@"Failure!",nil)
 #define Logging             NSLocalizedString(@"Logging...",nil)
+#define Registering     NSLocalizedString(@"Registering...",nil)
+#define RegisterFailure        NSLocalizedString(@"Failure!",nil)
+#define Uploading              NSLocalizedString(@"Uploading...",nil)
+#define UploadingSuccessful    NSLocalizedString(@"Successful!",nil)
+#define UploadingFailure       NSLocalizedString(@"Failed!",nil)
 
 #define Asia               NSLocalizedString(@"Asia",nil)
 #define Europe             NSLocalizedString(@"Europe",nil)

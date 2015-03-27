@@ -9,6 +9,7 @@
 #import "Client.h"
 #import <AFNetworking/AFNetworking.h>
 #import <AFNetworkActivityIndicatorManager.h>
+#import "User.h"
 
 @interface Client()
 @property (strong,nonatomic) AFHTTPRequestOperationManager * manager;
@@ -204,6 +205,47 @@
                          failureBlock:(FailureCompletionBlock) failureCompletionBlock
 {
     [self GET:@"/news/system_time" successBlock:successCompletionBlock failureBlock:failureCompletionBlock];
+}
+
+- (void)updateUserHeaderImage:(NSString *)headerImage
+                        token:(NSString *)token
+                 successBlock:(SuccessCompletionBlock) successCompletionBlock
+                 failureBlock:(FailureCompletionBlock) failureCompletionBlock
+{
+    NSMutableDictionary * param = [[NSMutableDictionary alloc] init];
+    if (headerImage)       param[@"header"] = headerImage;
+    if (token)              param[@"token"] = token;
+    [self POST:@"/news/user/update_header" parameter:param successBlock:successCompletionBlock failureBlock:failureCompletionBlock];
+}
+
+- (void)registerWithName:(NSString *)name
+                 account:(NSString *)account
+                password:(NSString *)password
+             headerImage:(NSString *)headerImage
+                 company:(NSString *)company
+                     job:(NSString *)job
+                   phone:(NSString *)phone
+                   email:(NSString *)email
+            successBlock:(SuccessCompletionBlock) successCompletionBlock
+            failureBlock:(FailureCompletionBlock) failureCompletionBlock
+{
+    NSMutableDictionary * param = [[NSMutableDictionary alloc] init];
+    if (account)       param[@"account"] = account;
+    if (password)      param[@"password"] = password;
+    if (name)          param[@"name"] = name;
+    if (company)       param[@"company"] = company;
+    if (phone)         param[@"phone_number"] = phone;
+    if (email)         param[@"email"] = email;
+    if (job)           param[@"title"] = job;
+    [self POST:@"/news/register" parameter:param successBlock:^(id responseData){
+        User * user = [[User alloc] init];
+        [user loadWithDictionary:responseData];
+        if (headerImage) {
+            [self updateUserHeaderImage:headerImage token:user.token successBlock:^(id responseData){
+                successCompletionBlock(responseData);
+            } failureBlock:failureCompletionBlock];
+        }
+    } failureBlock:failureCompletionBlock];
 }
 
 #pragma PrivateMethod

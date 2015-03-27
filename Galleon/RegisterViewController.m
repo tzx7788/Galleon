@@ -11,8 +11,14 @@
 #import "NotificationConstant.h"
 #import "SelectionViewController.h"
 #import "StringConstant.h"
+#import "Client.h"
+#import "User.h"
+#import "PersonModel.h"
+#import <MBProgressHUD.h>
 
-@interface RegisterViewController ()<UIScrollViewDelegate,UIActionSheetDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate>
+@interface RegisterViewController ()<UIScrollViewDelegate,UIActionSheetDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate,MBProgressHUDDelegate,UITextFieldDelegate>
+
+@property (nonatomic, strong) NSString * headerName;
 
 @end
 
@@ -41,27 +47,51 @@
                                   otherButtonTitles:@"拍照", @"从相册选取", nil];
     [actionSheet showInView:self.view];
 }
+
+- (BOOL)verified
+{
+    return YES;
+}
 - (IBAction)ComfirmClicked:(id)sender {
-    [self dismissViewControllerAnimated:YES completion:^{
-        [[NSNotificationCenter defaultCenter] postNotificationName:NotificationWarningMessage object:@"hahahah"];
-    }];
+    if ([self verified]) {
+        NSString * message =Registering;
+        MBProgressHUD * hud = [[MBProgressHUD alloc] initWithView:self.view];
+        [self.view addSubview:hud];
+        hud.delegate = self;
+        hud.dimBackground = YES;
+        hud.square = YES;
+        hud.labelText = message;
+        hud.mode = MBProgressHUDModeIndeterminate;
+        [hud show:YES];
+        [[Client sharedClient] registerWithName:self.nameTextField.text
+                                        account:self.accountTextField.text
+                                       password:self.passwordTextField.text
+                                    headerImage:self.headerName
+                                        company:self.campanyTextField.text
+                                            job:self.jobTextField.text
+                                          phone:self.phoneTextField.text
+                                          email:self.emailTextField.text
+                                   successBlock:^(id responseData){
+                                       NSLog(@"%@",responseData);
+                                       User * user = [[User alloc] init];
+                                       [user loadWithDictionary:responseData];
+                                       user.password = self.passwordTextField.text;
+                                       [User saveToCache:user];
+                                       hud.mode = MBProgressHUDModeText;
+                                       [self dismissViewControllerAnimated:YES completion:nil];
+                                       PersonModel * model = [[PersonModel alloc] init];
+                                       model.user = user;
+                                       [[NSNotificationCenter defaultCenter] postNotificationName:NotificationWarningMessage object:LogInSuccessful];
+                                       [[NSNotificationCenter defaultCenter] postNotificationName:NotificationPersonPageClicked object:model];
+                                   } failureBlock:^(NSError *error, NSString * errorString){
+                                       hud.mode = MBProgressHUDModeText;
+                                       hud.labelText = RegisterFailure;
+                                       [hud hide:YES afterDelay:1];
+                                   }];
+    }
 }
 - (IBAction)CancelClicked:(id)sender {
     [self.navigationController popViewControllerAnimated:YES];
-}
-
-- (IBAction)disctrictClicked:(id)sender {
-    [self performSegueWithIdentifier:@"SelectionSegue" sender:self.districtTextField];
-}
-
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    if ([segue.identifier isEqualToString:@"SelectionSegue"] && (sender == self.districtTextField) ) {
-        SelectionViewController * vc = (SelectionViewController *)segue.destinationViewController;
-        vc.textField = self.districtTextField;
-        NSArray * array = @[Asia, Africa, NorhthAmerica, SouthAmerica, Europe, Oceania];
-        vc.dataArray = array;
-    }
 }
 
 #pragma mark - UIActionSheetDelegate
@@ -92,14 +122,41 @@
     }
     
     [self dismissViewControllerAnimated:YES completion:nil];
-    
-//    WERequest *request = [WERequest requestWithSuccessBlock:^(id responseObject) {
-//        self.avatarImageView.image = edittedImage;
-//    } failureBlock:^(NSError *error, NSString *responseString) {
-//        [UIAlertView alertErrorMessage:@"上传头像失败"];
-//    }];
-//    [request updateCurrentUserAvatarWithImage:edittedImage];
-//    [[WEClient sharedClient] enqueueTokenRequest:request];
+    NSString * message = Uploading;
+    MBProgressHUD * hud = [[MBProgressHUD alloc] initWithView:self.view];
+    [self.view addSubview:hud];
+    hud.delegate = self;
+    hud.dimBackground = YES;
+    hud.square = YES;
+    hud.labelText = message;
+    hud.mode = MBProgressHUDModeIndeterminate;
+    [hud show:YES];
+    [[Client sharedClient] uploadImage:edittedImage successBlock:^(id responseData){
+        hud.mode = MBProgressHUDModeText;
+        hud.labelText = UploadingSuccessful;
+        [hud hide:YES afterDelay:1];
+        self.headerName = responseData[@"filename"];
+        [self.avatarImageView setImage:edittedImage];
+    } failureBlock:^(NSError *error,NSString * errorString){
+        hud.mode = MBProgressHUDModeText;
+        hud.labelText = UploadingFailure;
+        [hud hide:YES afterDelay:1];
+    }];
+}
+
+#pragma mark - MBProgressHUDDeleagte
+- (void)hudWasHidden:(MBProgressHUD *)hud
+{
+    [hud removeFromSuperview];
+    hud = nil;
+}
+
+#pragma - UITextFieldDelegate
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [textField resignFirstResponder];
+    return YES;
 }
 
 /*

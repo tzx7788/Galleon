@@ -29,6 +29,7 @@
 @property (nonatomic, strong) NSString * token;
 @property (nonatomic, strong) NSNumber * autoLogin;
 
+- (void)loadWithDictionary:(NSDictionary *)dict;
 + (void)saveToCache:(User *) user;
 + (User *)awakeFromCache;
 + (void)clearCache;
