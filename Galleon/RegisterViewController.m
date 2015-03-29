@@ -15,6 +15,7 @@
 #import "User.h"
 #import "PersonModel.h"
 #import <MBProgressHUD.h>
+#import "UIImage+Resize.h"
 
 @interface RegisterViewController ()<UIScrollViewDelegate,UIActionSheetDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate,MBProgressHUDDelegate,UITextFieldDelegate>
 
@@ -50,6 +51,19 @@
 
 - (BOOL)verified
 {
+    if ( ![self.passwordTextField.text isEqualToString: self.confirmPasswordTextField.text] ){
+        NSString * message =PasswordFail;
+        MBProgressHUD * hud = [[MBProgressHUD alloc] initWithView:self.view];
+        [self.view addSubview:hud];
+        hud.delegate = self;
+        hud.dimBackground = YES;
+        hud.square = YES;
+        hud.labelText = message;
+        hud.mode = MBProgressHUDModeText;
+        [hud show:YES];
+        [hud hide:YES afterDelay:1.0f];
+        return NO;
+    }
     return YES;
 }
 - (IBAction)ComfirmClicked:(id)sender {
@@ -83,6 +97,7 @@
                                        model.user = user;
                                        [[NSNotificationCenter defaultCenter] postNotificationName:NotificationWarningMessage object:LogInSuccessful];
                                        [[NSNotificationCenter defaultCenter] postNotificationName:NotificationPersonPageClicked object:model];
+                                       [[NSNotificationCenter defaultCenter] postNotificationName:NotificationLeftMenuUserRefresh object:nil];
                                    } failureBlock:^(NSError *error, NSString * errorString){
                                        hud.mode = MBProgressHUDModeText;
                                        hud.labelText = RegisterFailure;
@@ -119,9 +134,13 @@
     
     if (edittedImage.size.height > edittedImage.size.width + 3.5f || edittedImage.size.height < edittedImage.size.width - 3.5f) {
         [UIAlertView alertErrorMessage:@"为了达到更好的头像显示效果，请上传正方形头像"];
+        return;
     }
     
     [self dismissViewControllerAnimated:YES completion:nil];
+    int radius = edittedImage.self.size.height / 2;
+    edittedImage = [edittedImage cutImageWithRadius:radius];
+    //[self.avatarImageView setImage:edittedImage];
     NSString * message = Uploading;
     MBProgressHUD * hud = [[MBProgressHUD alloc] initWithView:self.view];
     [self.view addSubview:hud];

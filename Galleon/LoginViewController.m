@@ -116,6 +116,7 @@
         model.user = self.user;
         [[NSNotificationCenter defaultCenter] postNotificationName:NotificationWarningMessage object:LogInSuccessful];
         [[NSNotificationCenter defaultCenter] postNotificationName:NotificationPersonPageClicked object:model];
+        [[NSNotificationCenter defaultCenter] postNotificationName:NotificationLeftMenuUserRefresh object:nil];
     } failureBlock:^(NSError *error, NSString * responseString) {
         hud.mode = MBProgressHUDModeText;
         hud.labelText = LogInFailure;

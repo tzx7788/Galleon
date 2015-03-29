@@ -33,6 +33,7 @@
 #define Uploading              NSLocalizedString(@"Uploading...",nil)
 #define UploadingSuccessful    NSLocalizedString(@"Successful!",nil)
 #define UploadingFailure       NSLocalizedString(@"Failed!",nil)
+#define PasswordFail        NSLocalizedString(@"Password validation failed!",nil)
 
 #define Asia               NSLocalizedString(@"Asia",nil)
 #define Europe             NSLocalizedString(@"Europe",nil)

@@ -43,6 +43,7 @@
 		6C28D0791AC021C5004BD04D /* ExhibitionFileListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C28D0781AC021C5004BD04D /* ExhibitionFileListModel.m */; };
 		6C28D07D1AC03DD6004BD04D /* PDFTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C28D07B1AC03DD6004BD04D /* PDFTableViewCell.m */; };
 		6C28D07E1AC03DD6004BD04D /* PDFTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C28D07C1AC03DD6004BD04D /* PDFTableViewCell.xib */; };
+		6C2E5A161AC638AF00B0BAC1 /* UIImage+Resize.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C2E5A151AC638AF00B0BAC1 /* UIImage+Resize.m */; };
 		6C3CA2761AB16E8A00A87288 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6C3CA2781AB16E8A00A87288 /* Localizable.strings */; };
 		6C5B7A871AB56D9900FE47F0 /* button_dark_normal.9.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C5B7A861AB56D9900FE47F0 /* button_dark_normal.9.png */; };
 		6C5B7A8A1AB5731500FE47F0 /* UIAlertView+ErrorMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C5B7A891AB5731500FE47F0 /* UIAlertView+ErrorMessage.m */; };
@@ -199,6 +200,8 @@
 		6C28D07A1AC03DD6004BD04D /* PDFTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDFTableViewCell.h; sourceTree = "<group>"; };
 		6C28D07B1AC03DD6004BD04D /* PDFTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDFTableViewCell.m; sourceTree = "<group>"; };
 		6C28D07C1AC03DD6004BD04D /* PDFTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PDFTableViewCell.xib; sourceTree = "<group>"; };
+		6C2E5A141AC638AF00B0BAC1 /* UIImage+Resize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Resize.h"; sourceTree = "<group>"; };
+		6C2E5A151AC638AF00B0BAC1 /* UIImage+Resize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Resize.m"; sourceTree = "<group>"; };
 		6C3CA2771AB16E8A00A87288 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		6C5B7A861AB56D9900FE47F0 /* button_dark_normal.9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_dark_normal.9.png; sourceTree = "<group>"; };
 		6C5B7A881AB5731500FE47F0 /* UIAlertView+ErrorMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+ErrorMessage.h"; sourceTree = "<group>"; };
@@ -552,6 +555,8 @@
 				6CF078901AB1DA8900DF0C0C /* UIView+Resize.m */,
 				6CA07D2B1AADC63000BEEEE7 /* UIImage+Snapshot.h */,
 				6CA07D2C1AADC63000BEEEE7 /* UIImage+Snapshot.m */,
+				6C2E5A141AC638AF00B0BAC1 /* UIImage+Resize.h */,
+				6C2E5A151AC638AF00B0BAC1 /* UIImage+Resize.m */,
 			);
 			name = Category;
 			sourceTree = "<group>";
@@ -1278,6 +1283,7 @@
 				6CDD89D81ABC565D00FE41C2 /* InformHeaderView.m in Sources */,
 				6C6E635A1AB28D510014F47F /* ExhibitionViewController.m in Sources */,
 				6C5BDC5B1AB08008005FE343 /* LeftMenuTableViewCell.m in Sources */,
+				6C2E5A161AC638AF00B0BAC1 /* UIImage+Resize.m in Sources */,
 				6C0141341AB871920069EDE7 /* AboutViewController.m in Sources */,
 				6CF0788E1AB1BF3100DF0C0C /* SubContentViewController.m in Sources */,
 				6CEE19401AADC291006CB3DD /* AppDelegate.m in Sources */,

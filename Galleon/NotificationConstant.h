@@ -51,4 +51,6 @@
 
 #define NotificationExhibitionAddToCalendar @"NotificationExhibitionAddToCalendar"
 
+#define NotificationLeftMenuUserRefresh @"NotificationLeftMenuUserRefresh"
+
 #endif
