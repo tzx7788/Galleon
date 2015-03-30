@@ -140,6 +140,7 @@
     [self dismissViewControllerAnimated:YES completion:nil];
     int radius = edittedImage.self.size.height / 2;
     edittedImage = [edittedImage cutImageWithRadius:radius];
+    edittedImage = [edittedImage OriginImage:edittedImage scaleToSize:self.avatarImageView.bounds.size];
     //[self.avatarImageView setImage:edittedImage];
     NSString * message = Uploading;
     MBProgressHUD * hud = [[MBProgressHUD alloc] initWithView:self.view];

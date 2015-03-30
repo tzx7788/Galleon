@@ -10,4 +10,6 @@
 
 @interface UIImage (Resize)
 - (UIImage*)cutImageWithRadius:(int)radius;
+-(UIImage*)  OriginImage:(UIImage *)image   scaleToSize:(CGSize)size;
+-(UIImage*)  OriginImage:(UIImage *)image   scale:(CGFloat)scale;
 @end
