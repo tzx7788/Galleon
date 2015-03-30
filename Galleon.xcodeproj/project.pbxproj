@@ -63,6 +63,17 @@
 		6C72E0361ABE68C20012B428 /* InformTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C72E0341ABE68C20012B428 /* InformTableViewCell.m */; };
 		6C72E0371ABE68C20012B428 /* InformTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C72E0351ABE68C20012B428 /* InformTableViewCell.xib */; };
 		6C72E03A1ABE694C0012B428 /* InformModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C72E0391ABE694C0012B428 /* InformModel.m */; };
+		6C8A12531AC9800E0077E25A /* libPushSDK-1.8.3.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C8A12521AC9800E0077E25A /* libPushSDK-1.8.3.a */; };
+		6C8A12551AC980420077E25A /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C8A12541AC980420077E25A /* CFNetwork.framework */; };
+		6C8A12571AC9804B0077E25A /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C8A12561AC9804B0077E25A /* CoreFoundation.framework */; };
+		6C8A12591AC9805E0077E25A /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C8A12581AC9805E0077E25A /* CoreTelephony.framework */; };
+		6C8A125B1AC9806B0077E25A /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C8A125A1AC9806B0077E25A /* SystemConfiguration.framework */; };
+		6C8A125D1AC980740077E25A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C8A125C1AC980740077E25A /* CoreGraphics.framework */; };
+		6C8A125F1AC9807C0077E25A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C8A125E1AC9807C0077E25A /* Foundation.framework */; };
+		6C8A12611AC980850077E25A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C8A12601AC980850077E25A /* UIKit.framework */; };
+		6C8A12631AC9808B0077E25A /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C8A12621AC9808A0077E25A /* Security.framework */; };
+		6C8A12651AC980940077E25A /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C8A12641AC980940077E25A /* libz.dylib */; };
+		6C8A12671AC981F50077E25A /* PushConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6C8A12661AC981F50077E25A /* PushConfig.plist */; };
 		6CA07D2D1AADC63000BEEEE7 /* UIImage+Snapshot.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CA07D2C1AADC63000BEEEE7 /* UIImage+Snapshot.m */; };
 		6CA763971AB16BAD00A9185F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6CA763951AB16BAD00A9185F /* Main.storyboard */; };
 		6CAA1D311AB3C2AB00B848BD /* ExhibitionListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CAA1D301AB3C2AB00B848BD /* ExhibitionListModel.m */; };
@@ -236,6 +247,18 @@
 		6C72E0351ABE68C20012B428 /* InformTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InformTableViewCell.xib; sourceTree = "<group>"; };
 		6C72E0381ABE694C0012B428 /* InformModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InformModel.h; sourceTree = "<group>"; };
 		6C72E0391ABE694C0012B428 /* InformModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InformModel.m; sourceTree = "<group>"; };
+		6C8A12511AC9800E0077E25A /* APService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APService.h; sourceTree = "<group>"; };
+		6C8A12521AC9800E0077E25A /* libPushSDK-1.8.3.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libPushSDK-1.8.3.a"; sourceTree = "<group>"; };
+		6C8A12541AC980420077E25A /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		6C8A12561AC9804B0077E25A /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		6C8A12581AC9805E0077E25A /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		6C8A125A1AC9806B0077E25A /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		6C8A125C1AC980740077E25A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		6C8A125E1AC9807C0077E25A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		6C8A12601AC980850077E25A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		6C8A12621AC9808A0077E25A /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		6C8A12641AC980940077E25A /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		6C8A12661AC981F50077E25A /* PushConfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = PushConfig.plist; sourceTree = "<group>"; };
 		6CA07D2B1AADC63000BEEEE7 /* UIImage+Snapshot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Snapshot.h"; sourceTree = "<group>"; };
 		6CA07D2C1AADC63000BEEEE7 /* UIImage+Snapshot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Snapshot.m"; sourceTree = "<group>"; };
 		6CA763961AB16BAD00A9185F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -357,7 +380,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6C8A12651AC980940077E25A /* libz.dylib in Frameworks */,
+				6C8A12631AC9808B0077E25A /* Security.framework in Frameworks */,
+				6C8A12611AC980850077E25A /* UIKit.framework in Frameworks */,
+				6C8A125F1AC9807C0077E25A /* Foundation.framework in Frameworks */,
+				6C8A125D1AC980740077E25A /* CoreGraphics.framework in Frameworks */,
+				6C8A125B1AC9806B0077E25A /* SystemConfiguration.framework in Frameworks */,
+				6C8A12591AC9805E0077E25A /* CoreTelephony.framework in Frameworks */,
+				6C8A12571AC9804B0077E25A /* CoreFoundation.framework in Frameworks */,
+				6C8A12551AC980420077E25A /* CFNetwork.framework in Frameworks */,
 				83A98D002283403AA00C88F6 /* libPods-Galleon.a in Frameworks */,
+				6C8A12531AC9800E0077E25A /* libPushSDK-1.8.3.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -374,6 +407,15 @@
 		1BE2B96BC2479D3FA4132EC3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6C8A12641AC980940077E25A /* libz.dylib */,
+				6C8A12621AC9808A0077E25A /* Security.framework */,
+				6C8A12601AC980850077E25A /* UIKit.framework */,
+				6C8A125E1AC9807C0077E25A /* Foundation.framework */,
+				6C8A125C1AC980740077E25A /* CoreGraphics.framework */,
+				6C8A125A1AC9806B0077E25A /* SystemConfiguration.framework */,
+				6C8A12581AC9805E0077E25A /* CoreTelephony.framework */,
+				6C8A12561AC9804B0077E25A /* CoreFoundation.framework */,
+				6C8A12541AC980420077E25A /* CFNetwork.framework */,
 				6CE73FB01AC28B2100EA6BE5 /* MediaPlayer.framework */,
 				6CE73FAE1AC28AB400EA6BE5 /* AVFoundation.framework */,
 				A469F2A228C7CAC00E115829 /* libPods-Galleon.a */,
@@ -554,6 +596,15 @@
 			children = (
 			);
 			name = Exhibition;
+			sourceTree = "<group>";
+		};
+		6C8A12501AC9800E0077E25A /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				6C8A12511AC9800E0077E25A /* APService.h */,
+				6C8A12521AC9800E0077E25A /* libPushSDK-1.8.3.a */,
+			);
+			path = lib;
 			sourceTree = "<group>";
 		};
 		6CA07D2A1AADC5E800BEEEE7 /* Category */ = {
@@ -966,6 +1017,7 @@
 		6CEE18FF1AADBC78006CB3DD = {
 			isa = PBXGroup;
 			children = (
+				6C8A12661AC981F50077E25A /* PushConfig.plist */,
 				6CEE19341AADC291006CB3DD /* Galleon */,
 				6CEE19241AADBC78006CB3DD /* GalleonTests */,
 				6CEE19091AADBC78006CB3DD /* Products */,
@@ -1015,6 +1067,7 @@
 		6CEE19471AADC2A0006CB3DD /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				6C8A12501AC9800E0077E25A /* lib */,
 				6CEE193B1AADC291006CB3DD /* Images.xcassets */,
 				6CEE193C1AADC291006CB3DD /* Info.plist */,
 				6CEE193D1AADC291006CB3DD /* main.m */,
@@ -1199,6 +1252,7 @@
 				6C5BDC4E1AB0754C005FE343 /* ic_sidebar_exhibition.png in Resources */,
 				6CF078931AB25CDF00DF0C0C /* bg_tab_bar.png in Resources */,
 				6C5BDC511AB0754C005FE343 /* ic_sidebar_news.png in Resources */,
+				6C8A12671AC981F50077E25A /* PushConfig.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1434,13 +1488,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "Apple Development IOS Push Services: cc.Galleon.Galleon";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Development IOS Push Services: cc.Galleon.Galleon";
 				INFOPLIST_FILE = Galleon/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Galleon/lib",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "1d525cce-d94a-4333-929c-2e1831abdd6e";
+				USER_HEADER_SEARCH_PATHS = "$(inherited) $(PROJECT_DIR)/Galleon/lib";
 			};
 			name = Debug;
 		};
@@ -1450,13 +1509,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "Apple Development IOS Push Services: cc.Galleon.Galleon";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Development IOS Push Services: cc.Galleon.Galleon";
 				INFOPLIST_FILE = Galleon/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Galleon/lib",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "1d525cce-d94a-4333-929c-2e1831abdd6e";
+				USER_HEADER_SEARCH_PATHS = "$(inherited) $(PROJECT_DIR)/Galleon/lib";
 			};
 			name = Release;
 		};

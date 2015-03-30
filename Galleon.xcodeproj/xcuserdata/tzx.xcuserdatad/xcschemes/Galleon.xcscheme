@@ -74,7 +74,8 @@
       allowLocationSimulation = "YES"
       showNonLocalizedStrings = "YES"
       language = "zh-Hans">
-      <BuildableProductRunnable>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "6CEE19071AADBC78006CB3DD"
@@ -96,7 +97,8 @@
       useCustomWorkingDirectory = "NO"
       buildConfiguration = "Release"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "6CEE19071AADBC78006CB3DD"
