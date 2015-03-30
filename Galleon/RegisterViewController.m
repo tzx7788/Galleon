@@ -141,7 +141,6 @@
     int radius = edittedImage.self.size.height / 2;
     edittedImage = [edittedImage cutImageWithRadius:radius];
     edittedImage = [edittedImage OriginImage:edittedImage scaleToSize:self.avatarImageView.bounds.size];
-    //[self.avatarImageView setImage:edittedImage];
     NSString * message = Uploading;
     MBProgressHUD * hud = [[MBProgressHUD alloc] initWithView:self.view];
     [self.view addSubview:hud];
@@ -178,6 +177,16 @@
     [textField resignFirstResponder];
     return YES;
 }
+
+- (void)textFieldDidBeginEditing:(UITextField *)textField
+{
+    CGPoint offset = self.scrollView.contentOffset;
+    offset.y = textField.superview.frame.origin.y - 40;
+    if ( offset.y + self.scrollView.bounds.size.height > self.scrollView.contentSize.height )
+        offset.y = self.scrollView.contentSize.height - self.scrollView.bounds.size.height;
+    [self.scrollView setContentOffset:offset animated:YES];
+}
+
 
 /*
 #pragma mark - Navigation
