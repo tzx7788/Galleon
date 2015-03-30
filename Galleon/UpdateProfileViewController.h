@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "PersonModel.h"
+#import "RegisterViewController.h"
 
-@interface UpdateProfileViewController : UIViewController
+@interface UpdateProfileViewController : RegisterViewController
 
 @property (nonatomic, strong) PersonModel * model;
 

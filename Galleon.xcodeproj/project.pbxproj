@@ -34,7 +34,6 @@
 		6C0FB4D11ABAAF0300E72C20 /* ic_input_box_invisible.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C0FB4CF1ABAAF0300E72C20 /* ic_input_box_invisible.png */; };
 		6C0FB4D21ABAAF0300E72C20 /* ic_input_box_visible.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C0FB4D01ABAAF0300E72C20 /* ic_input_box_visible.png */; };
 		6C18E31A1AC1417E00317556 /* UpdateProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C18E3181AC1417E00317556 /* UpdateProfileViewController.m */; };
-		6C18E31B1AC1417E00317556 /* UpdateProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C18E3191AC1417E00317556 /* UpdateProfileViewController.xib */; };
 		6C28D06C1AC020E2004BD04D /* ExhibitionDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C28D06B1AC020E2004BD04D /* ExhibitionDetailModel.m */; };
 		6C28D0701AC02118004BD04D /* ExhibitionDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C28D06E1AC02118004BD04D /* ExhibitionDetailViewController.m */; };
 		6C28D0711AC02118004BD04D /* ExhibitionDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C28D06F1AC02118004BD04D /* ExhibitionDetailViewController.xib */; };
@@ -186,7 +185,6 @@
 		6C0FB4D01ABAAF0300E72C20 /* ic_input_box_visible.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_input_box_visible.png; sourceTree = "<group>"; };
 		6C18E3171AC1417E00317556 /* UpdateProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UpdateProfileViewController.h; sourceTree = "<group>"; };
 		6C18E3181AC1417E00317556 /* UpdateProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UpdateProfileViewController.m; sourceTree = "<group>"; };
-		6C18E3191AC1417E00317556 /* UpdateProfileViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UpdateProfileViewController.xib; sourceTree = "<group>"; };
 		6C28D06A1AC020E2004BD04D /* ExhibitionDetailModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExhibitionDetailModel.h; sourceTree = "<group>"; };
 		6C28D06B1AC020E2004BD04D /* ExhibitionDetailModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExhibitionDetailModel.m; sourceTree = "<group>"; };
 		6C28D06D1AC02118004BD04D /* ExhibitionDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExhibitionDetailViewController.h; sourceTree = "<group>"; };
@@ -883,7 +881,6 @@
 				6C01415B1AB87BBB0069EDE7 /* PersonViewController.xib */,
 				6C18E3171AC1417E00317556 /* UpdateProfileViewController.h */,
 				6C18E3181AC1417E00317556 /* UpdateProfileViewController.m */,
-				6C18E3191AC1417E00317556 /* UpdateProfileViewController.xib */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -1135,7 +1132,6 @@
 				6C0141451AB877FC0069EDE7 /* DiscussTableViewCell.xib in Resources */,
 				6C72E0371ABE68C20012B428 /* InformTableViewCell.xib in Resources */,
 				6C0FB4CB1ABA760400E72C20 /* ic_checked_normal.png in Resources */,
-				6C18E31B1AC1417E00317556 /* UpdateProfileViewController.xib in Resources */,
 				6C0141521AB87AE60069EDE7 /* HomePageViewController.xib in Resources */,
 				6C0FB4CD1ABA760400E72C20 /* ic_unchecked_normal.png in Resources */,
 				6C01412C1AB80D5A0069EDE7 /* PDFViewController.xib in Resources */,

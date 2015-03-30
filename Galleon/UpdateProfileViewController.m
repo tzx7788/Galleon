@@ -16,7 +16,7 @@
 
 + (UpdateProfileViewController *) createViewController
 {
-    UpdateProfileViewController * vc = [[UpdateProfileViewController alloc] initWithNibName:@"UpdateProfileViewController" bundle:nil];
+    UpdateProfileViewController * vc = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"UpdateProfileViewController"];
     return vc;
 }
 
