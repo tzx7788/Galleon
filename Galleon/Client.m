@@ -120,7 +120,7 @@
        successBlock:(SuccessCompletionBlock) successCompletionBlock
        failureBlock:(FailureCompletionBlock) failureCompletionBlock
 {
-    [self uploadImage:image name:@"file" filename:@"ios.jpg" URL:@"news/user/upload_icon" parameter:nil successBlock:successCompletionBlock failureBlock:failureCompletionBlock];
+    [self uploadImage:image name:@"file" filename:@"ios.png" URL:@"news/user/upload_icon" parameter:nil successBlock:successCompletionBlock failureBlock:failureCompletionBlock];
 }
 
 - (void)updateUserWithId:(NSString *)userId
@@ -275,10 +275,10 @@ failureBlock:(FailureCompletionBlock) failureCompletionBlock
        failureBlock:(FailureCompletionBlock) failureCompletionBlock
 {
     [self.manager POST:urlString parameters:param constructingBodyWithBlock:^(id<AFMultipartFormData> formData) {
-        [formData appendPartWithFileData:UIImageJPEGRepresentation(image, 1.0)
+        [formData appendPartWithFileData:UIImagePNGRepresentation(image)
                                     name:name
                                 fileName:filename
-                                mimeType:@"image/jpeg"];
+                                mimeType:@"image/png"];
     } success:^(AFHTTPRequestOperation *operation, id resposeObject){
         if (successCompletionBlock)
             successCompletionBlock(resposeObject);

@@ -7,6 +7,7 @@
 //
 
 #import "UpdateProfileViewController.h"
+#import <AFNetworking/UIImageView+AFNetworking.h>
 
 @interface UpdateProfileViewController ()
 
@@ -22,7 +23,20 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    [self initTextField];
+}
+
+- (void) initTextField
+{
+    [self.avatarImageView setImageWithURL:[NSURL URLWithString:self.model.user.iconImageURLString]];
+    self.nameTextField.text = self.model.user.name;
+    self.accountTextField.text = self.model.user.account;
+    self.campanyTextField.text = self.model.user.company;
+    self.passwordTextField.text = self.model.user.password;
+    self.confirmPasswordTextField.text = self.model.user.password;
+    self.jobTextField.text = self.model.user.job;
+    self.phoneTextField.text = self.model.user.phone;
+    self.emailTextField.text = self.model.user.email;
 }
 
 - (void)didReceiveMemoryWarning {

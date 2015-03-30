@@ -15,6 +15,7 @@
 @property (nonatomic, strong) NSString * descript;
 @property (nonatomic, strong) NSString * email;
 @property (nonatomic, strong) NSString * iconImageURLString;
+@property (nonatomic, strong) NSString * job;
 @property (nonatomic, strong) NSString * userId;
 @property (nonatomic, strong) NSNumber * isActive;
 @property (nonatomic, strong) NSNumber * isVIP;

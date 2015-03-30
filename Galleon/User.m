@@ -47,6 +47,8 @@
         self.role = responseData[@"role"];
     if ( responseData[@"token"] != [NSNull null] )
         self.token = responseData[@"token"];
+    if ( responseData[@"title"] )
+        self.job = responseData[@"title"];
 }
 
 + (void)saveToCache:(User *)user
@@ -70,6 +72,7 @@
     [ud setObject:user.role forKey:@"role"];
     [ud setObject:user.token forKey:@"token"];
     [ud setObject:user.autoLogin forKey:@"autoLogin"];
+    [ud setObject:user.job forKey:@"job"];
 }
 
 + (User *)awakeFromCache
@@ -94,6 +97,7 @@
     user.role = [ud objectForKey:@"role"];
     user.token = [ud objectForKey:@"token"];
     user.autoLogin = [ud objectForKey:@"autoLogin"];
+    user.job = [ud objectForKey:@"job"];
     return user;
 }
 
@@ -118,6 +122,7 @@
     [ud setObject:nil forKey:@"role"];
     [ud setObject:nil forKey:@"token"];
     [ud setObject:nil forKey:@"autoLogin"];
+    [ud setObject:nil forKey:@"job"];
 }
 
 @end

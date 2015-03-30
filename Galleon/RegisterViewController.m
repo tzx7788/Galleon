@@ -174,7 +174,6 @@
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
 {
-    [self.scrollView scrollsToTop];
     [self.scrollView setContentInset:UIEdgeInsetsMake(0, 0, 0, 0)];
     [textField resignFirstResponder];
     return YES;
