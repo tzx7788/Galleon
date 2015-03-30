@@ -14,6 +14,7 @@
 #define ExhibitionIcon      [UIImage imageNamed:@"ic_sidebar_exhibition"]
 #define DiscussIcon         [UIImage imageNamed:@"ic_sidebar_message"]
 #define AboutUsIcon         [UIImage imageNamed:@"ic_sidebar_about_us"]
+#define SupplierIcon        [UIImage imageNamed:@"ic_sidebar_supplier"]
 
 #define TabBarBackGround    [UIImage imageNamed:@"bg_tab_bar"]
 

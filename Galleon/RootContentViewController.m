@@ -26,6 +26,8 @@
 #import "DiscussViewController.h"
 #import "PersonModel.h"
 #import "PersonViewController.h"
+#import "SupplierModel.h"
+#import "SupplierViewController.h"
 
 @interface RootContentViewController ()
 @end
@@ -44,6 +46,7 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loadHomePageViewController:) name:NotificationHomePageClicked object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loadDiscussViewController:) name:NotificationDiscussClicked object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loadPersonPageViewController:) name:NotificationPersonPageClicked object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loadSupplierViewController:) name:NotificationSupplierClicked object:nil];
     
 }
 
@@ -56,7 +59,21 @@
     [[NSNotificationCenter defaultCenter] removeObserver:self name:NotificationHomePageClicked object:nil];
     [[NSNotificationCenter defaultCenter] removeObserver:self name:NotificationDiscussClicked object:nil];
     [[NSNotificationCenter defaultCenter] removeObserver:self name:NotificationPersonPageClicked object:nil];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:NotificationSupplierClicked object:nil];
 }
+
+- (void)loadSupplierViewController:(NSNotification *) notification
+{
+    if ( [[notification object] isKindOfClass:[SupplierModel class]] ) {
+        TitleLabel * label = [TitleLabel createLabel];
+        label.text = Supplier;
+        self.navigationItem.titleView = label;
+        SupplierViewController * vc = [SupplierViewController createViewController];
+        vc.model = [notification object];
+        [self loadViewController:vc];
+    }
+}
+
 
 - (void)loadPersonPageViewController:(NSNotification *) notification
 {

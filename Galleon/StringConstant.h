@@ -15,6 +15,7 @@
 #define Discuss     NSLocalizedString(@"Discuss",nil)
 #define AboutUs     NSLocalizedString(@"About Us",nil)
 #define Person      NSLocalizedString(@"User Information",nil)
+#define Supplier    NSLocalizedString(@"Supplier Directory",nil)
 
 #define ExhibitionIntroduce NSLocalizedString(@"Introduction",nil)
 #define ExhibitionService   NSLocalizedString(@"Service",nil)

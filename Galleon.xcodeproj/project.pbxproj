@@ -96,6 +96,10 @@
 		6CAD84531AB719E900F5F2F5 /* NewsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6CAD84521AB719E900F5F2F5 /* NewsTableViewCell.xib */; };
 		6CB80BD31ABF97E500C49F44 /* NewsImageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CB80BD21ABF97E500C49F44 /* NewsImageModel.m */; };
 		6CC058C61ABB117B00C16465 /* bg_about_us.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6CC058C51ABB117B00C16465 /* bg_about_us.jpg */; };
+		6CC2B2721ACA168300026FAC /* SupplierViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CC2B2701ACA168300026FAC /* SupplierViewController.m */; };
+		6CC2B2731ACA168300026FAC /* SupplierViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6CC2B2711ACA168300026FAC /* SupplierViewController.xib */; };
+		6CC2B2761ACA169700026FAC /* SupplierModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CC2B2751ACA169700026FAC /* SupplierModel.m */; };
+		6CC2B2781ACA18B200026FAC /* ic_sidebar_supplier.png in Resources */ = {isa = PBXBuildFile; fileRef = 6CC2B2771ACA18B200026FAC /* ic_sidebar_supplier.png */; };
 		6CC3E6E61ABD125C00800F20 /* HomePageHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6CC3E6E51ABD125C00800F20 /* HomePageHeaderView.xib */; };
 		6CC3E6E91ABD126D00800F20 /* HomePageHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CC3E6E81ABD126D00800F20 /* HomePageHeaderView.m */; };
 		6CC6EBBE1AB31E2300A9392E /* TitleLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CC6EBBD1AB31E2300A9392E /* TitleLabel.m */; };
@@ -295,6 +299,12 @@
 		6CB80BD21ABF97E500C49F44 /* NewsImageModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsImageModel.m; sourceTree = "<group>"; };
 		6CBDA9661AB12881003CCB20 /* ImageConstant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageConstant.h; sourceTree = "<group>"; };
 		6CC058C51ABB117B00C16465 /* bg_about_us.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bg_about_us.jpg; sourceTree = "<group>"; };
+		6CC2B26F1ACA168300026FAC /* SupplierViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SupplierViewController.h; sourceTree = "<group>"; };
+		6CC2B2701ACA168300026FAC /* SupplierViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SupplierViewController.m; sourceTree = "<group>"; };
+		6CC2B2711ACA168300026FAC /* SupplierViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SupplierViewController.xib; sourceTree = "<group>"; };
+		6CC2B2741ACA169700026FAC /* SupplierModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SupplierModel.h; sourceTree = "<group>"; };
+		6CC2B2751ACA169700026FAC /* SupplierModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SupplierModel.m; sourceTree = "<group>"; };
+		6CC2B2771ACA18B200026FAC /* ic_sidebar_supplier.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_sidebar_supplier.png; sourceTree = "<group>"; };
 		6CC3E6E51ABD125C00800F20 /* HomePageHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomePageHeaderView.xib; sourceTree = "<group>"; };
 		6CC3E6E71ABD126D00800F20 /* HomePageHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomePageHeaderView.h; sourceTree = "<group>"; };
 		6CC3E6E81ABD126D00800F20 /* HomePageHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomePageHeaderView.m; sourceTree = "<group>"; };
@@ -448,6 +458,7 @@
 				6C5BDC4C1AB0754C005FE343 /* ic_sidebar_news.png */,
 				6C5BDC491AB0754C005FE343 /* ic_sidebar_exhibition.png */,
 				6C5BDC4B1AB0754C005FE343 /* ic_sidebar_message.png */,
+				6CC2B2771ACA18B200026FAC /* ic_sidebar_supplier.png */,
 				6C5BDC481AB0754C005FE343 /* ic_sidebar_about_us.png */,
 			);
 			name = LeftMenu;
@@ -511,6 +522,7 @@
 		6C6E63421AB281AA0014F47F /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				6CC2B26B1ACA160300026FAC /* Supplier */,
 				6CAA1D461AB400E000B848BD /* Login */,
 				6CC6EBA91AB31BA000A9392E /* Person */,
 				6CC6EBA81AB31B3500A9392E /* HomePage */,
@@ -746,6 +758,42 @@
 				6CC058C51ABB117B00C16465 /* bg_about_us.jpg */,
 			);
 			name = About;
+			sourceTree = "<group>";
+		};
+		6CC2B26B1ACA160300026FAC /* Supplier */ = {
+			isa = PBXGroup;
+			children = (
+				6CC2B26D1ACA165300026FAC /* Model */,
+				6CC2B26C1ACA164D00026FAC /* View */,
+				6CC2B26E1ACA165C00026FAC /* ViewController */,
+			);
+			name = Supplier;
+			sourceTree = "<group>";
+		};
+		6CC2B26C1ACA164D00026FAC /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		6CC2B26D1ACA165300026FAC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6CC2B2741ACA169700026FAC /* SupplierModel.h */,
+				6CC2B2751ACA169700026FAC /* SupplierModel.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		6CC2B26E1ACA165C00026FAC /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				6CC2B26F1ACA168300026FAC /* SupplierViewController.h */,
+				6CC2B2701ACA168300026FAC /* SupplierViewController.m */,
+				6CC2B2711ACA168300026FAC /* SupplierViewController.xib */,
+			);
+			name = ViewController;
 			sourceTree = "<group>";
 		};
 		6CC6EBA51AB31A8D00A9392E /* About */ = {
@@ -1200,6 +1248,7 @@
 				6CC6EBCB1AB3357E00A9392E /* ExhibitionListViewController.xib in Resources */,
 				6CAD84531AB719E900F5F2F5 /* NewsTableViewCell.xib in Resources */,
 				6CC9EC361ABC14420062B64A /* galleon@2x.png in Resources */,
+				6CC2B2731ACA168300026FAC /* SupplierViewController.xib in Resources */,
 				6C0141451AB877FC0069EDE7 /* DiscussTableViewCell.xib in Resources */,
 				6C72E0371ABE68C20012B428 /* InformTableViewCell.xib in Resources */,
 				6C0FB4CB1ABA760400E72C20 /* ic_checked_normal.png in Resources */,
@@ -1252,6 +1301,7 @@
 				6C5BDC4E1AB0754C005FE343 /* ic_sidebar_exhibition.png in Resources */,
 				6CF078931AB25CDF00DF0C0C /* bg_tab_bar.png in Resources */,
 				6C5BDC511AB0754C005FE343 /* ic_sidebar_news.png in Resources */,
+				6CC2B2781ACA18B200026FAC /* ic_sidebar_supplier.png in Resources */,
 				6C8A12671AC981F50077E25A /* PushConfig.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1314,6 +1364,7 @@
 				6C28D0701AC02118004BD04D /* ExhibitionDetailViewController.m in Sources */,
 				6CEE19451AADC291006CB3DD /* main.m in Sources */,
 				6CC3E6E91ABD126D00800F20 /* HomePageHeaderView.m in Sources */,
+				6CC2B2761ACA169700026FAC /* SupplierModel.m in Sources */,
 				6CAA1D3E1AB3ED2F00B848BD /* LeftMenuUserHeaderView.m in Sources */,
 				6C0141551AB87AF90069EDE7 /* HomePageModel.m in Sources */,
 				6C0141581AB87BA20069EDE7 /* PersonModel.m in Sources */,
@@ -1345,6 +1396,7 @@
 				6CAA1D371AB3E29900B848BD /* GalleonNavigationController.m in Sources */,
 				6CC6EBC61AB328AD00A9392E /* ExhibitionModel.m in Sources */,
 				6CAD84471AB7178E00F5F2F5 /* NewsViewController.m in Sources */,
+				6CC2B2721ACA168300026FAC /* SupplierViewController.m in Sources */,
 				6C01414D1AB879350069EDE7 /* PostMessageModel.m in Sources */,
 				6C0141301AB871360069EDE7 /* AboutModel.m in Sources */,
 				6CAD843A1AB5CF3100F5F2F5 /* Client.m in Sources */,

@@ -17,6 +17,7 @@
 #import "HomePageModel.h"
 #import "DiscussModel.h"
 #import "StringConstant.h"
+#import "SupplierModel.h"
 
 @interface LeftMenuTableViewController ()
 
@@ -50,7 +51,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 5;
+    return 6;
 }
 
 
@@ -70,6 +71,9 @@
             cell.type = LeftMenuTableViewCellDiscuss;
             break;
         case 4:
+            cell.type = LeftMenuTableViewCellSupplier;
+            break;
+        case 5:
             cell.type = LeftMenuTableViewCellAbout;
             break;
         default:
@@ -110,6 +114,12 @@
             }
             DiscussModel * model = [[DiscussModel alloc] init];
             [[NSNotificationCenter defaultCenter] postNotificationName:NotificationDiscussClicked object:model];
+        }
+            break;
+        case LeftMenuTableViewCellSupplier:
+        {
+            SupplierModel * model = [[SupplierModel alloc] init];
+            [[NSNotificationCenter defaultCenter] postNotificationName:NotificationSupplierClicked object:model];
         }
             break;
         case LeftMenuTableViewCellAbout:

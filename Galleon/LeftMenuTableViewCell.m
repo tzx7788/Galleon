@@ -32,6 +32,10 @@
             self.iconImageView.image = DiscussIcon;
             self.contentLabel.text = Discuss;
             break;
+        case LeftMenuTableViewCellSupplier:
+            self.iconImageView.image = SupplierIcon;
+            self.contentLabel.text = Supplier;
+            break;
         case LeftMenuTableViewCellAbout:
             self.iconImageView.image = AboutUsIcon;
             self.contentLabel.text = AboutUs;
