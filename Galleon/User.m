@@ -47,7 +47,7 @@
         self.role = responseData[@"role"];
     if ( responseData[@"token"] != [NSNull null] )
         self.token = responseData[@"token"];
-    if ( responseData[@"title"] )
+    if ( responseData[@"title"] != [NSNull null] )
         self.job = responseData[@"title"];
 }
 

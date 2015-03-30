@@ -207,6 +207,14 @@
     [self GET:@"/news/system_time" successBlock:successCompletionBlock failureBlock:failureCompletionBlock];
 }
 
+- (void)thumberANewsWithId:(NSString *) newsId
+              successBlock:(SuccessCompletionBlock) successCompletionBlock
+              failureBlock:(FailureCompletionBlock) failureCompletionBlock
+{
+    NSString * path = [NSString stringWithFormat:@"/news/news/%@/awesome",newsId];
+    [self GET:path successBlock:successCompletionBlock failureBlock:failureCompletionBlock];
+}
+
 - (void)updateUserHeaderImage:(NSString *)headerImage
                         token:(NSString *)token
                  successBlock:(SuccessCompletionBlock) successCompletionBlock

@@ -10,7 +10,7 @@
 #import "Client.h"
 
 @interface NewsViewController ()
-
+@property (nonatomic, assign) BOOL isAvailable;
 @end
 
 @implementation NewsViewController
@@ -23,7 +23,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    self.isAvailable = YES;
     [self loadData];
 }
 
@@ -68,17 +68,15 @@
 }
 
 - (IBAction)thumberClicked:(id)sender {
-    
-    static BOOL isAvailable = YES;
-    
-    if ( isAvailable ) {
-        int count = [self.model.thumbCount intValue];
-        count++;
-        self.model.thumbCount = [NSNumber numberWithInt:count];
-        self.thumbCountLabel.text = [self.model.thumbCount description];
-        isAvailable = NO;
+    if ( self.isAvailable ) {
+        [[Client sharedClient] thumberANewsWithId:self.model.newsId successBlock:^(id responseData){
+            if ( responseData[@"awesome_count"] )
+                self.thumbCountLabel.text = responseData[@"awesome_count"];
+        }failureBlock:^(NSError *error, NSString *errorString){
+        }];
+        self.isAvailable = NO;
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(20.0f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-            isAvailable = YES;
+            self.isAvailable = YES;
         });
     }
 }
