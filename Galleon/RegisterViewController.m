@@ -174,17 +174,15 @@
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
 {
+    [self.scrollView scrollsToTop];
+    [self.scrollView setContentInset:UIEdgeInsetsMake(0, 0, 0, 0)];
     [textField resignFirstResponder];
     return YES;
 }
 
 - (void)textFieldDidBeginEditing:(UITextField *)textField
 {
-    CGPoint offset = self.scrollView.contentOffset;
-    offset.y = textField.superview.frame.origin.y - 40;
-    if ( offset.y + self.scrollView.bounds.size.height > self.scrollView.contentSize.height )
-        offset.y = self.scrollView.contentSize.height - self.scrollView.bounds.size.height;
-    [self.scrollView setContentOffset:offset animated:YES];
+    [self.scrollView setContentInset:UIEdgeInsetsMake(0, 0, 300, 0)];
 }
 
 
