@@ -305,6 +305,7 @@
 		6CC2B2741ACA169700026FAC /* SupplierModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SupplierModel.h; sourceTree = "<group>"; };
 		6CC2B2751ACA169700026FAC /* SupplierModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SupplierModel.m; sourceTree = "<group>"; };
 		6CC2B2771ACA18B200026FAC /* ic_sidebar_supplier.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_sidebar_supplier.png; sourceTree = "<group>"; };
+		6CC2B27A1ACA1A8900026FAC /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		6CC3E6E51ABD125C00800F20 /* HomePageHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomePageHeaderView.xib; sourceTree = "<group>"; };
 		6CC3E6E71ABD126D00800F20 /* HomePageHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomePageHeaderView.h; sourceTree = "<group>"; };
 		6CC3E6E81ABD126D00800F20 /* HomePageHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomePageHeaderView.m; sourceTree = "<group>"; };
@@ -1451,6 +1452,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				6CA763961AB16BAD00A9185F /* Base */,
+				6CC2B27A1ACA1A8900026FAC /* zh-Hans */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
