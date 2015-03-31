@@ -60,7 +60,7 @@
             NewsModel * b = (NewsModel *)obj2;
             return [b.date compare:a.date];
         }];
-        [self.tableView reloadData];
+        [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:UITableViewRowAnimationFade];
     } failureBlock:nil];
 }
 
