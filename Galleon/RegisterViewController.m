@@ -19,7 +19,6 @@
 
 @interface RegisterViewController ()<UIScrollViewDelegate,UIActionSheetDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate,MBProgressHUDDelegate,UITextFieldDelegate>
 
-@property (nonatomic, strong) NSString * headerName;
 
 @end
 

@@ -54,6 +54,9 @@
 		6C5BDC511AB0754C005FE343 /* ic_sidebar_news.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C5BDC4C1AB0754C005FE343 /* ic_sidebar_news.png */; };
 		6C5BDC541AB07ADD005FE343 /* LeftMenuTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C5BDC531AB07ADD005FE343 /* LeftMenuTableViewController.m */; };
 		6C5BDC5B1AB08008005FE343 /* LeftMenuTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C5BDC5A1AB08008005FE343 /* LeftMenuTableViewCell.m */; };
+		6C5E019B1ACADDBA00570D5B /* JetlinerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C5E019A1ACADDBA00570D5B /* JetlinerModel.m */; };
+		6C5E01A61ACAFB0000570D5B /* JetlinerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C5E01A41ACAFB0000570D5B /* JetlinerViewController.m */; };
+		6C5E01A71ACAFB0000570D5B /* JetlinerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C5E01A51ACAFB0000570D5B /* JetlinerViewController.xib */; };
 		6C6E63411AB276A40014F47F /* btn_back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C6E63401AB276A40014F47F /* btn_back@2x.png */; };
 		6C6E63491AB282BD0014F47F /* ExhibitionType.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C6E63481AB282BD0014F47F /* ExhibitionType.m */; };
 		6C6E635A1AB28D510014F47F /* ExhibitionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C6E63581AB28D510014F47F /* ExhibitionViewController.m */; };
@@ -237,6 +240,11 @@
 		6C5BDC591AB08008005FE343 /* LeftMenuTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftMenuTableViewCell.h; sourceTree = "<group>"; };
 		6C5BDC5A1AB08008005FE343 /* LeftMenuTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftMenuTableViewCell.m; sourceTree = "<group>"; };
 		6C5BDC701AB11E07005FE343 /* StringConstant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StringConstant.h; sourceTree = "<group>"; };
+		6C5E01991ACADDBA00570D5B /* JetlinerModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JetlinerModel.h; sourceTree = "<group>"; };
+		6C5E019A1ACADDBA00570D5B /* JetlinerModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JetlinerModel.m; sourceTree = "<group>"; };
+		6C5E01A31ACAFB0000570D5B /* JetlinerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JetlinerViewController.h; sourceTree = "<group>"; };
+		6C5E01A41ACAFB0000570D5B /* JetlinerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JetlinerViewController.m; sourceTree = "<group>"; };
+		6C5E01A51ACAFB0000570D5B /* JetlinerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JetlinerViewController.xib; sourceTree = "<group>"; };
 		6C6E63401AB276A40014F47F /* btn_back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_back@2x.png"; sourceTree = "<group>"; };
 		6C6E63471AB282BD0014F47F /* ExhibitionType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExhibitionType.h; sourceTree = "<group>"; };
 		6C6E63481AB282BD0014F47F /* ExhibitionType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExhibitionType.m; sourceTree = "<group>"; };
@@ -510,6 +518,42 @@
 			name = Constant;
 			sourceTree = "<group>";
 		};
+		6C5E01951ACADD8D00570D5B /* Jetliner */ = {
+			isa = PBXGroup;
+			children = (
+				6C5E01961ACADD9500570D5B /* Model */,
+				6C5E01971ACADD9D00570D5B /* View */,
+				6C5E01981ACADDA100570D5B /* ViewController */,
+			);
+			name = Jetliner;
+			sourceTree = "<group>";
+		};
+		6C5E01961ACADD9500570D5B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6C5E01991ACADDBA00570D5B /* JetlinerModel.h */,
+				6C5E019A1ACADDBA00570D5B /* JetlinerModel.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		6C5E01971ACADD9D00570D5B /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		6C5E01981ACADDA100570D5B /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				6C5E01A31ACAFB0000570D5B /* JetlinerViewController.h */,
+				6C5E01A41ACAFB0000570D5B /* JetlinerViewController.m */,
+				6C5E01A51ACAFB0000570D5B /* JetlinerViewController.xib */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
 		6C6E633F1AB2767C0014F47F /* Navigation */ = {
 			isa = PBXGroup;
 			children = (
@@ -523,6 +567,7 @@
 		6C6E63421AB281AA0014F47F /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				6C5E01951ACADD8D00570D5B /* Jetliner */,
 				6CC2B26B1ACA160300026FAC /* Supplier */,
 				6CAA1D461AB400E000B848BD /* Login */,
 				6CC6EBA91AB31BA000A9392E /* Person */,
@@ -1278,6 +1323,7 @@
 				6CC6EBC01AB31E3800A9392E /* TitleLabel.xib in Resources */,
 				6C28D0711AC02118004BD04D /* ExhibitionDetailViewController.xib in Resources */,
 				6CF24AC91ABBA734002423D2 /* pic_6lijiehuiyibaogao.png in Resources */,
+				6C5E01A71ACAFB0000570D5B /* JetlinerViewController.xib in Resources */,
 				6CAD84481AB7178E00F5F2F5 /* NewsViewController.xib in Resources */,
 				6C28D07E1AC03DD6004BD04D /* PDFTableViewCell.xib in Resources */,
 				6CD5E1021AC9204300909FF4 /* reddot.png in Resources */,
@@ -1378,6 +1424,8 @@
 				6CF24AD01ABBB9B0002423D2 /* SelectionViewController.m in Sources */,
 				6C72E03A1ABE694C0012B428 /* InformModel.m in Sources */,
 				6CC6EBCA1AB3357E00A9392E /* ExhibitionListViewController.m in Sources */,
+				6C5E019B1ACADDBA00570D5B /* JetlinerModel.m in Sources */,
+				6C5E01A61ACAFB0000570D5B /* JetlinerViewController.m in Sources */,
 				6CAD844B1AB7181B00F5F2F5 /* NewsModel.m in Sources */,
 				6C01413D1AB877C80069EDE7 /* DiscussModel.m in Sources */,
 				6C28D0751AC0217E004BD04D /* ExhibitionFileListViewController.m in Sources */,

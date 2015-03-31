@@ -28,6 +28,8 @@
 #import "PersonViewController.h"
 #import "SupplierModel.h"
 #import "SupplierViewController.h"
+#import "JetlinerModel.h"
+#import "JetlinerViewController.h"
 
 @interface RootContentViewController ()
 @end
@@ -47,6 +49,7 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loadDiscussViewController:) name:NotificationDiscussClicked object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loadPersonPageViewController:) name:NotificationPersonPageClicked object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loadSupplierViewController:) name:NotificationSupplierClicked object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loadJetlinerViewController:) name:NotificationJetlinerClicked object:nil];
     
 }
 
@@ -60,6 +63,19 @@
     [[NSNotificationCenter defaultCenter] removeObserver:self name:NotificationDiscussClicked object:nil];
     [[NSNotificationCenter defaultCenter] removeObserver:self name:NotificationPersonPageClicked object:nil];
     [[NSNotificationCenter defaultCenter] removeObserver:self name:NotificationSupplierClicked object:nil];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:NotificationJetlinerClicked object:nil];
+}
+
+- (void)loadJetlinerViewController:(NSNotification *) notification
+{
+    if ( [[notification object] isKindOfClass:[JetlinerModel class]] ) {
+        TitleLabel * label = [TitleLabel createLabel];
+        label.text = Jetliner;
+        self.navigationItem.titleView = label;
+        JetlinerViewController * vc = [JetlinerViewController createViewController];
+        vc.model = [notification object];
+        [self loadViewController:vc];
+    }
 }
 
 - (void)loadSupplierViewController:(NSNotification *) notification

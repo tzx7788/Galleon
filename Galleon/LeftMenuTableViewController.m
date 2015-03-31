@@ -18,6 +18,7 @@
 #import "DiscussModel.h"
 #import "StringConstant.h"
 #import "SupplierModel.h"
+#import "JetlinerModel.h"
 
 @interface LeftMenuTableViewController ()
 
@@ -51,7 +52,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 6;
+    return 7;
 }
 
 
@@ -71,9 +72,12 @@
             cell.type = LeftMenuTableViewCellDiscuss;
             break;
         case 4:
-            cell.type = LeftMenuTableViewCellSupplier;
+            cell.type = LeftMenuTableViewCellJetliner;
             break;
         case 5:
+            cell.type = LeftMenuTableViewCellSupplier;
+            break;
+        case 6:
             cell.type = LeftMenuTableViewCellAbout;
             break;
         default:
@@ -114,6 +118,12 @@
             }
             DiscussModel * model = [[DiscussModel alloc] init];
             [[NSNotificationCenter defaultCenter] postNotificationName:NotificationDiscussClicked object:model];
+        }
+            break;
+        case LeftMenuTableViewCellJetliner:
+        {
+            JetlinerModel * model = [[JetlinerModel alloc] init];
+            [[NSNotificationCenter defaultCenter] postNotificationName:NotificationJetlinerClicked object:model];
         }
             break;
         case LeftMenuTableViewCellSupplier:

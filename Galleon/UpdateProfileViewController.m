@@ -8,8 +8,12 @@
 
 #import "UpdateProfileViewController.h"
 #import <AFNetworking/UIImageView+AFNetworking.h>
+#import "NotificationConstant.h"
+#import "StringConstant.h"
+#import <MBProgressHUD.h>
+#import "Client.h"
 
-@interface UpdateProfileViewController ()
+@interface UpdateProfileViewController ()<MBProgressHUDDelegate>
 
 @end
 
@@ -39,9 +43,56 @@
     self.emailTextField.text = self.model.user.email;
 }
 
+- (IBAction)ComfirmClicked:(id)sender {
+    if ([super verified]) {
+        NSString * message =Registering;
+        MBProgressHUD * hud = [[MBProgressHUD alloc] initWithView:self.view];
+        [self.view addSubview:hud];
+        hud.delegate = self;
+        hud.dimBackground = YES;
+        hud.square = YES;
+        hud.labelText = message;
+        hud.mode = MBProgressHUDModeIndeterminate;
+        [hud show:YES];
+        [[Client sharedClient] registerWithName:self.nameTextField.text
+                                        account:self.accountTextField.text
+                                       password:self.passwordTextField.text
+                                    headerImage:self.headerName
+                                        company:self.campanyTextField.text
+                                            job:self.jobTextField.text
+                                          phone:self.phoneTextField.text
+                                          email:self.emailTextField.text
+                                   successBlock:^(id responseData){
+                                       NSLog(@"%@",responseData);
+                                       User * user = [[User alloc] init];
+                                       [user loadWithDictionary:responseData];
+                                       user.password = self.passwordTextField.text;
+                                       [User saveToCache:user];
+                                       hud.mode = MBProgressHUDModeText;
+                                       [self dismissViewControllerAnimated:YES completion:nil];
+                                       PersonModel * model = [[PersonModel alloc] init];
+                                       model.user = user;
+                                       [[NSNotificationCenter defaultCenter] postNotificationName:NotificationWarningMessage object:LogInSuccessful];
+                                       [[NSNotificationCenter defaultCenter] postNotificationName:NotificationPersonPageClicked object:model];
+                                       [[NSNotificationCenter defaultCenter] postNotificationName:NotificationLeftMenuUserRefresh object:nil];
+                                   } failureBlock:^(NSError *error, NSString * errorString){
+                                       hud.mode = MBProgressHUDModeText;
+                                       hud.labelText = RegisterFailure;
+                                       [hud hide:YES afterDelay:1];
+                                   }];
+    }
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - MBProgressHUDDeleagte
+- (void)hudWasHidden:(MBProgressHUD *)hud
+{
+    [hud removeFromSuperview];
+    hud = nil;
 }
 
 /*

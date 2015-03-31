@@ -16,6 +16,7 @@
 #define NotificationAboutClicked        @"NotificationAboutClicked"
 #define NotificationPersonPageClicked   @"NotificationPersonPageClicked"
 #define NotificationSupplierClicked     @"NotificationSupplierClicked"
+#define NotificationJetlinerClicked     @"NotificationJetlinerClicked"
 
 #define NotificationExhibitionListClicked @"NotificationExhibitionListClicked"
 

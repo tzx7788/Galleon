@@ -22,4 +22,9 @@
 @property (weak, nonatomic) IBOutlet UITextField *emailTextField;
 @property (weak, nonatomic) IBOutlet UIImageView *avatarImageView;
 
+@property (nonatomic, strong) NSString * headerName;
+
+- (IBAction)ComfirmClicked:(id)sender;
+- (BOOL)verified;
+
 @end

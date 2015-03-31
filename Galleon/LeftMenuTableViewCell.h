@@ -14,6 +14,7 @@ typedef enum
     LeftMenuTableViewCellNews,
     LeftMenuTableViewCellExhibition,
     LeftMenuTableViewCellDiscuss,
+    LeftMenuTableViewCellJetliner,
     LeftMenuTableViewCellSupplier,
     LeftMenuTableViewCellAbout,
 } LeftMenuTableViewCellType;
