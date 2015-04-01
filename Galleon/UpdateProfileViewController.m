@@ -56,7 +56,7 @@
         hud.mode = MBProgressHUDModeIndeterminate;
         [hud show:YES];
         [[Client sharedClient] updateUserWithName:self.nameTextField.text
-                                          userId:self.model.user.userId
+                                           userId:self.model.user.userId
                                             token:self.model.user.token
                                          password:self.passwordTextField.text
                                       headerImage:self.headerName

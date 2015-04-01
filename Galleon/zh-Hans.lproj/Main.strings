@@ -1,78 +1,81 @@
 
-/* Class = "UILabel"; text = "邮箱"; ObjectID = "19e-Lu-3Sd"; */
-"19e-Lu-3Sd.text" = "邮箱";
+/* Class = "UILabel"; text = "Email"; ObjectID = "19e-Lu-3Sd"; */
+"19e-Lu-3Sd.text" = "Email";
+
+/* Class = "UIButton"; normalTitle = "Confirm"; ObjectID = "1tp-Ip-FLH"; */
+"1tp-Ip-FLH.normalTitle" = "确认";
 
 /* Class = "UIButton"; normalTitle = "Login"; ObjectID = "2fD-KW-yXh"; */
 "2fD-KW-yXh.normalTitle" = "登陆";
 
-/* Class = "UILabel"; text = "公司"; ObjectID = "3HS-Oo-IgM"; */
-"3HS-Oo-IgM.text" = "公司";
+/* Class = "UILabel"; text = "Edit Profile"; ObjectID = "3pV-As-Ga3"; */
+"3pV-As-Ga3.text" = "修改资料";
 
-/* Class = "UILabel"; text = "输入密码"; ObjectID = "3P2-oI-h37"; */
-"3P2-oI-h37.text" = "输入密码";
+/* Class = "UILabel"; text = "Confirm"; ObjectID = "4Pa-X1-Leu"; */
+"4Pa-X1-Leu.text" = "确认";
 
-/* Class = "UITextField"; placeholder = "请输入用户名"; ObjectID = "6fu-5U-Tv9"; */
-"6fu-5U-Tv9.placeholder" = "请输入用户名";
+/* Class = "UILabel"; text = "Name"; ObjectID = "5EZ-KZ-P75"; */
+"5EZ-KZ-P75.text" = "姓名";
 
-/* Class = "UILabel"; text = "用户名"; ObjectID = "AH3-76-cir"; */
-"AH3-76-cir.text" = "用户名";
+/* Class = "UILabel"; text = "Account"; ObjectID = "AH3-76-cir"; */
+"AH3-76-cir.text" = "账号";
 
-/* Class = "UITextField"; placeholder = "请输入密码"; ObjectID = "DlX-AJ-pTN"; */
-"DlX-AJ-pTN.placeholder" = "请输入密码";
+/* Class = "UILabel"; text = "Email"; ObjectID = "Bo1-Jd-1MW"; */
+"Bo1-Jd-1MW.text" = "Email";
 
-/* Class = "UITextField"; placeholder = "请输入邮箱地址"; ObjectID = "Dok-g5-mXd"; */
-"Dok-g5-mXd.placeholder" = "请输入邮箱地址";
+/* Class = "UITextField"; placeholder = "请输入用户名"; ObjectID = "EAE-x5-4Xx"; */
+"EAE-x5-4Xx.placeholder" = "请输入用户名";
 
-/* Class = "UIButton"; normalTitle = "取消"; ObjectID = "F9m-rl-iVI"; */
+/* Class = "UIButton"; normalTitle = "Cancel"; ObjectID = "F9m-rl-iVI"; */
 "F9m-rl-iVI.normalTitle" = "取消";
 
-/* Class = "UITextField"; placeholder = "请输入职位"; ObjectID = "Fh0-ap-EK8"; */
-"Fh0-ap-EK8.placeholder" = "请输入职位";
-
-/* Class = "UIButton"; normalTitle = "确定"; ObjectID = "Gjy-Z9-VLS"; */
-"Gjy-Z9-VLS.normalTitle" = "确定";
+/* Class = "UIButton"; normalTitle = "Confirm"; ObjectID = "Gjy-Z9-VLS"; */
+"Gjy-Z9-VLS.normalTitle" = "确认";
 
 /* Class = "UITextField"; placeholder = "请输入职位"; ObjectID = "Gqm-br-9F4"; */
 "Gqm-br-9F4.placeholder" = "请输入职位";
 
-/* Class = "UILabel"; text = "职位"; ObjectID = "IuQ-pB-ayO"; */
-"IuQ-pB-ayO.text" = "职位";
+/* Class = "UITextField"; placeholder = "请输入手机号码"; ObjectID = "KUB-QO-QPa"; */
+"KUB-QO-QPa.placeholder" = "请输入手机号码";
 
-/* Class = "UILabel"; text = "Label"; ObjectID = "Jxp-rz-o3s"; */
-"Jxp-rz-o3s.text" = "";
+/* Class = "UITextField"; placeholder = "请输入职位"; ObjectID = "MvQ-Bo-1mh"; */
+"MvQ-Bo-1mh.placeholder" = "请输入职位";
 
-/* Class = "UILabel"; text = "用户名"; ObjectID = "Mz7-hb-VVy"; */
-"Mz7-hb-VVy.text" = "用户名";
+/* Class = "UITextField"; placeholder = "请输入邮箱地址"; ObjectID = "N1Z-84-MCa"; */
+"N1Z-84-MCa.placeholder" = "请输入邮箱地址";
 
-/* Class = "UILabel"; text = "实名"; ObjectID = "PQF-sn-uYN"; */
-"PQF-sn-uYN.text" = "实名";
+/* Class = "UILabel"; text = "Name"; ObjectID = "PQF-sn-uYN"; */
+"PQF-sn-uYN.text" = "姓名";
 
-/* Class = "UILabel"; text = "填写注册信息"; ObjectID = "Qdj-lh-mge"; */
-"Qdj-lh-mge.text" = "填写注册信息";
+/* Class = "UITextField"; placeholder = "请输入密码"; ObjectID = "Q9M-rT-8lb"; */
+"Q9M-rT-8lb.placeholder" = "请输入密码";
 
-/* Class = "UIButton"; normalTitle = "确定"; ObjectID = "Qyh-tZ-vub"; */
-"Qyh-tZ-vub.normalTitle" = "确定";
+/* Class = "UILabel"; text = "Registration"; ObjectID = "Qdj-lh-mge"; */
+"Qdj-lh-mge.text" = "注册";
 
 /* Class = "UITextField"; placeholder = "再次确认密码"; ObjectID = "T4x-Le-QG3"; */
 "T4x-Le-QG3.placeholder" = "再次确认密码";
 
-/* Class = "UILabel"; text = "手机"; ObjectID = "VWr-CQ-9Za"; */
-"VWr-CQ-9Za.text" = "手机";
+/* Class = "UITextField"; placeholder = "请输入公司名称"; ObjectID = "Td0-Q8-cEw"; */
+"Td0-Q8-cEw.placeholder" = "请输入公司名称";
+
+/* Class = "UITextField"; placeholder = "再次确认密码"; ObjectID = "Un8-c6-tuR"; */
+"Un8-c6-tuR.placeholder" = "再次确认密码";
+
+/* Class = "UILabel"; text = "(Sign    means neccessary)"; ObjectID = "VBu-fd-CXN"; */
+"VBu-fd-CXN.text" = "(红点    代表必填)";
 
 /* Class = "UITextField"; placeholder = "请输入公司名称"; ObjectID = "Veg-Yf-2IT"; */
 "Veg-Yf-2IT.placeholder" = "请输入公司名称";
 
-/* Class = "UILabel"; text = "职位"; ObjectID = "WPa-vL-NjM"; */
+/* Class = "UILabel"; text = "Job"; ObjectID = "WPa-vL-NjM"; */
 "WPa-vL-NjM.text" = "职位";
 
-/* Class = "UIButton"; normalTitle = "取消"; ObjectID = "Z05-bp-kpa"; */
-"Z05-bp-kpa.normalTitle" = "取消";
+/* Class = "UILabel"; text = "(Sign    means neccessary)"; ObjectID = "ZTo-6w-om6"; */
+"ZTo-6w-om6.text" = "(红点    代表必填)";
 
-/* Class = "UILabel"; text = "(红点    为必填)"; ObjectID = "ZTo-6w-om6"; */
-"ZTo-6w-om6.text" = "(红点    为必填)";
-
-/* Class = "UILabel"; text = "确认密码"; ObjectID = "Zsm-Lm-lC5"; */
-"Zsm-Lm-lC5.text" = "确认密码";
+/* Class = "UILabel"; text = "Confirm"; ObjectID = "Zsm-Lm-lC5"; */
+"Zsm-Lm-lC5.text" = "确认";
 
 /* Class = "UITextField"; placeholder = "请输入实名"; ObjectID = "a0V-gv-inG"; */
 "a0V-gv-inG.placeholder" = "请输入实名";
@@ -83,8 +86,8 @@
 /* Class = "UILabel"; text = "主页"; ObjectID = "b2F-gD-Rjr"; */
 "b2F-gD-Rjr.text" = "主页";
 
-/* Class = "UILabel"; text = "下次自动登录"; ObjectID = "bP5-h7-Psa"; */
-"bP5-h7-Psa.text" = "下次自动登录";
+/* Class = "UILabel"; text = "Auto Login"; ObjectID = "bP5-h7-Psa"; */
+"bP5-h7-Psa.text" = "自动登录";
 
 /* Class = "UILabel"; text = "Galleon"; ObjectID = "bQC-xq-F06"; */
 "bQC-xq-F06.text" = "Galleon";
@@ -92,32 +95,26 @@
 /* Class = "UILabel"; text = "Account"; ObjectID = "cjt-OV-rLh"; */
 "cjt-OV-rLh.text" = "账号";
 
-/* Class = "UILabel"; text = "输入密码"; ObjectID = "dJB-Aa-jo2"; */
-"dJB-Aa-jo2.text" = "输入密码";
-
-/* Class = "UILabel"; text = "确认密码"; ObjectID = "dRq-z7-lS1"; */
-"dRq-z7-lS1.text" = "确认密码";
+/* Class = "UILabel"; text = "Password"; ObjectID = "dJB-Aa-jo2"; */
+"dJB-Aa-jo2.text" = "密码";
 
 /* Class = "UIButton"; normalTitle = "Register"; ObjectID = "eph-OW-mtL"; */
 "eph-OW-mtL.normalTitle" = "注册";
 
-/* Class = "UILabel"; text = "邮箱"; ObjectID = "j2g-15-B67"; */
-"j2g-15-B67.text" = "邮箱";
+/* Class = "UITextField"; placeholder = "请输入实名"; ObjectID = "gBZ-QO-zK3"; */
+"gBZ-QO-zK3.placeholder" = "请输入实名";
+
+/* Class = "UILabel"; text = "Phone"; ObjectID = "gTt-ww-abq"; */
+"gTt-ww-abq.text" = "电话号码";
+
+/* Class = "UILabel"; text = "Account"; ObjectID = "ill-aL-qIi"; */
+"ill-aL-qIi.text" = "账号";
 
 /* Class = "UITextField"; placeholder = "请输入密码"; ObjectID = "jb5-Dc-pZt"; */
 "jb5-Dc-pZt.placeholder" = "请输入密码";
 
-/* Class = "UILabel"; text = "填写注册信息"; ObjectID = "kq3-dq-VDc"; */
-"kq3-dq-VDc.text" = "填写注册信息";
-
-/* Class = "UILabel"; text = "实名"; ObjectID = "ld6-Yf-SVQ"; */
-"ld6-Yf-SVQ.text" = "实名";
-
-/* Class = "UITextField"; placeholder = "再次确认密码"; ObjectID = "lqv-pk-vdF"; */
-"lqv-pk-vdF.placeholder" = "再次确认密码";
-
-/* Class = "UITextField"; placeholder = "请输入实名"; ObjectID = "lwd-KB-pQq"; */
-"lwd-KB-pQq.placeholder" = "请输入实名";
+/* Class = "UILabel"; text = "Password"; ObjectID = "kKe-Ct-ZCr"; */
+"kKe-Ct-ZCr.text" = "密码";
 
 /* Class = "UILabel"; text = "Password"; ObjectID = "ofg-Pl-XnI"; */
 "ofg-Pl-XnI.text" = "密码";
@@ -125,20 +122,20 @@
 /* Class = "UITextField"; placeholder = "请输入邮箱地址"; ObjectID = "pRe-Tx-FzF"; */
 "pRe-Tx-FzF.placeholder" = "请输入邮箱地址";
 
-/* Class = "UILabel"; text = "公司"; ObjectID = "tod-vR-GfR"; */
+/* Class = "UILabel"; text = "Company"; ObjectID = "qQS-HP-NtZ"; */
+"qQS-HP-NtZ.text" = "公司";
+
+/* Class = "UIButton"; normalTitle = "Cancel"; ObjectID = "qaz-Ff-Wch"; */
+"qaz-Ff-Wch.normalTitle" = "取消";
+
+/* Class = "UILabel"; text = "Company"; ObjectID = "tod-vR-GfR"; */
 "tod-vR-GfR.text" = "公司";
 
-/* Class = "UILabel"; text = "手机"; ObjectID = "vhW-fa-oln"; */
-"vhW-fa-oln.text" = "手机";
+/* Class = "UILabel"; text = "Phone"; ObjectID = "vhW-fa-oln"; */
+"vhW-fa-oln.text" = "电话号码";
 
-/* Class = "UITextField"; placeholder = "请输入手机号码"; ObjectID = "viK-x2-BLB"; */
-"viK-x2-BLB.placeholder" = "请输入手机号码";
-
-/* Class = "UITextField"; placeholder = "请输入公司名称"; ObjectID = "yeD-lf-ed4"; */
-"yeD-lf-ed4.placeholder" = "请输入公司名称";
-
-/* Class = "UILabel"; text = "(红点    为必填)"; ObjectID = "zQu-nq-3qM"; */
-"zQu-nq-3qM.text" = "(红点    为必填)";
+/* Class = "UILabel"; text = "Job"; ObjectID = "wVG-zM-vgj"; */
+"wVG-zM-vgj.text" = "工作";
 
 /* Class = "UITextField"; placeholder = "请输入手机号码"; ObjectID = "zY4-yz-bXJ"; */
 "zY4-yz-bXJ.placeholder" = "请输入手机号码";

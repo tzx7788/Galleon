@@ -321,7 +321,6 @@
 		6CC2B2741ACA169700026FAC /* SupplierModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SupplierModel.h; sourceTree = "<group>"; };
 		6CC2B2751ACA169700026FAC /* SupplierModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SupplierModel.m; sourceTree = "<group>"; };
 		6CC2B2771ACA18B200026FAC /* ic_sidebar_supplier.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_sidebar_supplier.png; sourceTree = "<group>"; };
-		6CC2B27A1ACA1A8900026FAC /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		6CC3E6E51ABD125C00800F20 /* HomePageHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomePageHeaderView.xib; sourceTree = "<group>"; };
 		6CC3E6E71ABD126D00800F20 /* HomePageHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomePageHeaderView.h; sourceTree = "<group>"; };
 		6CC3E6E81ABD126D00800F20 /* HomePageHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomePageHeaderView.m; sourceTree = "<group>"; };
@@ -349,6 +348,7 @@
 		6CD5E0FA1AC8F56F00909FF4 /* ic_tag_en.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_tag_en.png; sourceTree = "<group>"; };
 		6CD5E0FB1AC8F56F00909FF4 /* ic_tag_video.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_tag_video.png; sourceTree = "<group>"; };
 		6CD5E1011AC9204300909FF4 /* reddot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = reddot.png; sourceTree = "<group>"; };
+		6CDBBC7D1ACBEE2600FB4D3E /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		6CDD89D11ABC543900FE41C2 /* bg_banner_noshadow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_banner_noshadow.png; sourceTree = "<group>"; };
 		6CDD89D61ABC565D00FE41C2 /* InformHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InformHeaderView.h; sourceTree = "<group>"; };
 		6CDD89D71ABC565D00FE41C2 /* InformHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InformHeaderView.m; sourceTree = "<group>"; };
@@ -1539,7 +1539,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				6CA763961AB16BAD00A9185F /* Base */,
-				6CC2B27A1ACA1A8900026FAC /* zh-Hans */,
+				6CDBBC7D1ACBEE2600FB4D3E /* zh-Hans */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
