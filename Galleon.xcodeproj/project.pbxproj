@@ -43,6 +43,7 @@
 		6C28D07E1AC03DD6004BD04D /* PDFTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C28D07C1AC03DD6004BD04D /* PDFTableViewCell.xib */; };
 		6C2E5A161AC638AF00B0BAC1 /* UIImage+Resize.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C2E5A151AC638AF00B0BAC1 /* UIImage+Resize.m */; };
 		6C3CA2761AB16E8A00A87288 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6C3CA2781AB16E8A00A87288 /* Localizable.strings */; };
+		6C485E571ACBD41000013B69 /* NSDate+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C485E561ACBD41000013B69 /* NSDate+Addition.m */; };
 		6C5B7A871AB56D9900FE47F0 /* button_dark_normal.9.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C5B7A861AB56D9900FE47F0 /* button_dark_normal.9.png */; };
 		6C5B7A8A1AB5731500FE47F0 /* UIAlertView+ErrorMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C5B7A891AB5731500FE47F0 /* UIAlertView+ErrorMessage.m */; };
 		6C5BDC401AB0721B005FE343 /* LeftMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C5BDC3F1AB0721B005FE343 /* LeftMenuViewController.m */; };
@@ -225,6 +226,8 @@
 		6C2E5A141AC638AF00B0BAC1 /* UIImage+Resize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Resize.h"; sourceTree = "<group>"; };
 		6C2E5A151AC638AF00B0BAC1 /* UIImage+Resize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Resize.m"; sourceTree = "<group>"; };
 		6C3CA2771AB16E8A00A87288 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		6C485E551ACBD41000013B69 /* NSDate+Addition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Addition.h"; sourceTree = "<group>"; };
+		6C485E561ACBD41000013B69 /* NSDate+Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Addition.m"; sourceTree = "<group>"; };
 		6C5B7A861AB56D9900FE47F0 /* button_dark_normal.9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_dark_normal.9.png; sourceTree = "<group>"; };
 		6C5B7A881AB5731500FE47F0 /* UIAlertView+ErrorMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+ErrorMessage.h"; sourceTree = "<group>"; };
 		6C5B7A891AB5731500FE47F0 /* UIAlertView+ErrorMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+ErrorMessage.m"; sourceTree = "<group>"; };
@@ -445,6 +448,15 @@
 				A469F2A228C7CAC00E115829 /* libPods-Galleon.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6C485E541ACBD2C300013B69 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				6C485E551ACBD41000013B69 /* NSDate+Addition.h */,
+				6C485E561ACBD41000013B69 /* NSDate+Addition.m */,
+			);
+			name = Category;
 			sourceTree = "<group>";
 		};
 		6C5BDC461AB074DF005FE343 /* Resource */ = {
@@ -1155,6 +1167,7 @@
 		6CEE19341AADC291006CB3DD /* Galleon */ = {
 			isa = PBXGroup;
 			children = (
+				6C485E541ACBD2C300013B69 /* Category */,
 				6CE169A01ABA47D0003BF89F /* Model */,
 				6CAD84371AB5CE9F00F5F2F5 /* Client */,
 				6C6E63421AB281AA0014F47F /* UI */,
@@ -1467,6 +1480,7 @@
 				6C5BDC5B1AB08008005FE343 /* LeftMenuTableViewCell.m in Sources */,
 				6C2E5A161AC638AF00B0BAC1 /* UIImage+Resize.m in Sources */,
 				6C0141341AB871920069EDE7 /* AboutViewController.m in Sources */,
+				6C485E571ACBD41000013B69 /* NSDate+Addition.m in Sources */,
 				6CF0788E1AB1BF3100DF0C0C /* SubContentViewController.m in Sources */,
 				6CEE19401AADC291006CB3DD /* AppDelegate.m in Sources */,
 				6C5BDC541AB07ADD005FE343 /* LeftMenuTableViewController.m in Sources */,

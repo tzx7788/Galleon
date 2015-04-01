@@ -80,9 +80,7 @@
         for ( id dict in array )
         {
             InformModel * model = [[InformModel alloc] init];
-            if ( dict[@"title"] ) model.title = dict[@"title"];
-            if ( dict[@"create_time"] ) model.createdTime = dict[@"create_time"];
-            if ( dict[@"id"] ) model.informId = dict[@"id"];
+            [model loadWithDictionary:dict];
             [modelList addObject:model];
         }
         NSMutableIndexSet * indexSet = [NSMutableIndexSet indexSet];

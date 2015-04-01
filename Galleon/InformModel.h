@@ -14,4 +14,6 @@
 @property (nonatomic, strong) NSString * title;
 @property (nonatomic, strong) NSDate * createdTime;
 
+- (void)loadWithDictionary:(NSDictionary *)dict;
+
 @end

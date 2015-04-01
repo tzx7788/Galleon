@@ -7,7 +7,16 @@
 //
 
 #import "MessageModel.h"
+#import "NSDate+Addition.h"
 
 @implementation MessageModel
+
+- (void)loadDataWithDictionary:(NSDictionary *)dict
+{
+    self.avatarURLString = dict[@"user"][@"header_small"];
+    self.content = dict[@"content"];
+    self.date = [NSDate covertFromString:dict[@"created_time"]];
+    self.name = dict[@"user"][@"name"];
+}
 
 @end

@@ -7,6 +7,7 @@
 //
 
 #import "InformTableViewCell.h"
+#import "NSDate+Addition.h"
 
 @implementation InformTableViewCell
 

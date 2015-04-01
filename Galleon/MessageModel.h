@@ -15,4 +15,6 @@
 @property (nonatomic,strong) NSDate * date;
 @property (nonatomic,strong) NSString * content;
 
+- (void)loadDataWithDictionary:(NSDictionary *)dict;
+
 @end

@@ -11,6 +11,7 @@
 #import "StringConstant.h"
 #import <EventKit/EventKit.h>
 #import <EventKitUI/EventKitUI.h>
+#import "NSDate+Addition.h"
 
 @interface ExhibitionModel()<EKEventEditViewDelegate>
 
@@ -20,15 +21,10 @@
 
 - (void)loadWithDictionary:(NSDictionary *)dict
 {
-    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-    [formatter setDateStyle:NSDateFormatterMediumStyle];
-    [formatter setTimeStyle:NSDateFormatterShortStyle];
-    [formatter setDateFormat:@"yyyy-MM-dd'T'HH:mm:ss"];
-    
     if (dict[@"view_count"]) self.viewCount = dict[@"view_count"];
-    if (dict[@"started_time"]) self.startedTime = [formatter dateFromString:dict[@"started_time"]];
-    if (dict[@"updated_time"]) self.updatedTime = dict[@"updated_time"];
-    if (dict[@"created_time"]) self.createdTime = dict[@"created_time"];
+    if (dict[@"started_time"]) self.startedTime = [NSDate covertFromString:dict[@"started_time"]];
+    if (dict[@"updated_time"]) self.updatedTime = [NSDate covertFromString:dict[@"updated_time"]];
+    if (dict[@"created_time"]) self.createdTime = [NSDate covertFromString:dict[@"created_time"]];
     if (dict[@"id"]) self.exhibitionId = dict[@"id"];
     if (dict[@"title"]) self.exhibitionName = dict[@"title"];
     if (dict[@"logistics_content"]) self.serviceContent = dict[@"logistics_content"];

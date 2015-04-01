@@ -62,15 +62,6 @@
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xda-gQ-tiT" id="JQG-dO-UL8">
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="主页" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b2F-gD-Rjr">
-                                            <rect key="frame" x="87" y="15" width="34" height="21"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="21" id="Nqo-lY-UWS"/>
-                                            </constraints>
-                                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
-                                            <color key="textColor" red="0.12549019607843137" green="0.63921568627450975" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_sidebar_homepage.png" translatesAutoresizingMaskIntoConstraints="NO" id="QKC-Nj-tLt">
                                             <rect key="frame" x="18" y="8" width="36" height="36"/>
                                             <constraints>
@@ -78,12 +69,21 @@
                                                 <constraint firstAttribute="height" constant="36" id="QdI-Ut-EXj"/>
                                             </constraints>
                                         </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="主页" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b2F-gD-Rjr">
+                                            <rect key="frame" x="67" y="15" width="34" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="21" id="Nqo-lY-UWS"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                            <color key="textColor" red="0.12549019607843137" green="0.63921568627450975" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                     <constraints>
                                         <constraint firstAttribute="centerY" secondItem="QKC-Nj-tLt" secondAttribute="centerY" id="amh-0W-bZS"/>
                                         <constraint firstItem="QKC-Nj-tLt" firstAttribute="leading" secondItem="JQG-dO-UL8" secondAttribute="leadingMargin" constant="10" id="kgb-Gd-DOM"/>
                                         <constraint firstAttribute="centerY" secondItem="b2F-gD-Rjr" secondAttribute="centerY" id="q7A-0A-Am3"/>
-                                        <constraint firstItem="b2F-gD-Rjr" firstAttribute="leading" secondItem="QKC-Nj-tLt" secondAttribute="leading" constant="69" id="vN5-2X-pDy"/>
+                                        <constraint firstItem="b2F-gD-Rjr" firstAttribute="leading" secondItem="QKC-Nj-tLt" secondAttribute="leading" constant="49" id="vN5-2X-pDy"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>

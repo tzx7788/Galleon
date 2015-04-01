@@ -45,10 +45,7 @@
         NSArray * array = responseData;
         for ( id dict in array ) {
             MessageModel * model = [[MessageModel alloc] init];
-            model.avatarURLString = dict[@"user"][@"header_small"];
-            model.content = dict[@"content"];
-            model.date = dict[@"created_time"];
-            model.name = dict[@"user"][@"name"];
+            [model loadDataWithDictionary:dict];
             [modelArray addObject:model];
         }
         self.messageList = [modelArray sortedArrayUsingComparator:^(id obj1, id obj2){

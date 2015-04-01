@@ -18,6 +18,8 @@
     self.titleLabel.text = model.titleString;
     self.dataLabel.text = [model.date description];
     [self.videoImageView setHidden:!model.hasVideo];
+    [self.enImageView setHidden:!model.isEN];
+    [self.cnImageView setHidden:!model.isCN];
 }
 
 + (NewsTableViewCell *)createCell

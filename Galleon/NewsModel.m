@@ -7,16 +7,24 @@
 //
 
 #import "NewsModel.h"
+#import "NSDate+Addition.h"
 
 @implementation NewsModel
 
 - (void)loadDataWithDictionary:(NSDictionary *)dict
 {
     id object = dict;
+    if (object[@"news_language"]) {
+        NSString * string = [object[@"news_language"] description];
+        if ([[string lowercaseString] containsString:@"zh"] )
+            self.isCN = YES;
+        if ([[string lowercaseString] containsString:@"en"] )
+            self.isEN = YES;
+    }
     if (object[@"id"]) self.newsId = object[@"id"];
     if (object[@"title"]) self.titleString = object[@"title"];
     if (object[@"icon"]) self.avatarURLString = object[@"icon"];
-    if (object[@"create_time"]) self.date = object[@"create_time"];
+    if (object[@"create_time"]) self.date = [NSDate covertFromString: object[@"create_time"]];
     if (object[@"has_video"]) self.hasVideo = [object[@"has_video"] boolValue];
     if (object[@"video_link"]) self.videoURLString = object[@"video_link"];
     if (object[@"content"]) self.content = object[@"content"];
