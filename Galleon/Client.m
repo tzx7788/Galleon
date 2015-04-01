@@ -157,6 +157,8 @@
             [self updateUserHeaderImage:headerImage token:user.token successBlock:^(id responseData){
                 successCompletionBlock(responseData);
             } failureBlock:failureCompletionBlock];
+        } else {
+            successCompletionBlock(responseData);
         }
     } failureBlock:failureCompletionBlock];}
 
@@ -273,6 +275,9 @@
             [self updateUserHeaderImage:headerImage token:user.token successBlock:^(id responseData){
                 successCompletionBlock(responseData);
             } failureBlock:failureCompletionBlock];
+        }
+        else {
+            successCompletionBlock(responseData);
         }
     } failureBlock:failureCompletionBlock];
 }
