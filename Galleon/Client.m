@@ -48,6 +48,11 @@
     } failureBlock:^(NSError *error, NSString * responseString) {
         NSLog(@"%@",error);
     }];
+    [self updateUserWithName:@"aaa" userId:@"1" token:@"b6b22322c3be6bd06b8bd2911567bc1b:1419465662" password:nil headerImage:nil company:@"afa" job:@"fad" phone:@"fadf" email:@"heeh" successBlock:^(id resposeObject){
+        NSLog(@"%@",resposeObject);
+    } failureBlock:^(NSError *error, NSString * responseString) {
+        NSLog(@"%@",error);
+    }];
 //    [self getNewsWithsuccessBlock:^(id resposeObject){
 //        NSLog(@"%@",resposeObject);
 //    } failureBlock:^(NSError *error, NSString * responseString) {
@@ -123,22 +128,37 @@
     [self uploadImage:image name:@"file" filename:@"ios.png" URL:@"news/user/upload_icon" parameter:nil successBlock:successCompletionBlock failureBlock:failureCompletionBlock];
 }
 
-- (void)updateUserWithId:(NSString *)userId
-            withNickName:(NSString *)nikeName
-                    name:(NSString *)name
-                   token:(NSString *)token
-           iconURLString:(NSString *)iconURLString
-            successBlock:(SuccessCompletionBlock) successCompletionBlock
-            failureBlock:(FailureCompletionBlock) failureCompletionBlock
+- (void)updateUserWithName:(NSString *)name
+                   userId:(NSString *)userId
+                     token:(NSString *)token
+                  password:(NSString *)password
+               headerImage:(NSString *)headerImage
+                   company:(NSString *)company
+                       job:(NSString *)job
+                     phone:(NSString *)phone
+                     email:(NSString *)email
+              successBlock:(SuccessCompletionBlock) successCompletionBlock
+              failureBlock:(FailureCompletionBlock) failureCompletionBlock
 {
     NSMutableDictionary * param = [[NSMutableDictionary alloc] init];
-    if (name)       param[@"name"]= name;
-    if (nikeName)   param[@"nickname"] = nikeName;
+    //if (account)       param[@"account"] = account;
+    if (password)      param[@"password"] = password;
+    if (name)          param[@"name"] = name;
+    if (company)       param[@"company"] = company;
+    if (phone)         param[@"phone_number"] = phone;
+    if (email)         param[@"email"] = email;
+    if (job)           param[@"title"] = job;
     if (token)      param[@"token"]=token;
-    if (iconURLString) param[@"header"] = iconURLString;
-    NSString * urlString = [NSString stringWithFormat:@"/news/user/%@/update_profile",userId];
-    [self POST:urlString parameter:param successBlock:successCompletionBlock failureBlock:failureCompletionBlock];
-}
+    NSString * urlString = [NSString stringWithFormat:@"/news/user/%@/update_user_profile",userId];
+    [self POST:urlString parameter:param successBlock:^(id responseData){
+        User * user = [[User alloc] init];
+        [user loadWithDictionary:responseData];
+        if (headerImage) {
+            [self updateUserHeaderImage:headerImage token:user.token successBlock:^(id responseData){
+                successCompletionBlock(responseData);
+            } failureBlock:failureCompletionBlock];
+        }
+    } failureBlock:failureCompletionBlock];}
 
 - (void)getMockImageURLWithsuccessBlock:(SuccessCompletionBlock) successCompletionBlock
                            failureBlock:(FailureCompletionBlock) failureCompletionBlock

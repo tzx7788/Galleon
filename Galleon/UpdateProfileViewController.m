@@ -54,14 +54,15 @@
         hud.labelText = message;
         hud.mode = MBProgressHUDModeIndeterminate;
         [hud show:YES];
-        [[Client sharedClient] registerWithName:self.nameTextField.text
-                                        account:self.accountTextField.text
-                                       password:self.passwordTextField.text
-                                    headerImage:self.headerName
-                                        company:self.campanyTextField.text
-                                            job:self.jobTextField.text
-                                          phone:self.phoneTextField.text
-                                          email:self.emailTextField.text
+        [[Client sharedClient] updateUserWithName:self.nameTextField.text
+                                          userId:self.model.user.userId
+                                            token:self.model.user.token
+                                         password:self.passwordTextField.text
+                                      headerImage:self.headerName
+                                          company:self.campanyTextField.text
+                                              job:self.jobTextField.text
+                                            phone:self.phoneTextField.text
+                                            email:self.emailTextField.text
                                    successBlock:^(id responseData){
                                        NSLog(@"%@",responseData);
                                        User * user = [[User alloc] init];
@@ -69,7 +70,6 @@
                                        user.password = self.passwordTextField.text;
                                        [User saveToCache:user];
                                        hud.mode = MBProgressHUDModeText;
-                                       [self dismissViewControllerAnimated:YES completion:nil];
                                        PersonModel * model = [[PersonModel alloc] init];
                                        model.user = user;
                                        [[NSNotificationCenter defaultCenter] postNotificationName:NotificationWarningMessage object:LogInSuccessful];
