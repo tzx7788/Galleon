@@ -232,7 +232,8 @@
               failureBlock:(FailureCompletionBlock) failureCompletionBlock
 {
     NSString * path = [NSString stringWithFormat:@"/news/news/%@/awesome",newsId];
-    [self GET:path successBlock:successCompletionBlock failureBlock:failureCompletionBlock];
+    NSMutableDictionary * param = [[NSMutableDictionary alloc] init];
+    [self POST:path parameter:param successBlock:successCompletionBlock failureBlock:failureCompletionBlock];
 }
 
 - (void)updateUserHeaderImage:(NSString *)headerImage

@@ -71,7 +71,7 @@
     if ( self.isAvailable ) {
         [[Client sharedClient] thumberANewsWithId:self.model.newsId successBlock:^(id responseData){
             if ( responseData[@"awesome_count"] )
-                self.thumbCountLabel.text = responseData[@"awesome_count"];
+                self.thumbCountLabel.text = [NSString stringWithFormat:@"%@", responseData[@"awesome_count"]];
         }failureBlock:^(NSError *error, NSString *errorString){
         }];
         self.isAvailable = NO;
