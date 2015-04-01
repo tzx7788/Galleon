@@ -51,7 +51,7 @@
 "Q9M-rT-8lb.placeholder" = "请输入密码";
 
 /* Class = "UILabel"; text = "Registration"; ObjectID = "Qdj-lh-mge"; */
-"Qdj-lh-mge.text" = "注册";
+"Qdj-lh-mge.text" = "注    册";
 
 /* Class = "UITextField"; placeholder = "再次确认密码"; ObjectID = "T4x-Le-QG3"; */
 "T4x-Le-QG3.placeholder" = "再次确认密码";

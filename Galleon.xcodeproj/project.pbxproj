@@ -18,7 +18,6 @@
 		6C0141441AB877FC0069EDE7 /* DiscussTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C0141421AB877FC0069EDE7 /* DiscussTableViewCell.m */; };
 		6C0141451AB877FC0069EDE7 /* DiscussTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C0141431AB877FC0069EDE7 /* DiscussTableViewCell.xib */; };
 		6C0141491AB878490069EDE7 /* PostMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C0141471AB878490069EDE7 /* PostMessageViewController.m */; };
-		6C01414A1AB878490069EDE7 /* PostMessageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C0141481AB878490069EDE7 /* PostMessageViewController.xib */; };
 		6C01414D1AB879350069EDE7 /* PostMessageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C01414C1AB879350069EDE7 /* PostMessageModel.m */; };
 		6C0141511AB87AE60069EDE7 /* HomePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C01414F1AB87AE60069EDE7 /* HomePageViewController.m */; };
 		6C0141521AB87AE60069EDE7 /* HomePageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C0141501AB87AE60069EDE7 /* HomePageViewController.xib */; };
@@ -41,7 +40,6 @@
 		6C28D07D1AC03DD6004BD04D /* PDFTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C28D07B1AC03DD6004BD04D /* PDFTableViewCell.m */; };
 		6C28D07E1AC03DD6004BD04D /* PDFTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C28D07C1AC03DD6004BD04D /* PDFTableViewCell.xib */; };
 		6C2E5A161AC638AF00B0BAC1 /* UIImage+Resize.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C2E5A151AC638AF00B0BAC1 /* UIImage+Resize.m */; };
-		6C3CA2761AB16E8A00A87288 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6C3CA2781AB16E8A00A87288 /* Localizable.strings */; };
 		6C485E571ACBD41000013B69 /* NSDate+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C485E561ACBD41000013B69 /* NSDate+Addition.m */; };
 		6C5B7A871AB56D9900FE47F0 /* button_dark_normal.9.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C5B7A861AB56D9900FE47F0 /* button_dark_normal.9.png */; };
 		6C5B7A8A1AB5731500FE47F0 /* UIAlertView+ErrorMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C5B7A891AB5731500FE47F0 /* UIAlertView+ErrorMessage.m */; };
@@ -128,6 +126,8 @@
 		6CDBBC7E1ACBF0B400FB4D3E /* InformHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6CDBBC801ACBF0B400FB4D3E /* InformHeaderView.xib */; };
 		6CDBBC821ACBF0D100FB4D3E /* HeadLineHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6CDBBC841ACBF0D100FB4D3E /* HeadLineHeaderView.xib */; };
 		6CDBBC861ACBF11900FB4D3E /* AboutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6CDBBC881ACBF11900FB4D3E /* AboutViewController.xib */; };
+		6CDBBC8C1ACC1FC400FB4D3E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6CDBBC8E1ACC1FC400FB4D3E /* Localizable.strings */; };
+		6CDBBC901ACC215F00FB4D3E /* PostMessageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6CDBBC921ACC215F00FB4D3E /* PostMessageViewController.xib */; };
 		6CDD89D21ABC543900FE41C2 /* bg_banner_noshadow.png in Resources */ = {isa = PBXBuildFile; fileRef = 6CDD89D11ABC543900FE41C2 /* bg_banner_noshadow.png */; };
 		6CDD89D81ABC565D00FE41C2 /* InformHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CDD89D71ABC565D00FE41C2 /* InformHeaderView.m */; };
 		6CDD89DD1ABC588400FE41C2 /* HeadLineHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CDD89DC1ABC588400FE41C2 /* HeadLineHeaderView.m */; };
@@ -189,7 +189,6 @@
 		6C0141431AB877FC0069EDE7 /* DiscussTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DiscussTableViewCell.xib; sourceTree = "<group>"; };
 		6C0141461AB878490069EDE7 /* PostMessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostMessageViewController.h; sourceTree = "<group>"; };
 		6C0141471AB878490069EDE7 /* PostMessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostMessageViewController.m; sourceTree = "<group>"; };
-		6C0141481AB878490069EDE7 /* PostMessageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PostMessageViewController.xib; sourceTree = "<group>"; };
 		6C01414B1AB879350069EDE7 /* PostMessageModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostMessageModel.h; sourceTree = "<group>"; };
 		6C01414C1AB879350069EDE7 /* PostMessageModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostMessageModel.m; sourceTree = "<group>"; };
 		6C01414E1AB87AE60069EDE7 /* HomePageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomePageViewController.h; sourceTree = "<group>"; };
@@ -224,7 +223,6 @@
 		6C28D07C1AC03DD6004BD04D /* PDFTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PDFTableViewCell.xib; sourceTree = "<group>"; };
 		6C2E5A141AC638AF00B0BAC1 /* UIImage+Resize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Resize.h"; sourceTree = "<group>"; };
 		6C2E5A151AC638AF00B0BAC1 /* UIImage+Resize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Resize.m"; sourceTree = "<group>"; };
-		6C3CA2771AB16E8A00A87288 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		6C485E551ACBD41000013B69 /* NSDate+Addition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Addition.h"; sourceTree = "<group>"; };
 		6C485E561ACBD41000013B69 /* NSDate+Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Addition.m"; sourceTree = "<group>"; };
 		6C5B7A861AB56D9900FE47F0 /* button_dark_normal.9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_dark_normal.9.png; sourceTree = "<group>"; };
@@ -354,6 +352,10 @@
 		6CDBBC851ACBF0D500FB4D3E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/HeadLineHeaderView.xib; sourceTree = "<group>"; };
 		6CDBBC871ACBF11900FB4D3E /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = "zh-Hans"; path = "zh-Hans.lproj/AboutViewController.xib"; sourceTree = "<group>"; };
 		6CDBBC891ACBF11B00FB4D3E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/AboutViewController.xib; sourceTree = "<group>"; };
+		6CDBBC8D1ACC1FC400FB4D3E /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		6CDBBC8F1ACC1FC700FB4D3E /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		6CDBBC911ACC215F00FB4D3E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/PostMessageViewController.xib; sourceTree = "<group>"; };
+		6CDBBC941ACC216100FB4D3E /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/PostMessageViewController.strings"; sourceTree = "<group>"; };
 		6CDD89D11ABC543900FE41C2 /* bg_banner_noshadow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_banner_noshadow.png; sourceTree = "<group>"; };
 		6CDD89D61ABC565D00FE41C2 /* InformHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InformHeaderView.h; sourceTree = "<group>"; };
 		6CDD89D71ABC565D00FE41C2 /* InformHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InformHeaderView.m; sourceTree = "<group>"; };
@@ -378,7 +380,6 @@
 		6CEE193F1AADC291006CB3DD /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		6CEE19491AADC4A2006CB3DD /* UISnapShotNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UISnapShotNavigationController.h; sourceTree = "<group>"; };
 		6CEE194A1AADC4A2006CB3DD /* UISnapShotNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UISnapShotNavigationController.m; sourceTree = "<group>"; };
-		6CF078811AB176CF00DF0C0C /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		6CF078841AB1914A00DF0C0C /* NotificationConstant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationConstant.h; sourceTree = "<group>"; };
 		6CF078851AB1978800DF0C0C /* SuperViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SuperViewController.h; sourceTree = "<group>"; };
 		6CF078861AB1978800DF0C0C /* SuperViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SuperViewController.m; sourceTree = "<group>"; };
@@ -475,7 +476,6 @@
 				6C6E634A1AB287D70014F47F /* Exhibition */,
 				6C6E633F1AB2767C0014F47F /* Navigation */,
 				6C5BDC471AB07535005FE343 /* LeftMenu */,
-				6C3CA2781AB16E8A00A87288 /* Localizable.strings */,
 			);
 			name = Resource;
 			sourceTree = "<group>";
@@ -599,6 +599,7 @@
 				6C6E63431AB282270014F47F /* Exhibition */,
 				6CA07D371AAE65D400BEEEE7 /* Base */,
 				6CA763951AB16BAD00A9185F /* Main.storyboard */,
+				6CDBBC8E1ACC1FC400FB4D3E /* Localizable.strings */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -931,7 +932,7 @@
 				6C0141381AB877880069EDE7 /* DiscussViewController.xib */,
 				6C0141461AB878490069EDE7 /* PostMessageViewController.h */,
 				6C0141471AB878490069EDE7 /* PostMessageViewController.m */,
-				6C0141481AB878490069EDE7 /* PostMessageViewController.xib */,
+				6CDBBC921ACC215F00FB4D3E /* PostMessageViewController.xib */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -1307,7 +1308,7 @@
 				6CAA1D511AB48F9200B848BD /* ic_avater_new_normal.png in Resources */,
 				6C6E63411AB276A40014F47F /* btn_back@2x.png in Resources */,
 				6C6E63601AB290530014F47F /* ExhibitionTableViewCell.xib in Resources */,
-				6C01414A1AB878490069EDE7 /* PostMessageViewController.xib in Resources */,
+				6CDBBC901ACC215F00FB4D3E /* PostMessageViewController.xib in Resources */,
 				6C0FB4CE1ABA760400E72C20 /* ic_unchecked_press.png in Resources */,
 				6CEE19431AADC291006CB3DD /* Images.xcassets in Resources */,
 				6CEE101B1AC0F2EB00821D70 /* btn_play_video.png in Resources */,
@@ -1342,8 +1343,8 @@
 				6CA763971AB16BAD00A9185F /* Main.storyboard in Resources */,
 				6C0FB4D11ABAAF0300E72C20 /* ic_input_box_invisible.png in Resources */,
 				6CC9EC331ABC08300062B64A /* Launch Screen.xib in Resources */,
-				6C3CA2761AB16E8A00A87288 /* Localizable.strings in Resources */,
 				6CC6EBC01AB31E3800A9392E /* TitleLabel.xib in Resources */,
+				6CDBBC8C1ACC1FC400FB4D3E /* Localizable.strings in Resources */,
 				6C28D0711AC02118004BD04D /* ExhibitionDetailViewController.xib in Resources */,
 				6CF24AC91ABBA734002423D2 /* pic_6lijiehuiyibaogao.png in Resources */,
 				6C5E01A81ACB657D00570D5B /* JetlinerViewController.xib in Resources */,
@@ -1511,15 +1512,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		6C3CA2781AB16E8A00A87288 /* Localizable.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				6C3CA2771AB16E8A00A87288 /* Base */,
-				6CF078811AB176CF00DF0C0C /* zh-Hans */,
-			);
-			name = Localizable.strings;
-			sourceTree = "<group>";
-		};
 		6C5E01AA1ACB657D00570D5B /* JetlinerViewController.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -1583,6 +1575,24 @@
 			name = AboutViewController.xib;
 			sourceTree = "<group>";
 		};
+		6CDBBC8E1ACC1FC400FB4D3E /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6CDBBC8D1ACC1FC400FB4D3E /* Base */,
+				6CDBBC8F1ACC1FC700FB4D3E /* zh-Hans */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		6CDBBC921ACC215F00FB4D3E /* PostMessageViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6CDBBC911ACC215F00FB4D3E /* Base */,
+				6CDBBC941ACC216100FB4D3E /* zh-Hans */,
+			);
+			name = PostMessageViewController.xib;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -1603,7 +1613,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -1623,6 +1634,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "1d525cce-d94a-4333-929c-2e1831abdd6e";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -1644,7 +1656,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -1657,6 +1670,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PROVISIONING_PROFILE = "1d525cce-d94a-4333-929c-2e1831abdd6e";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};

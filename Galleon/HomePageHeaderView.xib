@@ -23,21 +23,36 @@
                         <outlet property="delegate" destination="iN0-l3-epB" id="1Nb-MB-xDg"/>
                     </connections>
                 </view>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="320" translatesAutoresizingMaskIntoConstraints="NO" id="qqx-FU-efS">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="320" translatesAutoresizingMaskIntoConstraints="NO" id="qqx-FU-efS">
+                    <rect key="frame" x="112" y="8" width="30" height="67"/>
+                    <gestureRecognizers/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3LJ-3d-LpH">
+                    <rect key="frame" x="112" y="8" width="30" height="67"/>
+                    <state key="normal">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="exhibitionClicked:" destination="iN0-l3-epB" eventType="touchUpInside" id="AOo-hR-ZQn"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstAttribute="centerX" secondItem="qqx-FU-efS" secondAttribute="centerX" id="3xj-le-gRB"/>
+                <constraint firstItem="qqx-FU-efS" firstAttribute="trailing" secondItem="3LJ-3d-LpH" secondAttribute="trailing" id="5az-YW-yeJ"/>
                 <constraint firstItem="1RV-GO-378" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="83" id="5pl-KF-iBW"/>
                 <constraint firstAttribute="trailing" secondItem="1RV-GO-378" secondAttribute="trailing" id="BSi-qv-bXY"/>
                 <constraint firstAttribute="bottom" secondItem="1RV-GO-378" secondAttribute="bottom" id="Cfg-ji-zXT"/>
+                <constraint firstItem="qqx-FU-efS" firstAttribute="top" secondItem="3LJ-3d-LpH" secondAttribute="top" id="INQ-y6-Kj6"/>
+                <constraint firstItem="qqx-FU-efS" firstAttribute="bottom" secondItem="3LJ-3d-LpH" secondAttribute="bottom" id="Nir-Ro-Cue"/>
                 <constraint firstItem="qqx-FU-efS" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="aE1-by-67Z"/>
                 <constraint firstItem="1RV-GO-378" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="kXG-yt-ziM"/>
                 <constraint firstItem="1RV-GO-378" firstAttribute="top" secondItem="qqx-FU-efS" secondAttribute="bottom" constant="8" id="uM2-3S-Qzc"/>
+                <constraint firstItem="qqx-FU-efS" firstAttribute="leading" secondItem="3LJ-3d-LpH" secondAttribute="leading" id="zY5-1o-Mdw"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>

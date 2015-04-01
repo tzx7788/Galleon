@@ -24,7 +24,7 @@
 
 + (HomePageHeaderView *)createView
 {
-    HomePageHeaderView * view = [[[NSBundle mainBundle] loadNibNamed:@"HomePageHeaderView" owner:self options:nil] lastObject];
+    HomePageHeaderView * view = [[[NSBundle mainBundle] loadNibNamed:@"HomePageHeaderView" owner:self options:nil] firstObject];
     return view;
 }
 
@@ -64,6 +64,10 @@
     } failureBlock:nil];
 }
 
+- (IBAction)exhibitionClicked:(id)sender {
+    if (self.countDownExhibition)
+    [[NSNotificationCenter defaultCenter] postNotificationName:NotificationExhibitionAddToCalendar object:self.countDownExhibition];
+}
 
 - (NSArray *)numberOfKDCycleBannerView:(KDCycleBannerView *)bannerView
 {
