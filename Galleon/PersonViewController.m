@@ -8,6 +8,7 @@
 
 #import "PersonViewController.h"
 #import "NotificationConstant.h"
+#import <AFNetworking/UIImageView+AFNetworking.h>
 
 @interface PersonViewController ()
 
@@ -22,6 +23,12 @@
 }
 
 - (void)viewDidLoad {
+    [self.avatarImageView setImageWithURL:[NSURL URLWithString:self.model.user.iconImageURLString]];
+    self.nameLabel.text = self.model.user.name;
+    self.companyLabel.text = self.model.user.company;
+    self.jobLabel.text = self.model.user.job;
+    self.phoneLabel.text = self.model.user.phone;
+    self.emailLabel.text = self.model.user.email;
     [super viewDidLoad];
 }
 

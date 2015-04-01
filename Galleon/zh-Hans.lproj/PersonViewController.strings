@@ -1,0 +1,36 @@
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "2tH-cI-tlO"; */
+"2tH-cI-tlO.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "DAs-Jh-fl5"; */
+"DAs-Jh-fl5.text" = "Label";
+
+/* Class = "UILabel"; text = "Company"; ObjectID = "E4T-Pq-zCx"; */
+"E4T-Pq-zCx.text" = "公司";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "GIs-RZ-7ue"; */
+"GIs-RZ-7ue.text" = "Label";
+
+/* Class = "UILabel"; text = "email"; ObjectID = "Ozq-mf-q7e"; */
+"Ozq-mf-q7e.text" = "email";
+
+/* Class = "UILabel"; text = "Phone"; ObjectID = "P0p-7f-el8"; */
+"P0p-7f-el8.text" = "电话号码";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "Pf1-5n-S22"; */
+"Pf1-5n-S22.text" = "Label";
+
+/* Class = "UILabel"; text = "Job"; ObjectID = "dOy-ww-Jen"; */
+"dOy-ww-Jen.text" = "职位";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "mQR-as-0ua"; */
+"mQR-as-0ua.text" = "Label";
+
+/* Class = "UILabel"; text = "Name"; ObjectID = "ouM-m7-Bi5"; */
+"ouM-m7-Bi5.text" = "姓名";
+
+/* Class = "UIButton"; normalTitle = "Edit Profile"; ObjectID = "woj-O6-6gf"; */
+"woj-O6-6gf.normalTitle" = "修改资料";
+
+/* Class = "UIButton"; normalTitle = "Log out"; ObjectID = "xd2-UR-7hh"; */
+"xd2-UR-7hh.normalTitle" = "登出";

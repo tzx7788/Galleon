@@ -64,7 +64,6 @@
                                             phone:self.phoneTextField.text
                                             email:self.emailTextField.text
                                    successBlock:^(id responseData){
-                                       NSLog(@"%@",responseData);
                                        User * user = [[User alloc] init];
                                        [user loadWithDictionary:responseData];
                                        user.password = self.passwordTextField.text;

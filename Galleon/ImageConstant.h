@@ -15,7 +15,7 @@
 #define DiscussIcon         [UIImage imageNamed:@"ic_sidebar_message"]
 #define AboutUsIcon         [UIImage imageNamed:@"ic_sidebar_about_us"]
 #define SupplierIcon        [UIImage imageNamed:@"ic_sidebar_supplier"]
-#define JetlinerIcon        [UIImage imageNamed:@"ic_sidebar_supplier"]
+#define JetlinerIcon        [UIImage imageNamed:@"ic_sidebar_magazine"]
 
 #define TabBarBackGround    [UIImage imageNamed:@"bg_tab_bar"]
 
