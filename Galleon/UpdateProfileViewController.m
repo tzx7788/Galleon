@@ -27,6 +27,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self.accountTextField setEnabled:NO];
     [self initTextField];
 }
 
