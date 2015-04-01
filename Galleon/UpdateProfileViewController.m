@@ -45,7 +45,7 @@
 
 - (IBAction)ComfirmClicked:(id)sender {
     if ([super verified]) {
-        NSString * message =Registering;
+        NSString * message = Updating;
         MBProgressHUD * hud = [[MBProgressHUD alloc] initWithView:self.view];
         [self.view addSubview:hud];
         hud.delegate = self;
@@ -71,12 +71,12 @@
                                        hud.mode = MBProgressHUDModeText;
                                        PersonModel * model = [[PersonModel alloc] init];
                                        model.user = user;
-                                       [[NSNotificationCenter defaultCenter] postNotificationName:NotificationWarningMessage object:LogInSuccessful];
+                                       [[NSNotificationCenter defaultCenter] postNotificationName:NotificationWarningMessage object:UpdateSuccessful];
                                        [[NSNotificationCenter defaultCenter] postNotificationName:NotificationPersonPageClicked object:model];
                                        [[NSNotificationCenter defaultCenter] postNotificationName:NotificationLeftMenuUserRefresh object:nil];
                                    } failureBlock:^(NSError *error, NSString * errorString){
                                        hud.mode = MBProgressHUDModeText;
-                                       hud.labelText = RegisterFailure;
+                                       hud.labelText = UpdateFailure;
                                        [hud hide:YES afterDelay:1];
                                    }];
     }
