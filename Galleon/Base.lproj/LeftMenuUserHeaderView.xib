@@ -21,7 +21,7 @@
                         <constraint firstAttribute="height" constant="60" id="uAg-Rd-x53"/>
                     </constraints>
                 </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="用户名" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T5T-VX-MxM">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T5T-VX-MxM">
                     <rect key="frame" x="89" y="26" width="150" height="21"/>
                     <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -57,8 +57,7 @@
             <connections>
                 <outlet property="button" destination="VuD-Ab-5vr" id="snQ-Rq-Ogi"/>
                 <outlet property="headerImageView" destination="tZ5-lm-FnI" id="SMp-Rn-IAd"/>
-                <outlet property="identityLabel" destination="Sqe-nd-qdw" id="LXN-rV-mMf"/>
-                <outlet property="nameLabel" destination="T5T-VX-MxM" id="59O-Yo-UZo"/>
+                <outlet property="nameLabel" destination="Sqe-nd-qdw" id="2h1-4z-vHE"/>
             </connections>
             <point key="canvasLocation" x="-77" y="-21"/>
         </view>

@@ -13,7 +13,6 @@
 @interface LeftMenuUserHeaderView : UIView
 @property (weak, nonatomic) IBOutlet UIImageView *headerImageView;
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
-@property (weak, nonatomic) IBOutlet UILabel *identityLabel;
 @property (weak, nonatomic) IBOutlet UIButton *button;
 
 + (LeftMenuUserHeaderView *)createView;

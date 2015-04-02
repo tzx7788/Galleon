@@ -41,7 +41,6 @@
     self.user = [User awakeFromCache];
     [self.headerImageView setImageWithURL:[NSURL URLWithString:self.user.iconImageURLString] placeholderImage:nil];
     self.nameLabel.text = self.user.name;
-    self.identityLabel.text = self.user.role;
 }
 
 - (void)refresh
