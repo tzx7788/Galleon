@@ -494,7 +494,7 @@
                                                 </connections>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" alpha="0.60000002384185791" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Account" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AH3-76-cir">
-                                                <rect key="frame" x="80.5" y="11" width="52.5" height="21"/>
+                                                <rect key="frame" x="80" y="11" width="52.5" height="21"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="21" id="hTo-jj-kNB"/>
                                                 </constraints>
@@ -774,10 +774,9 @@
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" alpha="0.60000002384185791" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vhW-fa-oln">
-                                                <rect key="frame" x="91" y="11" width="42" height="21"/>
+                                                <rect key="frame" x="92.5" y="11" width="40.5" height="21"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="21" id="pPy-j6-k5V"/>
-                                                    <constraint firstAttribute="width" constant="42" id="vmd-sv-BAh"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

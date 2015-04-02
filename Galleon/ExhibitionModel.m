@@ -47,6 +47,9 @@
         event.endDate = self.startedTime;
         event.allDay = YES;
         event.calendar = [store defaultCalendarForNewEvents];
+        if ( !event.calendar ) {
+            
+        }
         controller.event = event;
         [vc presentViewController:controller animated:YES completion:nil];
     }];
@@ -64,7 +67,10 @@
             [controller dismissViewControllerAnimated:YES completion:nil];
             [[NSNotificationCenter defaultCenter] postNotificationName:NotificationWarningMessage object:OperationSuccessful];
         }
+    } else {
+        [controller dismissViewControllerAnimated:YES completion:nil];
     }
 }
+
 
 @end

@@ -19,9 +19,9 @@
                     <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" alpha="0.69999998807907104" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="304" translatesAutoresizingMaskIntoConstraints="NO" id="GDv-VE-hb6">
-                    <rect key="frame" x="8" y="20" width="304" height="264"/>
-                    <mutableString key="text">Jetliner magazine witnesses the development of China's civil aircraft industry. It is the news center and the base broadcast of COMAC ; It ‘s an online portal and online newspaper of COMAC, is mainly responsible for propaganda of the national development of civil aircraft . As the exclusive advertisement partner of Jetliner, in this section, Galleon will offer you the only mobile platform for Jetliner's online reading. The section is coming soon…</mutableString>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <rect key="frame" x="8" y="20" width="304" height="229.5"/>
+                    <string key="text">Jetliner magazine witnesses the development of China's civil aircraft industry. It is the news center and the base broadcast of COMAC ; It ‘s an online portal and online newspaper of COMAC, is mainly responsible for propaganda of the national development of civil aircraft . As the exclusive advertisement partner of Jetliner, in this section, Galleon will offer you the only mobile platform for Jetliner's online reading. The section is coming soon…</string>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                 </label>

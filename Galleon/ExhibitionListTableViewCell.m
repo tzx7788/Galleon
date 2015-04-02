@@ -21,7 +21,7 @@
 {
     _exhibitionModel = exhibitionModel;
     self.exhibitionTitleLabel.text = exhibitionModel.exhibitionName;
-    [self.exhibitionImageView setImageWithURL:[NSURL URLWithString:exhibitionModel.titleImageURLString]];
+    [self.exhibitionImageView setImageWithURL:[NSURL URLWithString:exhibitionModel.titleImageURLString] placeholderImage:[UIImage imageNamed:@"00.jpg"]];
 }
 
 - (void)awakeFromNib {

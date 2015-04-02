@@ -14,6 +14,5 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *countDownLabel;
 + (HomePageHeaderView *) createView;
-@property (weak, nonatomic) IBOutlet UITapGestureRecognizer *tapGesture;
 
 @end

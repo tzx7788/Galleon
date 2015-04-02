@@ -15,7 +15,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SM1-ME-3ru">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="00.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="SM1-ME-3ru">
                         <rect key="frame" x="8" y="8" width="45" height="45"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="45" id="eZO-it-X2a"/>
@@ -28,7 +28,7 @@
                             <constraint firstAttribute="height" constant="24" id="XRh-M4-EgT"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s1P-U4-is8">
@@ -57,4 +57,7 @@
             <point key="canvasLocation" x="272" y="147"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="00.jpg" width="45" height="45"/>
+    </resources>
 </document>
