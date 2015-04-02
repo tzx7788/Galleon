@@ -37,8 +37,8 @@
         self.name = responseData[@"name"];
     if ( responseData[@"nickname"] != [NSNull null] )
         self.nickName = responseData[@"nickname"];
-    //        if ( responseData[@"password"] != [NSNull null] )
-    //            self.user.password = responseData[@"password"];
+    if ( responseData[@"password"] != [NSNull null] )
+        self.password = responseData[@"password"];
     if ( responseData[@"phone_number"] != [NSNull null] )
         self.phone = responseData[@"phone_number"];
     if ( responseData[@"registered_time"] != [NSNull null] )

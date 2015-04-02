@@ -107,7 +107,8 @@
     [hud show:YES];
     [[Client sharedClient] loginWithAccount:account Password:password successBlock:^(id responseData){
         [self.user loadWithDictionary:responseData];
-        self.user.password = self.passwordTextField.text;
+        if ( [self.user.autoLogin boolValue] )
+            self.user.password = self.passwordTextField.text;
         [User saveToCache:self.user];
         hud.mode = MBProgressHUDModeText;
         [hud hide:YES afterDelay:0];
