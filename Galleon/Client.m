@@ -202,7 +202,7 @@
                successBlock:(SuccessCompletionBlock) successCompletionBlock
                failureBlock:(FailureCompletionBlock) failureCompletionBlock
 {
-    [self GET:[NSString stringWithFormat:@"news/conferences/%@/get_file/REPORT",exhibitionId] successBlock:successCompletionBlock failureBlock:failureCompletionBlock];
+    [self GET:[NSString stringWithFormat:@"news/conferences/%@/get_file/PDF",exhibitionId] successBlock:successCompletionBlock failureBlock:failureCompletionBlock];
 }
 
 - (void)getAllInformsWithsuccessBlock:(SuccessCompletionBlock) successCompletionBlock
