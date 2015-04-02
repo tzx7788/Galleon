@@ -55,11 +55,7 @@
             [model loadDataWithDictionary:object];
             [modelArray addObject:model];
         }
-        self.modelList = [modelArray sortedArrayUsingComparator:^(id obj1, id obj2){
-            NewsModel * a = (NewsModel *)obj1;
-            NewsModel * b = (NewsModel *)obj2;
-            return [b.date compare:a.date];
-        }];
+        self.modelList = [modelArray copy];
         [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:UITableViewRowAnimationFade];
     } failureBlock:nil];
 }
