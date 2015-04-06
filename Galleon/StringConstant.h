@@ -57,4 +57,6 @@
 #define OperationSuccessful NSLocalizedString(@"Operation Successful!",nil)
 #define OperationFailed     NSLocalizedString(@"Operation Failed!",nil)
 
+#define EnterMoreContext    NSLocalizedString(@"Please input more!",nil)
+
 #endif

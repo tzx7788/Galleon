@@ -28,21 +28,21 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_tag_video.png" translatesAutoresizingMaskIntoConstraints="NO" id="FKO-Mb-gIn">
-                        <rect key="frame" x="292" y="34" width="20" height="20"/>
+                        <rect key="frame" x="282" y="34" width="20" height="20"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="20" id="0lp-jM-b2i"/>
                             <constraint firstAttribute="height" constant="20" id="Vcc-iz-EXt"/>
                         </constraints>
                     </imageView>
                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_tag_ch.png" translatesAutoresizingMaskIntoConstraints="NO" id="Yiw-gj-DZr">
-                        <rect key="frame" x="233" y="34" width="20" height="20"/>
+                        <rect key="frame" x="223" y="34" width="20" height="20"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="20" id="B90-3D-BoB"/>
                             <constraint firstAttribute="width" constant="20" id="FMA-fq-aQ0"/>
                         </constraints>
                     </imageView>
                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_tag_en.png" translatesAutoresizingMaskIntoConstraints="NO" id="n2U-u0-FYE">
-                        <rect key="frame" x="264" y="34" width="20" height="20"/>
+                        <rect key="frame" x="254" y="34" width="20" height="20"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="20" id="u8c-Wf-LMe"/>
                             <constraint firstAttribute="width" constant="20" id="vRZ-Wq-KUT"/>
@@ -77,18 +77,18 @@
                     <constraint firstItem="uOj-FB-GTQ" firstAttribute="leading" secondItem="jWv-hz-154" secondAttribute="trailing" constant="17" id="jjj-td-BIb"/>
                     <constraint firstItem="CSc-lI-TIZ" firstAttribute="leading" secondItem="u61-ig-MDW" secondAttribute="leadingMargin" id="lI8-Mv-LyS"/>
                     <constraint firstItem="uOj-FB-GTQ" firstAttribute="top" secondItem="zwn-Pa-55H" secondAttribute="bottom" constant="9" id="lV8-mS-a7A"/>
-                    <constraint firstItem="FKO-Mb-gIn" firstAttribute="trailing" secondItem="u61-ig-MDW" secondAttribute="trailingMargin" id="ms8-1b-uha"/>
+                    <constraint firstItem="FKO-Mb-gIn" firstAttribute="trailing" secondItem="u61-ig-MDW" secondAttribute="trailingMargin" constant="-10" id="ms8-1b-uha"/>
                     <constraint firstAttribute="bottomMargin" secondItem="FKO-Mb-gIn" secondAttribute="bottom" constant="-2.5" id="xVZ-x3-HND"/>
                     <constraint firstItem="zwn-Pa-55H" firstAttribute="leading" secondItem="jWv-hz-154" secondAttribute="trailing" constant="17" id="zHF-re-bIL"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
                 <outlet property="avatarImageView" destination="jWv-hz-154" id="Lug-av-Y6s"/>
-                <outlet property="cnImageView" destination="Yiw-gj-DZr" id="nJr-vh-Zwd"/>
                 <outlet property="dataLabel" destination="uOj-FB-GTQ" id="KXg-Ot-vyw"/>
-                <outlet property="enImageView" destination="n2U-u0-FYE" id="jZb-tF-kYO"/>
+                <outlet property="firstImageVIew" destination="FKO-Mb-gIn" id="ZQb-8o-V5J"/>
+                <outlet property="secondImageView" destination="n2U-u0-FYE" id="Hln-ym-sQ2"/>
+                <outlet property="thirdImageView" destination="Yiw-gj-DZr" id="ugm-a2-7Wk"/>
                 <outlet property="titleLabel" destination="zwn-Pa-55H" id="8e8-bV-Bka"/>
-                <outlet property="videoImageView" destination="FKO-Mb-gIn" id="UQS-Jx-M7v"/>
             </connections>
             <point key="canvasLocation" x="307" y="77"/>
         </tableViewCell>

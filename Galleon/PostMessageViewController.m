@@ -8,6 +8,8 @@
 
 #import "PostMessageViewController.h"
 #import "Client.h"
+#import "NotificationConstant.h"
+#import "StringConstant.h"
 
 @interface PostMessageViewController ()<UITextViewDelegate>
 
@@ -32,6 +34,10 @@
 }
 
 - (IBAction)submitClicked:(id)sender {
+//    if (self.contentTextView.text.length < 4) {
+//        [[NSNotificationCenter defaultCenter] postNotificationName:NotificationWarningMessage object:EnterMoreContext];
+//        return;
+//    }
     [[Client sharedClient] PostMessgeWithContent:self.contentTextView.text token:self.model.user.token successBlock:^(id responseData){
         [self.navigationController popViewControllerAnimated:YES];
     } failureBlock:^(NSError * error, NSString * errorString){

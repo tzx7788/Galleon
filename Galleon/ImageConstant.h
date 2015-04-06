@@ -29,4 +29,8 @@
 #define ExhibitionlayoutBackGround    [UIImage imageNamed:@"pic_5huichangbuju"]
 #define ExhibitionDownloadsBackGround [UIImage imageNamed:@"pic_6lijiehuiyibaogao"]
 
+#define EnImage     [UIImage imageNamed:@"ic_tag_en"]
+#define CnImage     [UIImage imageNamed:@"ic_tag_ch"]
+#define VideoImage  [UIImage imageNamed:@"ic_tag_video"]
+
 #endif

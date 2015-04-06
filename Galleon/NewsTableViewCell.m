@@ -8,6 +8,11 @@
 
 #import "NewsTableViewCell.h"
 #import "UIImageView+AFNetworking.h"
+#import "ImageConstant.h"
+
+@interface NewsTableViewCell()
+@property (nonatomic, strong) NSArray * imageViewList;
+@end
 
 @implementation NewsTableViewCell
 
@@ -17,9 +22,23 @@
     [self.avatarImageView setImageWithURL:[NSURL URLWithString:model.avatarURLString]];
     self.titleLabel.text = model.titleString;
     self.dataLabel.text = [model.date description];
-    [self.videoImageView setHidden:!model.hasVideo];
-    [self.enImageView setHidden:!model.isEN];
-    [self.cnImageView setHidden:!model.isCN];
+    int index = 0;
+    if (model.hasVideo) {
+        [(UIImageView *)self.imageViewList[index] setImage:VideoImage];
+        [(UIImageView *)self.imageViewList[index++] setHidden:NO];
+    }
+    
+    if (model.isEN) {
+        [(UIImageView *)self.imageViewList[index] setImage:EnImage];
+        [(UIImageView *)self.imageViewList[index++] setHidden:NO];
+    }
+    if (model.isCN) {
+        [(UIImageView *)self.imageViewList[index] setImage:CnImage];
+        [(UIImageView *)self.imageViewList[index++] setHidden:NO];
+    }
+    while ( index < self.imageViewList.count ) {
+        [(UIImageView *)self.imageViewList[index++] setHidden:YES];
+    }
 }
 
 + (NewsTableViewCell *)createCell
@@ -30,7 +49,9 @@
 }
 
 - (void)awakeFromNib {
-    // Initialization code
+    if ( !self.imageViewList ){
+        self.imageViewList = [NSArray arrayWithObjects:self.firstImageVIew, self.secondImageView, self.thirdImageView,nil];
+    }
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

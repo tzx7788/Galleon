@@ -18,9 +18,10 @@
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *dataLabel;
 
-@property (weak, nonatomic) IBOutlet UIImageView *enImageView;
-@property (weak, nonatomic) IBOutlet UIImageView *cnImageView;
-@property (weak, nonatomic) IBOutlet UIImageView *videoImageView;
+
+@property (weak, nonatomic) IBOutlet UIImageView *firstImageVIew;
+@property (weak, nonatomic) IBOutlet UIImageView *secondImageView;
+@property (weak, nonatomic) IBOutlet UIImageView *thirdImageView;
 
 + (NewsTableViewCell *)createCell;
 

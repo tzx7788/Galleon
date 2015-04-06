@@ -68,6 +68,7 @@
                     <constraint firstItem="uFG-bL-HE5" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="64" id="roQ-Qc-iSj"/>
                     <constraint firstAttribute="bottomMargin" secondItem="0qY-y6-sgy" secondAttribute="bottom" constant="-8" id="xNs-aU-l3U"/>
                     <constraint firstItem="1Sa-cd-lS9" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="64" id="ySl-u5-YJj"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="6cA-U3-Tay" secondAttribute="bottom" priority="999" constant="9" id="zli-jc-5fu"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
