@@ -21,24 +21,24 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_tag_video.png" translatesAutoresizingMaskIntoConstraints="NO" id="FKO-Mb-gIn">
-                        <rect key="frame" x="282" y="76" width="20" height="20"/>
+                        <rect key="frame" x="288" y="77" width="14" height="14"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="20" id="0lp-jM-b2i"/>
-                            <constraint firstAttribute="height" constant="20" id="Vcc-iz-EXt"/>
+                            <constraint firstAttribute="width" constant="14" id="0lp-jM-b2i"/>
+                            <constraint firstAttribute="height" constant="14" id="Vcc-iz-EXt"/>
                         </constraints>
                     </imageView>
                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_tag_ch.png" translatesAutoresizingMaskIntoConstraints="NO" id="Yiw-gj-DZr">
-                        <rect key="frame" x="223" y="76" width="20" height="20"/>
+                        <rect key="frame" x="238" y="77" width="14" height="14"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="20" id="B90-3D-BoB"/>
-                            <constraint firstAttribute="width" constant="20" id="FMA-fq-aQ0"/>
+                            <constraint firstAttribute="height" constant="14" id="B90-3D-BoB"/>
+                            <constraint firstAttribute="width" constant="14" id="FMA-fq-aQ0"/>
                         </constraints>
                     </imageView>
                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_tag_en.png" translatesAutoresizingMaskIntoConstraints="NO" id="n2U-u0-FYE">
-                        <rect key="frame" x="254" y="76" width="20" height="20"/>
+                        <rect key="frame" x="263" y="77.5" width="14" height="14"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="20" id="u8c-Wf-LMe"/>
-                            <constraint firstAttribute="width" constant="20" id="vRZ-Wq-KUT"/>
+                            <constraint firstAttribute="height" constant="14" id="u8c-Wf-LMe"/>
+                            <constraint firstAttribute="width" constant="14" id="vRZ-Wq-KUT"/>
                         </constraints>
                     </imageView>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CSc-lI-TIZ">
@@ -64,7 +64,7 @@
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="centerY" secondItem="jWv-hz-154" secondAttribute="centerY" id="0li-lX-utU"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="n2U-u0-FYE" secondAttribute="bottom" constant="-2.5" id="1vN-RL-NGJ"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="n2U-u0-FYE" secondAttribute="bottom" constant="2" id="1vN-RL-NGJ"/>
                     <constraint firstItem="CSc-lI-TIZ" firstAttribute="trailing" secondItem="u61-ig-MDW" secondAttribute="trailingMargin" id="2wi-SN-qd1"/>
                     <constraint firstItem="jWv-hz-154" firstAttribute="leading" secondItem="u61-ig-MDW" secondAttribute="leadingMargin" constant="7" id="7V0-H2-XYB"/>
                     <constraint firstAttribute="bottomMargin" secondItem="CSc-lI-TIZ" secondAttribute="bottom" constant="-7.5" id="FIz-ji-5UV"/>
@@ -72,14 +72,14 @@
                     <constraint firstItem="zwn-Pa-55H" firstAttribute="trailing" secondItem="u61-ig-MDW" secondAttribute="trailingMargin" id="HGE-ce-4Bn"/>
                     <constraint firstItem="jWv-hz-154" firstAttribute="top" secondItem="u61-ig-MDW" secondAttribute="topMargin" id="Meg-IP-vJK"/>
                     <constraint firstItem="n2U-u0-FYE" firstAttribute="leading" secondItem="Yiw-gj-DZr" secondAttribute="trailing" constant="11" id="Nmm-dv-7bm"/>
-                    <constraint firstItem="FKO-Mb-gIn" firstAttribute="leading" secondItem="n2U-u0-FYE" secondAttribute="trailing" constant="8" id="RlP-G4-ErJ"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="Yiw-gj-DZr" secondAttribute="bottom" constant="-2.5" id="S1J-J2-qwr"/>
+                    <constraint firstItem="FKO-Mb-gIn" firstAttribute="leading" secondItem="n2U-u0-FYE" secondAttribute="trailing" constant="11" id="RlP-G4-ErJ"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="Yiw-gj-DZr" secondAttribute="bottom" constant="2" id="S1J-J2-qwr"/>
                     <constraint firstAttribute="bottomMargin" secondItem="uOj-FB-GTQ" secondAttribute="bottom" constant="2" id="Xbz-K1-aHs"/>
                     <constraint firstItem="uOj-FB-GTQ" firstAttribute="leading" secondItem="jWv-hz-154" secondAttribute="trailing" constant="17" id="jjj-td-BIb"/>
                     <constraint firstItem="CSc-lI-TIZ" firstAttribute="leading" secondItem="u61-ig-MDW" secondAttribute="leadingMargin" id="lI8-Mv-LyS"/>
                     <constraint firstItem="uOj-FB-GTQ" firstAttribute="top" relation="greaterThanOrEqual" secondItem="zwn-Pa-55H" secondAttribute="bottom" constant="9" id="lV8-mS-a7A"/>
                     <constraint firstItem="FKO-Mb-gIn" firstAttribute="trailing" secondItem="u61-ig-MDW" secondAttribute="trailingMargin" constant="-10" id="ms8-1b-uha"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="FKO-Mb-gIn" secondAttribute="bottom" constant="-2.5" id="xVZ-x3-HND"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="FKO-Mb-gIn" secondAttribute="bottom" constant="2" id="xVZ-x3-HND"/>
                     <constraint firstItem="uOj-FB-GTQ" firstAttribute="top" relation="greaterThanOrEqual" secondItem="jWv-hz-154" secondAttribute="bottom" constant="9" id="y1g-qu-gFh"/>
                     <constraint firstItem="zwn-Pa-55H" firstAttribute="leading" secondItem="jWv-hz-154" secondAttribute="trailing" constant="17" id="zHF-re-bIL"/>
                 </constraints>
