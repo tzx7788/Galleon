@@ -133,6 +133,7 @@
     
     if (edittedImage.size.height > edittedImage.size.width + 3.5f || edittedImage.size.height < edittedImage.size.width - 3.5f) {
         [UIAlertView alertErrorMessage:@"为了达到更好的头像显示效果，请上传正方形头像"];
+        [self dismissViewControllerAnimated:YES completion:nil];
         return;
     }
     

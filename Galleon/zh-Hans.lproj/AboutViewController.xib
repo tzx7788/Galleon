@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
@@ -36,8 +36,8 @@
                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="联系人：Adeson XING" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mRV-W7-TRe">
-                    <rect key="frame" x="8" y="361" width="304" height="21"/>
+                <label opaque="NO" userInteractionEnabled="NO" alpha="0.90000000000000002" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="联系人：Adeson XING" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mRV-W7-TRe">
+                    <rect key="frame" x="8" y="259" width="304" height="21"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="21" id="QDW-2g-vmt"/>
                     </constraints>
@@ -45,8 +45,8 @@
                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="电话：86 21-51559030" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TPq-5x-mtI">
-                    <rect key="frame" x="8" y="390" width="304" height="21"/>
+                <label opaque="NO" userInteractionEnabled="NO" alpha="0.90000000000000002" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="电话：86 21-51559030" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TPq-5x-mtI">
+                    <rect key="frame" x="8" y="288" width="304" height="21"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="21" id="V75-zV-9Nf"/>
                     </constraints>
@@ -54,8 +54,8 @@
                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="手机： 86-18621768883" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L7W-3n-sXS">
-                    <rect key="frame" x="8" y="419" width="304" height="21"/>
+                <label opaque="NO" userInteractionEnabled="NO" alpha="0.90000000000000002" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="手机： 86-18621768883" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L7W-3n-sXS">
+                    <rect key="frame" x="8" y="317" width="304" height="21"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="21" id="crX-Z0-a5I"/>
                     </constraints>
@@ -63,8 +63,8 @@
                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="邮箱：adesonx@galleon.cc" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Af1-lU-dWB">
-                    <rect key="frame" x="8" y="448" width="304" height="21"/>
+                <label opaque="NO" userInteractionEnabled="NO" alpha="0.90000000000000002" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="邮箱：adesonx@galleon.cc" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Af1-lU-dWB">
+                    <rect key="frame" x="8" y="346" width="304" height="21"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="21" id="avV-Xv-Nqa"/>
                     </constraints>
@@ -81,13 +81,13 @@
                 <constraint firstItem="Af1-lU-dWB" firstAttribute="top" secondItem="L7W-3n-sXS" secondAttribute="bottom" constant="8" id="2Pn-Hj-YEM"/>
                 <constraint firstItem="0NI-7a-aJR" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="4SM-Yw-DfM"/>
                 <constraint firstAttribute="trailing" secondItem="TPq-5x-mtI" secondAttribute="trailing" constant="8" id="4d0-1X-O3V"/>
+                <constraint firstItem="mRV-W7-TRe" firstAttribute="top" secondItem="Yh9-HE-fh1" secondAttribute="bottom" constant="8" id="6Pe-qU-wG2"/>
                 <constraint firstAttribute="trailing" secondItem="0NI-7a-aJR" secondAttribute="trailing" constant="8" id="6j5-aY-RuJ"/>
                 <constraint firstItem="731-5E-iwI" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Be0-Cx-nws"/>
                 <constraint firstItem="TPq-5x-mtI" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="D6C-7H-x2a"/>
                 <constraint firstItem="TPq-5x-mtI" firstAttribute="top" secondItem="mRV-W7-TRe" secondAttribute="bottom" constant="8" id="J9t-ng-3MM"/>
                 <constraint firstItem="mRV-W7-TRe" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="KxH-Xk-AGA"/>
                 <constraint firstItem="Yh9-HE-fh1" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="86" id="V77-zS-cUQ"/>
-                <constraint firstAttribute="bottom" secondItem="mRV-W7-TRe" secondAttribute="bottom" constant="98" id="aYy-0v-xVC"/>
                 <constraint firstItem="731-5E-iwI" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="dt6-CG-R2m"/>
                 <constraint firstAttribute="trailing" secondItem="L7W-3n-sXS" secondAttribute="trailing" constant="8" id="fae-CH-AoP"/>
                 <constraint firstItem="Af1-lU-dWB" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="gOa-4j-LEJ"/>
