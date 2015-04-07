@@ -44,7 +44,6 @@ typedef enum {
 
 #define kMenuWidth 277
 - (void)viewDidLoad {
-    [[Client sharedClient] testPost];
     [super viewDidLoad];
     self.leftMenuViewController = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"LeftMenuViewController"];
     [self addChildViewController:self.leftMenuViewController];

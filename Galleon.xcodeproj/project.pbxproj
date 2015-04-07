@@ -1658,7 +1658,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PROVISIONING_PROFILE = "4eb1c281-f556-456b-bbb4-2c221f776a9f";
+				PROVISIONING_PROFILE = "3fd51c57-1421-4996-aa26-e46ca3454195";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -1694,7 +1694,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PROVISIONING_PROFILE = "4eb1c281-f556-456b-bbb4-2c221f776a9f";
+				PROVISIONING_PROFILE = "3fd51c57-1421-4996-aa26-e46ca3454195";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -1706,8 +1706,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Galleon (Shanghai) Consulting Co., Ltd.";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				INFOPLIST_FILE = Galleon/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1716,7 +1716,7 @@
 					"$(PROJECT_DIR)/Galleon/lib",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "3fd51c57-1421-4996-aa26-e46ca3454195";
 				USER_HEADER_SEARCH_PATHS = "$(inherited) $(PROJECT_DIR)/Galleon/lib";
 			};
 			name = Debug;
@@ -1727,8 +1727,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Galleon (Shanghai) Consulting Co., Ltd.";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				INFOPLIST_FILE = Galleon/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1737,7 +1737,7 @@
 					"$(PROJECT_DIR)/Galleon/lib",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "3fd51c57-1421-4996-aa26-e46ca3454195";
 				USER_HEADER_SEARCH_PATHS = "$(inherited) $(PROJECT_DIR)/Galleon/lib";
 			};
 			name = Release;

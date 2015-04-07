@@ -17,8 +17,6 @@ typedef void (^FailureCompletionBlock)(NSError *error, NSString *responseString)
 
 + (Client *)sharedClient;
 
-- (void) testPost;
-
 - (void)loginWithAccount:(NSString *) account
                 Password:(NSString *) password
             successBlock:(SuccessCompletionBlock) successCompletionBlock

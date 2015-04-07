@@ -118,7 +118,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_login.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="HJY-Bb-NNX">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                                <rect key="frame" x="-4" y="0.0" width="328" height="480"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SYr-Zl-ojN">
                                 <rect key="frame" x="40" y="206" width="240" height="40"/>
@@ -274,11 +274,11 @@
                             <constraint firstAttribute="trailingMargin" secondItem="1ac-4W-0qz" secondAttribute="trailing" constant="24" id="Elk-Pm-mgz"/>
                             <constraint firstItem="SYr-Zl-ojN" firstAttribute="top" secondItem="UVA-yM-FhZ" secondAttribute="bottom" constant="186" id="GgP-eK-LmI"/>
                             <constraint firstItem="eph-OW-mtL" firstAttribute="trailing" secondItem="eSw-t5-jqB" secondAttribute="trailingMargin" constant="-24" id="KQ9-Ho-9NX"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="HJY-Bb-NNX" secondAttribute="trailing" constant="-16" id="NkM-cs-AUK"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="HJY-Bb-NNX" secondAttribute="trailing" constant="-20" id="NkM-cs-AUK"/>
                             <constraint firstItem="bP5-h7-Psa" firstAttribute="top" secondItem="UVA-yM-FhZ" secondAttribute="bottom" constant="243" id="OQF-Vq-hUC"/>
                             <constraint firstItem="obQ-Qt-cK6" firstAttribute="top" secondItem="eph-OW-mtL" secondAttribute="bottom" constant="48" id="SEG-Up-xRS"/>
                             <constraint firstItem="m2A-Dn-VTf" firstAttribute="top" secondItem="UVA-yM-FhZ" secondAttribute="bottom" constant="239" id="SwS-9c-FWk"/>
-                            <constraint firstItem="HJY-Bb-NNX" firstAttribute="leading" secondItem="eSw-t5-jqB" secondAttribute="leadingMargin" constant="-16" id="TB4-kR-Fe1"/>
+                            <constraint firstItem="HJY-Bb-NNX" firstAttribute="leading" secondItem="eSw-t5-jqB" secondAttribute="leadingMargin" constant="-20" id="TB4-kR-Fe1"/>
                             <constraint firstAttribute="trailingMargin" secondItem="SYr-Zl-ojN" secondAttribute="trailing" constant="24" id="UVz-8A-9AZ"/>
                             <constraint firstAttribute="centerX" secondItem="1ac-4W-0qz" secondAttribute="centerX" id="Zkg-eE-6Ad"/>
                             <constraint firstAttribute="centerX" secondItem="m2A-Dn-VTf" secondAttribute="centerX" constant="41" id="aId-WJ-0Ha"/>
