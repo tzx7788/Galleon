@@ -60,7 +60,6 @@
 		6C6E635A1AB28D510014F47F /* ExhibitionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C6E63581AB28D510014F47F /* ExhibitionViewController.m */; };
 		6C6E635B1AB28D510014F47F /* ExhibitionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C6E63591AB28D510014F47F /* ExhibitionViewController.xib */; };
 		6C6E635F1AB290530014F47F /* ExhibitionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C6E635D1AB290530014F47F /* ExhibitionTableViewCell.m */; };
-		6C6E63601AB290530014F47F /* ExhibitionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C6E635E1AB290530014F47F /* ExhibitionTableViewCell.xib */; };
 		6C72E0361ABE68C20012B428 /* InformTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C72E0341ABE68C20012B428 /* InformTableViewCell.m */; };
 		6C72E0371ABE68C20012B428 /* InformTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C72E0351ABE68C20012B428 /* InformTableViewCell.xib */; };
 		6C72E03A1ABE694C0012B428 /* InformModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C72E0391ABE694C0012B428 /* InformModel.m */; };
@@ -76,6 +75,7 @@
 		6C8A12651AC980940077E25A /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C8A12641AC980940077E25A /* libz.dylib */; };
 		6C8A12671AC981F50077E25A /* PushConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6C8A12661AC981F50077E25A /* PushConfig.plist */; };
 		6CA07D2D1AADC63000BEEEE7 /* UIImage+Snapshot.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CA07D2C1AADC63000BEEEE7 /* UIImage+Snapshot.m */; };
+		6CA32A4C1AD3BA63001F75AF /* ExhibitionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6CA32A4E1AD3BA63001F75AF /* ExhibitionTableViewCell.xib */; };
 		6CA6569C1ACD4514005CE599 /* 00.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6CA6569B1ACD4514005CE599 /* 00.jpg */; };
 		6CA763971AB16BAD00A9185F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6CA763951AB16BAD00A9185F /* Main.storyboard */; };
 		6CA9516A1ACD8CB4008DCCAC /* LeftMenuUserHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6CA9516C1ACD8CB4008DCCAC /* LeftMenuUserHeaderView.xib */; };
@@ -257,7 +257,6 @@
 		6C6E63591AB28D510014F47F /* ExhibitionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExhibitionViewController.xib; sourceTree = "<group>"; };
 		6C6E635C1AB290530014F47F /* ExhibitionTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExhibitionTableViewCell.h; sourceTree = "<group>"; };
 		6C6E635D1AB290530014F47F /* ExhibitionTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExhibitionTableViewCell.m; sourceTree = "<group>"; };
-		6C6E635E1AB290530014F47F /* ExhibitionTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExhibitionTableViewCell.xib; sourceTree = "<group>"; };
 		6C72E0331ABE68C20012B428 /* InformTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InformTableViewCell.h; sourceTree = "<group>"; };
 		6C72E0341ABE68C20012B428 /* InformTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InformTableViewCell.m; sourceTree = "<group>"; };
 		6C72E0351ABE68C20012B428 /* InformTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InformTableViewCell.xib; sourceTree = "<group>"; };
@@ -277,6 +276,8 @@
 		6C8A12661AC981F50077E25A /* PushConfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = PushConfig.plist; sourceTree = "<group>"; };
 		6CA07D2B1AADC63000BEEEE7 /* UIImage+Snapshot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Snapshot.h"; sourceTree = "<group>"; };
 		6CA07D2C1AADC63000BEEEE7 /* UIImage+Snapshot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Snapshot.m"; sourceTree = "<group>"; };
+		6CA32A4D1AD3BA63001F75AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/ExhibitionTableViewCell.xib; sourceTree = "<group>"; };
+		6CA32A511AD3BA7C001F75AF /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = "zh-Hans"; path = "zh-Hans.lproj/ExhibitionTableViewCell.xib"; sourceTree = "<group>"; };
 		6CA6569B1ACD4514005CE599 /* 00.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 00.jpg; sourceTree = "<group>"; };
 		6CA763961AB16BAD00A9185F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6CA9516B1ACD8CB4008DCCAC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LeftMenuUserHeaderView.xib; sourceTree = "<group>"; };
@@ -645,7 +646,7 @@
 			children = (
 				6C6E635C1AB290530014F47F /* ExhibitionTableViewCell.h */,
 				6C6E635D1AB290530014F47F /* ExhibitionTableViewCell.m */,
-				6C6E635E1AB290530014F47F /* ExhibitionTableViewCell.xib */,
+				6CA32A4E1AD3BA63001F75AF /* ExhibitionTableViewCell.xib */,
 				6CC6EBCC1AB3371900A9392E /* ExhibitionListTableViewCell.h */,
 				6CC6EBCD1AB3371900A9392E /* ExhibitionListTableViewCell.m */,
 				6CC6EBCE1AB3371900A9392E /* ExhibitionListTableViewCell.xib */,
@@ -1312,7 +1313,7 @@
 				6CF24AC71ABBA734002423D2 /* pic_4huiyiricheng.png in Resources */,
 				6CFC32861ACD43AF003CCDB7 /* ic_avater_new_normal.png in Resources */,
 				6C6E63411AB276A40014F47F /* btn_back@2x.png in Resources */,
-				6C6E63601AB290530014F47F /* ExhibitionTableViewCell.xib in Resources */,
+				6CA32A4C1AD3BA63001F75AF /* ExhibitionTableViewCell.xib in Resources */,
 				6CDBBC901ACC215F00FB4D3E /* PostMessageViewController.xib in Resources */,
 				6C0FB4CE1ABA760400E72C20 /* ic_unchecked_press.png in Resources */,
 				6CEE19431AADC291006CB3DD /* Images.xcassets in Resources */,
@@ -1534,6 +1535,15 @@
 				6C5E01B01ACB666A00570D5B /* Base */,
 			);
 			name = SupplierViewController.xib;
+			sourceTree = "<group>";
+		};
+		6CA32A4E1AD3BA63001F75AF /* ExhibitionTableViewCell.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6CA32A4D1AD3BA63001F75AF /* Base */,
+				6CA32A511AD3BA7C001F75AF /* zh-Hans */,
+			);
+			name = ExhibitionTableViewCell.xib;
 			sourceTree = "<group>";
 		};
 		6CA763951AB16BAD00A9185F /* Main.storyboard */ = {
