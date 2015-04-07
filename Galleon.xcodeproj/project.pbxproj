@@ -76,6 +76,7 @@
 		6C8A12671AC981F50077E25A /* PushConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6C8A12661AC981F50077E25A /* PushConfig.plist */; };
 		6CA07D2D1AADC63000BEEEE7 /* UIImage+Snapshot.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CA07D2C1AADC63000BEEEE7 /* UIImage+Snapshot.m */; };
 		6CA32A4C1AD3BA63001F75AF /* ExhibitionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6CA32A4E1AD3BA63001F75AF /* ExhibitionTableViewCell.xib */; };
+		6CA32A541AD41353001F75AF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6CA32A561AD41353001F75AF /* InfoPlist.strings */; };
 		6CA6569C1ACD4514005CE599 /* 00.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6CA6569B1ACD4514005CE599 /* 00.jpg */; };
 		6CA763971AB16BAD00A9185F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6CA763951AB16BAD00A9185F /* Main.storyboard */; };
 		6CA9516A1ACD8CB4008DCCAC /* LeftMenuUserHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6CA9516C1ACD8CB4008DCCAC /* LeftMenuUserHeaderView.xib */; };
@@ -278,6 +279,8 @@
 		6CA07D2C1AADC63000BEEEE7 /* UIImage+Snapshot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Snapshot.m"; sourceTree = "<group>"; };
 		6CA32A4D1AD3BA63001F75AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/ExhibitionTableViewCell.xib; sourceTree = "<group>"; };
 		6CA32A511AD3BA7C001F75AF /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = "zh-Hans"; path = "zh-Hans.lproj/ExhibitionTableViewCell.xib"; sourceTree = "<group>"; };
+		6CA32A551AD41353001F75AF /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		6CA32A571AD41357001F75AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6CA6569B1ACD4514005CE599 /* 00.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 00.jpg; sourceTree = "<group>"; };
 		6CA763961AB16BAD00A9185F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6CA9516B1ACD8CB4008DCCAC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LeftMenuUserHeaderView.xib; sourceTree = "<group>"; };
@@ -1197,6 +1200,7 @@
 				6CEE19351AADC291006CB3DD /* AppDelegate.h */,
 				6CEE19361AADC291006CB3DD /* AppDelegate.m */,
 				6CC9EC321ABC08300062B64A /* Launch Screen.xib */,
+				6CA32A561AD41353001F75AF /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -1372,6 +1376,7 @@
 				6C28D0761AC0217E004BD04D /* ExhibitionFileListViewController.xib in Resources */,
 				6CCB9C3D1AB9C045001BF16E /* ic_leave_new_message.png in Resources */,
 				6CD5E0F81AC8F56600909FF4 /* ic_read.png in Resources */,
+				6CA32A541AD41353001F75AF /* InfoPlist.strings in Resources */,
 				6C5BDC4D1AB0754C005FE343 /* ic_sidebar_about_us.png in Resources */,
 				6CDBBC821ACBF0D100FB4D3E /* HeadLineHeaderView.xib in Resources */,
 				6CDD89D21ABC543900FE41C2 /* bg_banner_noshadow.png in Resources */,
@@ -1544,6 +1549,15 @@
 				6CA32A511AD3BA7C001F75AF /* zh-Hans */,
 			);
 			name = ExhibitionTableViewCell.xib;
+			sourceTree = "<group>";
+		};
+		6CA32A561AD41353001F75AF /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6CA32A551AD41353001F75AF /* zh-Hans */,
+				6CA32A571AD41357001F75AF /* Base */,
+			);
+			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 		6CA763951AB16BAD00A9185F /* Main.storyboard */ = {
@@ -1802,7 +1816,7 @@
 				6CEE192A1AADBC78006CB3DD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Debug;
+			defaultConfigurationName = Release;
 		};
 		6CEE192B1AADBC78006CB3DD /* Build configuration list for PBXNativeTarget "Galleon" */ = {
 			isa = XCConfigurationList;
@@ -1811,7 +1825,7 @@
 				6CEE192D1AADBC78006CB3DD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Debug;
+			defaultConfigurationName = Release;
 		};
 		6CEE192E1AADBC78006CB3DD /* Build configuration list for PBXNativeTarget "GalleonTests" */ = {
 			isa = XCConfigurationList;
@@ -1820,7 +1834,7 @@
 				6CEE19301AADBC78006CB3DD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Debug;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
