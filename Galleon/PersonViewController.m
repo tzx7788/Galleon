@@ -41,6 +41,7 @@
     [[self.logoutButton layer] setBorderWidth:1.0f];
     [[self.logoutButton layer] setBorderColor:CGColorCreateCopyWithAlpha([UIColor whiteColor].CGColor, 0.7)];
     [[self.logoutButton layer] setCornerRadius:self.logoutButton.frame.size.height/2];
+    [self.view layoutSubviews];
 }
 
 - (void)didReceiveMemoryWarning {
