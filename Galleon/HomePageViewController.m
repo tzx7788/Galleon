@@ -51,6 +51,7 @@
 
 - (void)viewDidLayoutSubviews
 {
+    [super viewDidLayoutSubviews];
     [self.tableView setTableHeaderView:self.tableHeaderView];
     
     [self.tableHeaderView setNeedsLayout];
@@ -64,6 +65,7 @@
     self.tableHeaderView.frame = headerFrame;
     
     [self.tableView setTableHeaderView:self.tableHeaderView];
+    [self.view layoutSubviews];
 }
 
 - (void)viewWillAppear:(BOOL)animated

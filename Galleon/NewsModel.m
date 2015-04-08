@@ -16,9 +16,9 @@
     id object = dict;
     if (object[@"news_language"]) {
         NSString * string = [object[@"news_language"] description];
-        if ([[string lowercaseString] containsString:@"zh"] )
+        if ([[string lowercaseString] rangeOfString:@"zh"].location != NSNotFound )
             self.isCN = YES;
-        if ([[string lowercaseString] containsString:@"en"] )
+        if ([[string lowercaseString] rangeOfString:@"en"].location != NSNotFound )
             self.isEN = YES;
     }
     if (object[@"id"]) self.newsId = object[@"id"];

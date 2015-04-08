@@ -6,7 +6,7 @@
 "1tp-Ip-FLH.normalTitle" = "确认";
 
 /* Class = "UIButton"; normalTitle = "Login"; ObjectID = "2fD-KW-yXh"; */
-"2fD-KW-yXh.normalTitle" = "登陆";
+"2fD-KW-yXh.normalTitle" = "登录";
 
 /* Class = "UILabel"; text = "Edit Profile"; ObjectID = "3pV-As-Ga3"; */
 "3pV-As-Ga3.text" = "修改资料";
