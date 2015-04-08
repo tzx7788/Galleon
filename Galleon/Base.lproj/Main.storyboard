@@ -1052,10 +1052,10 @@
             </objects>
             <point key="canvasLocation" x="1087" y="-385"/>
         </scene>
-        <!--Snap Shot Navigation Controller-->
+        <!--Log In Navigation View Controller-->
         <scene sceneID="3bP-Dx-3BL">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="ze3-RG-kzS" customClass="UISnapShotNavigationController" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="ze3-RG-kzS" customClass="LogInNavigationViewController" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="z2Y-vH-jVj">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>

@@ -73,7 +73,7 @@
       debugDocumentVersioning = "YES"
       allowLocationSimulation = "YES"
       showNonLocalizedStrings = "YES"
-      language = "en">
+      language = "zh-Hans">
       <BuildableProductRunnable
          runnableDebuggingMode = "0">
          <BuildableReference

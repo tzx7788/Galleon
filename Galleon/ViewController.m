@@ -42,6 +42,11 @@ typedef enum {
 
 @implementation ViewController
 
+- (BOOL) shouldAutorotate
+{
+    return NO;
+}
+
 #define kMenuWidth 277
 - (void)viewDidLoad {
     [super viewDidLoad];

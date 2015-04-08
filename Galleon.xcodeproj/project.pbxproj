@@ -117,6 +117,7 @@
 		6CC9EC371ABC14420062B64A /* galleon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6CC9EC351ABC14420062B64A /* galleon@3x.png */; };
 		6CCB9C3A1AB9ABA8001BF16E /* MessageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CCB9C391AB9ABA8001BF16E /* MessageModel.m */; };
 		6CCB9C3D1AB9C045001BF16E /* ic_leave_new_message.png in Resources */ = {isa = PBXBuildFile; fileRef = 6CCB9C3C1AB9C045001BF16E /* ic_leave_new_message.png */; };
+		6CD22F361AD50D8E00B2DB15 /* LogInNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CD22F351AD50D8E00B2DB15 /* LogInNavigationViewController.m */; };
 		6CD5E0F61AC8F56600909FF4 /* ic_like_normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 6CD5E0F31AC8F56600909FF4 /* ic_like_normal.png */; };
 		6CD5E0F71AC8F56600909FF4 /* ic_like_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 6CD5E0F41AC8F56600909FF4 /* ic_like_selected.png */; };
 		6CD5E0F81AC8F56600909FF4 /* ic_read.png in Resources */ = {isa = PBXBuildFile; fileRef = 6CD5E0F51AC8F56600909FF4 /* ic_read.png */; };
@@ -344,6 +345,8 @@
 		6CCB9C381AB9ABA8001BF16E /* MessageModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageModel.h; sourceTree = "<group>"; };
 		6CCB9C391AB9ABA8001BF16E /* MessageModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageModel.m; sourceTree = "<group>"; };
 		6CCB9C3C1AB9C045001BF16E /* ic_leave_new_message.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_leave_new_message.png; sourceTree = "<group>"; };
+		6CD22F341AD50D8E00B2DB15 /* LogInNavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogInNavigationViewController.h; sourceTree = "<group>"; };
+		6CD22F351AD50D8E00B2DB15 /* LogInNavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogInNavigationViewController.m; sourceTree = "<group>"; };
 		6CD5E0F31AC8F56600909FF4 /* ic_like_normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_like_normal.png; sourceTree = "<group>"; };
 		6CD5E0F41AC8F56600909FF4 /* ic_like_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_like_selected.png; sourceTree = "<group>"; };
 		6CD5E0F51AC8F56600909FF4 /* ic_read.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_read.png; sourceTree = "<group>"; };
@@ -1210,6 +1213,8 @@
 			children = (
 				6CEE19491AADC4A2006CB3DD /* UISnapShotNavigationController.h */,
 				6CEE194A1AADC4A2006CB3DD /* UISnapShotNavigationController.m */,
+				6CD22F341AD50D8E00B2DB15 /* LogInNavigationViewController.h */,
+				6CD22F351AD50D8E00B2DB15 /* LogInNavigationViewController.m */,
 				6CAA1D351AB3E29900B848BD /* GalleonNavigationController.h */,
 				6CAA1D361AB3E29900B848BD /* GalleonNavigationController.m */,
 				6CF078891AB197FB00DF0C0C /* RootContentViewController.h */,
@@ -1490,6 +1495,7 @@
 				6CAD844E1AB718A900F5F2F5 /* NewsListModel.m in Sources */,
 				6CC6EBCF1AB3371900A9392E /* ExhibitionListTableViewCell.m in Sources */,
 				6CC6EBBE1AB31E2300A9392E /* TitleLabel.m in Sources */,
+				6CD22F361AD50D8E00B2DB15 /* LogInNavigationViewController.m in Sources */,
 				6CF078871AB1978800DF0C0C /* SuperViewController.m in Sources */,
 				6CDD89D81ABC565D00FE41C2 /* InformHeaderView.m in Sources */,
 				6C6E635A1AB28D510014F47F /* ExhibitionViewController.m in Sources */,
@@ -1682,7 +1688,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PROVISIONING_PROFILE = "3fd51c57-1421-4996-aa26-e46ca3454195";
+				PROVISIONING_PROFILE = "7e2e8603-209d-42f5-b63e-de923ea21f20";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -1718,7 +1724,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PROVISIONING_PROFILE = "3fd51c57-1421-4996-aa26-e46ca3454195";
+				PROVISIONING_PROFILE = "7e2e8603-209d-42f5-b63e-de923ea21f20";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -1740,7 +1746,7 @@
 					"$(PROJECT_DIR)/Galleon/lib",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "3fd51c57-1421-4996-aa26-e46ca3454195";
+				PROVISIONING_PROFILE = "7e2e8603-209d-42f5-b63e-de923ea21f20";
 				USER_HEADER_SEARCH_PATHS = "$(inherited) $(PROJECT_DIR)/Galleon/lib";
 			};
 			name = Debug;
@@ -1761,7 +1767,7 @@
 					"$(PROJECT_DIR)/Galleon/lib",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "3fd51c57-1421-4996-aa26-e46ca3454195";
+				PROVISIONING_PROFILE = "7e2e8603-209d-42f5-b63e-de923ea21f20";
 				USER_HEADER_SEARCH_PATHS = "$(inherited) $(PROJECT_DIR)/Galleon/lib";
 			};
 			name = Release;
