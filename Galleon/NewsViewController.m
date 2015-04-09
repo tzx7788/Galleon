@@ -9,7 +9,7 @@
 #import "NewsViewController.h"
 #import "Client.h"
 
-@interface NewsViewController ()
+@interface NewsViewController ()<UIWebViewDelegate>
 @property (nonatomic, assign) BOOL isAvailable;
 @end
 
@@ -23,6 +23,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    //[self.webView setScalesPageToFit:YES];
     self.isAvailable = YES;
     [self loadData];
 }
@@ -80,6 +81,7 @@
         });
     }
 }
+
 
 /*
 #pragma mark - Navigation

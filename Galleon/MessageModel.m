@@ -13,10 +13,18 @@
 
 - (void)loadDataWithDictionary:(NSDictionary *)dict
 {
-    self.avatarURLString = dict[@"user"][@"header_small"];
-    self.content = dict[@"content"];
-    self.date = [NSDate covertFromString:dict[@"created_time"]];
-    self.name = dict[@"user"][@"name"];
+    if ( dict[@"content"] )
+        self.content = dict[@"content"];
+    if ( dict[@"created_time"] )
+        self.date = [NSDate covertFromString:dict[@"created_time"]];
+    if ( dict[@"user"] ) {
+        if ( dict[@"user"][@"header_small"] )
+            self.avatarURLString = dict[@"user"][@"header_small"];
+        if ( dict[@"user"][@"name"] )
+            self.name = dict[@"user"][@"name"];
+        if ( dict[@"user"][@"company"] )
+            self.company = dict[@"user"][@"company"];
+    }
 }
 
 @end

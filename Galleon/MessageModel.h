@@ -14,6 +14,7 @@
 @property (nonatomic,strong) NSString * name;
 @property (nonatomic,strong) NSDate * date;
 @property (nonatomic,strong) NSString * content;
+@property (nonatomic,strong) NSString * company;
 
 - (void)loadDataWithDictionary:(NSDictionary *)dict;
 

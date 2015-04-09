@@ -18,6 +18,7 @@
     self.nameLabel.text = model.name;
     self.dateLabel.text = model.date.description;
     self.contentLabel.text = model.content;
+    self.companyLabel.text = model.company;
 }
 
 

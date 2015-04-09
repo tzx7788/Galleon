@@ -42,7 +42,22 @@ typedef enum {
 
 @implementation ViewController
 
-- (BOOL) shouldAutorotate
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
+{
+    return (interfaceOrientation == UIInterfaceOrientationPortrait);
+}
+
+- (BOOL)shouldAutorotate
+{
+    return NO;
+}
+
+- (NSUInteger)supportedInterfaceOrientations
+{
+    return UIInterfaceOrientationMaskPortrait;
+}
+
+- (BOOL)prefersStatusBarHidden
 {
     return NO;
 }
@@ -66,6 +81,11 @@ typedef enum {
     [self.contentNavigationController.view resetOriginX:kMenuWidth];
     [self disableSubView];
     self.status = WERootContainerViewControllerStatusLeftMenu;
+}
+
+- (void)viewDidLayoutSubviews
+{
+    [super viewDidLayoutSubviews];
 }
 
 - (void)exhibitionAddToCalendar:(NSNotification *) notification
