@@ -135,7 +135,7 @@
 "vhW-fa-oln.text" = "电话号码";
 
 /* Class = "UILabel"; text = "Job"; ObjectID = "wVG-zM-vgj"; */
-"wVG-zM-vgj.text" = "工作";
+"wVG-zM-vgj.text" = "职位";
 
 /* Class = "UITextField"; placeholder = "请输入手机号码"; ObjectID = "zY4-yz-bXJ"; */
 "zY4-yz-bXJ.placeholder" = "请输入手机号码";
