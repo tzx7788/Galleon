@@ -78,7 +78,7 @@
 }
 - (UIViewContentMode)contentModeForImageIndex:(NSUInteger)index
 {
-    return UIViewContentModeScaleAspectFill;
+    return UIViewContentModeScaleToFill;
 }
 
 - (void)cycleBannerView:(KDCycleBannerView *)bannerView didSelectedAtIndex:(NSUInteger)index
