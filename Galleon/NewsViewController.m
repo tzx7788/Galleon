@@ -82,6 +82,25 @@
     }
 }
 
+- (void)webViewDidFinishLoad:(UIWebView *)webView
+{
+    NSString * string = [NSString stringWithFormat:@"var script = document.createElement('script');"
+                         "script.type = 'text/javascript';"
+                         "script.text = \"function ResizeImages() { "
+                         "var myimg,oldwidth;"
+                         "var maxwidth = %f;" // UIWebView中显示的图片宽度
+                         "for(i=0;i <document.images.length;i++){"
+                         "myimg = document.images[i];"
+                         "if(myimg.width > maxwidth){"
+                         "oldwidth = myimg.width;"
+                         "myimg.width = maxwidth;"
+                         "}"
+                         "}"
+                         "}\";"
+                         "document.getElementsByTagName('head')[0].appendChild(script);", webView.frame.size.width - 20];
+    [webView stringByEvaluatingJavaScriptFromString:string];
+    [webView stringByEvaluatingJavaScriptFromString:@"ResizeImages();"];
+}
 
 /*
 #pragma mark - Navigation
