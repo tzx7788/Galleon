@@ -7,9 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "SuperModel.h"
 #import "User.h"
 
-@interface PostMessageModel : NSObject
+@interface PostMessageModel : SuperModel
 
 @property (nonatomic, strong) User * user;
 

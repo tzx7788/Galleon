@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SuperViewController.h"
 #import "PostMessageModel.h"
 
-@interface PostMessageViewController : UIViewController
+@interface PostMessageViewController : SuperViewController
 
 @property (nonatomic, strong) PostMessageModel * model;
 

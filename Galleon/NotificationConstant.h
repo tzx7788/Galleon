@@ -36,8 +36,6 @@
 
 #define NotificationViewPDF             @"NotificationViewPDF"
 
-#define NotificationPostMessageViewController @"NotificationPostMessageViewController"
-
 #define NotificationPersonPageClicked   @"NotificationPersonPageClicked"
 
 #define NotificationLoginIn @"NotificationLoginIn"

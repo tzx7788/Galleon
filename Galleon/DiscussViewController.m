@@ -11,6 +11,7 @@
 #import "Client.h"
 #import "MessageModel.h"
 #import "NotificationConstant.h"
+#import "PostMessagePushNotification.h"
 #import "PostMessageModel.h"
 
 @interface DiscussViewController ()<UITableViewDataSource, UITableViewDelegate>
@@ -94,9 +95,11 @@
 }
 
 - (IBAction)addMessageClicked:(id)sender {
+    PostMessagePushNotification * object = [[PostMessagePushNotification alloc] init];
     PostMessageModel * model = [[PostMessageModel alloc] init];
     model.user = [User awakeFromCache];
-    [[NSNotificationCenter defaultCenter] postNotificationName:NotificationPostMessageViewController object:model];
+    object.model = model;
+    [[NSNotificationCenter defaultCenter] postNotificationName:NotificationPush object:object];
 }
 
 /*

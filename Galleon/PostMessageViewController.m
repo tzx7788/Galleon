@@ -16,6 +16,7 @@
 @end
 
 @implementation PostMessageViewController
+@dynamic model;
 
 + (PostMessageViewController *)createViewController
 {
