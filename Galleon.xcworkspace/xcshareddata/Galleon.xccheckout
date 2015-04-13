@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>1429C342-1EDD-4D26-84E3-A76482A4646A</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Galleon</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>2DC4A5313464FF490161C02C5E0F07F9CB45DB00</key>
+		<string>github.com:tzx7788/Galleon.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Galleon.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>2DC4A5313464FF490161C02C5E0F07F9CB45DB00</key>
+		<string>..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>github.com:tzx7788/Galleon.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>2DC4A5313464FF490161C02C5E0F07F9CB45DB00</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>2DC4A5313464FF490161C02C5E0F07F9CB45DB00</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Galleon</string>
+		</dict>
+	</array>
+</dict>
+</plist>

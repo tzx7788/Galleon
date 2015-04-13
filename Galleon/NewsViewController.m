@@ -14,6 +14,13 @@
 @end
 
 @implementation NewsViewController
+@dynamic model;
+
+
+- (NewsModel *)model
+{
+    return (NewsModel *)[super model];
+}
 
 + (NewsViewController *)createViewController
 {
@@ -23,7 +30,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    //[self.webView setScalesPageToFit:YES];
     self.isAvailable = YES;
     [self loadData];
 }

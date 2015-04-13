@@ -13,6 +13,8 @@
 #import "StringConstant.h"
 #import "Client.h"
 #import "ExhibitionModel.h"
+#import "NewsPushNotification.h"
+#import "NewsModel.h"
 
 @interface HomePageHeaderView()<KDCycleBannerViewDataource, KDCycleBannerViewDelegate>
 @property (nonatomic, strong) ExhibitionModel * countDownExhibition;
@@ -86,7 +88,10 @@
     NewsModel * model = [[NewsModel alloc] init];
     NewsImageModel * imageModel = self.modelList[index];
     model.newsId = imageModel.newsId;
-    [[NSNotificationCenter defaultCenter] postNotificationName:NotificationNewsDetailClicked object:model];
+    NewsPushNotification * object = [[NewsPushNotification alloc] init];
+    object.title = model.titleString;
+    object.model = model;
+    [[NSNotificationCenter defaultCenter] postNotificationName:NotificationPush object:object];
 }
 
 /*

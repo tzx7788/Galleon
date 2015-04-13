@@ -11,6 +11,7 @@
 #import "NewsModel.h"
 #import "Client.h"
 #import "NotificationConstant.h"
+#import "NewsPushNotification.h"
 
 @interface NewsListViewController ()<UITableViewDataSource, UITableViewDelegate>
 
@@ -96,7 +97,10 @@
 
 - (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    [[NSNotificationCenter defaultCenter] postNotificationName:NotificationNewsDetailClicked object:self.modelList[indexPath.row]];
+    NewsPushNotification * object = [[NewsPushNotification alloc] init];
+    object.title = ((NewsModel *)self.modelList[indexPath.row]).titleString;
+    object.model = self.modelList[indexPath.row];
+    [[NSNotificationCenter defaultCenter] postNotificationName:NotificationPush object:object];
     UITableViewCell * cell = [tableView cellForRowAtIndexPath:indexPath];
     [cell setSelected:NO];
 }

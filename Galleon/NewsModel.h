@@ -7,8 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "SuperModel.h"
 
-@interface NewsModel : NSObject
+@interface NewsModel : SuperModel
 
 @property (nonatomic, strong) NSString * newsId;
 @property (nonatomic, strong) NSString * avatarURLString;

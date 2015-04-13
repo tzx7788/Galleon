@@ -8,10 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import "NewsListModel.h"
+#import "SuperViewController.h"
 
-@interface NewsListViewController : UIViewController
+@interface NewsListViewController : SuperViewController
 
-@property (nonatomic, strong) NewsListModel * model;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 + (NewsListViewController *)createViewController;

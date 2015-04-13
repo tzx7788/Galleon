@@ -25,6 +25,8 @@
 #import "ExhibitionFileListViewController.h"
 #import "ExhibitionDetailViewController.h"
 #import "UpdateProfileViewController.h"
+#import "SuperPushNotification.h"
+#import "SuperViewController.h"
 
 @interface GalleonNavigationController ()
 
@@ -34,8 +36,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(pushNotification:) name:NotificationPush object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(exhibitionclicked:) name:NotificationExhibitionClicked object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(newsDetailClicked:) name:NotificationNewsDetailClicked object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(viewPDF:) name:NotificationViewPDF object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(postMessageClicked:) name:NotificationPostMessageViewController object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(pushNewsListViewController:) name:NotificationNewsPush  object:nil];
@@ -47,14 +49,33 @@
 - (void) finalize
 {
     [super finalize];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:NotificationPush object:nil];
     [[NSNotificationCenter defaultCenter] removeObserver:self name:NotificationExhibitionClicked object:nil];
-    [[NSNotificationCenter defaultCenter] removeObserver:self name:NotificationNewsDetailClicked object:nil];
     [[NSNotificationCenter defaultCenter] removeObserver:self name:NotificationViewPDF object:nil];
     [[NSNotificationCenter defaultCenter] removeObserver:self name:NotificationPostMessageViewController object:nil];
     [[NSNotificationCenter defaultCenter] removeObserver:self name:NotificationNewsPush object:nil];
     [[NSNotificationCenter defaultCenter] removeObserver:self name:NotificationExhibitionFileList object:nil];
     [[NSNotificationCenter defaultCenter] removeObserver:self name:NotificationExhibitionDeitail object:nil];
     [[NSNotificationCenter defaultCenter] removeObserver:self name:NotificationUpdateProfile object:nil];
+}
+
+- (void)pushNotification:(NSNotification *)notification
+{
+    if ( [[notification object] isKindOfClass:[SuperPushNotification class]] ) {
+        SuperPushNotification * superNotification = [notification object];
+        SubContentViewController * svc = [SubContentViewController createViewController];
+        TitleLabel * label = [TitleLabel createLabel];
+        label.text = superNotification.title;
+        self.navigationItem.titleView = label;
+        svc.titleLabel = label;
+        Class class = NSClassFromString(superNotification.viewControllerClassName);
+        if ( [class isSubclassOfClass:SuperViewController.class] ) {
+            SuperViewController * vc = [[class alloc] initWithNibName:superNotification.nibName bundle:nil];
+            svc.contentViewController = vc;
+            vc.model = superNotification.model;
+            [self pushViewController:svc animated:YES];
+        }
+    }
 }
 
 - (void)pushUpdateProfile:(NSNotification *) notification
@@ -150,22 +171,6 @@
         self.navigationItem.titleView = label;
         svc.titleLabel = label;
         PDFViewController * vc = [PDFViewController createViewController];
-        svc.contentViewController = vc;
-        vc.model = model;
-        [self pushViewController:svc animated:YES];
-    }
-}
-
-- (void)newsDetailClicked:(NSNotification *) notification
-{
-    if ( [[notification object] isKindOfClass:[NewsModel class]] ) {
-        NewsModel *model = [notification object];
-        SubContentViewController * svc = [SubContentViewController createViewController];
-        TitleLabel * label = [TitleLabel createLabel];
-        label.text = model.titleString;
-        self.navigationItem.titleView = label;
-        svc.titleLabel = label;
-        NewsViewController * vc = [NewsViewController createViewController];
         svc.contentViewController = vc;
         vc.model = model;
         [self pushViewController:svc animated:YES];

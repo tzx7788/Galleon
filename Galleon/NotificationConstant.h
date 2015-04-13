@@ -34,8 +34,6 @@
 
 #define NotificationWarningMessage      @"NotificationWarningMessage"
 
-#define NotificationNewsDetailClicked   @"NotificationNewsDetailClicked"
-
 #define NotificationViewPDF             @"NotificationViewPDF"
 
 #define NotificationPostMessageViewController @"NotificationPostMessageViewController"
@@ -54,5 +52,7 @@
 #define NotificationExhibitionAddToCalendar @"NotificationExhibitionAddToCalendar"
 
 #define NotificationLeftMenuUserRefresh @"NotificationLeftMenuUserRefresh"
+
+#define NotificationPush @"NotificationPush"
 
 #endif

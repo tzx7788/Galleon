@@ -74,6 +74,9 @@
 		6C8A12631AC9808B0077E25A /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C8A12621AC9808A0077E25A /* Security.framework */; };
 		6C8A12651AC980940077E25A /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C8A12641AC980940077E25A /* libz.dylib */; };
 		6C8A12671AC981F50077E25A /* PushConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6C8A12661AC981F50077E25A /* PushConfig.plist */; };
+		6C8EB87B1ADA12FC00999C5F /* SuperPushNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C8EB87A1ADA12FC00999C5F /* SuperPushNotification.m */; };
+		6C8EB87E1ADA139400999C5F /* SuperModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C8EB87D1ADA139400999C5F /* SuperModel.m */; };
+		6C8EB8821ADB4C4100999C5F /* NewsPushNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C8EB8811ADB4C4100999C5F /* NewsPushNotification.m */; };
 		6CA07D2D1AADC63000BEEEE7 /* UIImage+Snapshot.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CA07D2C1AADC63000BEEEE7 /* UIImage+Snapshot.m */; };
 		6CA32A4C1AD3BA63001F75AF /* ExhibitionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6CA32A4E1AD3BA63001F75AF /* ExhibitionTableViewCell.xib */; };
 		6CA32A541AD41353001F75AF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6CA32A561AD41353001F75AF /* InfoPlist.strings */; };
@@ -276,6 +279,12 @@
 		6C8A12621AC9808A0077E25A /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		6C8A12641AC980940077E25A /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		6C8A12661AC981F50077E25A /* PushConfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = PushConfig.plist; sourceTree = "<group>"; };
+		6C8EB8791ADA12FC00999C5F /* SuperPushNotification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SuperPushNotification.h; sourceTree = "<group>"; };
+		6C8EB87A1ADA12FC00999C5F /* SuperPushNotification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SuperPushNotification.m; sourceTree = "<group>"; };
+		6C8EB87C1ADA139400999C5F /* SuperModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SuperModel.h; sourceTree = "<group>"; };
+		6C8EB87D1ADA139400999C5F /* SuperModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SuperModel.m; sourceTree = "<group>"; };
+		6C8EB8801ADB4C4100999C5F /* NewsPushNotification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsPushNotification.h; sourceTree = "<group>"; };
+		6C8EB8811ADB4C4100999C5F /* NewsPushNotification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsPushNotification.m; sourceTree = "<group>"; };
 		6CA07D2B1AADC63000BEEEE7 /* UIImage+Snapshot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Snapshot.h"; sourceTree = "<group>"; };
 		6CA07D2C1AADC63000BEEEE7 /* UIImage+Snapshot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Snapshot.m"; sourceTree = "<group>"; };
 		6CA32A4D1AD3BA63001F75AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/ExhibitionTableViewCell.xib; sourceTree = "<group>"; };
@@ -699,6 +708,15 @@
 			path = lib;
 			sourceTree = "<group>";
 		};
+		6C8EB87F1ADB4C2100999C5F /* Notification */ = {
+			isa = PBXGroup;
+			children = (
+				6C8EB8801ADB4C4100999C5F /* NewsPushNotification.h */,
+				6C8EB8811ADB4C4100999C5F /* NewsPushNotification.m */,
+			);
+			name = Notification;
+			sourceTree = "<group>";
+		};
 		6CA07D2A1AADC5E800BEEEE7 /* Category */ = {
 			isa = PBXGroup;
 			children = (
@@ -828,6 +846,10 @@
 			children = (
 				6CF078851AB1978800DF0C0C /* SuperViewController.h */,
 				6CF078861AB1978800DF0C0C /* SuperViewController.m */,
+				6C8EB8791ADA12FC00999C5F /* SuperPushNotification.h */,
+				6C8EB87A1ADA12FC00999C5F /* SuperPushNotification.m */,
+				6C8EB87C1ADA139400999C5F /* SuperModel.h */,
+				6C8EB87D1ADA139400999C5F /* SuperModel.m */,
 			);
 			name = SuperClass;
 			sourceTree = "<group>";
@@ -899,6 +921,7 @@
 		6CC6EBA71AB31B1900A9392E /* News */ = {
 			isa = PBXGroup;
 			children = (
+				6C8EB87F1ADB4C2100999C5F /* Notification */,
 				6CC6EBB21AB31CC400A9392E /* Model */,
 				6CC6EBB11AB31CBE00A9392E /* View */,
 				6CC6EBB01AB31CB600A9392E /* ViewController */,
@@ -1457,6 +1480,7 @@
 				6C0141551AB87AF90069EDE7 /* HomePageModel.m in Sources */,
 				6C0141581AB87BA20069EDE7 /* PersonModel.m in Sources */,
 				6CAA1D311AB3C2AB00B848BD /* ExhibitionListModel.m in Sources */,
+				6C8EB87B1ADA12FC00999C5F /* SuperPushNotification.m in Sources */,
 				6CAA1D4F1AB4026A00B848BD /* RegisterViewController.m in Sources */,
 				6C28D0791AC021C5004BD04D /* ExhibitionFileListModel.m in Sources */,
 				6CE169A31ABA47E9003BF89F /* User.m in Sources */,
@@ -1476,6 +1500,7 @@
 				6CF0788B1AB197FB00DF0C0C /* RootContentViewController.m in Sources */,
 				6C0141491AB878490069EDE7 /* PostMessageViewController.m in Sources */,
 				6C28D07D1AC03DD6004BD04D /* PDFTableViewCell.m in Sources */,
+				6C8EB87E1ADA139400999C5F /* SuperModel.m in Sources */,
 				6CEE194B1AADC4A2006CB3DD /* UISnapShotNavigationController.m in Sources */,
 				6C5B7A8A1AB5731500FE47F0 /* UIAlertView+ErrorMessage.m in Sources */,
 				6CAD84511AB719D500F5F2F5 /* NewsTableViewCell.m in Sources */,
@@ -1504,6 +1529,7 @@
 				6C0141341AB871920069EDE7 /* AboutViewController.m in Sources */,
 				6C485E571ACBD41000013B69 /* NSDate+Addition.m in Sources */,
 				6CF0788E1AB1BF3100DF0C0C /* SubContentViewController.m in Sources */,
+				6C8EB8821ADB4C4100999C5F /* NewsPushNotification.m in Sources */,
 				6CEE19401AADC291006CB3DD /* AppDelegate.m in Sources */,
 				6C5BDC541AB07ADD005FE343 /* LeftMenuTableViewController.m in Sources */,
 				6C72E0361ABE68C20012B428 /* InformTableViewCell.m in Sources */,
@@ -1688,7 +1714,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PROVISIONING_PROFILE = "3fd51c57-1421-4996-aa26-e46ca3454195";
+				PROVISIONING_PROFILE = "7e2e8603-209d-42f5-b63e-de923ea21f20";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -1724,7 +1750,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PROVISIONING_PROFILE = "3fd51c57-1421-4996-aa26-e46ca3454195";
+				PROVISIONING_PROFILE = "7e2e8603-209d-42f5-b63e-de923ea21f20";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};

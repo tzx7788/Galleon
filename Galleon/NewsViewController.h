@@ -7,11 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SuperViewController.h"
 #import "NewsModel.h"
 
-@interface NewsViewController : UIViewController
+@interface NewsViewController : SuperViewController
 
-@property (nonatomic, strong) NewsModel * model;
+@property (nonatomic) NewsModel * model;
 @property (weak, nonatomic) IBOutlet UIWebView *webView;
 
 + (NewsViewController *)createViewController;
