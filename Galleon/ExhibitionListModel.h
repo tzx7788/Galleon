@@ -7,7 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "SuperModel.h"
 
-@interface ExhibitionListModel : NSObject
+@interface ExhibitionListModel : SuperModel
 
 @end

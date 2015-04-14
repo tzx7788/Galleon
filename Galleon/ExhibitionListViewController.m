@@ -10,6 +10,7 @@
 #import "ExhibitionListTableViewCell.h"
 #import "NotificationConstant.h"
 #import "Client.h"
+#import "ExhibitionPushNotification.h"
 
 @interface ExhibitionListViewController ()<UITableViewDataSource, UITableViewDelegate>
 
@@ -89,7 +90,11 @@
 {
     ExhibitionListTableViewCell * cell = (ExhibitionListTableViewCell *)[tableView cellForRowAtIndexPath:indexPath];
     [cell setSelected:NO];
-    [[NSNotificationCenter defaultCenter] postNotificationName:NotificationExhibitionClicked object:cell.exhibitionModel];
+    ExhibitionPushNotification * pushNotification = [[ExhibitionPushNotification alloc] init];
+    ExhibitionModel * model = cell.exhibitionModel;
+    pushNotification.title = model.exhibitionName;
+    pushNotification.model = model;
+    [[NSNotificationCenter defaultCenter] postNotificationName:NotificationPush object:pushNotification];
 }
 
 /*

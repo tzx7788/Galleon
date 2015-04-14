@@ -37,7 +37,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(pushNotification:) name:NotificationPush object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(exhibitionclicked:) name:NotificationExhibitionClicked object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(pushNewsListViewController:) name:NotificationNewsPush  object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(pushExhibitionFileList:) name:NotificationExhibitionFileList  object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(pushExhibitionDetail:) name:NotificationExhibitionDeitail  object:nil];
@@ -48,7 +47,6 @@
 {
     [super finalize];
     [[NSNotificationCenter defaultCenter] removeObserver:self name:NotificationPush object:nil];
-    [[NSNotificationCenter defaultCenter] removeObserver:self name:NotificationExhibitionClicked object:nil];
     [[NSNotificationCenter defaultCenter] removeObserver:self name:NotificationNewsPush object:nil];
     [[NSNotificationCenter defaultCenter] removeObserver:self name:NotificationExhibitionFileList object:nil];
     [[NSNotificationCenter defaultCenter] removeObserver:self name:NotificationExhibitionDeitail object:nil];
@@ -66,7 +64,7 @@
         svc.titleLabel = label;
         Class class = NSClassFromString(superNotification.viewControllerClassName);
         if ( [class isSubclassOfClass:SuperViewController.class] ) {
-            SuperViewController * vc = [[class alloc] initWithNibName:superNotification.nibName bundle:nil];
+            SuperViewController * vc = [class createViewController];
             svc.contentViewController = vc;
             vc.model = superNotification.model;
             [self pushViewController:svc animated:YES];
@@ -134,22 +132,6 @@
         self.navigationItem.titleView = label;
         svc.titleLabel = label;
         NewsListViewController * vc = [NewsListViewController createViewController];
-        svc.contentViewController = vc;
-        vc.model = model;
-        [self pushViewController:svc animated:YES];
-    }
-}
-
-- (void)exhibitionclicked:(NSNotification *) notification
-{
-    if ( [[notification object] isKindOfClass:[ExhibitionModel class]] ) {
-        ExhibitionModel * model = [notification object];
-        SubContentViewController * svc = [SubContentViewController createViewController];
-        TitleLabel * label = [TitleLabel createLabel];
-        label.text = model.exhibitionName;
-        self.navigationItem.titleView = label;
-        svc.titleLabel = label;
-        ExhibitionViewController * vc = [ExhibitionViewController createViewController];
         svc.contentViewController = vc;
         vc.model = model;
         [self pushViewController:svc animated:YES];

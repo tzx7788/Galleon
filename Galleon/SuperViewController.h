@@ -13,4 +13,6 @@
 
 @property (nonatomic, strong) SuperModel * model;
 
++ (instancetype)createViewController;
+
 @end

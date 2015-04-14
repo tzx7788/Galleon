@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SuperViewController.h"
 #import "ExhibitionModel.h"
 
-@interface ExhibitionViewController : UIViewController
+@interface ExhibitionViewController : SuperViewController
 
 @property (nonatomic, strong) ExhibitionModel * model;
 

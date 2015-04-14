@@ -8,8 +8,9 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#import "SuperModel.h"
 
-@interface ExhibitionModel : NSObject
+@interface ExhibitionModel : SuperModel
 
 @property (nonatomic, strong) NSString * exhibitionName;
 

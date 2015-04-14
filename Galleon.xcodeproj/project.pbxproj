@@ -104,6 +104,7 @@
 		6CAD84511AB719D500F5F2F5 /* NewsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CAD84501AB719D500F5F2F5 /* NewsTableViewCell.m */; };
 		6CAD84531AB719E900F5F2F5 /* NewsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6CAD84521AB719E900F5F2F5 /* NewsTableViewCell.xib */; };
 		6CB80BD31ABF97E500C49F44 /* NewsImageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CB80BD21ABF97E500C49F44 /* NewsImageModel.m */; };
+		6CB9E2291ADC9DF00075B56B /* ExhibitionPushNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CB9E2281ADC9DF00075B56B /* ExhibitionPushNotification.m */; };
 		6CC058C61ABB117B00C16465 /* bg_about_us.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6CC058C51ABB117B00C16465 /* bg_about_us.jpg */; };
 		6CC2B2721ACA168300026FAC /* SupplierViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CC2B2701ACA168300026FAC /* SupplierViewController.m */; };
 		6CC2B2761ACA169700026FAC /* SupplierModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CC2B2751ACA169700026FAC /* SupplierModel.m */; };
@@ -333,6 +334,8 @@
 		6CAD84521AB719E900F5F2F5 /* NewsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewsTableViewCell.xib; sourceTree = "<group>"; };
 		6CB80BD11ABF97E500C49F44 /* NewsImageModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsImageModel.h; sourceTree = "<group>"; };
 		6CB80BD21ABF97E500C49F44 /* NewsImageModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsImageModel.m; sourceTree = "<group>"; };
+		6CB9E2271ADC9DF00075B56B /* ExhibitionPushNotification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExhibitionPushNotification.h; sourceTree = "<group>"; };
+		6CB9E2281ADC9DF00075B56B /* ExhibitionPushNotification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExhibitionPushNotification.m; sourceTree = "<group>"; };
 		6CBDA9661AB12881003CCB20 /* ImageConstant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageConstant.h; sourceTree = "<group>"; };
 		6CC058C51ABB117B00C16465 /* bg_about_us.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bg_about_us.jpg; sourceTree = "<group>"; };
 		6CC2B26F1ACA168300026FAC /* SupplierViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SupplierViewController.h; sourceTree = "<group>"; };
@@ -720,6 +723,8 @@
 			children = (
 				6C726D6F1ADB680100CB2815 /* PDFPushNotification.h */,
 				6C726D701ADB680100CB2815 /* PDFPushNotification.m */,
+				6CB9E2271ADC9DF00075B56B /* ExhibitionPushNotification.h */,
+				6CB9E2281ADC9DF00075B56B /* ExhibitionPushNotification.m */,
 			);
 			name = Notification;
 			sourceTree = "<group>";
@@ -1561,6 +1566,7 @@
 				6CEE19401AADC291006CB3DD /* AppDelegate.m in Sources */,
 				6C5BDC541AB07ADD005FE343 /* LeftMenuTableViewController.m in Sources */,
 				6C72E0361ABE68C20012B428 /* InformTableViewCell.m in Sources */,
+				6CB9E2291ADC9DF00075B56B /* ExhibitionPushNotification.m in Sources */,
 				6C0141511AB87AE60069EDE7 /* HomePageViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
