@@ -7,8 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "SuperModel.h"
 
-@interface PDFModel : NSObject
+@interface PDFModel : SuperModel
 
 @property (nonatomic, strong) NSString * pdfName;
 @property (nonatomic, strong) NSString * pdfURLString;

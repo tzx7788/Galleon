@@ -38,7 +38,6 @@
     [super viewDidLoad];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(pushNotification:) name:NotificationPush object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(exhibitionclicked:) name:NotificationExhibitionClicked object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(viewPDF:) name:NotificationViewPDF object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(pushNewsListViewController:) name:NotificationNewsPush  object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(pushExhibitionFileList:) name:NotificationExhibitionFileList  object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(pushExhibitionDetail:) name:NotificationExhibitionDeitail  object:nil];
@@ -50,7 +49,6 @@
     [super finalize];
     [[NSNotificationCenter defaultCenter] removeObserver:self name:NotificationPush object:nil];
     [[NSNotificationCenter defaultCenter] removeObserver:self name:NotificationExhibitionClicked object:nil];
-    [[NSNotificationCenter defaultCenter] removeObserver:self name:NotificationViewPDF object:nil];
     [[NSNotificationCenter defaultCenter] removeObserver:self name:NotificationNewsPush object:nil];
     [[NSNotificationCenter defaultCenter] removeObserver:self name:NotificationExhibitionFileList object:nil];
     [[NSNotificationCenter defaultCenter] removeObserver:self name:NotificationExhibitionDeitail object:nil];
@@ -136,22 +134,6 @@
         self.navigationItem.titleView = label;
         svc.titleLabel = label;
         NewsListViewController * vc = [NewsListViewController createViewController];
-        svc.contentViewController = vc;
-        vc.model = model;
-        [self pushViewController:svc animated:YES];
-    }
-}
-
-- (void)viewPDF:(NSNotification *) notification
-{
-    if ( [[notification object] isKindOfClass:[PDFModel class]] ) {
-        PDFModel *model = [notification object];
-        SubContentViewController * svc = [SubContentViewController createViewController];
-        TitleLabel * label = [TitleLabel createLabel];
-        label.text = model.pdfName;
-        self.navigationItem.titleView = label;
-        svc.titleLabel = label;
-        PDFViewController * vc = [PDFViewController createViewController];
         svc.contentViewController = vc;
         vc.model = model;
         [self pushViewController:svc animated:YES];

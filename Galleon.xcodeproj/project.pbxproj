@@ -61,6 +61,7 @@
 		6C6E635B1AB28D510014F47F /* ExhibitionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C6E63591AB28D510014F47F /* ExhibitionViewController.xib */; };
 		6C6E635F1AB290530014F47F /* ExhibitionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C6E635D1AB290530014F47F /* ExhibitionTableViewCell.m */; };
 		6C726D6D1ADB650D00CB2815 /* PostMessagePushNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C726D6C1ADB650D00CB2815 /* PostMessagePushNotification.m */; };
+		6C726D711ADB680100CB2815 /* PDFPushNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C726D701ADB680100CB2815 /* PDFPushNotification.m */; };
 		6C72E0361ABE68C20012B428 /* InformTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C72E0341ABE68C20012B428 /* InformTableViewCell.m */; };
 		6C72E0371ABE68C20012B428 /* InformTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C72E0351ABE68C20012B428 /* InformTableViewCell.xib */; };
 		6C72E03A1ABE694C0012B428 /* InformModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C72E0391ABE694C0012B428 /* InformModel.m */; };
@@ -265,6 +266,8 @@
 		6C6E635D1AB290530014F47F /* ExhibitionTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExhibitionTableViewCell.m; sourceTree = "<group>"; };
 		6C726D6B1ADB650D00CB2815 /* PostMessagePushNotification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostMessagePushNotification.h; sourceTree = "<group>"; };
 		6C726D6C1ADB650D00CB2815 /* PostMessagePushNotification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostMessagePushNotification.m; sourceTree = "<group>"; };
+		6C726D6F1ADB680100CB2815 /* PDFPushNotification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDFPushNotification.h; sourceTree = "<group>"; };
+		6C726D701ADB680100CB2815 /* PDFPushNotification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDFPushNotification.m; sourceTree = "<group>"; };
 		6C72E0331ABE68C20012B428 /* InformTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InformTableViewCell.h; sourceTree = "<group>"; };
 		6C72E0341ABE68C20012B428 /* InformTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InformTableViewCell.m; sourceTree = "<group>"; };
 		6C72E0351ABE68C20012B428 /* InformTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InformTableViewCell.xib; sourceTree = "<group>"; };
@@ -630,6 +633,7 @@
 		6C6E63431AB282270014F47F /* Exhibition */ = {
 			isa = PBXGroup;
 			children = (
+				6C726D6E1ADB67C200CB2815 /* Notification */,
 				6C6E63461AB2828F0014F47F /* Model */,
 				6C6E63451AB282820014F47F /* View */,
 				6C6E63441AB282770014F47F /* ViewController */,
@@ -707,6 +711,15 @@
 			children = (
 				6C726D6B1ADB650D00CB2815 /* PostMessagePushNotification.h */,
 				6C726D6C1ADB650D00CB2815 /* PostMessagePushNotification.m */,
+			);
+			name = Notification;
+			sourceTree = "<group>";
+		};
+		6C726D6E1ADB67C200CB2815 /* Notification */ = {
+			isa = PBXGroup;
+			children = (
+				6C726D6F1ADB680100CB2815 /* PDFPushNotification.h */,
+				6C726D701ADB680100CB2815 /* PDFPushNotification.m */,
 			);
 			name = Notification;
 			sourceTree = "<group>";
@@ -1526,6 +1539,7 @@
 				6CC6EBC61AB328AD00A9392E /* ExhibitionModel.m in Sources */,
 				6CAD84471AB7178E00F5F2F5 /* NewsViewController.m in Sources */,
 				6CC2B2721ACA168300026FAC /* SupplierViewController.m in Sources */,
+				6C726D711ADB680100CB2815 /* PDFPushNotification.m in Sources */,
 				6C01414D1AB879350069EDE7 /* PostMessageModel.m in Sources */,
 				6C0141301AB871360069EDE7 /* AboutModel.m in Sources */,
 				6CAD843A1AB5CF3100F5F2F5 /* Client.m in Sources */,

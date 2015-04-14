@@ -34,8 +34,6 @@
 
 #define NotificationWarningMessage      @"NotificationWarningMessage"
 
-#define NotificationViewPDF             @"NotificationViewPDF"
-
 #define NotificationPersonPageClicked   @"NotificationPersonPageClicked"
 
 #define NotificationLoginIn @"NotificationLoginIn"

@@ -13,6 +13,7 @@
 @end
 
 @implementation PDFViewController
+@dynamic model;
 
 + (PDFViewController *)createViewController
 {

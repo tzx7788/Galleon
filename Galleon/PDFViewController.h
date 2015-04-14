@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "PDFModel.h"
+#import "SuperViewController.h"
 
-@interface PDFViewController : UIViewController
+@interface PDFViewController : SuperViewController
 
 @property (strong, nonatomic) PDFModel * model;
 

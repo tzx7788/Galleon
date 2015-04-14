@@ -11,6 +11,7 @@
 #import "PDFModel.h"
 #import "PDFTableViewCell.h"
 #import "Client.h"
+#import "PDFPushNotification.h"
 
 @interface ExhibitionFileListViewController ()<UITableViewDataSource, UITableViewDelegate>
 
@@ -73,8 +74,12 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    PDFPushNotification * pushNotification = [[PDFPushNotification alloc] init];
+    PDFModel * model = self.modelList[indexPath.row];
+    pushNotification.title = model.pdfName;
+    pushNotification.model = model;
+    [[NSNotificationCenter defaultCenter] postNotificationName:NotificationPush object:pushNotification];
     UITableViewCell * cell = [tableView cellForRowAtIndexPath:indexPath];
-    [[NSNotificationCenter defaultCenter] postNotificationName:NotificationViewPDF object:self.modelList[indexPath.row]];
     [cell setSelected:NO];
 }
 
