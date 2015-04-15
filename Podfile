@@ -2,9 +2,8 @@
 platform :ios, '7.0'
 
 target 'Galleon' do
-pod 'AFNetworking', '~> 2.3.1'
+pod 'AFNetworking' 
 pod 'MBProgressHUD'
-pod 'UIImage-Helpers'
 pod 'KDCycleBannerView'
 end
 

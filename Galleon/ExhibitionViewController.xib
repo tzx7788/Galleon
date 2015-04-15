@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7531" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ExhibitionViewController">
@@ -16,8 +16,8 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="rxM-Jc-5dn">
-                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="rxM-Jc-5dn">
+                    <rect key="frame" x="-8" y="0.0" width="616" height="600"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <connections>
                         <outlet property="dataSource" destination="-1" id="KpZ-r1-Vfm"/>
@@ -28,8 +28,8 @@
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="rxM-Jc-5dn" secondAttribute="bottom" id="IQ3-vE-voe"/>
-                <constraint firstItem="rxM-Jc-5dn" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="XiD-R3-c6G"/>
-                <constraint firstAttribute="trailing" secondItem="rxM-Jc-5dn" secondAttribute="trailing" id="eht-Vm-8DV"/>
+                <constraint firstItem="rxM-Jc-5dn" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="-8" id="XiD-R3-c6G"/>
+                <constraint firstAttribute="trailing" secondItem="rxM-Jc-5dn" secondAttribute="trailing" constant="-8" id="eht-Vm-8DV"/>
                 <constraint firstItem="rxM-Jc-5dn" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="ved-qH-OCr"/>
             </constraints>
             <point key="canvasLocation" x="469" y="-74"/>

@@ -24,11 +24,6 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-Galleon-UIImage-Helpers.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>Pods-Galleon.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -37,32 +32,27 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>07005E616CC30E92DDFB435C</key>
+		<key>48E08889F44F27302C15C564</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>1045AA756CE0810DAD0B2A2E</key>
+		<key>4EC124509D0F7E7E6D0834B0</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>54C919A24C31FE345F0E7E8A</key>
+		<key>580BF33799EDEC98B55A2889</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B0880473119664C1FCCBBB17</key>
+		<key>8EF4748AC289FCA205F72F55</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B2C0335EFB2111CC6E8C7111</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>C94061AA668A5485B5AE6E7F</key>
+		<key>B2B5116A70CC78E576A2673C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
