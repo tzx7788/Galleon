@@ -1746,7 +1746,7 @@
 					"$(PROJECT_DIR)/Galleon/lib",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "7e2e8603-209d-42f5-b63e-de923ea21f20";
+				PROVISIONING_PROFILE = "3fd51c57-1421-4996-aa26-e46ca3454195";
 				USER_HEADER_SEARCH_PATHS = "$(inherited) $(PROJECT_DIR)/Galleon/lib";
 			};
 			name = Debug;
@@ -1767,7 +1767,7 @@
 					"$(PROJECT_DIR)/Galleon/lib",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "7e2e8603-209d-42f5-b63e-de923ea21f20";
+				PROVISIONING_PROFILE = "3fd51c57-1421-4996-aa26-e46ca3454195";
 				USER_HEADER_SEARCH_PATHS = "$(inherited) $(PROJECT_DIR)/Galleon/lib";
 			};
 			name = Release;
