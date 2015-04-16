@@ -17,6 +17,7 @@
 #import "Client.h"
 #import "User.h"
 #import "StringConstant.h"
+#import "ExhibitionDetailPushNotification.h"
 
 @interface ExhibitionViewController ()<UITableViewDataSource,UITableViewDelegate>
 
@@ -117,7 +118,10 @@
             ExhibitionDetailModel * model = [[ExhibitionDetailModel alloc] init];
             model.title = cell.type.name;
             model.content = self.model.introContent;
-            [[NSNotificationCenter defaultCenter] postNotificationName:NotificationExhibitionDeitail object:model];
+            ExhibitionDetailPushNotification * pushNotification = [[ExhibitionDetailPushNotification alloc] init];
+            pushNotification.title = model.title;
+            pushNotification.model = model;
+            [[NSNotificationCenter defaultCenter] postNotificationName:NotificationPush object:pushNotification];
         }
             break;
         case ExhibitionTypeService:
@@ -125,7 +129,10 @@
             ExhibitionDetailModel * model = [[ExhibitionDetailModel alloc] init];
             model.title = cell.type.name;
             model.content = self.model.serviceContent;
-            [[NSNotificationCenter defaultCenter] postNotificationName:NotificationExhibitionDeitail object:model];
+            ExhibitionDetailPushNotification * pushNotification = [[ExhibitionDetailPushNotification alloc] init];
+            pushNotification.title = model.title;
+            pushNotification.model = model;
+            [[NSNotificationCenter defaultCenter] postNotificationName:NotificationPush object:pushNotification];
         }
             break;
         case ExhibitionTypeHost:
@@ -133,7 +140,10 @@
             ExhibitionDetailModel * model = [[ExhibitionDetailModel alloc] init];
             model.title = cell.type.name;
             model.content = self.model.hostContent;
-            [[NSNotificationCenter defaultCenter] postNotificationName:NotificationExhibitionDeitail object:model];
+            ExhibitionDetailPushNotification * pushNotification = [[ExhibitionDetailPushNotification alloc] init];
+            pushNotification.title = model.title;
+            pushNotification.model = model;
+            [[NSNotificationCenter defaultCenter] postNotificationName:NotificationPush object:pushNotification];
         }
             break;
         case ExhibitionTypeSche:
@@ -141,7 +151,10 @@
             ExhibitionDetailModel * model = [[ExhibitionDetailModel alloc] init];
             model.title = cell.type.name;
             model.content = self.model.scheduleContent;
-            [[NSNotificationCenter defaultCenter] postNotificationName:NotificationExhibitionDeitail object:model];
+            ExhibitionDetailPushNotification * pushNotification = [[ExhibitionDetailPushNotification alloc] init];
+            pushNotification.title = model.title;
+            pushNotification.model = model;
+            [[NSNotificationCenter defaultCenter] postNotificationName:NotificationPush object:pushNotification];
         }
             break;
         case ExhibitionTypeLayout:
@@ -149,7 +162,10 @@
             ExhibitionDetailModel * model = [[ExhibitionDetailModel alloc] init];
             model.title = cell.type.name;
             model.content = self.model.layoutContent;
-            [[NSNotificationCenter defaultCenter] postNotificationName:NotificationExhibitionDeitail object:model];
+            ExhibitionDetailPushNotification * pushNotification = [[ExhibitionDetailPushNotification alloc] init];
+            pushNotification.title = model.title;
+            pushNotification.model = model;
+            [[NSNotificationCenter defaultCenter] postNotificationName:NotificationPush object:pushNotification];
         }
             break;
         case ExhibitionTypeDownload:

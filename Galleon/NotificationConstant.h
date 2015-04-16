@@ -39,7 +39,6 @@
 
 
 #define NotificationExhibitionFileList @"NotificationExhibitionFileList"
-#define NotificationExhibitionDeitail  @"NotificationExhibitionDeitail"
 
 #define NotificationUpdateProfile @"NotificationUpdateProfile"
 

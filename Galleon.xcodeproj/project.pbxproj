@@ -56,6 +56,7 @@
 		6C5E01A81ACB657D00570D5B /* JetlinerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C5E01AA1ACB657D00570D5B /* JetlinerViewController.xib */; };
 		6C5E01AD1ACB666100570D5B /* SupplierViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C5E01AF1ACB666100570D5B /* SupplierViewController.xib */; };
 		6C6AF7F21ADFA7E40069BDA8 /* NewsListPushNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C6AF7F11ADFA7E40069BDA8 /* NewsListPushNotification.m */; };
+		6C6AF7F51ADFAA0D0069BDA8 /* ExhibitionDetailPushNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C6AF7F41ADFAA0D0069BDA8 /* ExhibitionDetailPushNotification.m */; };
 		6C6E63411AB276A40014F47F /* btn_back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C6E63401AB276A40014F47F /* btn_back@2x.png */; };
 		6C6E63491AB282BD0014F47F /* ExhibitionType.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C6E63481AB282BD0014F47F /* ExhibitionType.m */; };
 		6C6E635A1AB28D510014F47F /* ExhibitionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C6E63581AB28D510014F47F /* ExhibitionViewController.m */; };
@@ -260,6 +261,8 @@
 		6C5E01B01ACB666A00570D5B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/SupplierViewController.xib; sourceTree = "<group>"; };
 		6C6AF7F01ADFA7E40069BDA8 /* NewsListPushNotification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsListPushNotification.h; sourceTree = "<group>"; };
 		6C6AF7F11ADFA7E40069BDA8 /* NewsListPushNotification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsListPushNotification.m; sourceTree = "<group>"; };
+		6C6AF7F31ADFAA0D0069BDA8 /* ExhibitionDetailPushNotification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExhibitionDetailPushNotification.h; sourceTree = "<group>"; };
+		6C6AF7F41ADFAA0D0069BDA8 /* ExhibitionDetailPushNotification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExhibitionDetailPushNotification.m; sourceTree = "<group>"; };
 		6C6E63401AB276A40014F47F /* btn_back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_back@2x.png"; sourceTree = "<group>"; };
 		6C6E63471AB282BD0014F47F /* ExhibitionType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExhibitionType.h; sourceTree = "<group>"; };
 		6C6E63481AB282BD0014F47F /* ExhibitionType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExhibitionType.m; sourceTree = "<group>"; };
@@ -728,6 +731,8 @@
 				6C726D701ADB680100CB2815 /* PDFPushNotification.m */,
 				6CB9E2271ADC9DF00075B56B /* ExhibitionPushNotification.h */,
 				6CB9E2281ADC9DF00075B56B /* ExhibitionPushNotification.m */,
+				6C6AF7F31ADFAA0D0069BDA8 /* ExhibitionDetailPushNotification.h */,
+				6C6AF7F41ADFAA0D0069BDA8 /* ExhibitionDetailPushNotification.m */,
 			);
 			name = Notification;
 			sourceTree = "<group>";
@@ -1540,6 +1545,7 @@
 				6C8EB87E1ADA139400999C5F /* SuperModel.m in Sources */,
 				6CEE194B1AADC4A2006CB3DD /* UISnapShotNavigationController.m in Sources */,
 				6C5B7A8A1AB5731500FE47F0 /* UIAlertView+ErrorMessage.m in Sources */,
+				6C6AF7F51ADFAA0D0069BDA8 /* ExhibitionDetailPushNotification.m in Sources */,
 				6CAD84511AB719D500F5F2F5 /* NewsTableViewCell.m in Sources */,
 				6C18E31A1AC1417E00317556 /* UpdateProfileViewController.m in Sources */,
 				6CA07D2D1AADC63000BEEEE7 /* UIImage+Snapshot.m in Sources */,

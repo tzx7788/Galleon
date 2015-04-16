@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SuperViewController.h"
 #import "ExhibitionDetailModel.h"
 
-@interface ExhibitionDetailViewController : UIViewController
+@interface ExhibitionDetailViewController : SuperViewController
 
 @property (nonatomic, strong) ExhibitionDetailModel * model;
 @property (weak, nonatomic) IBOutlet UIWebView *webView;

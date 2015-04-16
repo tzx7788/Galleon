@@ -13,10 +13,11 @@
 @end
 
 @implementation ExhibitionDetailViewController
+@dynamic model;
 
 - (void) setModel:(ExhibitionDetailModel *)model
 {
-    _model = model;
+    super.model = model;
     [self.webView loadHTMLString:model.content baseURL:nil];
 }
 
