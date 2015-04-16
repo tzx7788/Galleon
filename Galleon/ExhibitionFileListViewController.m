@@ -20,6 +20,7 @@
 @end
 
 @implementation ExhibitionFileListViewController
+@dynamic model;
 
 + (ExhibitionFileListViewController *)createViewController
 {

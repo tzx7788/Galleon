@@ -57,6 +57,8 @@
 		6C5E01AD1ACB666100570D5B /* SupplierViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C5E01AF1ACB666100570D5B /* SupplierViewController.xib */; };
 		6C6AF7F21ADFA7E40069BDA8 /* NewsListPushNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C6AF7F11ADFA7E40069BDA8 /* NewsListPushNotification.m */; };
 		6C6AF7F51ADFAA0D0069BDA8 /* ExhibitionDetailPushNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C6AF7F41ADFAA0D0069BDA8 /* ExhibitionDetailPushNotification.m */; };
+		6C6AF7F81ADFAE660069BDA8 /* FileListPushNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C6AF7F71ADFAE660069BDA8 /* FileListPushNotification.m */; };
+		6C6AF7FC1ADFB03D0069BDA8 /* UpdateProfilePushNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C6AF7FB1ADFB03D0069BDA8 /* UpdateProfilePushNotification.m */; };
 		6C6E63411AB276A40014F47F /* btn_back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C6E63401AB276A40014F47F /* btn_back@2x.png */; };
 		6C6E63491AB282BD0014F47F /* ExhibitionType.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C6E63481AB282BD0014F47F /* ExhibitionType.m */; };
 		6C6E635A1AB28D510014F47F /* ExhibitionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C6E63581AB28D510014F47F /* ExhibitionViewController.m */; };
@@ -263,6 +265,10 @@
 		6C6AF7F11ADFA7E40069BDA8 /* NewsListPushNotification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsListPushNotification.m; sourceTree = "<group>"; };
 		6C6AF7F31ADFAA0D0069BDA8 /* ExhibitionDetailPushNotification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExhibitionDetailPushNotification.h; sourceTree = "<group>"; };
 		6C6AF7F41ADFAA0D0069BDA8 /* ExhibitionDetailPushNotification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExhibitionDetailPushNotification.m; sourceTree = "<group>"; };
+		6C6AF7F61ADFAE660069BDA8 /* FileListPushNotification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileListPushNotification.h; sourceTree = "<group>"; };
+		6C6AF7F71ADFAE660069BDA8 /* FileListPushNotification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileListPushNotification.m; sourceTree = "<group>"; };
+		6C6AF7FA1ADFB03D0069BDA8 /* UpdateProfilePushNotification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UpdateProfilePushNotification.h; sourceTree = "<group>"; };
+		6C6AF7FB1ADFB03D0069BDA8 /* UpdateProfilePushNotification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UpdateProfilePushNotification.m; sourceTree = "<group>"; };
 		6C6E63401AB276A40014F47F /* btn_back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_back@2x.png"; sourceTree = "<group>"; };
 		6C6E63471AB282BD0014F47F /* ExhibitionType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExhibitionType.h; sourceTree = "<group>"; };
 		6C6E63481AB282BD0014F47F /* ExhibitionType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExhibitionType.m; sourceTree = "<group>"; };
@@ -610,6 +616,15 @@
 			name = ViewController;
 			sourceTree = "<group>";
 		};
+		6C6AF7F91ADFB02B0069BDA8 /* Notification */ = {
+			isa = PBXGroup;
+			children = (
+				6C6AF7FA1ADFB03D0069BDA8 /* UpdateProfilePushNotification.h */,
+				6C6AF7FB1ADFB03D0069BDA8 /* UpdateProfilePushNotification.m */,
+			);
+			name = Notification;
+			sourceTree = "<group>";
+		};
 		6C6E633F1AB2767C0014F47F /* Navigation */ = {
 			isa = PBXGroup;
 			children = (
@@ -733,6 +748,8 @@
 				6CB9E2281ADC9DF00075B56B /* ExhibitionPushNotification.m */,
 				6C6AF7F31ADFAA0D0069BDA8 /* ExhibitionDetailPushNotification.h */,
 				6C6AF7F41ADFAA0D0069BDA8 /* ExhibitionDetailPushNotification.m */,
+				6C6AF7F61ADFAE660069BDA8 /* FileListPushNotification.h */,
+				6C6AF7F71ADFAE660069BDA8 /* FileListPushNotification.m */,
 			);
 			name = Notification;
 			sourceTree = "<group>";
@@ -983,6 +1000,7 @@
 		6CC6EBA91AB31BA000A9392E /* Person */ = {
 			isa = PBXGroup;
 			children = (
+				6C6AF7F91ADFB02B0069BDA8 /* Notification */,
 				6CC6EBB81AB31D1800A9392E /* Model */,
 				6CC6EBB71AB31D1000A9392E /* View */,
 				6CC6EBB61AB31D0200A9392E /* ViewController */,
@@ -1522,6 +1540,7 @@
 				6C0141551AB87AF90069EDE7 /* HomePageModel.m in Sources */,
 				6C0141581AB87BA20069EDE7 /* PersonModel.m in Sources */,
 				6CAA1D311AB3C2AB00B848BD /* ExhibitionListModel.m in Sources */,
+				6C6AF7FC1ADFB03D0069BDA8 /* UpdateProfilePushNotification.m in Sources */,
 				6C8EB87B1ADA12FC00999C5F /* SuperPushNotification.m in Sources */,
 				6CAA1D4F1AB4026A00B848BD /* RegisterViewController.m in Sources */,
 				6C28D0791AC021C5004BD04D /* ExhibitionFileListModel.m in Sources */,
@@ -1533,6 +1552,7 @@
 				6CC6EBCA1AB3357E00A9392E /* ExhibitionListViewController.m in Sources */,
 				6C5E019B1ACADDBA00570D5B /* JetlinerModel.m in Sources */,
 				6C5E01A61ACAFB0000570D5B /* JetlinerViewController.m in Sources */,
+				6C6AF7F81ADFAE660069BDA8 /* FileListPushNotification.m in Sources */,
 				6CAD844B1AB7181B00F5F2F5 /* NewsModel.m in Sources */,
 				6C01413D1AB877C80069EDE7 /* DiscussModel.m in Sources */,
 				6C28D0751AC0217E004BD04D /* ExhibitionFileListViewController.m in Sources */,

@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SuperViewController.h"
 #import "ExhibitionFileListModel.h"
 
-@interface ExhibitionFileListViewController : UIViewController
+@interface ExhibitionFileListViewController : SuperViewController
 
 @property (nonatomic, strong) ExhibitionFileListModel * model;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;

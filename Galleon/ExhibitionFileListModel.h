@@ -7,8 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "SuperModel.h"
 
-@interface ExhibitionFileListModel : NSObject
+@interface ExhibitionFileListModel : SuperModel
 
 @property (nonatomic, strong) NSString * exhibitionId;
 @property (nonatomic, strong) NSString * title;

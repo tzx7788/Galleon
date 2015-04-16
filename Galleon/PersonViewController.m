@@ -8,6 +8,8 @@
 
 #import "PersonViewController.h"
 #import "NotificationConstant.h"
+#import "UpdateProfilePushNotification.h"
+#import "StringConstant.h"
 #import <AFNetworking/UIImageView+AFNetworking.h>
 
 @interface PersonViewController ()
@@ -50,7 +52,10 @@
 }
 
 - (IBAction)editClicked:(id)sender {
-    [[NSNotificationCenter defaultCenter] postNotificationName:NotificationUpdateProfile object:self.model];
+    UpdateProfilePushNotification * pushNotification = [[UpdateProfilePushNotification alloc] init];
+    pushNotification.title = UpdateProfile;
+    pushNotification.model = self.model;
+    [[NSNotificationCenter defaultCenter] postNotificationName:NotificationPush object:pushNotification];
 }
 
 - (IBAction)logoutClicked:(id)sender {

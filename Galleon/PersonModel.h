@@ -8,8 +8,9 @@
 
 #import <Foundation/Foundation.h>
 #import "User.h"
+#import "SuperModel.h"
 
-@interface PersonModel : NSObject
+@interface PersonModel : SuperModel
 
 @property (nonatomic, strong) User * user;
 

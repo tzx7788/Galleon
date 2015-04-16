@@ -37,16 +37,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(pushNotification:) name:NotificationPush object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(pushExhibitionFileList:) name:NotificationExhibitionFileList  object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(pushUpdateProfile:) name:NotificationUpdateProfile  object:nil];
 }
 
 - (void) finalize
 {
     [super finalize];
     [[NSNotificationCenter defaultCenter] removeObserver:self name:NotificationPush object:nil];
-    [[NSNotificationCenter defaultCenter] removeObserver:self name:NotificationExhibitionFileList object:nil];
-    [[NSNotificationCenter defaultCenter] removeObserver:self name:NotificationUpdateProfile object:nil];
 }
 
 - (void)pushNotification:(NSNotification *)notification
@@ -65,39 +61,6 @@
             vc.model = superNotification.model;
             [self pushViewController:svc animated:YES];
         }
-    }
-}
-
-- (void)pushUpdateProfile:(NSNotification *) notification
-{
-    if ( [[notification object] isKindOfClass:[PersonModel class]] ) {
-        PersonModel *model = [notification object];
-        SubContentViewController * svc = [SubContentViewController createViewController];
-        TitleLabel * label = [TitleLabel createLabel];
-        label.text = UpdateProfile;
-        self.navigationItem.titleView = label;
-        svc.titleLabel = label;
-        UpdateProfileViewController * vc = [UpdateProfileViewController createViewController];
-        svc.contentViewController = vc;
-        vc.model = model;
-        [self pushViewController:svc animated:YES];
-    }
-}
-
-
-- (void)pushExhibitionFileList:(NSNotification *) notification
-{
-    if ( [[notification object] isKindOfClass:[ExhibitionFileListModel class]] ) {
-        ExhibitionFileListModel *model = [notification object];
-        SubContentViewController * svc = [SubContentViewController createViewController];
-        TitleLabel * label = [TitleLabel createLabel];
-        label.text = model.title;
-        self.navigationItem.titleView = label;
-        svc.titleLabel = label;
-        ExhibitionFileListViewController * vc = [ExhibitionFileListViewController createViewController];
-        svc.contentViewController = vc;
-        vc.model = model;
-        [self pushViewController:svc animated:YES];
     }
 }
 

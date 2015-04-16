@@ -38,10 +38,6 @@
 #define NotificationLoginIn @"NotificationLoginIn"
 
 
-#define NotificationExhibitionFileList @"NotificationExhibitionFileList"
-
-#define NotificationUpdateProfile @"NotificationUpdateProfile"
-
 #define NotificationExhibitionAddToCalendar @"NotificationExhibitionAddToCalendar"
 
 #define NotificationLeftMenuUserRefresh @"NotificationLeftMenuUserRefresh"

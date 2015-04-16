@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SuperViewController.h"
 
-@interface RegisterViewController : UIViewController
+@interface RegisterViewController : SuperViewController
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (weak, nonatomic) IBOutlet UIButton *cancelButton;
 @property (weak, nonatomic) IBOutlet UIButton *confirmButton;

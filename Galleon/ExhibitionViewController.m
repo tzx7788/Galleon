@@ -18,6 +18,7 @@
 #import "User.h"
 #import "StringConstant.h"
 #import "ExhibitionDetailPushNotification.h"
+#import "FileListPushNotification.h"
 
 @interface ExhibitionViewController ()<UITableViewDataSource,UITableViewDelegate>
 
@@ -178,7 +179,10 @@
             ExhibitionFileListModel * model = [[ExhibitionFileListModel alloc] init];
             model.title = cell.type.name;
             model.exhibitionId = self.model.exhibitionId;
-            [[NSNotificationCenter defaultCenter] postNotificationName:NotificationExhibitionFileList object:model];
+            FileListPushNotification * pushNotification = [[FileListPushNotification alloc] init];
+            pushNotification.title = ExhibitionDownloads;
+            pushNotification.model = model;
+            [[NSNotificationCenter defaultCenter] postNotificationName:NotificationPush object:pushNotification];
         }
             break;
         default:
