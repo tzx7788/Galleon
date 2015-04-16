@@ -8,7 +8,9 @@
 
 #import "HeadLineHeaderView.h"
 #import "NotificationConstant.h"
+#import "StringConstant.h"
 #import "NewsListModel.h"
+#import "NewsListPushNotification.h"
 
 @implementation HeadLineHeaderView
 
@@ -20,8 +22,10 @@
 }
 */
 - (IBAction)moreClicked:(id)sender {
-    NewsListModel * model = [[NewsListModel alloc] init];
-    [[NSNotificationCenter defaultCenter] postNotificationName:NotificationNewsPush object:model];
+    NewsListPushNotification * pushNotification = [[NewsListPushNotification alloc] init];
+    pushNotification.title = News;
+    pushNotification.model = [[NewsListModel alloc] init];
+    [[NSNotificationCenter defaultCenter] postNotificationName:NotificationPush object:pushNotification];
 }
 
 @end

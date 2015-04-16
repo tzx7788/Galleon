@@ -55,6 +55,7 @@
 		6C5E01A61ACAFB0000570D5B /* JetlinerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C5E01A41ACAFB0000570D5B /* JetlinerViewController.m */; };
 		6C5E01A81ACB657D00570D5B /* JetlinerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C5E01AA1ACB657D00570D5B /* JetlinerViewController.xib */; };
 		6C5E01AD1ACB666100570D5B /* SupplierViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C5E01AF1ACB666100570D5B /* SupplierViewController.xib */; };
+		6C6AF7F21ADFA7E40069BDA8 /* NewsListPushNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C6AF7F11ADFA7E40069BDA8 /* NewsListPushNotification.m */; };
 		6C6E63411AB276A40014F47F /* btn_back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C6E63401AB276A40014F47F /* btn_back@2x.png */; };
 		6C6E63491AB282BD0014F47F /* ExhibitionType.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C6E63481AB282BD0014F47F /* ExhibitionType.m */; };
 		6C6E635A1AB28D510014F47F /* ExhibitionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C6E63581AB28D510014F47F /* ExhibitionViewController.m */; };
@@ -257,6 +258,8 @@
 		6C5E01AC1ACB658100570D5B /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/JetlinerViewController.strings"; sourceTree = "<group>"; };
 		6C5E01AE1ACB666100570D5B /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = "zh-Hans"; path = "zh-Hans.lproj/SupplierViewController.xib"; sourceTree = "<group>"; };
 		6C5E01B01ACB666A00570D5B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/SupplierViewController.xib; sourceTree = "<group>"; };
+		6C6AF7F01ADFA7E40069BDA8 /* NewsListPushNotification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsListPushNotification.h; sourceTree = "<group>"; };
+		6C6AF7F11ADFA7E40069BDA8 /* NewsListPushNotification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsListPushNotification.m; sourceTree = "<group>"; };
 		6C6E63401AB276A40014F47F /* btn_back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_back@2x.png"; sourceTree = "<group>"; };
 		6C6E63471AB282BD0014F47F /* ExhibitionType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExhibitionType.h; sourceTree = "<group>"; };
 		6C6E63481AB282BD0014F47F /* ExhibitionType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExhibitionType.m; sourceTree = "<group>"; };
@@ -743,6 +746,8 @@
 			children = (
 				6C8EB8801ADB4C4100999C5F /* NewsPushNotification.h */,
 				6C8EB8811ADB4C4100999C5F /* NewsPushNotification.m */,
+				6C6AF7F01ADFA7E40069BDA8 /* NewsListPushNotification.h */,
+				6C6AF7F11ADFA7E40069BDA8 /* NewsListPushNotification.m */,
 			);
 			name = Notification;
 			sourceTree = "<group>";
@@ -1552,6 +1557,7 @@
 				6CAD84421AB7177F00F5F2F5 /* NewsListViewController.m in Sources */,
 				6CAD844E1AB718A900F5F2F5 /* NewsListModel.m in Sources */,
 				6CC6EBCF1AB3371900A9392E /* ExhibitionListTableViewCell.m in Sources */,
+				6C6AF7F21ADFA7E40069BDA8 /* NewsListPushNotification.m in Sources */,
 				6CC6EBBE1AB31E2300A9392E /* TitleLabel.m in Sources */,
 				6CD22F361AD50D8E00B2DB15 /* LogInNavigationViewController.m in Sources */,
 				6CF078871AB1978800DF0C0C /* SuperViewController.m in Sources */,

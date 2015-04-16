@@ -37,7 +37,6 @@
 
 #define NotificationLoginIn @"NotificationLoginIn"
 
-#define NotificationNewsPush @"NotificationNewsPush"
 
 #define NotificationExhibitionFileList @"NotificationExhibitionFileList"
 #define NotificationExhibitionDeitail  @"NotificationExhibitionDeitail"

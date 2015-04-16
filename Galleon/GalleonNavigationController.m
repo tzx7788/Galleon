@@ -37,7 +37,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(pushNotification:) name:NotificationPush object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(pushNewsListViewController:) name:NotificationNewsPush  object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(pushExhibitionFileList:) name:NotificationExhibitionFileList  object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(pushExhibitionDetail:) name:NotificationExhibitionDeitail  object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(pushUpdateProfile:) name:NotificationUpdateProfile  object:nil];
@@ -47,7 +46,6 @@
 {
     [super finalize];
     [[NSNotificationCenter defaultCenter] removeObserver:self name:NotificationPush object:nil];
-    [[NSNotificationCenter defaultCenter] removeObserver:self name:NotificationNewsPush object:nil];
     [[NSNotificationCenter defaultCenter] removeObserver:self name:NotificationExhibitionFileList object:nil];
     [[NSNotificationCenter defaultCenter] removeObserver:self name:NotificationExhibitionDeitail object:nil];
     [[NSNotificationCenter defaultCenter] removeObserver:self name:NotificationUpdateProfile object:nil];
@@ -115,23 +113,6 @@
         self.navigationItem.titleView = label;
         svc.titleLabel = label;
         ExhibitionDetailViewController * vc = [ExhibitionDetailViewController createViewController];
-        svc.contentViewController = vc;
-        vc.model = model;
-        [self pushViewController:svc animated:YES];
-    }
-}
-
-
-- (void)pushNewsListViewController:(NSNotification *) notification
-{
-    if ( [[notification object] isKindOfClass:[NewsListModel class]] ) {
-        NewsListModel *model = [notification object];
-        SubContentViewController * svc = [SubContentViewController createViewController];
-        TitleLabel * label = [TitleLabel createLabel];
-        label.text = News;
-        self.navigationItem.titleView = label;
-        svc.titleLabel = label;
-        NewsListViewController * vc = [NewsListViewController createViewController];
         svc.contentViewController = vc;
         vc.model = model;
         [self pushViewController:svc animated:YES];
