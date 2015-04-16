@@ -26,7 +26,7 @@
 #import "ExhibitionDetailViewController.h"
 #import "UpdateProfileViewController.h"
 #import "SuperPushNotification.h"
-#import "SuperViewController.h"
+#import "SuperViewControllerDelegate.h"
 
 @interface GalleonNavigationController ()
 
@@ -55,10 +55,11 @@
         self.navigationItem.titleView = label;
         svc.titleLabel = label;
         Class class = NSClassFromString(superNotification.viewControllerClassName);
-        if ( [class isSubclassOfClass:SuperViewController.class] ) {
-            SuperViewController * vc = [class createViewController];
+        if ( [class conformsToProtocol:@protocol(SuperViewControllerDelegate)] ) {
+            UIViewController<SuperViewControllerDelegate> * vc = [class createViewController];
             svc.contentViewController = vc;
-            vc.model = superNotification.model;
+            if ( [vc respondsToSelector:@selector(setModel:)] )
+                vc.model = superNotification.model;
             [self pushViewController:svc animated:YES];
         }
     }

@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SuperViewControllerDelegate.h"
 #import "SuperModel.h"
 
-@interface SuperViewController : UIViewController
+@interface SuperViewController : UIViewController<SuperViewControllerDelegate>
 
 @property (nonatomic, strong) SuperModel * model;
 

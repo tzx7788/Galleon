@@ -269,6 +269,7 @@
 		6C6AF7F71ADFAE660069BDA8 /* FileListPushNotification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileListPushNotification.m; sourceTree = "<group>"; };
 		6C6AF7FA1ADFB03D0069BDA8 /* UpdateProfilePushNotification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UpdateProfilePushNotification.h; sourceTree = "<group>"; };
 		6C6AF7FB1ADFB03D0069BDA8 /* UpdateProfilePushNotification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UpdateProfilePushNotification.m; sourceTree = "<group>"; };
+		6C6AF7FE1ADFB4170069BDA8 /* SuperViewControllerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SuperViewControllerDelegate.h; sourceTree = "<group>"; };
 		6C6E63401AB276A40014F47F /* btn_back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_back@2x.png"; sourceTree = "<group>"; };
 		6C6E63471AB282BD0014F47F /* ExhibitionType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExhibitionType.h; sourceTree = "<group>"; };
 		6C6E63481AB282BD0014F47F /* ExhibitionType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExhibitionType.m; sourceTree = "<group>"; };
@@ -625,6 +626,14 @@
 			name = Notification;
 			sourceTree = "<group>";
 		};
+		6C6AF7FD1ADFB3D00069BDA8 /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				6C6AF7FE1ADFB4170069BDA8 /* SuperViewControllerDelegate.h */,
+			);
+			name = Delegate;
+			sourceTree = "<group>";
+		};
 		6C6E633F1AB2767C0014F47F /* Navigation */ = {
 			isa = PBXGroup;
 			children = (
@@ -792,6 +801,7 @@
 		6CA07D371AAE65D400BEEEE7 /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				6C6AF7FD1ADFB3D00069BDA8 /* Delegate */,
 				6CC6EBBA1AB31D6E00A9392E /* Common */,
 				6CBDA9741AB13153003CCB20 /* SuperClass */,
 				6C5BDC6F1AB11D19005FE343 /* Constant */,
