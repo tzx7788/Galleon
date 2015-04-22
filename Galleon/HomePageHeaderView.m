@@ -58,7 +58,8 @@
             [self.countDownExhibition loadWithDictionary:responseData];
             NSTimeInterval interval =[self.countDownExhibition.startedTime timeIntervalSinceDate:systemDate];
             int dayInterval = interval / (60 * 60 * 24);
-            self.countDownLabel.text = [NSString stringWithFormat:@"%@\n%@ %d %@", self.countDownExhibition.exhibitionName,In,dayInterval,Days];
+            if (dayInterval >= 0)
+                self.countDownLabel.text = [NSString stringWithFormat:@"%@\n%@ %d %@", self.countDownExhibition.exhibitionName,In,dayInterval,Days];
             //[[NSNotificationCenter defaultCenter] postNotificationName:NotificationExhibitionAddToCalendar object:self.countDownExhibition];
         } failureBlock:^(NSError *error, NSString * responseString) {
             

@@ -186,11 +186,12 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell * cell = [tableView cellForRowAtIndexPath:indexPath];
+    [cell setSelected:NO];
+    if (indexPath.section == 0) return;
     NewsPushNotification * object = [[NewsPushNotification alloc] init];
     object.title = ((NewsModel *)self.dataArray[indexPath.section][indexPath.row]).titleString;
     object.model = self.dataArray[indexPath.section][indexPath.row];
     [[NSNotificationCenter defaultCenter] postNotificationName:NotificationPush object:object];
-    [cell setSelected:NO];
 }
 
 /*
